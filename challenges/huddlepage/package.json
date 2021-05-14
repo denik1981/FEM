@@ -1,0 +1,34 @@
+{
+  "name": "fem-huddlepage",
+  "version": "1.0.0",
+  "description": "Profile Card Component Challenge by denik1981",
+  "author": "denik1981",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "debug": "node --inspect-brk $(npx which webpack) --mode=development",
+    "watch": "webpack --watch --mode=development",
+    "serve": "webpack serve"
+  },
+  "devDependencies": {
+    "css-loader": "^5.2.4",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "pug-html-loader": "^1.1.5",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "pug": "^3.0.2",
+    "sass": "^1.32.11"
+  }
+}

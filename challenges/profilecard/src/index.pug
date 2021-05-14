@@ -1,0 +1,40 @@
+-var srcFav = '~assets/favicon-32x32.png'
+-var srcFontGoogle = 'https://fonts.gstatic.com'
+-var srcFontKumbh = 'https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap'
+-var srcUserImg = '~assets/image-victor.jpg'
+-var srcAttrib = 'https://frontendmentor.io/challenges/profile-card-component-cfArpWshJ'
+-var srcGithub = 'https://github.com/denik1981'
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')    
+    link(rel='icon' type='image/png' sizes='32x32' href=srcFav)
+    link(rel='preconnect' href=srcFontGoogle)
+    link(rel='stylesheet' href=srcFontKumbh )
+    title Frontend Mentor | Profile card component
+  body  
+    main.card
+      figure.user__picture
+        img.user__picture__img(src=srcUserImg alt='picture of Victor Crest')
+      section.user__info
+        h2.user__caption Victor Crest
+        span.user__caption.user__caption--age 26
+        span.user__caption.user__caption--city London
+      section.user__stats(aria-label='stats')
+        ul.user__stats__items
+          each label, tally in {'80K': 'Followers', '803K': 'Likes', '1.4K': 'Photos'}
+            li.user__stats__item
+              span.user__stats__tally #{tally}
+              span.user__stats__label #{label}
+
+    .attribution(role="contentinfo" aria-hidden="true")
+      |Challenge by
+      |
+      a.attribution-link(href=srcAttrib target='_blank') Frontend Mentor
+      |
+      |coded by
+      |
+      a(href=srcGithub target='_blank') denik1981
+      |.

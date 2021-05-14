@@ -1,0 +1,14 @@
+**/node_modules/*
+**/dist/*
+public/*
+
+.vscode/
+.vercel/
+
+.prettierrc
+
+*.sketch
+*.fig
+*.xd
+
+node_modules

@@ -1,0 +1,242 @@
+@charset 'utf-8';
+@use 'sass:color';
+@use 'sass:list';
+@use 'sass:map';
+
+/* var */
+$palette: (
+  "gray-base": hsl(0, 0%, 75%),
+  "gray-dark": hsl(0, 0%, 40%),
+  "gray-light": hsl(0, 0%, 90%),
+  "blue-dark-sat": hsl(229, 50%, 10%),
+  "blue-base": hsl(229, 23%, 23%),
+  "cyan-base": hsl(185, 75%, 39%),
+  "black": hsl(0, 0%, 20%),
+);
+
+// prettier-ignore
+$gradients: (
+  "bg-main": (map-get($palette, "cyan-base"), 90%, lighten(map-get($palette, "cyan-base"), 30%))
+);
+//prettier-ignore
+$typography: (
+  root: (1rem, 400, 'gray-base', null),
+  strong: (1.4rem, 700,'blue-base', 0.1em),
+  age: (1.5rem, 400,'gray-dark', null),
+  city: (0.9rem, 400,'gray-dark', 0.2em),
+  tally: (1.1rem, 400,'blue-base', 0.03em),
+  labels: (0.7rem, 400,'gray-dark', .1em),
+  attrib: (0.6rem, 400, 'black', 0.15em)
+);
+$images: (
+  "hero-top": "/~assets/bg-pattern-top.svg",
+  "hero-bottom": "/~assets/bg-pattern-bottom.svg",
+  "card-pattern": "/~assets/bg-pattern-card.svg",
+);
+
+// breakpoints
+$bk-landscape-sm: 420px;
+$bk-landscape-md: 490px;
+$bk-portrait-md: 400px;
+
+$user-img-h: 96px;
+$user-img-border-size: 4px;
+$user-info-margin-top: 1.3em;
+$user-age-margin-left: 0.2em;
+$user-city-margin-top: 0.2em;
+$bg-card-pattern-h: 140px;
+
+// Mixins & Functions
+@mixin makeFont($font) {
+  font-size: nth(map-get($typography, $font), 1);
+  font-weight: nth(map-get($typography, $font), 2);
+  color: map-get($palette, nth(map-get($typography, $font), 3));
+  letter-spacing: nth(map-get($typography, $font), 4);
+}
+
+/* Reset & Normalize */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  font-family: "Kumbh Sans", sans-serif;
+  @include makeFont("root");
+  line-height: 1.5;
+}
+
+/* Layout (BEM) */
+
+body {
+  $hero-top: map-get($images, "hero-top");
+  $hero-bottom: map-get($images, "hero-bottom");
+  $background: map-get($palette, "cyan-base");
+  $gradient: map-get($gradients, "bg-main");
+
+  position: relative;
+  display: flex;
+  height: 100vh;
+
+  // prettier-ignore
+  background-image:  url($hero-top), url($hero-bottom),linear-gradient($gradient) ;
+  background-position: bottom 50vh right 50vw, top 50vh left 50vw, top;
+  background-repeat: no-repeat;
+}
+
+.card {
+  $card-pattern: map-get($images, "card-pattern");
+
+  margin: auto;
+  display: grid;
+  grid-template-rows: $bg-card-pattern-h minmax(auto, 150px) 90px;
+  place-items: center center;
+
+  width: 85vw;
+  max-width: 350px;
+  height: 90vh;
+  max-height: 380px;
+
+  background: url($card-pattern) top center no-repeat, #fff;
+  border-radius: 1rem;
+}
+
+.user__picture {
+  place-self: end center;
+}
+
+.user__picture__img {
+  $border-size: $user-img-border-size;
+  display: block;
+
+  border-radius: 50%;
+  box-shadow: 0 0 0 $border-size #fff;
+  transform: translateY(($user-img-h / 2) - ($bg-card-pattern-h / 2));
+
+  // Place the image in the center of the card pattern bg
+  @media (min-height: $bk-landscape-sm) {
+    transform: translateY(50%);
+  }
+}
+
+.user__info {
+  $user-img-h: $user-img-h;
+  $user-img-border-size: $user-img-border-size;
+  $margin-top: $user-info-margin-top;
+
+  place-self: start center;
+  margin-top: 1em;
+  @media (min-height: 350px) {
+    margin-top: 2em;
+  }
+  @media (min-height: $bk-landscape-sm) {
+    margin-top: calc(
+      #{$margin-top} + (#{$user-img-h} / 2) + #{$user-img-border-size}
+    );
+  }
+}
+
+.user__caption {
+  display: inline-block;
+  @include makeFont("strong");
+}
+
+.user__caption--age {
+  $margin-left: $user-age-margin-left;
+  margin-left: $margin-left;
+  @include makeFont("age");
+}
+
+.user__caption,
+.user__caption--age {
+  @media (min-height: $bk-landscape-sm) {
+    font-size: 1.125rem;
+  }
+}
+
+.user__caption--city {
+  $margin-top: $user-city-margin-top;
+  display: block;
+  margin-top: $margin-top;
+  text-align: center;
+  @include makeFont("city");
+  @media (min-height: $bk-landscape-sm) {
+    letter-spacing: 0;
+  }
+}
+
+.user__stats {
+  $border-color: map-get($palette, "gray-light");
+  place-self: stretch stretch;
+  min-height: 90px;
+  padding: 0 2em;
+  @media (min-height: $bk-landscape-sm) {
+    border-top: 1px solid $border-color;
+  }
+}
+
+.user__stats__items {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.user__stats__item {
+  flex: 1 0 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.user__stats__tally {
+  @include makeFont("tally");
+  @media (min-height: $bk-landscape-sm) {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+}
+
+.user__stats__label {
+  @include makeFont("labels");
+}
+
+.attribution {
+  display: none;
+  position: absolute;
+  bottom: 0.8em;
+  text-align: center;
+
+  width: 100%;
+
+  @include makeFont("attrib");
+  word-spacing: 0.1em;
+
+  a {
+    color: map-get($palette, "blue-dark");
+    &:hover {
+      font-weight: 700;
+    }
+  }
+
+  @media (min-height: $bk-landscape-md) and (min-width: $bk-portrait-md) {
+    display: block;
+  }
+}

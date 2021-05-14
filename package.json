@@ -1,0 +1,21 @@
+{
+  "name": "fem-denik1981",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontend Mentor (frontendmentor.io) Challenges by denik1981",
+  "author": "denik1981",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denik1981/FEM.git"
+  },
+  "workspaces": [
+    "./challenges/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces"
+  },
+  "dependencies": {
+    "npm": "^7.12.1"
+  }
+}
