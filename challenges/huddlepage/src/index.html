@@ -4,16 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dummy</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/1807313955.js" crossorigin="anonymous"></script>
+    <title>Huddle Landing Page</title>
   </head>
-  <body>
-    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
-      <div class="flex-shrink-0">
-        <img class="h-12 w-12" src="https://source.unsplash.com/random/100x100" alt="ChitChat Logo" />
+  <body class="flex min-h-screen px-6 text-gray-300 text-sm bg-hero">
+    <div class="grid grid-cols-2 auto-rows-auto place-items-center mx-auto max-w-5xl">
+      <img class="col-span-full w-28 mt-8 transform -translate-x-2/3" src="~assets/logo.svg" />
+      <img class="col-span-full w-64 px-4 mt-8 md:col-span-1" src="~assets/illustration.svg" />
+      <div class="col-span-full max-w-sm mt-4 text-center md:col-span-1">
+        <h1 class="capitalize font-display font-semibold max-w-20ch mx-auto text-lg text-white">
+          Build the community your fans will love
+        </h1>
+        <p class="max-w-xs font-body mt-2 px-1">
+          Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create
+          connections with your users as you engage in genuine discussion.
+        </p>
+        <button class="px-16 py-2 mt-8 mb-4 bg-white text-myViolet rounded-3xl tracking-widest">Register</button>
       </div>
-      <div>
-        <div class="text-xl font-medium text-black">ChitChat</div>
-        <p class="text-gray-500">You have a new message!</p>
+      <div class="col-span-full mb-2 space-x-3">
+        <i class="fab fa-facebook"></i><i class="fab fa-twitter-square"></i><i class="fab fa-instagram-square"></i>
       </div>
     </div>
   </body>
