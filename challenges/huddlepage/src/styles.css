@@ -1,0 +1,25 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer utilities {
+  @responsive {
+    .bg-size-410px {
+      background-size: 410px;
+    }
+    .bg-size-190vh {
+      background-size: 190vh;
+    }
+    .bg-moveup-5vh {
+      background-position: center -5vh;
+    }
+  }
+}
+
+@layer components {
+  .bg-hero {
+    @apply bg-myHeroMobile bg-no-repeat bg-fixed bg-moveup-5vh bg-primary bg-size-410px;
+    @apply xs:bg-none;
+    @apply md:bg-myHeroDesktop md:bg-left md:bg-size-190vh;
+  }
+}
