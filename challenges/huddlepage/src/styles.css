@@ -4,8 +4,8 @@
 
 @layer utilities {
   @responsive {
-    .bg-size-380px {
-      background-size: 380px;
+    .bg-size-410px {
+      background-size: 410px;
     }
     .bg-size-190vh {
       background-size: 190vh;
@@ -18,7 +18,7 @@
 
 @layer components {
   .bg-hero {
-    @apply bg-myHeroMobile bg-no-repeat bg-fixed bg-moveup-5vh bg-myViolet bg-size-380px;
+    @apply bg-myHeroMobile bg-no-repeat bg-fixed bg-moveup-5vh bg-primary bg-size-410px;
     @apply xs:bg-none;
     @apply md:bg-myHeroDesktop md:bg-left md:bg-size-190vh;
   }
