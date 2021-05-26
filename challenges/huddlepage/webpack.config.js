@@ -3,16 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const stylesHandler = MiniCssExtractPlugin.loader;
 
 const config = {
   devtool: 'source-map',
   entry: './src/index.js',
   output: {
-    clean: true,
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'assets/[hash][ext]',
-    publicPath: '/profilecard/',
+    publicPath: '/huddlelandingpage/',
   },
   resolve: {
     alias: {
@@ -21,22 +19,23 @@ const config = {
   },
   devServer: {
     open: true,
+    openPage: 'huddlelandingpage/',
     host: 'localhost',
     contentBase: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: 'src/index.pug' }),
+    new HtmlWebpackPlugin({ template: 'src/index.html' }),
     new MiniCssExtractPlugin({ filename: '[name].css' }),
   ],
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
-        use: [stylesHandler, 'css-loader', { loader: 'sass-loader' /* , options: { sourceMap: true } */ }],
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.pug$/i,
-        use: ['html-loader', 'pug-html-loader'],
+        test: /\.html$/i,
+        use: ['html-loader'],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
@@ -51,10 +50,11 @@ module.exports = () => {
     config.mode = 'production';
     config.stats = 'summary';
     config.output.path = path.resolve(__dirname, `../../public/${path.basename(__dirname)}`);
-    config.output.publicPath = '/profilecard/';
+    config.output.publicPath = '/huddlelandingpage/';
   } else {
     config.mode = 'development';
     config.stats = 'normal';
+    config.stats.errorStack = false;
   }
   return config;
 };
