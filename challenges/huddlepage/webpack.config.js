@@ -12,7 +12,7 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/huddlelandingpage/',
+    publicPath: '/huddlepage/',
     assetModuleFilename: 'assets/[hash][ext]',
   },
   resolve: {
@@ -22,7 +22,7 @@ const config = {
   },
   devServer: {
     open: { app: [''] },
-    openPage: 'huddlelandingpage/',
+    openPage: 'huddlepage/',
     host: 'localhost',
   },
 
@@ -52,7 +52,7 @@ module.exports = (env) => {
     config.mode = 'production';
     config.output.clean = true;
     config.output.path = path.resolve(__dirname, `../../public/${path.basename(__dirname)}`);
-    config.output.publicPath = '/huddlelandingpage/';
+    config.output.publicPath = '/huddlepage/';
     config.plugins.push(new MiniCssExtractPlugin({ filename: '[name].[contenthash].css', chunkFilename: '[id].[contenthash].css' }));
   } else {
     config.mode = 'development';
