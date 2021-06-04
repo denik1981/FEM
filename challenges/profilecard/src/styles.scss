@@ -128,7 +128,9 @@ body {
 
   border-radius: 50%;
   box-shadow: 0 0 0 $border-size #fff;
-  transform: translateY(($user-img-h / 2) - ($bg-card-pattern-h / 2));
+  transform: translateY(
+    math.div($user-img-h, 2) - math.div($bg-card-pattern-h, 2)
+  );
 
   // Place the image in the center of the card pattern bg
   @media (min-height: $bk-landscape-sm) {
@@ -148,7 +150,7 @@ body {
   }
   @media (min-height: $bk-landscape-sm) {
     margin-top: calc(
-      #{$margin-top} + (#{$user-img-h} / 2) + #{$user-img-border-size}
+      #{$margin-top} + math.div(#{$user-img-h}, 2) + #{$user-img-border-size}
     );
   }
 }
