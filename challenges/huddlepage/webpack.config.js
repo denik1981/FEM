@@ -43,12 +43,6 @@ const config = {
         test: /\.css$/i,
         use: [stylesHandler, 'css-loader', 'postcss-loader'],
       },
-
-      // {
-      //   test: /\.html$/,
-      //   use: ['html-loader'],
-      // },
-
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
         type: 'asset/resource',
