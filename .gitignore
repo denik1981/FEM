@@ -1,7 +1,7 @@
 **/node_modules/*
 **/dist/*
 public/*
-**/proto/**
+**/_/**
 
 .vscode/
 .vercel/
