@@ -3,14 +3,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
-
+const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
 const config = {
-  devtool: 'source-map',
-  entry: './src/index.js',
+  stats: 'summary',
+  entry: {
+    main: path.resolve(__dirname, 'src/index.js'),
+    404: path.resolve(__dirname, 'src/404/404.js'),
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: 'assets/[hash][ext]',
     publicPath: '/huddlelandingpage/',
+    assetModuleFilename: 'assets/[hash][ext]',
   },
   resolve: {
     alias: {
@@ -18,24 +21,23 @@ const config = {
     },
   },
   devServer: {
-    open: true,
+    open: { app: [''] },
     openPage: 'huddlelandingpage/',
     host: 'localhost',
-    contentBase: path.resolve(__dirname, 'dist'),
   },
+
   plugins: [
-    new HtmlWebpackPlugin({ template: 'src/index.html' }),
-    new MiniCssExtractPlugin({ filename: '[name].css' }),
+    new HtmlWebpackPlugin({ chunks: ['main'], filename: 'index.html', template: 'html-loader!src/index.html' }),
+    new HtmlWebpackPlugin({ chunks: ['404'], filename: '404.html', template: 'html-loader!src/404/404.html' }),
   ],
+  optimization: {
+    runtimeChunk: 'single',
+  },
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
-      },
-      {
-        test: /\.html$/i,
-        use: ['html-loader'],
+        use: [stylesHandler, 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
@@ -45,16 +47,16 @@ const config = {
   },
 };
 
-module.exports = () => {
+module.exports = (env) => {
   if (isProduction) {
     config.mode = 'production';
-    config.stats = 'summary';
+    config.output.clean = true;
     config.output.path = path.resolve(__dirname, `../../public/${path.basename(__dirname)}`);
     config.output.publicPath = '/huddlelandingpage/';
+    config.plugins.push(new MiniCssExtractPlugin({ filename: '[name].[contenthash].css', chunkFilename: '[id].[contenthash].css' }));
   } else {
     config.mode = 'development';
-    config.stats = 'normal';
-    config.stats.errorStack = false;
+    config.devServer.open.app = env.browser;
   }
   return config;
 };
