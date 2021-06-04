@@ -14,8 +14,8 @@
     <title>Huddle Landing Page</title>
   </head>
   <body class="container__main">
-    <div class="container__flex">
-      <div class="hero">
+    <main class="container__flex">
+      <section class="hero">
         <img class="hero__logo" src="<%=require('assets/logo.svg')%>" />
         <img class="hero__illustration" src="<%=require('assets/illustration.svg')%>" />
         <div class="hero__message">
@@ -26,17 +26,18 @@
             Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create
             connections with your users as you engage in genuine discussion.
           </p>
+          <!-- Could't extracted this utilities. The postcss compiler fails when I try to extracted them with @apply -->
           <button class="hero__button xl:hover:transition-all xl:active:transition-all xl:hover:font-bold" onclick="window.location.href='<%=__webpack_public_path__%>404.html'">
             Register
           </button>
         </div>
-      </div>
-      <div class="hero__social">
+      </section>
+      <footer class="hero__social">
         <% ['fa-facebook', 'fa-twitter-square', 'fa-instagram-square'].forEach( (socialIcon) => { %>
         <a href="<%=__webpack_public_path__%>404.html" class="hero__social__icon lg:hover:transition-all lg:active:transition-all"><i class="fab <%= socialIcon %>"></i></a> 
         <% }) %>
-      </div>
-    </div>
+      </footer>
+    </main>
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded",function(){
         document.querySelector('.preload-transitions').classList.remove('disable-transitions');

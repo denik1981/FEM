@@ -66,9 +66,10 @@
 }
 
 .hero__button {
-  @apply mt-4 mb-16 px-16 capitalize align-middle leading-10 bg-white text-primary rounded-3xl tracking-widest transform duration-200;
-  @apply xl:shadow-btn xl:hover:bg-gray-300 xl:focus:outline-magenta xl:active:bg-gray-200 xl:active:scale-100;
-  @apply xl:hover:scale-105;
+  @apply mt-4 mb-16 px-16 capitalize align-middle leading-10 bg-white text-primary rounded-3xl tracking-widest;
+  @apply xl:shadow-btn;
+  @apply transform duration-200;
+  @apply xl:hover:scale-105 xl:hover:bg-gray-300 xl:focus:outline-magenta xl:active:bg-gray-200 xl:active:scale-100;
 }
 
 .hero__social {
@@ -78,5 +79,5 @@
 
 .hero__social__icon {
   @apply inline-block transform duration-100;
-  @apply lg:hover:text-purple-100 lg:focus:outline-magenta lg:hover:scale-105 lg:active:text-purple-300 lg:active:scale-100 lg:focus:text-purple-100;
+  @apply lg:hover:text-purple-100 lg:hover:scale-105 lg:active:text-purple-300 lg:active:scale-100 lg:focus:text-purple-100 lg:focus:outline-magenta;
 }
