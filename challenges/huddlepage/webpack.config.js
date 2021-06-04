@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const isProduction = process.env.NODE_ENV === 'production';
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
 const config = {
+  devtool: 'inline-source-map',
   stats: 'summary',
   entry: {
     main: path.resolve(__dirname, 'src/index.js'),
