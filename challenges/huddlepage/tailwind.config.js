@@ -4,6 +4,9 @@ module.exports = {
   important: false,
   theme: {
     extend: {
+      gridTemplateColumns: {
+        desktop: '60% 40%',
+      },
       colors: {
         primary: '#6648b1',
       },
@@ -12,7 +15,7 @@ module.exports = {
         body: ['Open Sans', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
-        fluid: 'clamp(1.3rem, 2.5vw , 2rem)',
+        fluidh: 'clamp(1.2rem, 5vw, 2rem)',
       },
       backgroundImage: () => ({
         myHeroDesktop: "url('~assets/bg-desktop.svg')",
@@ -22,15 +25,21 @@ module.exports = {
         '20ch': '20ch',
       },
       boxShadow: {
-        btn: '0 10px 5px -2px rgba(0,0,0,0.3)',
+        btn: '0 7px 5px -2px rgba(0,0,0,0.3)',
       },
-      gridTemplateRows: {
-        desktop: '5rem auto 3rem',
+      outline: {
+        magenta: ['1px dashed #22183A', '6px'],
       },
-      screens: {
-        xs: '380px',
-        ...defaultTheme.screens,
-      },
+    },
+  },
+  variants: {
+    extend: {
+      textColor: ['active'],
+      backgroundColor: ['active'],
+      scale: ['active', 'focus'],
+      boxShadow: ['active'],
+      ringWidth: ['active'],
+
     },
   },
 };
