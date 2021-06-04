@@ -4,22 +4,22 @@
 
 @layer utilities {
   @responsive {
-    .bg-size-410px {
-      background-size: 410px;
+    .bg-size-100vw {
+      background-size: 100vw;
     }
     .bg-size-190vh {
       background-size: 190vh;
-    }
-    .bg-moveup-5vh {
-      background-position: center -5vh;
     }
   }
 }
 
 @layer components {
   .bg-hero {
-    @apply bg-myHeroMobile bg-no-repeat bg-fixed bg-moveup-5vh bg-primary bg-size-410px;
-    @apply xs:bg-none;
-    @apply md:bg-myHeroDesktop md:bg-left md:bg-size-190vh;
+    @apply bg-myHeroMobile bg-no-repeat bg-fixed bg-size-100vw bg-primary;
+    @apply lg:bg-myHeroDesktop lg:bg-left lg:bg-size-190vh;
   }
+}
+
+.disable-transitions * {
+  transition: none;
 }

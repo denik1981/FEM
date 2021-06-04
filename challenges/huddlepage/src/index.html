@@ -4,90 +4,114 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="~assets/favicon.png" type="image/png" sizes="32x32" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/1807313955.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>Huddle Landing Page</title>
   </head>
-  <body class="flex min-h-screen px-6 text-gray-300 text-sm bg-hero">
-    <div
-      class="
-        main-container
-        grid grid-cols-2
-        place-items-center
-        gap-x-5
-        mx-auto
-        w-full
-        max-w-6xl
-        px-5
-        md:grid-rows-desktop
-      "
-    >
-      <img
-        class="
-          col-span-full
-          w-28
-          mt-8
-          transform
-          -translate-x-2/3
-          md:place-self-start
-          md:self-end
-          md:transform-none
-          md:w-40
-        "
-        src="~assets/logo.svg"
-      />
-      <img
-        class="col-span-full w-64 px-4 mt-8 md:col-span-1 md:object-cover md:w-auto"
-        src="~assets/illustration.svg"
-      />
-      <div
-        class="
-          col-span-full
-          flex flex-col
-          place-items-center
-          max-w-sm
-          mt-4
-          text-center
-          md:col-span-1
-          md:text-left
-          md:place-items-start
-          bg-transparent
-        "
-      >
-        <h1 class="capitalize font-display font-semibold max-w-20ch text-fluid leading-snug text-white">
-          Build the community your fans will love
-        </h1>
-        <p class="max-w-xs font-body mt-2 px-1">
-          Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create
-          connections with your users as you engage in genuine discussion.
-        </p>
-        <button
-          class="px-16 py-2 mt-8 mb-4 bg-white text-primary rounded-3xl tracking-widest shadow-btn md:px-12 md:py-3"
-        >
-          Register
-        </button>
+  <body class="disable-transitions h-full text-base text-gray-300 bg-hero">
+    <div class="w-10/12 flex flex-col justify-between min-h-screen mx-auto | lg:max-w-6xl ">
+      <div class="grid grid-cols-1 auto-rows-max gap-x-20 gap-y-4 | lg:grid-cols-desktop lg:gap-y-0 ">
+        <img class="block w-36 col-span-full pt-8 pb-2 | md:w-52 | lg:pt-12  " src="~assets/logo.svg" />
+        <img class="block w-full pb-8 | lg:mt-12" src="~assets/illustration.svg" />
+        <div class="flex flex-col gap-y-4 items-center text-center | lg:justify-center lg:items-start lg:text-left">
+          <h1
+            class="capitalize font-display font-semibold text-fluidh leading-snug text-white | sm:w-full | lg:max-w-20ch"
+          >
+            Build the community <br class='hidden lg:inline'/> your <br class='inline lg:hidden'/> fans will love
+          </h1>
+          <p class="font-body | lg:max-w-prose lg:font-bold">
+            Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create
+            connections with your users as you engage in genuine discussion.
+          </p>
+          <button
+            class="
+              mt-4
+              mb-16
+              px-16
+              capitalize
+              align-middle
+              leading-10
+              bg-white
+              text-primary
+              rounded-3xl
+              tracking-widest
+              transform
+              duration-200 |
+              xl:shadow-btn
+              xl:hover:bg-gray-300
+              xl:hover:transition-all
+              xl:focus:outline-magenta
+              xl:active:bg-gray-200
+              xl:active:transition-all
+              xl:active:scale-100
+              xl:hover:scale-105
+              xl:hover:font-bold
+            "
+            onclick="window.location.href='./404.html';"
+          >
+            Register
+          </button>
+        </div>
       </div>
-      <div
-        class="
-          col-span-full
-          space-x-5
-          text-purple-300
-          mb-2
-          leading-none
-          text-center
-          md:text-2xl
-          md:place-self-end
-          md:self-start
-          md:mr-20
-          landscape:hidden
-        "
-      >
-        <i class="fab fa-facebook"></i><i class="fab fa-twitter-square"></i><i class="fab fa-instagram-square"></i>
+      <!-- #social can be remove. It's only purpose is to prevent the page to scroll up while the link taget is '#'' -->
+      <div id="social" class=" text-purple-300 text-center space-x-10 pb-5 sm:text-4xl | lg:pr-3 lg:text-right ">
+        <a
+          href="./404.html"
+          class="inline-block transform duration-100 | 
+          lg:hover:text-purple-100
+            lg:focus:outline-magenta
+            lg:hover:scale-105
+            lg:hover:transition-all
+            lg:active:transition-all
+            lg:active:text-purple-300
+            lg:active:scale-100
+            lg:focus:text-purple-100
+          "
+          ><i class="fab fa-facebook"></i></a
+        ><a
+          href="./404.html"
+          class="
+            inline-block
+            transform
+            duration-100 |
+            lg:hover:text-purple-100
+            lg:focus:outline-magenta
+            lg:hover:scale-105
+            lg:hover:transition-all
+            lg:active:transition-all
+            lg:active:text-purple-300
+            lg:active:scale-100
+            lg:focus:text-purple-100
+          "
+          ><i class="fab fa-twitter-square"></i></a
+        ><a
+          href="./404.html"
+          class="
+            inline-block
+            transform
+            duration-100 |
+            lg:hover:text-purple-100
+            lg:focus:outline-magenta
+            lg:hover:scale-105
+            lg:hover:transition-all
+            lg:active:transition-all
+            lg:active:text-purple-300
+            lg:active:scale-100
+            lg:focus:text-purple-100
+          "
+          ><i class="fab fa-instagram-square"></i
+        ></a>
       </div>
     </div>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded",function(){
+        document.querySelector('.preload-transitions').classList.remove('disable-transitions');
+      });
+    </script></script>
   </body>
 </html>
