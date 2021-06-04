@@ -13,67 +13,28 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>Huddle Landing Page</title>
   </head>
-  <body class="disable-transitions h-full text-base text-gray-300 bg-hero">
-    <div class="w-10/12 flex flex-col justify-between min-h-screen mx-auto | lg:max-w-6xl ">
-      <div class="grid grid-cols-1 auto-rows-max gap-x-20 gap-y-10 | lg:grid-cols-desktop lg:gap-y-0 ">
-        <img class="block w-36 col-span-full pt-8 pb-2 | md:w-52 | lg:pt-12  " src="<%=require('assets/logo.svg')%>" />
-        <img class="block w-full pb-8 | lg:mt-12" src="<%=require('assets/illustration.svg')%>" />
-        <div class="flex flex-col gap-y-4 items-center text-center | lg:justify-center lg:items-start lg:text-left">
-          <h1
-            class="capitalize font-display font-semibold text-fluidh leading-snug text-white | sm:w-full | lg:max-w-20ch"
-          >
+  <body class="container__main">
+    <div class="container__flex">
+      <div class="hero">
+        <img class="hero__logo" src="<%=require('assets/logo.svg')%>" />
+        <img class="hero__illustration" src="<%=require('assets/illustration.svg')%>" />
+        <div class="hero__message">
+          <h1 class="hero__headline">
             Build the community <br class='hidden lg:inline'/>your fans will love
           </h1>
-          <p class="font-body | lg:max-w-prose lg:font-bold">
+          <p class="hero__text">
             Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create
             connections with your users as you engage in genuine discussion.
           </p>
-          <button
-            class="
-              mt-4
-              mb-16
-              px-16
-              capitalize
-              align-middle
-              leading-10
-              bg-white
-              text-primary
-              rounded-3xl
-              tracking-widest
-              transform
-              duration-200 |
-              xl:shadow-btn
-              xl:hover:bg-gray-300
-              xl:hover:transition-all
-              xl:focus:outline-magenta
-              xl:active:bg-gray-200
-              xl:active:transition-all
-              xl:active:scale-100
-              xl:hover:scale-105
-              xl:hover:font-bold
-            "
-            onclick="window.location.href='<%=__webpack_public_path__%>404.html'"
-          >
+          <button class="hero__button xl:hover:transition-all xl:active:transition-all xl:hover:font-bold" onclick="window.location.href='<%=__webpack_public_path__%>404.html'">
             Register
           </button>
         </div>
       </div>
-      <div class=" text-purple-300 text-center space-x-10 pb-5 sm:text-4xl | lg:pr-3 lg:text-right ">
+      <div class="hero__social">
         <% ['fa-facebook', 'fa-twitter-square', 'fa-instagram-square'].forEach( (socialIcon) => { %>
-        <a
-        href="<%=__webpack_public_path__%>404.html"
-        class="inline-block transform duration-100 | 
-        lg:hover:text-purple-100
-          lg:focus:outline-magenta
-          lg:hover:scale-105
-          lg:hover:transition-all
-          lg:active:transition-all
-          lg:active:text-purple-300
-          lg:active:scale-100
-          lg:focus:text-purple-100
-        "
-        ><i class="fab <%= socialIcon %>"></i></a> 
-      <% }) %>
+        <a href="<%=__webpack_public_path__%>404.html" class="hero__social__icon lg:hover:transition-all lg:active:transition-all"><i class="fab <%= socialIcon %>"></i></a> 
+        <% }) %>
       </div>
     </div>
     <script type="text/javascript">
