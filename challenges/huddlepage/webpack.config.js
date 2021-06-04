@@ -12,7 +12,7 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/huddlepage/',
+    publicPath: '',
     assetModuleFilename: 'assets/[hash][ext]',
   },
   resolve: {
@@ -22,13 +22,17 @@ const config = {
   },
   devServer: {
     open: { app: [''] },
-    openPage: 'huddlepage/',
+    // openPage: 'huddlepage/',
     host: 'localhost',
   },
 
   plugins: [
-    new HtmlWebpackPlugin({ chunks: ['main'], filename: 'index.html', template: 'html-loader!src/index.html' }),
-    new HtmlWebpackPlugin({ chunks: ['404'], filename: '404.html', template: 'html-loader!src/404/404.html' }),
+    new HtmlWebpackPlugin({
+      chunks: ['main'],
+      filename: 'index.html',
+      template: 'index.ejs',
+    }),
+    new HtmlWebpackPlugin({ chunks: ['404'], filename: '404.html', template: 'src/404/404.html' }),
   ],
   optimization: {
     runtimeChunk: 'single',
@@ -39,10 +43,17 @@ const config = {
         test: /\.css$/i,
         use: [stylesHandler, 'css-loader', 'postcss-loader'],
       },
+
+      // {
+      //   test: /\.html$/,
+      //   use: ['html-loader'],
+      // },
+
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
         type: 'asset/resource',
       },
+
     ],
   },
 };
