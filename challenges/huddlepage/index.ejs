@@ -22,7 +22,7 @@
           <h1
             class="capitalize font-display font-semibold text-fluidh leading-snug text-white | sm:w-full | lg:max-w-20ch"
           >
-            Build the community <br class='hidden lg:inline'/> your <br class='inline lg:hidden'/> fans will love
+            Build the community <br class='hidden lg:inline'/>your fans will love
           </h1>
           <p class="font-body | lg:max-w-prose lg:font-bold">
             Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create
@@ -59,52 +59,21 @@
         </div>
       </div>
       <div class=" text-purple-300 text-center space-x-10 pb-5 sm:text-4xl | lg:pr-3 lg:text-right ">
+        <% ['fa-facebook', 'fa-twitter-square', 'fa-instagram-square'].forEach( (socialIcon) => { %>
         <a
-          href="<%=__webpack_public_path__%>404.html"
-          class="inline-block transform duration-100 | 
-          lg:hover:text-purple-100
-            lg:focus:outline-magenta
-            lg:hover:scale-105
-            lg:hover:transition-all
-            lg:active:transition-all
-            lg:active:text-purple-300
-            lg:active:scale-100
-            lg:focus:text-purple-100
-          "
-          ><i class="fab fa-facebook"></i></a
-        ><a
-          href="<%=__webpack_public_path__%>404.html"
-          class="
-            inline-block
-            transform
-            duration-100 |
-            lg:hover:text-purple-100
-            lg:focus:outline-magenta
-            lg:hover:scale-105
-            lg:hover:transition-all
-            lg:active:transition-all
-            lg:active:text-purple-300
-            lg:active:scale-100
-            lg:focus:text-purple-100
-          "
-          ><i class="fab fa-twitter-square"></i></a
-        ><a
-          href="<%=__webpack_public_path__%>404.html"
-          class="
-            inline-block
-            transform
-            duration-100 |
-            lg:hover:text-purple-100
-            lg:focus:outline-magenta
-            lg:hover:scale-105
-            lg:hover:transition-all
-            lg:active:transition-all
-            lg:active:text-purple-300
-            lg:active:scale-100
-            lg:focus:text-purple-100
-          "
-          ><i class="fab fa-instagram-square"></i
-        ></a>
+        href="<%=__webpack_public_path__%>404.html"
+        class="inline-block transform duration-100 | 
+        lg:hover:text-purple-100
+          lg:focus:outline-magenta
+          lg:hover:scale-105
+          lg:hover:transition-all
+          lg:active:transition-all
+          lg:active:text-purple-300
+          lg:active:scale-100
+          lg:focus:text-purple-100
+        "
+        ><i class="fab <%= socialIcon %>"></i></a> 
+      <% }) %>
       </div>
     </div>
     <script type="text/javascript">
