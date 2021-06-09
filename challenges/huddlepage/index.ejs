@@ -34,7 +34,7 @@
       </section>
       <footer class="hero__social">
         <% ['fa-facebook', 'fa-twitter-square', 'fa-instagram-square'].forEach( (socialIcon) => { %>
-        <a href="<%=__webpack_public_path__%>404.html" class="hero__social__icon lg:hover:transition-all lg:active:transition-all"><i class="fab <%= socialIcon %>"></i></a> 
+        <a href="<%=__webpack_public_path__%>404.html" aria-label="<%=socialIcon.replace(/\w+-(\w*)(?:-\w*)*/,'$1')%> icon" class="hero__social__icon lg:hover:transition-all lg:active:transition-all"><i class="fab <%= socialIcon %>"></i></a> 
         <% }) %>
       </footer>
     </main>
