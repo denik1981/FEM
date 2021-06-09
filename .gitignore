@@ -4,6 +4,7 @@ public/*
 **/_/**
 
 .vscode/
+*.code-workspace
 .vercel/
 
 .prettierrc
