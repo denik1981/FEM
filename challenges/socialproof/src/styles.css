@@ -1,0 +1,82 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* @layer utilities {
+  @responsive {
+    .bg-size-100vw {
+      background-size: 100vw;
+    }
+    .bg-size-190vh {
+      background-size: 190vh;
+    }
+  }
+}
+
+@layer components {
+  .bg-hero {
+    @apply bg-myHeroMobile bg-no-repeat bg-fixed bg-size-100vw bg-primary;
+    @apply lg:bg-myHeroDesktop lg:bg-left lg:bg-size-190vh;
+  }
+} */
+
+.disable-transitions * {
+  transition: none;
+}
+.container__main {
+  @apply disable-transitions h-full font-primary text-sm text-primary;
+}
+
+/* .container__flex {
+  @apply w-10/12 flex flex-col justify-between min-h-screen mx-auto;
+  @apply lg:max-w-6xl;
+}
+
+.hero {
+  @apply grid grid-cols-1 auto-rows-max gap-x-20 gap-y-10;
+  @apply lg:grid-cols-desktop lg:gap-y-0;
+}
+
+.hero__logo {
+  @apply block w-36 col-span-full pt-8 pb-2;
+  @apply md:w-52;
+  @apply lg:pt-12;
+}
+
+.hero__illustration {
+  @apply block w-full pb-8;
+  @apply lg:mt-12;
+}
+
+.hero__message {
+  @apply flex flex-col gap-y-4 items-center text-center;
+  @apply lg:justify-center lg:items-start lg:text-left;
+}
+
+.hero__headline {
+  @apply capitalize font-display font-semibold text-fluidh leading-snug text-white;
+  @apply sm:w-full;
+  @apply lg:max-w-20ch;
+}
+
+.hero__text {
+  @apply font-body;
+  @apply lg:max-w-prose lg:font-bold;
+}
+
+.hero__button {
+  @apply mt-4 mb-16 px-16 capitalize align-middle leading-10 bg-white text-primary rounded-3xl tracking-widest;
+  @apply xl:shadow-btn;
+  @apply transform duration-200;
+  @apply xl:hover:scale-105 xl:hover:bg-gray-300 xl:focus:outline-magenta xl:active:bg-gray-200 xl:active:scale-100;
+}
+
+.hero__social {
+  @apply text-purple-300 text-center space-x-10 pb-5 sm:text-4xl;
+  @apply lg:pr-3 lg:text-right;
+}
+
+.hero__social__icon {
+  @apply inline-block transform duration-100;
+  @apply lg:hover:text-purple-100 lg:hover:scale-105 lg:active:text-purple-300 lg:active:scale-100 lg:focus:text-purple-100 lg:focus:outline-magenta;
+} */
