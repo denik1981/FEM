@@ -1,18 +1,16 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   purge: ['./index.ejs'],
-  // important: false,
   theme: {
     extend: {
       colors: {
-        primary: { DEFAULT: 'hsl(300, 43%, 22%)', light: 'hsl(303, 10%, 53%)' },
-        secondary: 'hsl(333, 80%, 67%)',
-        neutral: 'hsl(300, 24%, 96%)',
+        primary: { DEFAULT: 'var(--cl-primary)', light: 'var(--cl-primary-light)' },
+        secondary: { DEFAULT: 'var(--cl-secondary)' },
+        neutral: { DEFAULT: 'var(--cl-neutral)', light: 'var(--cl-neutral-light)' }
       },
       fontFamily: {
-        primary: ['Spartan', ...defaultTheme.fontFamily.sans],
-      },
+        primary: ['Spartan', ...defaultTheme.fontFamily.sans]
+      }
       // gridTemplateColumns: {
       // desktop: '60% 40%',
       // },
@@ -33,7 +31,7 @@ module.exports = {
       // outline: {
       // magenta: ['1px dashed #22183A', '6px'],
       // },
-    },
+    }
   },
   variants: {
     extend: {
@@ -41,8 +39,8 @@ module.exports = {
       backgroundColor: ['active'],
       scale: ['active', 'focus'],
       boxShadow: ['active'],
-      ringWidth: ['active'],
+      ringWidth: ['active']
 
-    },
-  },
-};
+    }
+  }
+}

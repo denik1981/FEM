@@ -2,6 +2,29 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+:root {
+  --cl-primary: hsl(300, 43%, 22%);
+  --cl-primary-light: hsl(303, 10%, 53%);
+  --cl-secondary: hsl(333, 80%, 67%);
+  --cl-neutral: hsl(303, 10%, 53%);
+  --cl-neutral-light: hsl(300, 24%, 96%);
+  --cl-misc-star: hsl(28, 84%, 61%);
+  --font-primary: "Spartan";
+  --icon-star: url("~assets/misc/icon-star.svg");
+}
+
+h1 {
+  /* max-width: 13ch; */
+  margin: auto;
+}
+
+.rating__cat:before {
+  display: block;
+  content: "★★★★★";
+  font-size: 1.25rem;
+  color: var(--cl-misc-star);
+  letter-spacing: 0.5rem;
+}
 /* @layer utilities {
   @responsive {
     .bg-size-100vw {
@@ -20,12 +43,8 @@
   }
 } */
 
-.disable-transitions * {
-  transition: none;
-}
-.container__main {
-  @apply disable-transitions h-full font-primary text-sm text-primary;
-}
+/* .container__main {
+} */
 
 /* .container__flex {
   @apply w-10/12 flex flex-col justify-between min-h-screen mx-auto;
