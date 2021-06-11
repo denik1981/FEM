@@ -69,7 +69,9 @@
   @apply mt-4 mb-16 px-16 capitalize align-middle leading-10 bg-white text-primary rounded-3xl tracking-widest;
   @apply xl:shadow-btn;
   @apply transform duration-200;
-  @apply xl:hover:scale-105 xl:hover:bg-gray-300 xl:focus:outline-magenta xl:active:bg-gray-200 xl:active:scale-100;
+  @apply xl:hover:transition-all xl:hover:scale-105 xl:hover:bg-gray-300 xl:hover:font-bold;
+  @apply xl:focus:outline-magenta;
+  @apply xl:hover:transition-all xl:hover:scale-105 xl:hover:bg-gray-300 xl:hover:font-bold;
 }
 
 .hero__social {

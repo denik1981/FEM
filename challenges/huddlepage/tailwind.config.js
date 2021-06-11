@@ -43,7 +43,9 @@ module.exports = {
       backgroundColor: ['active'],
       scale: ['active', 'focus'],
       boxShadow: ['active'],
-      ringWidth: ['active']
+      ringWidth: ['active'],
+      fontWeight: ['hover'],
+      transitionProperty: ['hover', 'active']
 
     }
   }
