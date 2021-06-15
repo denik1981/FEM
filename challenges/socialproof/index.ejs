@@ -10,62 +10,109 @@
     <title>Frontend Mentor | Social Proof Section</title>
   </head>
   <body class="h-full flex justify-center text-sm text-neutral">
-    <main class="grid w-10/12 max-w-screen-xl min-h-screen gap-y-12 py-16 font-primary text-center">
-      <div>
-        <h1 class="text-3xl font-bold text-primary mb-4">10,000+ of our users love our products.</h1>
-        <p>
+    <main class="grid lg:grid-cols-2 w-10/12 max-w-6xl min-h-screen gap-y-16 py-16 font-primary text-center">
+      <div class="lg:text-left lg:w-5/6">
+        <h1 class="text-4xl xl:text-5xl font-bold text-primary mb-4">10,000+ of our users love our products.</h1>
+        <p class="text-lg font-medium leading-relaxed">
           We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our
           services.
         </p>
       </div>
 
-      <ul class="flex flex-col sm:flex-row justify-around gap-6 text-center text-primary font-bold">
-        <li class="rating__cat flex flex-col gap-3 bg-neutral-light rounded-lg py-4 px-4 flex-grow">
+      <ul class="flex flex-col sm:flex-row lg:flex-col xl:items-center gap-6 justify-around text-center font-bold text-primary">
+        <li
+          class="
+            rating__cat
+            flex flex-col
+            lg:flex-row
+            xl:self-start
+            gap-y-3
+            lg:gap-x-5
+            bg-neutral-light
+            rounded-xl
+            py-0.5
+            px-8
+            items-center
+            lg:pr-24
+            flex-grow
+          "
+        >
           <p>Rated 5 Stars in Reviews</p>
         </li>
-        <li class="rating__cat flex flex-col gap-3 bg-neutral-light rounded-lg py-4 px-4 flex-grow">
+        <li
+          class="
+            rating__cat
+            flex flex-col
+            lg:flex-row
+            gap-y-3
+            lg:gap-x-5
+            bg-neutral-light
+            rounded-xl
+            py-0.5
+            px-8
+            items-center
+            lg:pr-24
+            flex-grow
+          "
+        >
           <p>Rated 5 Stars in Reviews</p>
         </li>
-        <li class="rating__cat flex flex-col gap-3 bg-neutral-light rounded-lg py-4 px-4 flex-grow">
+        <li
+          class="
+            rating__cat
+            flex flex-col
+            lg:flex-row
+            gap-y-3
+            lg:gap-x-5
+            xl:self-end
+            bg-neutral-light
+            rounded-xl
+            py-0.5
+            px-8
+            items-center
+            lg:pr-24
+            flex-grow
+          "
+        >
           <p>Rated 5 Stars in Reviews</p>
         </li>
       </ul>
-      <ul class="flex flex-col lg:flex-row gap-4 text-left">
-        <li class="text-white px-8 py-12 bg-primary rounded-lg">
-          <div class="flex h-12 gap-5 mb-8 w-max md:mx-auto">
+      <ul class="col-span-full flex flex-col lg:flex-row xl:items-center gap-6 text-left text-sm leading-loose">
+        <li class="text-white px-8 py-8 bg-primary rounded-xl xl:mb-8">
+          <div class="flex h-12 gap-5 mb-8 w-max md:mx-auto lg:mx-0 lg:mr-auto">
             <img src="<%=require('assets/buyer/image-colton.jpg')%>" class="object-contain rounded-full" />
-            <div class="flex flex-col flex-1 justify-center gap-1 leading-none">
+            <div class="flex flex-col flex-1 justify-center gap-2 leading-none">
               <h2 class="font-bold text-white">Colton Smith</h2>
               <h3 class="text-secondary font-normal">Verified Buyer</h3>
             </div>
           </div>
-          <p class="clear-left font-medium md:text-center mx-auto max-w-lg lg:text-left">
+          <p class="review__quote md:text-center mx-auto max-w-lg lg:text-left">
             We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also
             received it in time. Excellent!
           </p>
         </li>
-        <li class="text-white px-8 py-12 bg-primary rounded-lg">
-          <div class="flex h-12 gap-5 mb-8 w-max md:mx-auto">
+        <li class="text-white px-8 py-8 bg-primary rounded-xl">
+          <div class="flex h-12 gap-5 mb-8 w-max md:mx-auto lg:mx-0 lg:mr-auto">
             <img src="<%=require('assets/buyer/image-colton.jpg')%>" class="object-contain rounded-full" />
-            <div class="flex flex-col flex-1 justify-center gap-1 leading-none">
+            <div class="flex flex-col flex-1 justify-center gap-2 leading-none">
               <h2 class="font-bold text-white">Colton Smith</h2>
               <h3 class="text-secondary font-normal">Verified Buyer</h3>
             </div>
           </div>
-          <p class="clear-left font-medium md:text-center mx-auto max-w-lg lg:text-left">
+          <p class="review__quote md:text-center mx-auto max-w-lg lg:text-left">
             We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also
             received it in time. Excellent!
           </p>
         </li>
-        <li class="text-white px-8 py-12 bg-primary rounded-lg">
-          <div class="flex h-12 gap-5 mb-8 w-max md:mx-auto">
+        <li class="text-white px-8 py-8 bg-primary rounded-xl xl:mt-8">
+          <div class="flex h-12 gap-5 mb-8 w-max md:mx-auto lg:mx-0 lg:mr-auto">
             <img src="<%=require('assets/buyer/image-colton.jpg')%>" class="object-contain rounded-full" />
-            <div class="flex flex-col flex-1 justify-center gap-1 leading-none">
+            <div class="flex flex-col flex-1 justify-center gap-2 leading-none">
               <h2 class="font-bold text-white">Colton Smith</h2>
               <h3 class="text-secondary font-normal">Verified Buyer</h3>
             </div>
           </div>
-          <p class="clear-left font-medium md:text-center mx-auto max-w-lg lg:text-left">
+          <p class="review__quote clear-left md:text-center mx-auto max-w-lg lg:text-left">
             We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also
             received it in time. Excellent!
           </p>
