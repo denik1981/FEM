@@ -1,0 +1,124 @@
+:root {
+  /* --cl-red: hsl(0, 78%, 62%)
+  --cl-cyan: hsl(0, 78%, 62%)
+  --cl-orange: hsl(0, 78%, 62%)
+  --cl-blue: hsl(303, 10%, 53%);
+
+  --cl-neutral-light: hsl(300, 24%, 96%);
+  --cl-misc-star: hsl(28, 84%, 61%); */
+
+  --ff-primary: "Poppins";
+}
+/*
+@responsive {
+  .bg-desktop {
+    background: var(--bg-top-desktop) fixed no-repeat, var(--bg-bottom-desktop) fixed no-repeat top 20vh left 10vw;
+  }
+}
+
+body {
+  @apply h-full;
+  @apply flex justify-center;
+  @apply font-primary text-sm text-neutral;
+  background: var(--bg-top-mobile) top left/80% fixed no-repeat, var(--bg-bottom-mobile) fixed no-repeat top 30vh right / 120%;
+  @apply lg:bg-desktop;
+}
+
+.global-container {
+  margin-top: 0;
+  background-image: none;
+}
+
+main {
+  @apply w-10/12 max-w-screen-2xl min-h-screen py-16;
+  @apply grid gap-y-24;
+  @apply lg:grid-cols-2;
+}
+
+header {
+  @apply text-center;
+  @apply lg:w-5/6 lg:text-left;
+}
+
+.title {
+  @apply mb-4;
+  @apply text-4xl font-bold text-primary;
+  @apply xl:text-5xl;
+}
+
+.lead {
+  @apply text-lg font-medium leading-relaxed;
+}
+
+.reviews {
+  @apply flex flex-col gap-6;
+  @apply text-center font-bold text-primary;
+  @apply sm:flex-row;
+  @apply lg:flex-col;
+  @apply xl:items-center;
+}
+
+.review {
+  @apply flex flex-col items-center flex-grow gap-y-3;
+  @apply py-0.5 px-4;
+
+  @apply bg-neutral-light rounded-xl;
+  @apply lg:flex-row lg:justify-center lg:gap-x-5;
+  @apply xl:pr-24;
+}
+
+.review:before {
+  content: "★ ★ ★ ★ ★";
+  color: var(--cl-misc-star);
+  @apply text-xl;
+}
+
+.quotes {
+  @apply col-span-full;
+  @apply flex flex-col gap-6;
+  @apply text-left text-white leading-loose;
+  @apply lg:flex-row;
+  @apply xl:items-start;
+}
+
+.quote {
+  @apply px-8 py-8;
+  @apply bg-primary rounded-xl;
+}
+
+.quote__header {
+  @apply w-max h-12 mb-8;
+
+  @apply grid gap-x-5 gap-y-2;
+  grid-template-columns: 1fr 3fr;
+
+  @apply capitalize leading-none;
+
+  @apply md:mx-auto;
+  @apply lg:mx-0 lg:mr-auto;
+}
+
+.quote__image {
+  @apply w-12 row-span-2 self-center;
+  @apply object-contain rounded-full;
+}
+
+.quote__name {
+  @apply self-end;
+  @apply font-bold text-white;
+}
+
+.quote__status {
+  @apply text-secondary font-normal;
+}
+
+.quote__text {
+  @apply max-w-lg mx-auto;
+  @apply md:text-center;
+  @apply lg:text-left;
+}
+
+.quote__text:before,
+.quote__text:after {
+  content: '"';
+} */
