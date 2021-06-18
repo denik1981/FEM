@@ -9,113 +9,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap" rel="stylesheet" />
     <title>Frontend Mentor | Social Proof Section</title>
   </head>
-  <body class="h-full flex justify-center text-sm text-neutral">
-    <main class="grid lg:grid-cols-2 w-10/12 max-w-6xl min-h-screen gap-y-16 py-16 font-primary text-center">
-      <div class="lg:text-left lg:w-5/6">
-        <h1 class="text-4xl xl:text-5xl font-bold text-primary mb-4">10,000+ of our users love our products.</h1>
-        <p class="text-lg font-medium leading-relaxed">
+  <body class="">
+    <main>
+      <header>
+        <h1 class="title">10,000+ of our users love our products.</h1>
+        <p class="lead">
           We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our
           services.
         </p>
-      </div>
+      </header>
 
-      <ul class="flex flex-col sm:flex-row lg:flex-col xl:items-center gap-6 justify-around text-center font-bold text-primary">
-        <li
-          class="
-            rating__cat
-            flex flex-col
-            lg:flex-row
-            xl:self-start
-            gap-y-3
-            lg:gap-x-5
-            bg-neutral-light
-            rounded-xl
-            py-0.5
-            px-8
-            items-center
-            lg:pr-24
-            flex-grow
-          "
-        >
-          <p>Rated 5 Stars in Reviews</p>
-        </li>
-        <li
-          class="
-            rating__cat
-            flex flex-col
-            lg:flex-row
-            gap-y-3
-            lg:gap-x-5
-            bg-neutral-light
-            rounded-xl
-            py-0.5
-            px-8
-            items-center
-            lg:pr-24
-            flex-grow
-          "
-        >
-          <p>Rated 5 Stars in Reviews</p>
-        </li>
-        <li
-          class="
-            rating__cat
-            flex flex-col
-            lg:flex-row
-            gap-y-3
-            lg:gap-x-5
-            xl:self-end
-            bg-neutral-light
-            rounded-xl
-            py-0.5
-            px-8
-            items-center
-            lg:pr-24
-            flex-grow
-          "
-        >
-          <p>Rated 5 Stars in Reviews</p>
-        </li>
+      <ul class="reviews">
+        <li class="review xl:self-start"><p>Rated 5 Stars in Reviews</p></li>
+        <li class="review"><p>Rated 5 Stars in Report Guru</p></li>
+        <li class="review xl:self-end"><p>Rated 5 Stars in BestTech</p></li>
       </ul>
-      <ul class="col-span-full flex flex-col lg:flex-row xl:items-center gap-6 text-left text-sm leading-loose">
-        <li class="text-white px-8 py-8 bg-primary rounded-xl xl:mb-8">
-          <div class="flex h-12 gap-5 mb-8 w-max md:mx-auto lg:mx-0 lg:mr-auto">
-            <img src="<%=require('assets/buyer/image-colton.jpg')%>" class="object-contain rounded-full" />
-            <div class="flex flex-col flex-1 justify-center gap-2 leading-none">
-              <h2 class="font-bold text-white">Colton Smith</h2>
-              <h3 class="text-secondary font-normal">Verified Buyer</h3>
-            </div>
+
+      <ul class="quotes">
+        <li class="quote">
+          <div class="quote__header">
+            <img src="<%=require('assets/buyer/image-colton.jpg')%>" class="quote__image" />
+            <h2 class="quote__name">Colton Smith</h2>
+            <h3 class="quote__status">Verified Buyer</h3>
           </div>
-          <p class="review__quote md:text-center mx-auto max-w-lg lg:text-left">
+          <blockquote class="quote_text">
             We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also
             received it in time. Excellent!
-          </p>
+          </blockquote>
         </li>
-        <li class="text-white px-8 py-8 bg-primary rounded-xl">
-          <div class="flex h-12 gap-5 mb-8 w-max md:mx-auto lg:mx-0 lg:mr-auto">
-            <img src="<%=require('assets/buyer/image-colton.jpg')%>" class="object-contain rounded-full" />
-            <div class="flex flex-col flex-1 justify-center gap-2 leading-none">
-              <h2 class="font-bold text-white">Colton Smith</h2>
-              <h3 class="text-secondary font-normal">Verified Buyer</h3>
-            </div>
+        <li class="quote xl:mt-8">
+          <div class="quote__header">
+            <img src="<%=require('assets/buyer/image-irene.jpg')%>" class="quote__image" />
+            <h2 class="quote__name">Irene Roberts</h2>
+            <h3 class="quote__status">Verified Buyer</h3>
           </div>
-          <p class="review__quote md:text-center mx-auto max-w-lg lg:text-left">
-            We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also
-            received it in time. Excellent!
-          </p>
+          <blockquote class="quote_text">
+            Customer service is always excellent and very quick turn around. Completely delighted with the simplicity of the purchase and
+            the speed of delivery.
+          </blockquote>
         </li>
-        <li class="text-white px-8 py-8 bg-primary rounded-xl xl:mt-8">
-          <div class="flex h-12 gap-5 mb-8 w-max md:mx-auto lg:mx-0 lg:mr-auto">
-            <img src="<%=require('assets/buyer/image-colton.jpg')%>" class="object-contain rounded-full" />
-            <div class="flex flex-col flex-1 justify-center gap-2 leading-none">
-              <h2 class="font-bold text-white">Colton Smith</h2>
-              <h3 class="text-secondary font-normal">Verified Buyer</h3>
-            </div>
+        <li class="quote xl:mt-16">
+          <div class="quote__header">
+            <img src="<%=require('assets/buyer/image-anne.jpg')%>" class="quote__image" />
+            <h2 class="quote__name">Anne Wallace</h2>
+            <h3 class="quote__status">Verified Buyer</h3>
           </div>
-          <p class="review__quote clear-left md:text-center mx-auto max-w-lg lg:text-left">
-            We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also
-            received it in time. Excellent!
-          </p>
+          <blockquote class="quote_text">
+            Put an order with this company and can only praise them for the very high standard. Will definitely use them again and recommend
+            them to everyone!
+          </blockquote>
         </li>
       </ul>
     </main>
