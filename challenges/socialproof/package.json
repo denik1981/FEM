@@ -7,6 +7,7 @@
   "private": true,
   "scripts": {
     "build": "webpack --mode=production --node-env=production",
+    "build:v": "webpack --mode=development -- --stats=verbose",
     "build:dev": "webpack --mode=development --node-env=development",
     "build:dev:v": "npm run build:dev -- --stats=verbose",
     "build:prod": "npm run build",
