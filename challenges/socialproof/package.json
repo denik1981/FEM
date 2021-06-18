@@ -6,12 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-<<<<<<< HEAD
     "build": "webpack --mode=production --node-env=production",
     "build:v": "webpack --mode=development -- --stats=verbose",
-=======
-    "build": "webpack --mode=production --node-env=production --stats=verbose",
->>>>>>> master
     "build:dev": "webpack --mode=development --node-env=development",
     "build:dev:v": "npm run build:dev -- --stats=verbose",
     "build:prod": "npm run build",
