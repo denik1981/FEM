@@ -13,7 +13,8 @@
     "./challenges/*"
   ],
   "scripts": {
-    "build": "npm run build --workspaces"
+    "build": "npm run build --workspaces",
+    "build:v": "npm run build:v --workspaces"
   },
   "dependencies": {
     "npm": "^7.12.1"
