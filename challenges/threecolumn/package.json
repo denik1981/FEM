@@ -1,0 +1,43 @@
+{
+  "name": "fem-threecolumnpreview",
+  "version": "1.0.0",
+  "description": "Three Column Preview Card Component",
+  "author": "denik1981",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode=production --node-env=production",
+    "build:v": "webpack --mode=development -- --stats=verbose",
+    "build:dev": "webpack --mode=development --node-env=development",
+    "build:dev:v": "npm run build:dev -- --stats=verbose",
+    "build:prod": "npm run build",
+    "debug": "node --inspect-brk $(npx which webpack) --mode=development",
+    "watch": "webpack --watch --mode=development",
+    "serve": "webpack serve",
+    "serve:fox": "webpack serve --env browser=firefox"
+  },
+  "devDependencies": {
+    "css-loader": "^5.2.4",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "postcss": "^8.3.0",
+    "postcss-import": "^14.0.2",
+    "postcss-loader": "^6.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "tailwind": "^4.0.0",
+    "tailwindcss": "^2.1.2"
+  }
+}
