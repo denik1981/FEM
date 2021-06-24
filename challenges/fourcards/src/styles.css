@@ -1,124 +1,76 @@
 :root {
-  /* --cl-red: hsl(0, 78%, 62%)
-  --cl-cyan: hsl(0, 78%, 62%)
-  --cl-orange: hsl(0, 78%, 62%)
-  --cl-blue: hsl(303, 10%, 53%);
+  --cl-red: hsl(0, 78%, 62%);
+  --cl-cyan: hsl(180, 62%, 55%);
+  --cl-orange: hsl(34, 97%, 64%);
+  --cl-blue: hsl(212, 86%, 64%);
 
-  --cl-neutral-light: hsl(300, 24%, 96%);
-  --cl-misc-star: hsl(28, 84%, 61%); */
+  --cl-neutral-300: hsl(234, 12%, 34%);
+  --cl-neutral-600: hsl(229, 6%, 66%);
 
   --ff-primary: "Poppins";
-}
-/*
-@responsive {
-  .bg-desktop {
-    background: var(--bg-top-desktop) fixed no-repeat, var(--bg-bottom-desktop) fixed no-repeat top 20vh left 10vw;
-  }
-}
 
+  --bg-icon-supervisor: url("~assets/icons/supervisor.svg");
+  --bg-icon-teambuilder: url("~assets/icons/teambuilder.svg");
+  --bg-icon-karma: url("~assets/icons/karma.svg");
+  --bg-icon-calculator: url("~assets/icons/calculator.svg");
+}
 body {
-  @apply h-full;
-  @apply flex justify-center;
-  @apply font-primary text-sm text-neutral;
-  background: var(--bg-top-mobile) top left/80% fixed no-repeat, var(--bg-bottom-mobile) fixed no-repeat top 30vh right / 120%;
-  @apply lg:bg-desktop;
-}
-
-.global-container {
-  margin-top: 0;
-  background-image: none;
-}
-
-main {
-  @apply w-10/12 max-w-screen-2xl min-h-screen py-16;
-  @apply grid gap-y-24;
-  @apply lg:grid-cols-2;
+  @apply w-10/12 h-full py-16 mx-auto;
+  @apply font-primary text-neutral-300;
 }
 
 header {
-  @apply text-center;
-  @apply lg:w-5/6 lg:text-left;
+  @apply text-center font-extralight;
+}
+header > h1 {
+  @apply text-2xl;
+  @apply lg:text-3xl;
+}
+header > h2 {
+  @apply font-semibold text-2xl lg:text-3xl;
+}
+header > p {
+  @apply max-w-lg mt-6 mx-auto;
+  @apply text-neutral-600;
 }
 
-.title {
-  @apply mb-4;
-  @apply text-4xl font-bold text-primary;
-  @apply xl:text-5xl;
+main {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  @apply grid gap-8;
+  @apply max-w-5xl mx-auto mt-20;
+  @apply lg:grid-flow-col lg:grid-cols-3 lg:grid-rows-4;
 }
 
-.lead {
-  @apply text-lg font-medium leading-relaxed;
+.card {
+  @apply h-52 pl-6 pr-8 py-4;
+  @apply border-t-4 rounded-md shadow-xl;
+  @apply text-sm;
+  @apply bg-supervisor bg-no-repeat bg-right-bottom bg-origin-content;
+  @apply lg:row-span-2;
 }
 
-.reviews {
-  @apply flex flex-col gap-6;
-  @apply text-center font-bold text-primary;
-  @apply sm:flex-row;
-  @apply lg:flex-col;
-  @apply xl:items-center;
+.card__title {
+  @apply font-semibold text-xl;
 }
 
-.review {
-  @apply flex flex-col items-center flex-grow gap-y-3;
-  @apply py-0.5 px-4;
-
-  @apply bg-neutral-light rounded-xl;
-  @apply lg:flex-row lg:justify-center lg:gap-x-5;
-  @apply xl:pr-24;
+.card__description {
+  @apply font-extralight mt-2 text-neutral-600;
 }
 
-.review:before {
-  content: "★ ★ ★ ★ ★";
-  color: var(--cl-misc-star);
-  @apply text-xl;
+.card:first-child,
+.card:last-child {
+  @apply lg:row-start-2;
 }
 
-.quotes {
-  @apply col-span-full;
-  @apply flex flex-col gap-6;
-  @apply text-left text-white leading-loose;
-  @apply lg:flex-row;
-  @apply xl:items-start;
+.card--supervisor {
+  @apply border-primary-cyan bg-supervisor;
 }
-
-.quote {
-  @apply px-8 py-8;
-  @apply bg-primary rounded-xl;
+.card--teambuilder {
+  @apply border-primary-red bg-teambuilder;
 }
-
-.quote__header {
-  @apply w-max h-12 mb-8;
-
-  @apply grid gap-x-5 gap-y-2;
-  grid-template-columns: 1fr 3fr;
-
-  @apply capitalize leading-none;
-
-  @apply md:mx-auto;
-  @apply lg:mx-0 lg:mr-auto;
+.card--karma {
+  @apply border-primary-orange bg-karma;
 }
-
-.quote__image {
-  @apply w-12 row-span-2 self-center;
-  @apply object-contain rounded-full;
+.card--calculator {
+  @apply border-primary-blue bg-calculator;
 }
-
-.quote__name {
-  @apply self-end;
-  @apply font-bold text-white;
-}
-
-.quote__status {
-  @apply text-secondary font-normal;
-}
-
-.quote__text {
-  @apply max-w-lg mx-auto;
-  @apply md:text-center;
-  @apply lg:text-left;
-}
-
-.quote__text:before,
-.quote__text:after {
-  content: '"';
-} */
