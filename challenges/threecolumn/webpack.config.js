@@ -33,7 +33,7 @@ const config = {
     })
   ],
   optimization: {
-    runtimeChunk: 'single',
+    runtimeChunk: 'single'
   },
   module: {
     rules: [
@@ -55,7 +55,7 @@ module.exports = (env) => {
     config.mode = 'production'
     config.output.clean = true
     config.output.path = path.resolve(__dirname, `../../public/${path.basename(__dirname)}`)
-    config.output.publicPath = '/fourcards/'
+    config.output.publicPath = '/threecolumncard/'
     config.plugins.push(new MiniCssExtractPlugin({ filename: '[name].[contenthash].css', chunkFilename: '[id].[contenthash].css' }))
   } else {
     config.mode = 'development'
