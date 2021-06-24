@@ -1,76 +1,65 @@
 :root {
-  --cl-red: hsl(0, 78%, 62%);
-  --cl-cyan: hsl(180, 62%, 55%);
-  --cl-orange: hsl(34, 97%, 64%);
-  --cl-blue: hsl(212, 86%, 64%);
+  --cl-orange: hsl(31, 77%, 52%);
+  --cl-cyan: hsl(184, 100%, 22%);
+  --cl-cyan-dark: hsl(179, 100%, 13%);
 
-  --cl-neutral-300: hsl(234, 12%, 34%);
-  --cl-neutral-600: hsl(229, 6%, 66%);
+  --cl-white: hsl(0, 0%, 95%);
+  --cl-white-alpha75: hsla(0, 0%, 100%, 0.75);
 
-  --ff-primary: "Poppins";
+  --ff-display: "Big Shoulders Display";
+  --ff-primary: "Legend Deca";
 
-  --bg-icon-supervisor: url("~assets/icons/supervisor.svg");
-  --bg-icon-teambuilder: url("~assets/icons/teambuilder.svg");
-  --bg-icon-karma: url("~assets/icons/karma.svg");
-  --bg-icon-calculator: url("~assets/icons/calculator.svg");
+  --bg-icon-sedans: url("~assets/icons/sedans.svg");
+  --bg-icon-suvs: url("~assets/icons/suvs.svg");
+  --bg-icon-luxury: url("~assets/icons/luxury.svg");
 }
+
 body {
-  @apply w-10/12 h-full py-16 mx-auto;
-  @apply font-primary text-neutral-300;
+  @apply min-h-screen flex;
+  @apply text-base font-primary leading-normal;
+  @apply lg:items-center;
 }
 
-header {
-  @apply text-center font-extralight;
-}
-header > h1 {
-  @apply text-2xl;
-  @apply lg:text-3xl;
-}
-header > h2 {
-  @apply font-semibold text-2xl lg:text-3xl;
-}
-header > p {
-  @apply max-w-lg mt-6 mx-auto;
-  @apply text-neutral-600;
-}
-
-main {
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  @apply grid gap-8;
-  @apply max-w-5xl mx-auto mt-20;
-  @apply lg:grid-flow-col lg:grid-cols-3 lg:grid-rows-4;
+.cards {
+  min-height: 70vh;
+  @apply w-10/12 max-w-5xl my-20 mx-auto;
+  @apply grid;
+  @apply rounded-xl overflow-hidden;
+  @apply lg:grid-cols-3;
 }
 
 .card {
-  @apply h-52 pl-6 pr-8 py-4;
-  @apply border-t-4 rounded-md shadow-xl;
-  @apply text-sm;
-  @apply bg-supervisor bg-no-repeat bg-right-bottom bg-origin-content;
-  @apply lg:row-span-2;
+  @apply py-12 pl-10 pr-14;
+  @apply flex flex-col justify-start items-start;
+  @apply bg-current bg-no-repeat bg-left-top bg-origin-content;
 }
 
 .card__title {
-  @apply font-semibold text-xl;
+  @apply mt-20;
+  @apply font-display font-bold text-5xl text-white uppercase;
 }
 
 .card__description {
-  @apply font-extralight mt-2 text-neutral-600;
+  @apply max-w-prose my-8;
+  @apply text-white-alpha75;
 }
 
-.card:first-child,
-.card:last-child {
-  @apply lg:row-start-2;
+.card__button {
+  @apply min-w-max mt-auto py-3 px-8;
+  @apply capitalize;
+  @apply border-white border-2 bg-white rounded-full;
+  @apply focus:outline-none focus:bg-transparent focus:text-white;
+  @apply hover:bg-transparent hover:text-white;
 }
 
-.card--supervisor {
-  @apply border-primary-cyan bg-supervisor;
+.card--sedan {
+  @apply text-primary-orange bg-sedans;
 }
-.card--teambuilder {
-  @apply border-primary-red bg-teambuilder;
+
+.card--suv {
+  @apply text-primary-cyan bg-suvs;
 }
-.card--karma {
-  @apply border-primary-orange bg-karma;
-}
-.card--calculator {
-  @apply border-primary-blue bg-calculator;
+
+.card--luxury {
+  @apply text-primary-cyan-dark bg-luxury;
 }

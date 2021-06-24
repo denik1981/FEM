@@ -5,24 +5,22 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          red: 'var(--cl-red)',
-          cyan: 'var(--cl-cyan)',
           orange: 'var(--cl-orange)',
-          blue: 'var(--cl-blue)'
+          cyan: { DEFAULT: 'var(--cl-cyan)', dark: 'var(--cl-cyan-dark)' }
         },
-        neutral: {
-          300: 'var(--cl-neutral-300)',
-          600: 'var(--cl-neutral-600)'
+        white: {
+          DEFAULT: 'var(--cl-white)',
+          alpha75: 'var(--cl-white-alpha75)'
         }
       },
       fontFamily: {
+        display: ['var(--ff-display)', ...defaultTheme.fontFamily.sans],
         primary: ['var(--ff-primary)', ...defaultTheme.fontFamily.sans]
       },
       backgroundImage: theme => ({
-        supervisor: 'var(--bg-icon-supervisor)',
-        teambuilder: 'var(--bg-icon-teambuilder)',
-        karma: 'var(--bg-icon-karma)',
-        calculator: 'var(--bg-icon-calculator)'
+        sedans: 'var(--bg-icon-sedans)',
+        suvs: 'var(--bg-icon-suvs)',
+        luxury: 'var(--bg-icon-luxury)'
       })
     }
   }
