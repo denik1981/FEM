@@ -1,0 +1,98 @@
+:root {
+  --cl-primary-500a: hsl(179, 40%, 51%);
+  --cl-primary-500b: hsl(179, 44%, 54%);
+  --cl-primary-600: hsl(179, 44%, 67%);
+  --cl-primary-900: hsl(206, 47%, 93%);
+  --cl-accent-500: hsl(71, 73%, 54%);
+  --cl-accent-400: hsl(71, 73%, 44%);
+  --cl-neutral-600: hsl(218, 22%, 67%);
+  --cl-neutral-900: hsl(204, 43%, 93%);
+
+  --ff-primary: "Karla";
+}
+
+body {
+  @apply min-h-screen flex;
+  @apply bg-primary-900 text-sm font-primary;
+}
+
+.cards {
+  @apply w-10/12 max-w-xl my-20 mx-auto;
+  @apply grid sm:grid-cols-2;
+  @apply rounded-xl overflow-hidden;
+}
+
+.card {
+  @apply p-6 sm:p-8;
+}
+.card__header {
+  @apply col-span-full;
+  @apply bg-white text-neutral-600;
+}
+
+.card__subscription {
+  @apply bg-primary-500a text-neutral-900;
+}
+
+.card__whyus {
+  @apply bg-primary-500b text-neutral-900;
+}
+
+.header__title {
+  @apply text-xl text-primary-500b font-bold;
+}
+
+.header__pitch {
+  @apply my-4;
+  @apply text-accent-500 text-base font-bold;
+}
+
+.header_lead {
+  @apply leading-loose;
+}
+.header_lead > span {
+  @apply sm:block;
+}
+
+.subscription__title,
+.whyus__title {
+  @apply text-lg text-white font-bold;
+}
+
+.subscription__price {
+  @apply mt-3 leading-10;
+}
+
+.price__amount {
+  @apply text-3xl text-white font-bold align-middle mr-2;
+}
+
+.price__amount:before,
+.subscription__pitch > u:before {
+  content: "\24";
+  display: inline;
+}
+
+.price__base {
+  @apply text-base align-middle text-primary-600;
+}
+
+.subscription__pitch {
+  @apply mt-2;
+  @apply text-sm;
+}
+
+.subscription__pitch > u {
+  @apply no-underline;
+}
+
+.subscription__btn {
+  @apply mt-6 block w-full py-3;
+  @apply bg-accent-500 rounded-md shadow-2xl;
+  @apply text-white text-base font-bold capitalize;
+  @apply hover:bg-accent-400 focus:bg-accent-400;
+}
+
+.whyus__description {
+  @apply mt-4 leading-normal;
+}
