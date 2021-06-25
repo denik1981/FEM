@@ -3,7 +3,8 @@
   --cl-primary-500b: hsl(179, 44%, 54%);
   --cl-primary-600: hsl(179, 44%, 67%);
   --cl-primary-900: hsl(206, 47%, 93%);
-  --cl-accent: hsl(71, 73%, 54%);
+  --cl-accent-500: hsl(71, 73%, 54%);
+  --cl-accent-400: hsl(71, 73%, 44%);
   --cl-neutral-600: hsl(218, 22%, 67%);
   --cl-neutral-900: hsl(204, 43%, 93%);
 
@@ -43,7 +44,7 @@ body {
 
 .header__pitch {
   @apply my-4;
-  @apply text-accent text-base font-bold;
+  @apply text-accent-500 text-base font-bold;
 }
 
 .header_lead {
@@ -87,8 +88,9 @@ body {
 
 .subscription__btn {
   @apply mt-6 block w-full py-3;
-  @apply bg-accent rounded-md shadow-2xl;
+  @apply bg-accent-500 rounded-md shadow-2xl;
   @apply text-white text-base font-bold capitalize;
+  @apply hover:bg-accent-400 focus:bg-accent-400;
 }
 
 .whyus__description {

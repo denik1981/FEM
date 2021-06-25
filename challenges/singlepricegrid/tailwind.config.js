@@ -10,7 +10,10 @@ module.exports = {
           '600': 'var(--cl-primary-600)',
           '900': 'var(--cl-primary-900)',
         },      
-        accent: 'var(--cl-accent)',
+        accent: {
+          '400':'var(--cl-accent-400)',
+          '500':'var(--cl-accent-500)'
+      },
         neutral: {
           '600': 'var(--cl-neutral-600)',
           '900': 'var(--cl-neutral-900)'
