@@ -1,4 +1,4 @@
-/* :root {
+:root {
   --cl-primary-500a: hsl(179, 40%, 51%);
   --cl-primary-500b: hsl(179, 44%, 54%);
   --cl-primary-600: hsl(179, 44%, 67%);
@@ -8,9 +8,16 @@
   --cl-neutral-600: hsl(218, 22%, 67%);
   --cl-neutral-900: hsl(204, 43%, 93%);
 
-  --ff-primary: "Karla";
+  --ff-primary: "Inter";
 }
 
+@screen lg {
+  .component {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+}
+
+/*
 body {
   @apply min-h-screen flex;
   @apply bg-primary-900 text-sm font-primary;
