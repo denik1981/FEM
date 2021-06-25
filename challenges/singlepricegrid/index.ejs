@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="<%=require('assets/favicon.png')%>"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Single Price Grid Component</title>
+  </head>
+  <body>
+    <div class="cards">
+      <section class="card card__header">
+        <h2 class="header__title">Join our community</h2>
+        <h3 class="header__pitch">30-day, hassle-free money back guarantee</h3>
+        <p class="header_lead">
+          <span>
+            Gain access to our full library of tutorials along with expert code
+            reviews.
+          </span>
+          <span>
+            Perfect for any developers who are serious about honing their
+            skills.
+          </span>
+        </p>
+      </section>
+      <section class="card card__subscription">
+        <h3 class="subscription__title">Monthly Subscription</h3>
+        <div class="subscription__price">
+          <span class="price__amount">29</span>
+          <span class="price__base">per month</span>
+        </div>
+        <p class="subscription__pitch">
+          Full access for less than <u>1</u> a day
+        </p>
+        <button class="subscription__btn" type="button">Sign up</button>
+      </section>
+      <section class="card card__whyus">
+        <h3 class="whyus__title">Why us</h3>
+        <ul class="whyus__description">
+          <li>Tutorials by industry experts</li>
+          <li>Peer &amp; expert code review</li>
+          <li>Coding exercises</li>
+          <li>Access to our GitHub repos</li>
+          <li>Community forum</li>
+          <li>Flashcard decks</li>
+          <li>New videos every week</li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
