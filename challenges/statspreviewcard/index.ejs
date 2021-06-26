@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="<%=require('assets/favicon.png')%>" type="image/png" sizes="32x32" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <title>Frontend Mentor | Stats Preview Card Component</title>
+  </head>
+  <body>
+    <div class="component">
+      <picture class="card__banner">
+        <source media="(min-width: 640px)" srcset="<%=require('assets/bg/desktop-540w.jpg')%> 540w" />
+        <source srcset="<%=require('assets/bg/mobile-654w.jpg')%> 654w" />
+        <img src="<%=require('assets/bg/desktop-540w.jpg')%>" class="mix-blend-multiply" alt="banner" />
+      </picture>
+      <section class="card__message">
+        <div>
+          <h2 class="message__title">
+            Get <em class="not-italic text-secondary-600">insights</em> that help your business grow.
+          </h2>
+          <p class="message__text">
+            Discover the benefits of data analytics and make better decisions regarding revenue, customer experience,
+            and overall efficiency.
+          </p>
+        </div>
+        <ul class="message__stats">
+          <li>
+            <span class="stat__value stat__value--companies">10k+</span>
+            <span class="stat__label">companies</span>
+          </li>
+          <li>
+            <span class="stat__value">314</span>
+            <span class="stat__label">templates</span>
+          </li>
+          <li>
+            <span class="stat__value">12m+</span>
+            <span class="stat__label">queries</span>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
