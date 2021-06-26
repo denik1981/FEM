@@ -150,7 +150,7 @@ body {
   }
   @media (min-height: $bk-landscape-sm) {
     margin-top: calc(
-      #{$margin-top} + math.div(#{$user-img-h}, 2) + #{$user-img-border-size}
+      #{$margin-top} + (#{$user-img-h} / 2) + #{$user-img-border-size}
     );
   }
 }
