@@ -9,66 +9,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
     <title>Frontend Mentor | Stats Preview Card Component</title>
   </head>
-  <body class="flex min-h-screen bg-primary-000 text-white font-primary py-24">
-    <div
-      class="
-        component
-        lg:max-w-4xl
-        max-w-md
-        m-auto
-        w-11/12
-        overflow-hidden
-        bg-primary-100
-        @bg-secondary-600
-        rounded-3xl
-        text-center
-        grid
-        lg:grid-flow-col-dense
-      "
-    >
-      <picture class="lg:col-start-2 bg-secondary-600">
+  <body>
+    <div class="component">
+      <picture class="card__banner">
         <source media="(min-width: 640px)" srcset="<%=require('assets/bg/desktop-540w.jpg')%> 540w" />
         <source srcset="<%=require('assets/bg/mobile-654w.jpg')%> 654w" />
         <img src="<%=require('assets/bg/desktop-540w.jpg')%>" class="mix-blend-multiply" />
       </picture>
-      <div
-        class="
-          w-10/12
-          max-w-sm
-          justify-self-center
-          lg:justify-self-start lg:pl-14 lg:text-left
-          flex flex-col
-          justify-around
-          gap-y-10
-          lg:gap-y-0
-          py-8
-          lg:py-4
-        "
-      >
+      <section class="card__message">
         <div>
-          <h2 class="text-3xl font-bold">
+          <h2 class="message__title">
             Get <em class="not-italic text-secondary-600">insights</em> that help your business grow.
           </h2>
-          <p class="text-base lg:text-sm mt-6 leading-relaxed w-11/12 mx-auto lg:w-auto">
+          <p class="message__text">
             Discover the benefits of data analytics and make better decisions regarding revenue, customer experience,
             and overall efficiency.
           </p>
         </div>
-        <ul class="grid md:grid-flow-col auto-cols-fr uppercase text-xs gap-y-5">
+        <ul class="message__stats">
           <li>
-            <span class="block lowercase text-2xl lg:text-xl font-bold">10k+</span>
-            <span class="block leading-relaxed tracking-widest" style="font-size: 0.6rem">companies</span>
+            <span class="stat__value stat__value--companies">10k+</span>
+            <span class="stat__label">companies</span>
           </li>
           <li>
-            <span class="block text-2xl lg:text-xl font-bold">314</span>
-            <span class="block leading-relaxed tracking-widest" style="font-size: 0.6rem">templates</span>
+            <span class="stat__value">314</span>
+            <span class="stat__label">templates</span>
           </li>
           <li>
-            <span class="block text-2xl lg:text-xl font-bold">12m+</span>
-            <span class="block leading-relaxed tracking-widest" style="font-size: 0.6rem">queries</span>
+            <span class="stat__value">12m+</span>
+            <span class="stat__label">queries</span>
           </li>
         </ul>
-      </div>
+      </section>
     </div>
   </body>
 </html>

@@ -6,95 +6,67 @@
   --ff-primary: "Inter";
 }
 
+body {
+  @apply flex min-h-screen py-24;
+  @apply text-white font-primary bg-primary-000;
+}
+
+.component {
+  @apply w-11/12 max-w-md m-auto grid;
+  @apply bg-primary-100 rounded-3xl overflow-hidden text-center;
+  @apply lg:max-w-4xl lg:grid-flow-col-dense;
+}
+
 @screen lg {
   .component {
     grid-template-columns: 1.05fr 0.95fr;
   }
 }
 
-/*
-body {
-  @apply min-h-screen flex;
-  @apply bg-primary-900 text-sm font-primary;
+.card__banner {
+  @apply bg-secondary-600;
+  @apply lg:col-start-2;
 }
 
-.cards {
-  @apply w-10/12 max-w-xl m-auto;
-  @apply grid sm:grid-cols-2;
-  @apply rounded-xl overflow-hidden;
+.card__message {
+  @apply w-10/12 max-w-sm py-8;
+  @apply justify-self-center;
+  @apply flex flex-col gap-y-10 justify-around;
+  @apply lg:justify-self-start lg:gap-y-0 lg:pl-14 lg:py-4 lg:text-left;
 }
 
-.card {
-  @apply p-6 sm:p-8;
-}
-.card__header {
-  @apply col-span-full;
-  @apply bg-white text-neutral-600;
+.message__title {
+  @apply text-3xl font-bold;
 }
 
-.card__subscription {
-  @apply bg-primary-500a text-neutral-900;
+.message__text {
+  @apply w-11/12 mx-auto mt-6;
+  @apply text-gray-300 leading-relaxed;
+  @apply lg:w-auto lg:text-sm lg:leading-relaxed;
 }
 
-.card__whyus {
-  @apply bg-primary-500b text-neutral-900;
+.message__stats {
+  @apply grid auto-cols-fr gap-y-5;
+  @apply uppercase text-xs;
+  @apply md:grid-flow-col;
 }
 
-.header__title {
-  @apply text-xl text-primary-500b font-bold;
+.stat__value {
+  @apply block;
+  @apply text-2xl font-bold;
+  @apply lg:text-xl;
 }
 
-.header__pitch {
-  @apply my-4;
-  @apply text-accent-500 text-base font-bold;
+.stat__value--companies {
+  @apply lowercase;
+}
+.stat__label {
+  @apply block;
+  @apply text-gray-300 leading-relaxed tracking-widest;
 }
 
-.header_lead {
-  @apply leading-loose;
+@screen md {
+  .stat__label {
+    font-size: 0.6rem;
+  }
 }
-.header_lead > span {
-  @apply sm:block;
-}
-
-.subscription__title,
-.whyus__title {
-  @apply text-lg text-white font-bold;
-}
-
-.subscription__price {
-  @apply mt-3 leading-10;
-}
-
-.price__amount {
-  @apply text-3xl text-white font-bold align-middle mr-2;
-}
-
-.price__amount:before,
-.subscription__pitch > u:before {
-  content: "\24";
-  display: inline;
-}
-
-.price__base {
-  @apply text-base align-middle text-primary-600;
-}
-
-.subscription__pitch {
-  @apply mt-2;
-  @apply text-sm;
-}
-
-.subscription__pitch > u {
-  @apply no-underline;
-}
-
-.subscription__btn {
-  @apply mt-6 block w-full py-3;
-  @apply bg-accent-500 rounded-md shadow-2xl;
-  @apply text-white text-base font-bold capitalize;
-  @apply hover:bg-accent-400 focus:bg-accent-400;
-}
-
-.whyus__description {
-  @apply mt-4 leading-normal;
-} */
