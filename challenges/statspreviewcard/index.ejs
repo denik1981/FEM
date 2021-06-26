@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
     <title>Frontend Mentor | Stats Preview Card Component</title>
   </head>
-  <body class="flex min-h-screen bg-indigo-900 text-white font-primary py-24">
+  <body class="flex min-h-screen bg-primary-000 text-white font-primary py-24">
     <div
       class="
         component
@@ -17,18 +17,19 @@
         max-w-md
         m-auto
         w-11/12
-        bg-indigo-500
         overflow-hidden
+        bg-primary-100
+        @bg-secondary-600
         rounded-3xl
         text-center
         grid
         lg:grid-flow-col-dense
       "
     >
-      <picture class="lg:col-start-2 mix-blend-multiply">
+      <picture class="lg:col-start-2 bg-secondary-600">
         <source media="(min-width: 640px)" srcset="<%=require('assets/bg/desktop-540w.jpg')%> 540w" />
         <source srcset="<%=require('assets/bg/mobile-654w.jpg')%> 654w" />
-        <img src="<%=require('assets/bg/desktop-540w.jpg')%>" />
+        <img src="<%=require('assets/bg/desktop-540w.jpg')%>" class="mix-blend-multiply" />
       </picture>
       <div
         class="
@@ -45,7 +46,9 @@
         "
       >
         <div>
-          <h2 class="text-3xl font-bold">Get <em class="not-italic">insights</em> that help your business grow.</h2>
+          <h2 class="text-3xl font-bold">
+            Get <em class="not-italic text-secondary-600">insights</em> that help your business grow.
+          </h2>
           <p class="text-base lg:text-sm mt-6 leading-relaxed w-11/12 mx-auto lg:w-auto">
             Discover the benefits of data analytics and make better decisions regarding revenue, customer experience,
             and overall efficiency.
@@ -57,11 +60,11 @@
             <span class="block leading-relaxed tracking-widest" style="font-size: 0.6rem">companies</span>
           </li>
           <li>
-            <span class="block lowercase text-2xl lg:text-xl font-bold">314</span>
+            <span class="block text-2xl lg:text-xl font-bold">314</span>
             <span class="block leading-relaxed tracking-widest" style="font-size: 0.6rem">templates</span>
           </li>
           <li>
-            <span class="block lowercase text-2xl lg:text-xl font-bold">12m+</span>
+            <span class="block text-2xl lg:text-xl font-bold">12m+</span>
             <span class="block leading-relaxed tracking-widest" style="font-size: 0.6rem">queries</span>
           </li>
         </ul>

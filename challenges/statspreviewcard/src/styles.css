@@ -1,12 +1,7 @@
 :root {
-  --cl-primary-500a: hsl(179, 40%, 51%);
-  --cl-primary-500b: hsl(179, 44%, 54%);
-  --cl-primary-600: hsl(179, 44%, 67%);
-  --cl-primary-900: hsl(206, 47%, 93%);
-  --cl-accent-500: hsl(71, 73%, 54%);
-  --cl-accent-400: hsl(71, 73%, 44%);
-  --cl-neutral-600: hsl(218, 22%, 67%);
-  --cl-neutral-900: hsl(204, 43%, 93%);
+  --cl-primary-000: hsl(233, 47%, 7%);
+  --cl-primary-100: hsl(244, 38%, 16%);
+  --cl-secondary-600: hsl(277, 64%, 61%);
 
   --ff-primary: "Inter";
 }
