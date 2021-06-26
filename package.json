@@ -15,7 +15,14 @@
   "scripts": {
     "build": "npm run --if-present build:$npm_config_branch",
     "build:master": "npm run build --workspaces",
-    "build:master:v": "npm run build:v --workspaces"
+    "build:fourcards": "npm run build -w fem-fourcards",
+    "build:huddlepage": "npm run build -w fem-huddlepage",
+    "build:profilecard": "npm run build -w fem-profilecard",
+    "build:singlepricegrid": "npm run build -w fem-single-price-grid-component",
+    "build:socialproof": "npm run build -w fem-socialproof",
+    "build:statspreviewcard": "npm run build -w fem-stats-preview-card",
+    "qbuild:threecolumn": "npm run build -w fem-three-column-preview-card-component",
+    "build:master:v": "npm run build:v -w "
   },
   "dependencies": {
     "npm": "^7.12.1"
