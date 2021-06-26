@@ -12,9 +12,9 @@ body {
 }
 
 .component {
-  @apply w-11/12 max-w-md m-auto grid;
-  @apply bg-primary-100 rounded-3xl overflow-hidden text-center;
-  @apply lg:max-w-4xl lg:grid-flow-col-dense;
+  @apply w-11/12 max-w-sm m-auto grid;
+  @apply bg-primary-100 rounded-xl overflow-hidden text-center;
+  @apply lg:max-w-5xl lg:grid-flow-col-dense;
 }
 
 @screen lg {
@@ -26,6 +26,10 @@ body {
 .card__banner {
   @apply bg-secondary-600;
   @apply lg:col-start-2;
+}
+
+.banner__img {
+  @apply mix-blend-multiply opacity-70;
 }
 
 .card__message {
