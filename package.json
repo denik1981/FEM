@@ -13,8 +13,9 @@
     "./challenges/*"
   ],
   "scripts": {
-    "build": "npm run build --workspaces",
-    "build:v": "npm run build:v --workspaces"
+    "build": "npm run --if-present build:$npm_config_branch",
+    "build:master": "npm run build --workspaces",
+    "build:master:v": "npm run build:v --workspaces"
   },
   "dependencies": {
     "npm": "^7.12.1"
