@@ -4,79 +4,100 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | Huddle landing page with curved sections</title>
   </head>
-  <body>
-    <div>
-      <img src="<%=require('./assets/logo.svg')%>" />
-      <div>Try it free</div>
-    </div>
-    <div>
-      <div>Build The Community Your Fans Will Love</div>
-      <div>
-        Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections
-        with your users as you engage in genuine discussion.
-      </div>
-      <div>Get Started For Free</div>
-    </div>
-    <img src="<%=require('./assets/illustration/screenshot.svg')%>" />
-    <div>
-      <div>
-        <div>1.4k+</div>
-        <div>Communities Formed</div>
-      </div>
-      <div>
-        <div>1.4k+</div>
-        <div>Communities Formed</div>
-      </div>
-    </div>
-    <div>
-      <div>
-        <img src="<%=require('./assets/illustration/grow.svg')%>" />
-        <div>Grow Together</div>
-        <div>
-          Generate meaningful discussions with your audience and build a strong, loyal community. Think of the
-          insightful conversations you miss out on with a feedback form.
+  <body class="font-primary text-center">
+    <div class="w-10/12 mx-auto my-8">
+      <div class="flex justify-between">
+        <img src="<%=require('./assets/logo.svg')%>" class="w-24 object-contain" />
+        <div class="text-xs border-4 border-solid border-purple-500 text-purple-500 rounded-3xl align-middle px-5 py-1">
+          Try it free
         </div>
       </div>
-      <div>
-        <img src="<%=require('./assets/illustration/flowing.svg')%>" />
-        <div>Flowing Conversations</div>
+      <div class="px-4">
+        <div class="">
+          <h1 class="text-2xl mt-24 font-bold font-display">Build The Community Your Fans Will Love</h1>
+          <div class="mt-10 text-sm">
+            Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create
+            connections with your users as you engage in genuine discussion.
+          </div>
+          <div class="w-max mx-auto px-12 py-4 bg-red-700 text-white rounded-3xl mt-14 text-xs font-bold">
+            Get Started For Free
+          </div>
+        </div>
+        <img src="<%=require('./assets/illustration/screenshot.svg')%>" class="mt-24 mb-28 object-contain" />
         <div>
-          You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading
-          for a more natural flow.
+          <div class="py-8">
+            <div class="font-bold font-display text-6xl">1.4k+</div>
+            <div class="text-sm mt-3 tracking-wider">Communities Formed</div>
+          </div>
+          <div class="py-8">
+            <div class="font-bold font-display text-6xl">1.4k+</div>
+            <div class="text-sm mt-3 tracking-wider">Communities Formed</div>
+          </div>
+        </div>
+        <div>
+          <div class="text-sm">
+            <img src="<%=require('./assets/illustration/grow.svg')%>" class="mt-44 mb-24 object-contain" />
+            <div class="font-bold text-xl font-display">Grow Together</div>
+            <div class="mt-6">
+              Generate meaningful discussions with your audience and build a strong, loyal community. Think of the
+              insightful conversations you miss out on with a feedback form.
+            </div>
+          </div>
+          <div class="text-sm">
+            <img src="<%=require('./assets/illustration/flowing.svg')%>" class="mt-44 mb-24 object-contain" />
+            <div class="font-bold text-xl font-display">Flowing Conversations</div>
+            <div class="mt-6">
+              You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time
+              loading for a more natural flow.
+            </div>
+          </div>
+          <div class="text-sm">
+            <img src="<%=require('./assets/illustration/grow.svg')%>" class="mt-44 mb-24 object-contain" />
+            <div class="font-bold text-xl font-display">Grow Together</div>
+            <div class="mt-6">
+              Generate meaningful discussions with your audience and build a strong, loyal community. Think of the
+              insightful conversations you miss out on with a feedback form.
+            </div>
+          </div>
+        </div>
+        <div class="my-80">
+          <div class="text-2xl mt-24 font-bold font-display">Ready To Build Your Community?</div>
+          <div class="w-max mx-auto px-12 py-4 bg-red-700 text-white rounded-3xl mt-14 text-xs font-bold">
+            Get Started For Free
+          </div>
         </div>
       </div>
-      <div>
-        <img src="<%=require('./assets/illustration/users.svg')%>" />
-        <div>Your Users</div>
+      <div class="text-left">
         <div>
-          It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed
-          in to your app, your users can start chatting immediately.
-        </div>
-      </div>
-    </div>
-    <div>
-      <div>Ready To Build Your Community?</div>
-      <div>Get Started For Free</div>
-    </div>
-    <div>
-      <div>
-        <img src="<%=require('./assets/logo.svg')%>" />
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a,
-          ultrices quis sem.
+          <div class="uppercase font-bold text-2xl">Newsletter</div>
+          <div class="my-6">
+            To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam
+            or pass on your email address
+          </div>
+          <form onsubmit="return false  ">
+            <label for="email" class="">Email</label>
+            <input type="email" id="email" name="email" size="30" class="bg-yellow-300" required />
+            <button type="submit">Subscribe</button>
+          </form>
         </div>
         <div>
-          <div>Phone: +1-543-123-4567</div>
-          <div>example@huddle.com</div>
-        </div>
-      </div>
-      <div>
-        <div>Newsletter</div>
-        <div>
-          To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or
-          pass on your email address Subscribe
+          <img src="<%=require('./assets/logo.svg')%>" />
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a,
+            ultrices quis sem.
+          </div>
+          <div>
+            <div>Phone: +1-543-123-4567</div>
+            <div>example@huddle.com</div>
+          </div>
         </div>
       </div>
     </div>

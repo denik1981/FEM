@@ -12,6 +12,5 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-  },
-  ignorePatterns: ['**/fem/*.html']
+  }
 }
