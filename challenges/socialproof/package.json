@@ -27,19 +27,18 @@
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
     "mini-css-extract-plugin": "^1.6.0",
-    "postcss": "^8.3.0",
-    "postcss-import": "^14.0.2",
     "postcss-loader": "^6.1.0",
-    "postcss-preset-env": "^6.7.0",
-    "style-loader": "^2.0.0",
+    "style-loader": "^3.0.0",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "postcss": "^8.3.0",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-import": "^14.0.2",
     "pug": "^3.0.2",
     "sass": "^1.32.11",
-    "tailwind": "^4.0.0",
     "tailwindcss": "^2.1.2"
   }
 }
