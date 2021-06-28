@@ -21,7 +21,8 @@
     "build:singlepricegrid": "npm run build -w fem-single-price-grid-component",
     "build:socialproof": "npm run build -w fem-socialproof",
     "build:statspreviewcard": "npm run build -w fem-stats-preview-card",
-    "qbuild:threecolumn": "npm run build -w fem-three-column-preview-card-component",
+    "build:threecolumn": "npm run build -w fem-three-column-preview-card-component",
+    "build:huddlepagecurved": "npm run build -w fem-hudddle-page-curved-sections",
     "build:master:v": "npm run build:v -w "
   },
   "dependencies": {
