@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   purge: ['./index.ejs'],
+  plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],
   theme: {
     extend: {
       fontFamily: {

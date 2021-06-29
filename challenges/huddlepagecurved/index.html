@@ -82,19 +82,19 @@
             To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam
             or pass on your email address
           </div>
-          <form onsubmit="return false  ">
+          <form onsubmit="return false" class="grid gap-y-4">
             <label for="email" class="">Email</label>
-            <input type="email" id="email" name="email" size="30" class="bg-yellow-300" required />
-            <button type="submit">Subscribe</button>
+            <input type="email" id="email" class="form-input" required />
+            <button type="submit" class="bg-red-400 px-4 py-2 w-max justify-self-end">Subscribe</button>
           </form>
         </div>
-        <div>
-          <img src="<%=require('./assets/logo.svg')%>" />
-          <div>
+        <div class="mt-20">
+          <img src="<%=require('./assets/logo.svg')%>" class="mt-6 w-52" />
+          <div class="mt-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a,
             ultrices quis sem.
           </div>
-          <div>
+          <div class="mt-8 leading-loose">
             <div>Phone: +1-543-123-4567</div>
             <div>example@huddle.com</div>
           </div>

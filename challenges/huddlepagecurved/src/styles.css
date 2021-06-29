@@ -6,6 +6,10 @@
   --ff-primary: "Open Sans";
   --ff-display: "Poppins";
 }
+/* 
+html {
+  @apply text-4xl;
+} */
 
 /* body {
   @apply flex min-h-screen py-24;
