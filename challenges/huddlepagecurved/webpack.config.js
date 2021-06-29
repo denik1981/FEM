@@ -30,6 +30,6 @@ const config = {
 
 module.exports = (env) => {
   config.plugins.push(new HtmlWebpackPlugin({ minify: false, favicon: 'assets/misc/favicon.png', template: 'index.html' }))
-  if (isProduction) config.plugins.push(new MiniCssExtractPlugin({ filename: '[contenthash][ext]' }))
+  if (isProduction) config.plugins.push(new MiniCssExtractPlugin({ filename: '[contenthash].css' }))
   return config
 }
