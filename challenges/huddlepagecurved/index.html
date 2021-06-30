@@ -21,7 +21,7 @@
           px-5
           py-1
           text-1xs
-          lg:px-2 lg:py-0 lg:text-3xs
+          lg:px-2 lg:text-2xs
           |
           capitalize
           border-2 border-solid border-current
@@ -75,43 +75,49 @@
       </div>
     </div>
 
-    <div class="my-52 lg:my-40 w-10/12 gap-y-52 xs:gap-y-40 lg:gap-y-48 | mx-auto flex flex-col">
-      <div class="gap-y-10 | flex flex-col md:flex-row-reverse justify-between items-center">
-        <img
-          src="<%=require('./assets/illustration/grow.svg')%>"
-          class="object-contain w-11/12 md:w-64 lg:w-56 xl:w-64 md:mr-3"
-        />
-        <div class="my-7 md:w-5/12 | md:text-left">
-          <div class="text-xl md:text-2xl lg:text-xl | font-bold font-display capitalize">Grow Together</div>
-          <div class="text-sm md:text-xs lg:text-2xs mt-4 leading-relaxed">
-            Generate meaningful discussions with your audience and build a strong, loyal community. Think of the
-            insightful conversations you miss out on with a feedback form.
+    <div class="my-52 lg:my-40 w-full gap-y-52 xs:gap-y-40 lg:gap-y-48 | mx-auto flex flex-col">
+      <div class="stripe-1 py-40">
+        <div class="w-10/12 mx-auto gap-y-10 flex flex-col md:flex-row-reverse justify-between items-center">
+          <img
+            src="<%=require('./assets/illustration/grow.svg')%>"
+            class="object-contain w-11/12 md:w-64 lg:w-56 xl:w-64 md:mr-3"
+          />
+          <div class="my-7 md:w-5/12 | md:text-left">
+            <div class="text-xl md:text-2xl lg:text-xl | font-bold font-display capitalize">Grow Together</div>
+            <div class="text-sm md:text-xs lg:text-2xs mt-4 leading-relaxed">
+              Generate meaningful discussions with your audience and build a strong, loyal community. Think of the
+              insightful conversations you miss out on with a feedback form.
+            </div>
           </div>
         </div>
       </div>
-      <div class="gap-y-10 | flex flex-col md:flex-row justify-between items-center">
-        <img
-          src="<%=require('./assets/illustration/flowing.svg')%>"
-          class="object-contain w-11/12 md:w-64 lg:w-56 xl:w-64"
-        />
-        <div class="my-7 md:w-5/12 md:mr-3 | md:text-left">
-          <div class="text-xl md:text-2xl lg:text-xl | font-bold font-display capitalize">Flowing Conversations</div>
-          <div class="text-sm md:text-xs lg:text-2xs mt-4 leading-relaxed">
-            You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time
-            loading for a more natural flow.
+      <div class="py-40">
+        <div class="w-10/12 mx-auto gap-y-10 | flex flex-col md:flex-row justify-between items-center">
+          <img
+            src="<%=require('./assets/illustration/flowing.svg')%>"
+            class="object-contain w-11/12 md:w-64 lg:w-56 xl:w-64"
+          />
+          <div class="my-7 md:w-5/12 md:mr-3 | md:text-left">
+            <div class="text-xl md:text-2xl lg:text-xl | font-bold font-display capitalize">Flowing Conversations</div>
+            <div class="text-sm md:text-xs lg:text-2xs mt-4 leading-relaxed">
+              You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time
+              loading for a more natural flow.
+            </div>
           </div>
         </div>
       </div>
-      <div class="gap-y-10 | flex flex-col md:flex-row-reverse justify-between items-center">
-        <img
-          src="<%=require('./assets/illustration/users.svg')%>"
-          class="object-contain w-11/12 md:w-64 lg:w-56 xl:w-64 md:mr-3"
-        />
-        <div class="my-7 md:w-5/12 | md:text-left">
-          <div class="text-xl md:text-2xl lg:text-xl | font-bold font-display capitalize">Your Users</div>
-          <div class="text-sm md:text-xs lg:text-2xs mt-4 leading-relaxed">
-            It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed
-            in to your app, your users can start chatting immediately.
+      <div class="stripe-2 py-40">
+        <div class="w-10/12 mx-auto gap-y-10 | flex flex-col md:flex-row-reverse justify-between items-center">
+          <img
+            src="<%=require('./assets/illustration/users.svg')%>"
+            class="object-contain w-11/12 md:w-64 lg:w-56 xl:w-64 md:mr-3"
+          />
+          <div class="my-7 md:w-5/12 | md:text-left">
+            <div class="text-xl md:text-2xl lg:text-xl | font-bold font-display capitalize">Your Users</div>
+            <div class="text-sm md:text-xs lg:text-2xs mt-4 leading-relaxed">
+              It takes no time at all to integrate Huddle with your app's authentication solution. This means, once
+              signed in to your app, your users can start chatting immediately.
+            </div>
           </div>
         </div>
       </div>
@@ -124,14 +130,12 @@
         Get started for free
       </div>
     </div>
-    <div class="bg-black text-white">
+    <div class="footer pt-20 mt-80 xs:mt-56 text-white">
       <div
         class="
           xs:max-w-sm
           lg:max-w-none
           w-4/5
-          mt-80
-          xs:mt-56
           mb-0
           gap-y-24
           |

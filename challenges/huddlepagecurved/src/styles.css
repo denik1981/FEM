@@ -45,6 +45,42 @@ html {
 .contact--email:before {
   background: url("~assets/icon/email.svg") center / contain no-repeat;
 }
+
+/* Curved Backgrounds - #F6FBFF */
+
+.stripe-1 {
+  background: url("~assets/bg/stripe1-t-mob.svg") top center / contain no-repeat,
+    url("~assets/bg/stripe1-b-mob.svg") bottom center / contain no-repeat, #e6fbff;
+}
+
+@media (min-width: 768px) {
+  .stripe-1 {
+    background: url("~assets/bg/stripe1-t-desk.svg") top center / contain no-repeat,
+      url("~assets/bg/stripe1-b-desk.svg") bottom center / contain no-repeat, #e6fbff;
+  }
+}
+
+.stripe-2 {
+  background: url("~assets/bg/stripe2-t-mob.svg") top center / contain no-repeat,
+    url("~assets/bg/stripe2-b-mob.svg") bottom center / contain no-repeat, #e6fbff;
+}
+
+@media (min-width: 768px) {
+  .stripe-2 {
+    background: url("~assets/bg/stripe2-t-desk.svg") top center / contain no-repeat,
+      url("~assets/bg/stripe2-b-desk.svg") bottom center / contain no-repeat, #e6fbff;
+  }
+}
+
+.footer {
+  background: url("~assets/bg/footer-mobile.svg") top center / contain no-repeat, #09252e;
+}
+@media (min-width: 768px) {
+  .footer {
+    background: url("~assets/bg/footer-desktop.svg") top center / contain no-repeat, #09252e;
+  }
+}
+
 /* body {
   @apply flex min-h-screen py-24;
   @apply text-white font-primary bg-primary-000;
