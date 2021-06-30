@@ -3,10 +3,20 @@ module.exports = {
   purge: ['./index.ejs'],
   plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],
   theme: {
+    screens: {
+      xs: '440px',
+      ...defaultTheme.screens
+    },
     extend: {
       fontFamily: {
         primary: ['var(--ff-primary)', ...defaultTheme.fontFamily.sans],
         display: ['var(--ff-display)', ...defaultTheme.fontFamily.sans]
+      },
+      fontSize: {
+        '3xs': ['0.4rem', '1.6'],
+        '2xs': ['0.5rem', '1.5'],
+        '1xs': ['0.625rem', '1.5'],
+        ...defaultTheme.fontSize
       },
       colors: {
         primary: {

@@ -10,102 +10,208 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/1807313955.js" crossorigin="anonymous"></script>
     <title>Frontend Mentor | Huddle landing page with curved sections</title>
   </head>
-  <body class="font-primary text-center">
-    <div class="flex items-center justify-between | w-10/12 mx-auto | my-12 | bg-red-300">
-      <img src="<%=require('./assets/logo.svg')%>" class="object-contain | w-24 lg:w-32 | filter brightness-0" />
-      <div class="text-xs border-2 border-solid border-purple-500 text-purple-500 rounded-3xl align-middle px-5 py-1">
+  <body class="font-primary text-center mx-auto" style="max-width: 1366px">
+    <div class="w-11/12 lg:px-2 my-6 lg:my-9 | flex items-center justify-between | mx-auto | bg-red-300">
+      <img src="<%=require('./assets/logo.svg')%>" class="object-contain | w-24 lg:w-28 | filter brightness-0" />
+      <div
+        class="
+          px-5
+          py-1
+          border-2
+          text-1xs
+          lg:px-2 lg:py-0
+          @border-2
+          lg:text-3xs
+          |
+          capitalize
+          border-solid border-purple-500
+          text-purple-500
+          align-middle
+        "
+      >
         Try it free
       </div>
     </div>
-    <div class="w-10/12 mx-auto my-16 | flex flex-col justify-between items-center | h-screen max-h-52 bg-pink-400">
-      <div class="flex flex-col items-center gap-y-4">
-        <h1 class="text-2xl font-bold font-display">Build The Community Your Fans Will Love</h1>
-        <div class="text-xs max-w-sm">
+    <div class="w-10/12 mt-28 mb-0 | mx-auto flex flex-col justify-between items-center | bg-pink-400">
+      <div class="flex flex-col items-center">
+        <h1 class="text-2xl lg:text-2xl leading-snug | font-bold font-display capitalize">
+          Build the community your fans will love
+        </h1>
+        <div class="text-sm lg:text-1xs my-6 lg:my-4 max-w-sm lg:max-w-xs">
           Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create
           connections with your users as you engage in genuine discussion.
         </div>
       </div>
-      <div class="w-max px-10 py-3 bg-red-700 text-white rounded-3xl text-xs font-bold">Get Started For Free</div>
+      <div class="my-6 lg:my-1 px-12 lg:px-9 py-3 text-xs bg-red-700 | text-white font-bold">Get Started For Free</div>
     </div>
     <img
       src="<%=require('./assets/illustration/screenshot.svg')%>"
-      class="object-contain mx-auto my-10 max-w-lg w-full"
+      class="w-4/5 lg:w-2/3 my-20 lg:my-12 | object-contain mx-auto"
     />
-    <div class="my-10 flex flex-col gap-y-12 justify-around items-center lg:flex-row bg-indigo-800">
+    <div
+      class="
+        lg:w-3/5
+        my-40
+        mx-auto
+        lg:my-20
+        gap-y-24
+        flex flex-col
+        justify-around
+        lg:justify-between
+        items-center
+        lg:flex-row
+        bg-indigo-800
+      "
+    >
       <div>
-        <div class="font-bold text-6xl">1.4k+</div>
-        <div class="text-sm lg:text-xs mt-3 tracking-wider lg:tracking-normal">Communities Formed</div>
+        <div class="text-6xl lg:text-5xl font-bold">1.4k+</div>
+        <div class="my-4 text-base lg:text-xs lg:tracking-normal">Communities Formed</div>
       </div>
       <div>
-        <div class="font-bold text-6xl">1.4k+</div>
-        <div class="text-sm mt-3 tracking-wider lg:tracking-normal">Communities Formed</div>
+        <div class="text-6xl lg:text-5xl font-bold">1.4k+</div>
+        <div class="my-4 text-base lg:text-xs lg:tracking-normal">Communities Formed</div>
       </div>
     </div>
 
-    <div class="w-11/12 mx-auto flex flex-col gap-y-20 my-10 bg-yellow-300">
-      <div class="flex flex-col lg:flex-row justify-between items-center gap-y-10 text-sm">
-        <div class="w-64 lg:text-left">
-          <div class="font-bold text-xl font-display">Grow Together</div>
-          <div class="mt-6 lg:text-xs">
+    <div class="my-52 lg:my-40 w-10/12 gap-y-52 xs:gap-y-40 lg:gap-y-48 | mx-auto flex flex-col bg-yellow-300">
+      <div class="gap-y-10 | flex flex-col md:flex-row-reverse justify-between items-center">
+        <img
+          src="<%=require('./assets/illustration/grow.svg')%>"
+          class="object-contain w-11/12 md:w-64 lg:w-56 xl:w-64 md:mr-3"
+        />
+        <div class="my-7 md:w-5/12 | md:text-left">
+          <div class="text-xl md:text-2xl lg:text-xl | font-bold font-display capitalize">Grow Together</div>
+          <div class="text-sm md:text-xs lg:text-2xs mt-4 leading-relaxed">
             Generate meaningful discussions with your audience and build a strong, loyal community. Think of the
             insightful conversations you miss out on with a feedback form.
           </div>
         </div>
-        <img src="<%=require('./assets/illustration/grow.svg')%>" class="object-contain lg:w-72" />
       </div>
-      <div class="flex flex-col lg:flex-row-reverse justify-between items-center gap-y-10 text-sm">
-        <div class="w-64 lg:text-left">
-          <div class="font-bold text-xl font-display">Grow Together</div>
-          <div class="mt-6 lg:text-xs">
+      <div class="gap-y-10 | flex flex-col md:flex-row justify-between items-center">
+        <img
+          src="<%=require('./assets/illustration/flowing.svg')%>"
+          class="object-contain w-11/12 md:w-64 lg:w-56 xl:w-64"
+        />
+        <div class="my-7 md:w-5/12 md:mr-3 | md:text-left">
+          <div class="text-xl md:text-2xl lg:text-xl | font-bold font-display capitalize">Grow Together</div>
+          <div class="text-sm md:text-xs lg:text-2xs mt-4 leading-relaxed">
             Generate meaningful discussions with your audience and build a strong, loyal community. Think of the
             insightful conversations you miss out on with a feedback form.
           </div>
         </div>
-        <img src="<%=require('./assets/illustration/grow.svg')%>" class="object-contain lg:w-72" />
       </div>
-      <div class="flex flex-col lg:flex-row justify-between items-center gap-y-10 text-sm">
-        <div class="w-64 lg:text-left">
-          <div class="font-bold text-xl font-display">Grow Together</div>
-          <div class="mt-6 lg:text-xs">
+      <div class="gap-y-10 | flex flex-col md:flex-row-reverse justify-between items-center">
+        <img
+          src="<%=require('./assets/illustration/grow.svg')%>"
+          class="object-contain w-11/12 md:w-64 lg:w-56 xl:w-64 md:mr-3"
+        />
+        <div class="my-7 md:w-5/12 | md:text-left">
+          <div class="text-xl md:text-2xl lg:text-xl | font-bold font-display capitalize">Grow Together</div>
+          <div class="text-sm md:text-xs lg:text-2xs mt-4 leading-relaxed">
             Generate meaningful discussions with your audience and build a strong, loyal community. Think of the
             insightful conversations you miss out on with a feedback form.
           </div>
         </div>
-        <img src="<%=require('./assets/illustration/grow.svg')%>" class="object-contain lg:w-72" />
       </div>
     </div>
-    <div class="flex flex-col gap-y-5 bg-green-400 my-10">
-      <div class="text-2xl lg:text-xl font-bold font-display">Ready To Build Your Community?</div>
-      <div class="w-max mx-auto px-12 py-4 bg-red-700 text-white rounded-3xl text-xs font-bold">
-        Get Started For Free
+    <div class="my-60 xs:my-40 bg-green-400 capitalize">
+      <div class="text-2xl leading-normal lg:tracking-tight lg:text-xl | font-bold font-display">
+        Ready to build your community?
+      </div>
+      <div class="my-10 lg:my-5 w-max mx-auto px-10 py-3 text-xs | bg-pink-700 text-white font-bold">
+        Get started for free
       </div>
     </div>
-    <div class="footer w-11/12 my-10 mx-auto text-left flex flex-col sm:flex-row-reverse gap-y-20 bg-blue-900">
-      <div class="">
-        <div class="uppercase font-bold text-2xl lg:text-base">Newsletter</div>
-        <div class="my-6 w-80" style="font-size: 15px">
+    <div
+      class="
+        xs:max-w-sm
+        lg:max-w-none
+        w-4/5
+        mt-80
+        xs:mt-56
+        mb-0
+        gap-y-24
+        |
+        mx-auto
+        text-left
+        xs:text-center
+        lg:text-left
+        flex flex-col
+        lg:flex-row-reverse lg:items-start lg:justify-between
+        bg-blue-900
+        text-sm
+        lg:text-3xs
+        leading-normal
+      "
+    >
+      <div class="w-full lg:w-5/12 bg-blue-400 flex flex-col lg:items-start xs:items-center">
+        <div class="text-xl lg:text-xs | uppercase font-bold">Newsletter</div>
+        <div class="my-4 lg:my-2 lg:w-8/12 | font-semibold">
           To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or
           pass on your email address
         </div>
-        <form onsubmit="return false" class="flex flex-col sm:flex-row gap-y-4 gap-x-2">
-          <div>
-            <label for="email" class="hidden">Email</label>
-            <input type="email" id="email" class="form-input w-full py-3 text-base" required />
+        <form
+          onsubmit="return false"
+          class="
+            my-5
+            lg:my-3
+            xs:w-full
+            gap-y-4 gap-x-3
+            flex flex-col
+            items-start
+            xs:items-center
+            lg:flex-row
+            bg-gray-500
+          "
+        >
+          <div class="w-full">
+            <label id="email-label" hidden>email</label>
+            <input
+              type="email"
+              class="px-2 lg:px-1 py-3 lg:py-1 lg:text-2xs w-full text-right xs:text-center lg:text-left"
+              aria-labelledby="email-label"
+              required
+            />
           </div>
-          <button type="submit" class="bg-red-400 px-10 py-3 self-end">Subscribe</button>
+          <button
+            type="submit"
+            class="
+              py-3
+              px-10
+              xs:px-16
+              lg:px-4 lg:py-0 lg:text-2xs
+              font-bold
+              self-end
+              xs:self-center
+              lg:self-stretch
+              bg-red-400
+              capitalize
+            "
+          >
+            Subscribe
+          </button>
         </form>
       </div>
-      <div class="w-3/12 ml-6">
-        <img src="<%=require('./assets/logo.svg')%>" class="w-52 lg:w-32 filter brightness-0 invert" />
-        <div class="mt-6">
+      <div class="lg:w-1/4 lg:text-left lg:justify-self-start xs:items-center xs:text-center bg-red-300">
+        <img
+          src="<%=require('./assets/logo.svg')%>"
+          class="w-52 xs:mx-auto lg:mx-0 xs:w-1/2 lg:w-9/12 filter brightness-0 invert"
+        />
+        <div class="my-4 xs:my-8 lg:my-4 leading-normal font-semibold">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a,
           ultrices quis sem.
         </div>
-        <div class="mt-8 leading-loose">
+        <div class="my-10 lg:my-2 space-y-4 lg:space-y-2 font-semibold">
           <div>Phone: +1-543-123-4567</div>
           <div>example@huddle.com</div>
+        </div>
+        <div class="my-10 w-min xs:mx-auto lg:mx-0 text-3xl lg:text-lg gap-x-3 flex">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter-square"></i>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@
 }
 
 html {
-  @apply sm:text-xl md:text-2xl lg:text-3xl;
+  @apply xs:text-xl lg:text-3xl;
 }
 
 /* body {
