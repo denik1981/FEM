@@ -47,20 +47,106 @@ html {
 }
 
 /* Curved Backgrounds - #F6FBFF */
+.stripe-1,
+.stripe-2,
+.footer {
+  position: relative;
+}
 
-.stripe-1 {
-  background: url("~assets/bg/stripe1-t-mob.svg") top center / contain no-repeat,
-    url("~assets/bg/stripe1-b-mob.svg") bottom center / contain no-repeat, #e6fbff;
+.stripe-1,
+.stripe-2 {
+  background: #e6fbff;
+}
+.footer {
+  background: #09252e;
+}
+
+.stripe-1:before {
+  content: "";
+  background: url("~assets/bg/stripe1-t-mob.svg") bottom left / contain no-repeat;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  display: block;
+}
+
+.stripe-1:after {
+  content: "";
+  background: url("~assets/bg/stripe1-b-mob.svg") top left / contain no-repeat;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  display: block;
+}
+
+.stripe-2:before {
+  content: "";
+  background: url("~assets/bg/stripe2-t-mob.svg") bottom left / contain no-repeat;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  display: block;
+}
+
+.stripe-2:after {
+  content: "";
+  background: url("~assets/bg/stripe2-b-mob.svg") top left / contain no-repeat;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  display: block;
+}
+
+.footer:before {
+  content: "";
+  background: url("~assets/bg/footer-mobile.svg") bottom left / contain no-repeat;
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  display: block;
 }
 
 @media (min-width: 768px) {
+  .stripe-1:before {
+    background: url("~assets/bg/stripe1-t-desk.svg") bottom left / contain no-repeat;
+  }
+  .stripe-1:after {
+    background: url("~assets/bg/stripe1-b-desk.svg") top left / contain no-repeat;
+  }
+
+  .stripe-2:before {
+    background: url("~assets/bg/stripe2-t-desk.svg") bottom left / contain no-repeat;
+  }
+  .stripe-2:after {
+    background: url("~assets/bg/stripe2-b-desk.svg") top left / contain no-repeat;
+  }
+  .footer:before {
+    background: url("~assets/bg/footer-desktop.svg") bottom left / contain no-repeat;
+  }
+}
+
+/* @media (min-width: 768px) {
   .stripe-1 {
     background: url("~assets/bg/stripe1-t-desk.svg") top center / contain no-repeat,
       url("~assets/bg/stripe1-b-desk.svg") bottom center / contain no-repeat, #e6fbff;
   }
-}
+} */
 
-.stripe-2 {
+/* .stripe-2 {
   background: url("~assets/bg/stripe2-t-mob.svg") top center / contain no-repeat,
     url("~assets/bg/stripe2-b-mob.svg") bottom center / contain no-repeat, #e6fbff;
 }
@@ -70,16 +156,11 @@ html {
     background: url("~assets/bg/stripe2-t-desk.svg") top center / contain no-repeat,
       url("~assets/bg/stripe2-b-desk.svg") bottom center / contain no-repeat, #e6fbff;
   }
-}
+} */
 
-.footer {
-  background: url("~assets/bg/footer-mobile.svg") top center / contain no-repeat, #09252e;
-}
-@media (min-width: 768px) {
-  .footer {
-    background: url("~assets/bg/footer-desktop.svg") top center / contain no-repeat, #09252e;
-  }
-}
+/* url("~assets/bg/footer-mobile.svg") top left / contain no-repeat") */
+
+/* //////////////////////////////////////////////////////////// */
 
 /* body {
   @apply flex min-h-screen py-24;
