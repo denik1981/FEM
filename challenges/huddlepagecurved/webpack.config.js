@@ -6,42 +6,30 @@ const isProduction = process.env.NODE_ENV === 'production'
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader'
 
 const config = {
-  stats: 'summary',
-  devtool: 'source-map',
+  mode: isProduction ? 'production' : 'development',
+  stats: 'detailed',
+  devtool: 'inline-source-map',
   entry: { main: path.resolve(__dirname, 'src/index.js') },
   resolve: { alias: { assets: path.resolve(__dirname, 'assets') } },
-  devServer: { open: { app: [''] }, host: 'localhost' },
+  devServer: { host: 'localhost' },
   optimization: { runtimeChunk: 'single' },
+  output: {
+    clean: isProduction,
+    path: isProduction ? path.resolve('..', '..', 'public', path.basename(__dirname)) : path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[hash][ext]',
+    publicPath: isProduction ? path.basename(__dirname) + path.sep : ''
+  },
   module: {
     rules: [
       { test: /\.css$/i, use: [stylesHandler, 'css-loader', 'postcss-loader'] },
       { test: /\.(|svg|png|jpg|gif)$/i, type: 'asset/resource' }
     ]
   },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: 'assets/[hash][ext]',
-    publicPath: ''
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      favicon: 'assets/misc/favicon.png',
-      template: 'index.html',
-      minify: false
-    })
-  ]
+  plugins: []
 }
 
 module.exports = (env) => {
-  if (isProduction) {
-    config.mode = 'production'
-    config.output.clean = true
-    config.output.path = path.resolve(__dirname, `../../public/${path.basename(__dirname)}`)
-    config.output.publicPath = '/huddlepagecurved/'
-    config.plugins.push(new MiniCssExtractPlugin({ filename: '[contenthash][ext]' }))
-  } else {
-    config.mode = 'development'
-    config.devServer.open.app = env.browser
-  }
+  config.plugins.push(new HtmlWebpackPlugin({ minify: false, favicon: 'assets/misc/favicon.png', template: 'index.html' }))
+  if (isProduction) config.plugins.push(new MiniCssExtractPlugin({ filename: '[contenthash].css' }))
   return config
 }

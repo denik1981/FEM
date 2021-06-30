@@ -1,0 +1,152 @@
+:root {
+  /* --cl-primary-000: hsl(233, 47%, 7%);
+  --cl-primary-100: hsl(244, 38%, 16%);
+  --cl-secondary-600: hsl(277, 64%, 61%); */
+
+  --ff-primary: "Open Sans";
+  --ff-display: "Poppins";
+}
+
+html {
+  @apply xs:text-xl lg:text-3xl;
+}
+
+.stat--communities:before,
+.stat--messages:before {
+  content: "";
+  width: 1.7rem;
+  height: 1.7rem;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(20%, -120%);
+}
+
+.stat--communities:before {
+  background: url("~assets/icon/communities.svg") center / contain no-repeat;
+}
+
+.stat--messages:before {
+  background: url("~assets/icon/messages.svg") center / contain no-repeat;
+}
+
+.contact--phone:before,
+.contact--email:before {
+  content: " ";
+  width: 1.2rem;
+  display: block;
+}
+
+.contact--phone:before {
+  background: url("~assets/icon/phone.svg") center / contain no-repeat;
+}
+
+.contact--email:before {
+  background: url("~assets/icon/email.svg") center / contain no-repeat;
+}
+
+/* Curved Backgrounds - #F6FBFF */
+
+.stripe-1 {
+  background: url("~assets/bg/stripe1-t-mob.svg") top center / contain no-repeat,
+    url("~assets/bg/stripe1-b-mob.svg") bottom center / contain no-repeat, #e6fbff;
+}
+
+@media (min-width: 768px) {
+  .stripe-1 {
+    background: url("~assets/bg/stripe1-t-desk.svg") top center / contain no-repeat,
+      url("~assets/bg/stripe1-b-desk.svg") bottom center / contain no-repeat, #e6fbff;
+  }
+}
+
+.stripe-2 {
+  background: url("~assets/bg/stripe2-t-mob.svg") top center / contain no-repeat,
+    url("~assets/bg/stripe2-b-mob.svg") bottom center / contain no-repeat, #e6fbff;
+}
+
+@media (min-width: 768px) {
+  .stripe-2 {
+    background: url("~assets/bg/stripe2-t-desk.svg") top center / contain no-repeat,
+      url("~assets/bg/stripe2-b-desk.svg") bottom center / contain no-repeat, #e6fbff;
+  }
+}
+
+.footer {
+  background: url("~assets/bg/footer-mobile.svg") top center / contain no-repeat, #09252e;
+}
+@media (min-width: 768px) {
+  .footer {
+    background: url("~assets/bg/footer-desktop.svg") top center / contain no-repeat, #09252e;
+  }
+}
+
+/* body {
+  @apply flex min-h-screen py-24;
+  @apply text-white font-primary bg-primary-000;
+}
+
+.component {
+  @apply w-11/12 max-w-sm m-auto grid;
+  @apply bg-primary-100 rounded-xl overflow-hidden text-center;
+  @apply lg:max-w-5xl lg:grid-flow-col-dense;
+}
+
+@screen lg {
+  .component {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+}
+
+.card__banner {
+  @apply bg-secondary-600;
+  @apply lg:col-start-2;
+}
+
+.banner__img {
+  @apply mix-blend-multiply opacity-70;
+}
+
+.card__message {
+  @apply w-10/12 max-w-sm py-8;
+  @apply justify-self-center;
+  @apply flex flex-col gap-y-10 justify-around;
+  @apply lg:justify-self-start lg:gap-y-0 lg:pl-14 lg:py-4 lg:text-left;
+}
+
+.message__title {
+  @apply text-3xl font-bold;
+}
+
+.message__text {
+  @apply w-11/12 mx-auto mt-6;
+  @apply text-gray-300 leading-relaxed;
+  @apply lg:w-auto lg:text-sm lg:leading-relaxed;
+}
+
+.message__stats {
+  @apply grid auto-cols-fr gap-y-5;
+  @apply uppercase text-xs;
+  @apply md:grid-flow-col;
+}
+
+.stat__value {
+  @apply block;
+  @apply text-2xl font-bold;
+  /* @apply lg:text-xl; 
+
+
+.stat__value--companies {
+  @apply lowercase;
+}
+.stat__label {
+  @apply block;
+  @apply text-gray-300 leading-relaxed tracking-widest;
+}
+
+@screen md {
+  .stat__label {
+    font-size: 0.6rem;
+  }
+} 
+*/
