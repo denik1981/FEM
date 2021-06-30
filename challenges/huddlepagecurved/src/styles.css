@@ -11,6 +11,40 @@ html {
   @apply xs:text-xl lg:text-3xl;
 }
 
+.stat--communities:before,
+.stat--messages:before {
+  content: "";
+  width: 1.7rem;
+  height: 1.7rem;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(20%, -120%);
+}
+
+.stat--communities:before {
+  background: url("~assets/icon/communities.svg") center / contain no-repeat;
+}
+
+.stat--messages:before {
+  background: url("~assets/icon/messages.svg") center / contain no-repeat;
+}
+
+.contact--phone:before,
+.contact--email:before {
+  content: " ";
+  width: 1.2rem;
+  display: block;
+}
+
+.contact--phone:before {
+  background: url("~assets/icon/phone.svg") center / contain no-repeat;
+}
+
+.contact--email:before {
+  background: url("~assets/icon/email.svg") center / contain no-repeat;
+}
 /* body {
   @apply flex min-h-screen py-24;
   @apply text-white font-primary bg-primary-000;
