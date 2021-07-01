@@ -78,14 +78,14 @@
               <p class="feature__description">
                 It takes no time at all to integrate Huddle with your app's authentication solution. This means, once
                 signed in to your app, your users can start chatting immediately.
-              </pv>
+              </p>
             </div>
           </div>
         </li>
       </ul>
       <section class="cta">
         <h2 class="cta__title">Ready to build your community?</h2>
-        <a href="#" class="btn btn__cta brn__cta--cta" onclick="return false" > Get started for free </a>
+        <a href="#" class="btn btn__cta brn__cta--cta" onclick="return false"> Get started for free </a>
       </section>
     </main>
 
@@ -97,32 +97,46 @@
             To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam
             or pass on your email address
           </p>
-          <form onsubmit="return false" class="newsletter__subscribe" >
-            <div class="w-full">
+          <form onsubmit="return false" class="newsletter__subscribe">
+            <div class="subscribe__email">
               <label id="email-label" hidden>email</label>
-              <input type="email" class=" subscribe__email" aria-labelledby="email-label" required />
+              <input
+                id="email"
+                type="email"
+                class="email__field"
+                aria-labelledby="email-label"
+                oninvalid="this.setCustomValidity(' ')"
+              />
+              <span class="email__error" aria-live="polite" onclick="this.webkitTransform = 'scale(1)'"
+                >Check your email please</span
+              >
             </div>
-            <button type="submit" class="btn btn__subscribe" > Subscribe </button>
+            <button type="submit" class="btn btn__subscribe" onclick="(e)=>e.preventDefault()">Subscribe</button>
           </form>
         </section>
         <section class="footer__contact">
           <img src="<%=require('./assets/logo.svg')%>" alt="logo" class="contact__logo" />
           <p class="contact__desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum
-            a, ultrices quis sem.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a,
+            ultrices quis sem.
           </p>
           <ul class="contact__channels">
             <li class="contact__channel contact--phone">Phone: +1-543-123-4567</li>
             <li class="contact__channel contact--email">example@huddle.com</li>
           </ul>
           <div class="contact__social">
-            <a href="#" onclick="return false" aria-label="go to our facebook page"><i class="fab fa-facebook-square"  aria-hidden="true"></i></a>
-            <a href="#" onclick="return false" aria-label="go to our instagram page"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a href="#" onclick="return false" aria-label="go to our twitter page" ><i class="fab fa-twitter-square" aria-hidden="true"></i></a>
+            <a href="#" onclick="return false" aria-label="go to our facebook page"
+              ><i class="fab fa-facebook-square" aria-hidden="true"></i
+            ></a>
+            <a href="#" onclick="return false" aria-label="go to our instagram page"
+              ><i class="fab fa-instagram" aria-hidden="true"></i
+            ></a>
+            <a href="#" onclick="return false" aria-label="go to our twitter page"
+              ><i class="fab fa-twitter-square" aria-hidden="true"></i
+            ></a>
           </div>
         </section>
       </div>
-      
     </footer>
   </body>
 </html>

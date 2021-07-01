@@ -251,12 +251,40 @@ footer {
 }
 
 .subscribe__email {
+  @apply w-full relative;
+}
+
+.email__field {
   @apply w-full;
   @apply px-2 lg:px-1 py-3 lg:py-1;
   @apply lg:text-3xs;
   @apply text-right xs:text-center lg:text-left;
   @apply text-black;
   @apply rounded-md lg:rounded-sm;
+}
+
+.email__error {
+  @apply hidden;
+  @apply absolute;
+  @apply my-1;
+  @apply text-xs text-accent-600;
+  bottom: 100%;
+  left: 0;
+}
+
+@screen lg {
+  .email__error {
+    top: 100%;
+    @apply text-3xs;
+  }
+}
+
+.email__field:invalid {
+  @apply ring-2 ring-accent-600;
+}
+
+.email__field:invalid + .email__error {
+  @apply block;
 }
 
 .footer__contact {
@@ -357,7 +385,7 @@ footer:before {
   z-index: -1;
 }
 
-@media (min-width: 768px) {
+@screen md {
   .feature:nth-child(1):before {
     background: var(--bg-wave1-top-desktop) bottom left / contain no-repeat;
   }
