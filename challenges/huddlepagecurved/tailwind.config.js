@@ -1,7 +1,16 @@
+const { textColor } = require('tailwindcss/defaultTheme')
 const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
-  purge: ['./index.ejs'],
+  purge: ['./index.html'],
   plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],
+  variants: {
+    extend: {
+      borderWidth: ['hover', 'focus'],
+      textColor: ['active'],
+      ringWidth: ['hover', 'active'],
+      backgroundColor: ['active']
+    }
+  },
   theme: {
     screens: {
       xs: '440px',
