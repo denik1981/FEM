@@ -1,7 +1,12 @@
 :root {
-  /* --cl-primary-000: hsl(233, 47%, 7%);
-  --cl-primary-100: hsl(244, 38%, 16%);
-  --cl-secondary-600: hsl(277, 64%, 61%); */
+  --cl-primary-600: hsl(322, 100%, 66%);
+  --cl-primary-700: hsl(321, 100%, 78%);
+  --cl-accent-600: hsl(0, 100%, 63%);
+  --cl-neutral-000: hsl(192, 100%, 9%);
+  --cl-neutral-100: hsl(192, 44%, 16%);
+  --cl-neutral-900: hsl(207, 100%, 98%);
+
+  --cl-secondary-600: hsl(277, 64%, 61%);
 
   --ff-primary: "Open Sans";
   --ff-display: "Poppins";
@@ -14,11 +19,19 @@ html {
 body {
   max-width: 1400px;
   @apply mx-auto;
-  @apply text-base font-primary text-center;
+  @apply text-base font-primary text-center text-neutral-000;
 }
 
+/* a {
+  @apply no-underline;
+}
+
+ul {
+  @apply list-none;
+} */
 .btn {
   @apply capitalize align-middle;
+  @apply text-neutral-900 bg-primary-600 font-bold;
 }
 
 .brand {
@@ -30,14 +43,14 @@ body {
 .brand__logo {
   @apply w-24 lg:w-28;
   @apply object-contain;
-  @apply filter brightness-0;
+  @apply filter contrast-200;
 }
 
 .brand__cta {
-  @apply px-5 lg:px-2 py-1;
-  @apply text-purple-500;
+  @apply px-5 lg:px-3 py-1;
+  @apply text-primary-700 font-normal;
   @apply text-1xs lg:text-2xs;
-  @apply border-2 border-solid border-current rounded-xl;
+  @apply bg-transparent border-2 border-solid border-current rounded-xl;
 }
 
 .hero {
@@ -61,7 +74,7 @@ body {
   @apply my-6 lg:my-1 px-12 lg:px-9 py-3;
   @apply text-xs;
   @apply font-bold;
-  @apply bg-red-700 text-white;
+  @apply bg-primary-600 text-neutral-900;
   @apply rounded-3xl;
 }
 
@@ -92,6 +105,7 @@ body {
   @apply text-base lg:text-xs;
   @apply capitalize;
   @apply lg:tracking-normal;
+  filter: contrast(0.1);
 }
 
 .features {
@@ -162,12 +176,12 @@ body {
   @apply w-max block mx-auto my-10 lg:my-5;
   @apply px-10 py-3;
   @apply text-xs font-bold;
-  @apply text-white bg-pink-700 rounded-3xl;
+  @apply rounded-3xl;
 }
 
 footer {
   @apply mt-96 xs:mt-56;
-  @apply text-white;
+  @apply text-neutral-900;
   @apply relative;
   background: #09252e;
 }
@@ -214,10 +228,9 @@ footer {
 }
 
 .subscribe__btn {
-  @apply px-10 xs:px-16 lg:px-4 py-3 lg:py-0;
-  @apply lg:text-2xs font-bold;
+  @apply px-10 xs:px-16 lg:px-4 py-3 lg:py-1;
+  @apply lg:text-2xs;
   @apply self-end xs:self-center lg:self-stretch;
-  @apply bg-red-400;
   @apply rounded-md lg:rounded-sm;
 }
 
@@ -317,20 +330,20 @@ footer:before {
 
 @media (min-width: 768px) {
   .feature:nth-child(1):before {
-    background: url("~assets/bg/stripe1-t-desk.svg") bottom left / contain no-repeat;
+    background: url("assets/bg/stripe1-t-desk.svg") bottom left / contain no-repeat;
   }
   .feature:nth-child(1):after {
-    background: url("~assets/bg/stripe1-b-desk.svg") top left / contain no-repeat;
+    background: url("assets/bg/stripe1-b-desk.svg") top left / contain no-repeat;
   }
 
   .feature:nth-child(3):before {
-    background: url("~assets/bg/stripe2-t-desk.svg") bottom left / contain no-repeat;
+    background: url("assets/bg/stripe2-t-desk.svg") bottom left / contain no-repeat;
   }
   .feature:nth-child(3):after {
-    background: url("~assets/bg/stripe2-b-desk.svg") top left / contain no-repeat;
+    background: url("assets/bg/stripe2-b-desk.svg") top left / contain no-repeat;
   }
   .footer:before {
-    background: url("~assets/bg/footer-desktop.svg") bottom left / contain no-repeat;
+    background: url("assets/bg/footer-desktop.svg") bottom left / contain no-repeat;
   }
 }
 
@@ -338,13 +351,14 @@ footer:before {
 .stat__mark--communities:before,
 .stat__mark--messages:before {
   content: "";
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 1.3rem;
+  height: 1.3rem;
   display: block;
   position: absolute;
   top: 0px;
   left: 0px;
-  transform: translate(20%, -120%);
+  filter: contrast(0.5);
+  transform: translate(10%, -120%);
 }
 
 .stat__mark--communities:before {

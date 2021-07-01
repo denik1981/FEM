@@ -1,6 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
-  purge: ['./index.ejs'],
+  purge: ['./index.html'],
   plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],
   theme: {
     screens: {

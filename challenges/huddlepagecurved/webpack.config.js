@@ -17,7 +17,8 @@ const config = {
     clean: isProduction,
     path: isProduction ? path.resolve('..', '..', 'public', path.basename(__dirname)) : path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'assets/[hash][ext]',
-    publicPath: isProduction ? path.basename(__dirname) + path.sep : ''
+    // publicPath: ''
+    publicPath: isProduction ? path.sep + path.basename(__dirname) + path.sep : ''
   },
   module: {
     rules: [
