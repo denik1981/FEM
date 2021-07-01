@@ -10,6 +10,22 @@
 
   --ff-primary: "Open Sans";
   --ff-display: "Poppins";
+
+  --bg-wave1-top-desktop: url("~assets/bg/wave1-top-desktop.svg");
+  --bg-wave1-top-mobile: url("~assets/bg/wave1-top-mobile.svg");
+  --bg-wave1-bottom-desktop: url("~assets/bg/wave1-bottom-desktop.svg");
+  --bg-wave1-bottom-mobile: url("~assets/bg/wave1-bottom-mobile.svg");
+  --bg-wave2-top-desktop: url("~assets/bg/wave2-top-desktop.svg");
+  --bg-wave2-top-mobile: url("~assets/bg/wave2-top-mobile.svg");
+  --bg-wave2-bottom-desktop: url("~assets/bg/wave2-bottom-desktop.svg");
+  --bg-wave2-bottom-mobile: url("~assets/bg/wave2-bottom-mobile.svg");
+  --bg-wave-footer-desktop: url("~assets/bg/wave-footer-desktop.svg");
+  --bg-wave-footer-mobile: url("~assets/bg/wave-footer-mobile.svg");
+
+  --icon-communities: url("~assets/icon/communities.svg");
+  --icon-messages: url("~assets/icon/messages.svg");
+  --icon-phone: url("~assets/icon/phone.svg");
+  --icon-email: url("~assets/icon/email.svg");
 }
 
 html {
@@ -301,24 +317,24 @@ footer {
 }
 
 .feature:nth-child(1):before {
-  background: url("~assets/bg/stripe1-t-mob.svg") bottom left / contain no-repeat;
+  background: var(--bg-wave1-top-mobile) bottom left / contain no-repeat;
 }
 
 .feature:nth-child(1):after {
-  background: url("~assets/bg/stripe1-b-mob.svg") top left / contain no-repeat;
+  background: var(--bg-wave1-bottom-mobile) top left / contain no-repeat;
 }
 
 .feature:nth-child(3):before {
-  background: url("~assets/bg/stripe2-t-mob.svg") bottom left / contain no-repeat;
+  background: var(--bg-wave2-top-mobile) bottom left / contain no-repeat;
 }
 
 .feature:nth-child(3):after {
-  background: url("~assets/bg/stripe2-b-mob.svg") top left / contain no-repeat;
+  background: var(--bg-wave2-bottom-mobile) top left / contain no-repeat;
 }
 
 footer:before {
   content: "";
-  background: url("~assets/bg/footer-mobile.svg") bottom left / contain no-repeat;
+  background: var(--bg-wave-footer-mobile) bottom left / contain no-repeat;
   position: absolute;
   bottom: 100%;
   width: 100%;
@@ -330,20 +346,20 @@ footer:before {
 
 @media (min-width: 768px) {
   .feature:nth-child(1):before {
-    background: url("assets/bg/stripe1-t-desk.svg") bottom left / contain no-repeat;
+    background: var(--bg-wave1-top-desktop) bottom left / contain no-repeat;
   }
   .feature:nth-child(1):after {
-    background: url("assets/bg/stripe1-b-desk.svg") top left / contain no-repeat;
+    background: var(--bg-wave1-bottom-desktop) top left / contain no-repeat;
   }
 
   .feature:nth-child(3):before {
-    background: url("assets/bg/stripe2-t-desk.svg") bottom left / contain no-repeat;
+    background: var(--bg-wave2-top-desktop) bottom left / contain no-repeat;
   }
   .feature:nth-child(3):after {
-    background: url("assets/bg/stripe2-b-desk.svg") top left / contain no-repeat;
+    background: var(--bg-wave2-bottom-desktop) top left / contain no-repeat;
   }
   .footer:before {
-    background: url("assets/bg/footer-desktop.svg") bottom left / contain no-repeat;
+    background: var(--bg-wave1-footer-desktop) bottom left / contain no-repeat;
   }
 }
 
@@ -362,11 +378,11 @@ footer:before {
 }
 
 .stat__mark--communities:before {
-  background: url("~assets/icon/communities.svg") center / contain no-repeat;
+  background: var(--icon-communities) center / contain no-repeat;
 }
 
 .stat__mark--messages:before {
-  background: url("~assets/icon/messages.svg") center / contain no-repeat;
+  background: var(--icon-messages) center / contain no-repeat;
 }
 
 .contact--phone:before,
@@ -377,9 +393,9 @@ footer:before {
 }
 
 .contact--phone:before {
-  background: url("~assets/icon/phone.svg") center / contain no-repeat;
+  background: var(--icon-phone) center / contain no-repeat;
 }
 
 .contact--email:before {
-  background: url("~assets/icon/email.svg") center / contain no-repeat;
+  background: var(--icon-email) center / contain no-repeat;
 }
