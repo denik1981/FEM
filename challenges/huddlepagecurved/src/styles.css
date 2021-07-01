@@ -31,6 +31,10 @@
   @apply focus:outline-none focus:ring focus:ring-secondary-600 focus:ring-offset-4;
 }
 
+address {
+  @apply not-italic;
+}
+
 html {
   @apply xs:text-xl lg:text-3xl;
 }
