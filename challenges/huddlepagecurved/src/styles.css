@@ -1,12 +1,11 @@
 :root {
   --cl-primary-600: hsl(322, 100%, 66%);
   --cl-primary-700: hsl(321, 100%, 78%);
+  --cl-secondary-600: hsl(198, 95%, 64%);
   --cl-accent-600: hsl(0, 100%, 63%);
   --cl-neutral-000: hsl(192, 100%, 9%);
   --cl-neutral-100: hsl(192, 44%, 16%);
   --cl-neutral-900: hsl(207, 100%, 98%);
-
-  --cl-secondary-600: hsl(277, 64%, 61%);
 
   --ff-primary: "Open Sans";
   --ff-display: "Poppins";
@@ -28,6 +27,10 @@
   --icon-email: url("~assets/icon/email.svg");
 }
 
+* {
+  @apply focus:outline-none focus:ring focus:ring-secondary-600 focus:ring-offset-4;
+}
+
 html {
   @apply xs:text-xl lg:text-3xl;
 }
@@ -38,16 +41,50 @@ body {
   @apply text-base font-primary text-center text-neutral-000;
 }
 
-/* a {
-  @apply no-underline;
-}
-
-ul {
-  @apply list-none;
-} */
 .btn {
+  @apply w-max block;
   @apply capitalize align-middle;
   @apply text-neutral-900 bg-primary-600 font-bold;
+}
+
+.btn__brand {
+  @apply px-5 lg:px-3 py-1;
+  @apply text-primary-600 font-normal;
+  @apply text-1xs lg:text-2xs;
+  @apply bg-transparent border-2 border-solid border-current rounded-xl;
+  @apply hover:text-primary-700 active:text-primary-600;
+}
+
+.btn__cta {
+  @apply px-12 lg:px-9 py-3;
+  @apply mx-auto my-6;
+  @apply text-xs font-bold;
+  @apply bg-primary-600 text-neutral-900;
+  @apply rounded-3xl shadow-2xl;
+  @apply transition-shadow;
+}
+
+.btn__subscribe {
+  @apply px-10 xs:px-16 lg:px-4 py-3 lg:py-1;
+  @apply lg:text-2xs;
+  @apply rounded-md lg:rounded-sm;
+  @apply self-end xs:self-center lg:self-stretch;
+}
+
+.btn,
+a {
+  @apply hover:ring-0 active:ring-0;
+}
+
+footer .btn,
+footer a {
+  @apply ring-offset-neutral-000;
+}
+
+.btn__cta,
+.btn__subscribe {
+  @apply hover:bg-primary-700 hover:shadow-none focus:shadow-none;
+  @apply active:bg-primary-600;
 }
 
 .brand {
@@ -60,13 +97,6 @@ ul {
   @apply w-24 lg:w-28;
   @apply object-contain;
   @apply filter contrast-200;
-}
-
-.brand__cta {
-  @apply px-5 lg:px-3 py-1;
-  @apply text-primary-700 font-normal;
-  @apply text-1xs lg:text-2xs;
-  @apply bg-transparent border-2 border-solid border-current rounded-xl;
 }
 
 .hero {
@@ -84,14 +114,6 @@ ul {
   @apply max-w-sm lg:max-w-xs;
   @apply text-sm lg:text-1xs;
   @apply my-6 lg:my-4;
-}
-
-.hero__cta {
-  @apply my-6 lg:my-1 px-12 lg:px-9 py-3;
-  @apply text-xs;
-  @apply font-bold;
-  @apply bg-primary-600 text-neutral-900;
-  @apply rounded-3xl;
 }
 
 .hero__banner {
@@ -140,6 +162,7 @@ ul {
   @apply flex flex-col md:flex-row justify-between items-center;
   @apply justify-between items-center;
   @apply gap-y-10;
+  @apply text-center md:text-left;
 }
 
 .feature__image {
@@ -155,7 +178,7 @@ ul {
 }
 
 .feature__heading {
-  @apply w-max;
+  @apply w-max mx-auto md:mx-0 md:mr-auto;
   @apply text-xl md:text-2xl lg:text-xl;
   @apply font-bold font-display capitalize;
 }
@@ -188,18 +211,11 @@ ul {
   @apply lg:tracking-tight;
 }
 
-.cta__btn {
-  @apply w-max block mx-auto my-10 lg:my-5;
-  @apply px-10 py-3;
-  @apply text-xs font-bold;
-  @apply rounded-3xl;
-}
-
 footer {
   @apply mt-96 xs:mt-56;
   @apply text-neutral-900;
   @apply relative;
-  background: #09252e;
+  @apply bg-neutral-000;
 }
 
 .footer__container {
@@ -243,13 +259,6 @@ footer {
   @apply rounded-md lg:rounded-sm;
 }
 
-.subscribe__btn {
-  @apply px-10 xs:px-16 lg:px-4 py-3 lg:py-1;
-  @apply lg:text-2xs;
-  @apply self-end xs:self-center lg:self-stretch;
-  @apply rounded-md lg:rounded-sm;
-}
-
 .footer__contact {
   @apply lg:w-1/4;
   @apply lg:justify-self-start xs:items-center;
@@ -286,6 +295,10 @@ footer {
   @apply xs:mx-auto lg:mx-0;
   @apply flex gap-x-4;
   @apply text-3xl lg:text-lg;
+}
+
+.contact__social .fab {
+  @apply hover:text-secondary-600;
 }
 
 /* backgrounds */
