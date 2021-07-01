@@ -34,7 +34,7 @@ html {
 .contact--phone:before,
 .contact--email:before {
   content: " ";
-  width: 1.2rem;
+  width: 0.5rem;
   display: block;
 }
 
@@ -71,6 +71,7 @@ html {
   height: 100vh;
   left: 0;
   display: block;
+  z-index: -1;
 }
 
 .stripe-1:after {
@@ -83,6 +84,7 @@ html {
   height: 100vh;
   left: 0;
   display: block;
+  z-index: -1;
 }
 
 .stripe-2:before {
@@ -95,6 +97,7 @@ html {
   height: 100vh;
   left: 0;
   display: block;
+  z-index: -1;
 }
 
 .stripe-2:after {
@@ -107,6 +110,7 @@ html {
   height: 100vh;
   left: 0;
   display: block;
+  z-index: -1;
 }
 
 .footer:before {
@@ -118,6 +122,7 @@ html {
   height: 100vh;
   left: 0;
   display: block;
+  z-index: -1;
 }
 
 @media (min-width: 768px) {

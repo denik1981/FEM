@@ -16,7 +16,7 @@
   <body class="mx-auto | text-center font-primary" style="max-width: 1400px">
     <div class="w-11/12 lg:px-2 my-6 lg:my-9 | flex items-center justify-between | mx-auto">
       <img src="<%=require('./assets/logo.svg')%>" class="object-contain | w-24 lg:w-28 | filter brightness-0" />
-      <div
+      <a
         class="
           px-5
           py-1
@@ -29,9 +29,11 @@
           text-purple-500
           align-middle
         "
+        href="#"
+        onclick="return false"
       >
         Try it free
-      </div>
+      </a>
     </div>
     <div class="w-10/12 mt-28 mb-0 | mx-auto flex flex-col justify-between items-center">
       <div class="flex flex-col items-center">
@@ -43,14 +45,20 @@
           connections with your users as you engage in genuine discussion.
         </div>
       </div>
-      <div class="my-6 lg:my-1 px-12 lg:px-9 py-3 text-xs bg-red-700 | text-white font-bold | rounded-3xl">
+      <a
+        href="#"
+        class="my-6 lg:my-1 px-12 lg:px-9 py-3 text-xs bg-red-700 | text-white font-bold | rounded-3xl"
+        onclick="return false"
+      >
         Get Started For Free
-      </div>
+      </a>
     </div>
+
     <img
       src="<%=require('./assets/illustration/screenshot.svg')%>"
       class="w-4/5 lg:w-2/3 my-20 lg:my-12 | object-contain mx-auto"
     />
+
     <div
       class="
         md:w-4/5
@@ -124,14 +132,20 @@
         </div>
       </div>
     </div>
+
     <div class="mt-64 mb-0 xs:my-40 capitalize">
       <div class="text-2xl leading-normal lg:tracking-tight lg:text-xl | font-bold font-display">
         Ready to build your community?
       </div>
-      <div class="my-10 lg:my-5 w-max mx-auto px-10 py-3 text-xs | bg-pink-700 text-white font-bold | rounded-3xl">
+      <a
+        href="#"
+        class="block my-10 lg:my-5 w-max mx-auto px-10 py-3 text-xs | bg-pink-700 text-white font-bold | rounded-3xl"
+        onclick="return false"
+      >
         Get started for free
-      </div>
+      </a>
     </div>
+
     <div class="footer mt-96 xs:mt-56 text-white">
       <div
         class="
@@ -171,7 +185,7 @@
                   px-2
                   lg:px-1
                   py-3
-                  lg:py-1 lg:text-2xs
+                  lg:py-1 lg:text-3xs
                   w-full
                   text-right
                   xs:text-center
@@ -179,6 +193,7 @@
                   text-black
                   |
                   rounded-md
+                  lg:rounded-sm
                 "
                 aria-labelledby="email-label"
                 required
@@ -198,6 +213,7 @@
                 bg-red-400
                 capitalize
                 rounded-md
+                lg:rounded-sm
               "
             >
               Subscribe
@@ -213,14 +229,14 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a,
             ultrices quis sem.
           </div>
-          <div class="my-10 lg:my-2 space-y-4 lg:space-y-2">
-            <div class="contact--phone flex gap-x-4 xs:justify-center">Phone: +1-543-123-4567</div>
-            <div class="contact--email flex gap-x-4 xs:justify-center">example@huddle.com</div>
+          <div class="my-10 lg:my-2 w-min xs:mx-auto lg:mx-0 space-y-4 lg:space-y-2 text-2xs">
+            <div class="contact--phone flex gap-x-2 w-max">Phone: +1-543-123-4567</div>
+            <div class="contact--email flex gap-x-2">example@huddle.com</div>
           </div>
           <div class="my-10 w-min xs:mx-auto lg:mx-0 text-3xl lg:text-lg gap-x-4 flex">
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter-square"></i>
+            <a href="#" onclick="return false"><i class="fab fa-facebook-square"></i></a>
+            <a href="#" onclick="return false"><i class="fab fa-instagram"></i></a>
+            <a href="#" onclick="return false"><i class="fab fa-twitter-square"></i></a>
           </div>
         </div>
       </div>
