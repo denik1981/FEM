@@ -23,6 +23,7 @@
     "build:statspreviewcard": "npm run build -w fem-stats-preview-card",
     "build:threecolumn": "npm run build -w fem-three-column-preview-card-component",
     "build:huddlepagecurved": "npm run build -w fem-hudddle-page-curved-sections",
+    "build:fylotwocolumns": "npm run build -w fem-fylo-landing-page-two-columns",
     "build:master:v": "npm run build:v -w "
   },
   "dependencies": {
