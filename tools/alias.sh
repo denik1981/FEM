@@ -1,1 +1,0 @@
-alias clrfiles='find . -name "*" -type f -not -path "./fem/*" -exec bash -c "cat /dev/null > {}" \;'
