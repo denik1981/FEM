@@ -6,49 +6,52 @@
     <link rel="preconnect" href="https://fo nts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/1807313955.js" crossorigin="anonymous"></script>
     <title>Frontend Mentor | Fylo Landing Page With Two Column Layout</title>
   </head>
   <body class="w-full border-2 border-black font-primary text-base text-black overflow-x-hidden">
-    <div class="w-full px-5 lg:px-10 max-w-xl mx-auto">
-      <div class="w-full py-12 flex flex-row justify-between items-center">
+    <div class="w-full px-6 max-w-xl mx-auto | lg:px-10">
+      <div class="w-full py-6 flex flex-row justify-between items-center">
         <img src="<%=require('./assets/logo.svg')%>" class="contain w-1/4 max-w-5xs" />
-        <div class="max-w-3xs w-3/5">
-          <div class="flex flex-row justify-between items-center capitalize text-sm md:text-base">
+        <div class="max-w-3xs">
+          <div class="align-middle space-x-6 capitalize text-xs md:text-base">
             <span>features</span>
             <span>team</span>
             <span>sign in</span>
           </div>
         </div>
       </div>
-      <div class="grid gap-32 place-items-center py-24 text-center md:text-left">
-        <div class="grid gap-x-12 gap-y-8 place-items-center md:ab">
-          <img src="<%=require('./assets/draw-1.svg')%>" class="w-full contain max-w-2xs md:max-w-md md:order-2" alt="" style="" />
-          <div class="grid md:justify-self-start place-items-center md:place-items-start gap-y-7 max-w-xs lg:max-w-sm">
-            <div class="font-primary text-2xl font-bold lg:font-display md:text-xl lg:text-3xl xl:text-4xl lg:leading-normal">All your files in one secure location, accessible anywhere.</div>
-            <div class="font-primary text-sm lg:text-base leading-relaxed">Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.</div>
-            <form class="w-full grid grid-cols-1 gap-5 max-w-xs xl:aa xs:justify-items-center md:justify-items-start">
-              <input type="email" name="email" id="email" class="form-input w-full xs:max-w-2xs" />
-              <div class="sm:max-w-3xs px-12 py-4 bg-black text-white capitalize text-sm align-bottom leading-none text-center text-primary font-bold">Get started</div>
+      <div class="space-y-44 py-16 text-center | md:text-left">
+        <div class="grid gap-x-12 gap-y-8 place-items-center | md:ab">
+          <img src="<%=require('./assets/draw-1.svg')%>" class="w-full contain max-w-2xs | md:max-w-md md:order-2" alt="" style="" />
+          <div class="grid place-items-center gap-y-7 max-w-xs | md:justify-self-start md:place-items-start | lg:max-w-sm">
+            <div class="font-primary text-2xl font-bold | md:text-xl lg:text-3xl xl:text-4xl | lg:font-display lg:leading-normal">All your files in one secure location, accessible anywhere.</div>
+            <div class="font-primary text-sm leading-relaxed | max-w-2xs | lg:text-base">Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.</div>
+            <form class="w-full grid grid-cols-1 gap-3 | max-w-3xs | xs:justify-items-center md:justify-items-start | xl:aa">
+              <input type="email" name="email" id="email" class="form-input w-full | xs:max-w-2xs" />
+              <div class="px-12 py-4 bg-black text-white capitalize text-sm align-bottom leading-none text-center text-primary font-bold | sm:max-w-3xs">Get started</div>
             </form>
           </div>
         </div>
-        <div class="grid gap-x-12 gap-y-8 justify-items-center md:ac">
-          <img src="<%=require('./assets/draw-2.svg')%>" class="w-full contain max-w-2xs place-self-center xl:place-self-start md:row-span-full md:max-w-md md:order-2" alt="" />
-          <div class="flex flex-col md:place-self-start place-items-center md:place-items-start gap-y-7 max-w-xs lg:max-w-sm">
-            <div class="font-primary text-lg font-bold lg:font-display xs:text-2xl md:text-xl lg:text-3xl xl:text-4xl lg:leading-normal xs:min-w-max">Stay productive, wherever you are</div>
-            <div class="space-y-5 md:space-y-3 text-sm max-w-sm text-left leading-relaxed">
-              <div>Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</div>
-              <div>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!</div>
+        <div class="grid grid-cols-1 gap-x-12 gap-y-20 justify-items-center | md:ac">
+          <img src="<%=require('./assets/draw-2.svg')%>" class="w-full contain max-w-2xs place-self-center | md:row-span-full md:max-w-md md:order-2 | xl:place-self-start" alt="" />
+          <div class="grid grid-cols-1 justify-items-center gap-y-10">
+            <div class="flex flex-col place-items-center gap-y-7 | max-w-xs | md:place-self-start md:place-items-start | lg:max-w-sm">
+              <div class="font-primary text-md font-bold | xs:text-2xl xs:min-w-max | md:text-xl | lg:font-display lg:text-3xl lg:leading-normal | xl:text-4xl">Stay productive, wherever you are</div>
+              <div class="space-y-5 text-sm text-left leading-relaxed | max-w-sm | md:space-y-3">
+                <div>Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</div>
+                <div>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!</div>
+              </div>
+              <span class="see-how border-b-2 border-blue-400 text-blue-400 pb-1 px-0 w-max text-xs flex gap-x-2 items-center justify-between">See how Fylo works </span>
             </div>
-            <span class="block border-b-2 border-blue-400 text-blue-400 pb-1 px-1 w-max text-sm">See how Fylo works </span>
-          </div>
-          <div class="w-72 md:place-self-start space-y-5 border-2 border-black p-4">
-            <div class="text-xs text-left leading-relaxed">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</div>
-            <div class="flex items-center text-left text-xs leading-relaxed gap-2">
-              <img src="<%=require('./assets/avatar.jpg')%>" alt="" class="w-8 contain rounded-full" />
-              <div>
-                <div class="font-bold">Kyle Burton</div>
-                <div class="text-2xs">Founder & CEO, Huddle</div>
+            <div class="w-72 space-y-3 border-2 border-black pl-7 pr-1 py-8 | md:place-self-start">
+              <div class="testimonial | text-xs text-left leading-relaxed relative">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</div>
+              <div class="flex items-center text-left text-2xs leading-relaxed gap-2 tracking-widest">
+                <img src="<%=require('./assets/avatar.jpg')%>" alt="" class="w-6 contain rounded-full" />
+                <div>
+                  <div class="font-bold">Kyle Burton</div>
+                  <div class="text-3xs">Founder & CEO, Huddle</div>
+                </div>
               </div>
             </div>
           </div>
@@ -56,41 +59,41 @@
       </div>
     </div>
 
-    <div class="bg-blue-400 w-full py-10">
-      <div class="px-5 lg:px-10 w-full max-w-sm lg:max-w-xl mx-auto grid text-center lg:text-left gap-x-12 gap-y-7 items-start justify-items-center lg:justify-items-start lg:ac">
+    <div class="bg-blue-400 w-full py-14">
+      <div class="px-5 grid grid-cols-1 w-full max-w-sm mx-auto text-center gap-x-12 gap-y-4 items-start justify-items-center | lg:max-w-xl lg:px-10 lg:text-left lg:justify-items-start lg:ac">
         <div class="space-y-4 row-span-2">
           <div class="font-bold text-lg xs:text-2xl">Get early access today</div>
-          <div class="text-sm leading-relaxed max-w-xs">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</div>
+          <div class="text-sm leading-relaxed max-w-3xs">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</div>
         </div>
-        <form action="" class="grid grid-cols-1 row-span-2 justify-self-center xl:justify-self-start justify-items-center lg:justify-items-end xl:justify-items-start w-full max-w-2xs gap-3 self-center xl:self-start">
-          <input type="email" name="email" id="email" class="form-input w-full max-w-2xs" />
-          <div class="sm:max-w-3xs py-3 px-5 bg-black text-center text-white capitalize text-sm text-primary font-bold">Get started for free</div>
+        <form action="" class="grid grid-cols-1 row-span-2 w-full max-w-3xs gap-2 self-center justify-self-center justify-items-center | lg:justify-items-end | xl:justify-self-start xl:justify-items-start xl:self-start">
+          <input type="email" name="email" id="email" class="form-input w-full @max-w-2xs" />
+          <div class="w-full py-3 px-5 bg-black text-center text-white capitalize text-xs text-primary font-bold | sm:max-w-3xs">Get started for free</div>
         </form>
       </div>
     </div>
 
-    <div class="bg-purple-500 w-full py-10">
-      <div class="grid grid-cols-1 px-10 xs:px-0 md:px-10 gap-x-10 md:gap-x-20 gap-y-10 text-white xs:grid-cols-4">
+    <div class="bg-purple-500 w-full py-16">
+      <div class="grid grid-cols-1 px-10 gap-x-10 gap-y-12 text-white | xs:px-0 xs:grid-cols-4 | md:px-10 md:gap-x-20">
         <img src="<%=require('./assets/logo.svg')%>" alt="" class="col-span-full filter brightness-0 invert xs:justify-self-center md:justify-self-start" />
-        <div class="mr-3 space-y-3 w-max xs:text-xs xs:order-2 md:order-none lg:text-base xs:justify-self-end md:justify-self-start col-span-full xs:col-span-2 md:col-span-1">
-          <div>Phone: +1-543-123-4567</div>
-          <div>example@fylo.com</div>
+        <div class="mr-3 col-span-full space-y-4 | xs:justify-self-end xs:text-xs xs:order-2 xs:col-span-2 | md:order-none md:justify-self-start md:col-span-1 | lg:text-base">
+          <div class="w-max phone flex gap-x-4 items-center">Phone: +1-543-123-4567</div>
+          <div class="w-max email flex gap-x-4 items-center">example@fylo.com</div>
         </div>
-        <div class="xs:col-span-2 md:col-span-1 xs:justify-self-end md:justify-self-center flex flex-col gap-x-10 gap-y-4 xs:flex-row md:flex-col text-base xs:text-sm lg:text-base">
+        <div class="flex flex-col gap-x-10 gap-y-4 | xs:col-span-2 xs:justify-self-end xs:flex-row xs:text-sm | md:col-span-1 md:justify-self-center md:flex-col text-base | lg:text-base">
           <div class="w-max">About us</div>
           <div class="w-max">Jobs</div>
           <div class="w-max">Press</div>
           <div class="w-max">Blog</div>
         </div>
-        <div class="md:justify-self-center xs:col-span-2 md:col-span-1 flex flex-col gap-x-10 gap-y-4 xs:flex-row md:flex-col text-base xs:text-sm lg:text-base">
+        <div class="flex flex-col gap-x-10 gap-y-4 | xs:text-sm xs:col-span-2 xs:flex-row md:flex-col | md:col-span-1 md:justify-self-center | lg:text-base">
           <div class="w-max">Contact Us</div>
           <div class="w-max">Terms</div>
           <div class="w-max">Privacy</div>
         </div>
-        <div class="my-auto md:my-0 xs:justify-self-start justify-self-center lg:justify-self-start space-x-5 font-bold col-span-full xs:col-span-2 md:col-span-1 xs:order-last md:order-1">
-          <span>F</span>
-          <span>I</span>
-          <span>T</span>
+        <div class="justify-self-center space-x-2 font-bold col-span-full | xs:justify-self-start xs:col-span-2 xs:order-last | md:my-0 md:col-span-1 md:order-1 | lg:justify-self-start">
+          <i class="fab fa-facebook-f fa-sm leading-7 w-7 h-7 align-middle text-center inline-block rounded-full border" aria-hidden="true"></i>
+          <i class="fab fa-twitter fa-sm leading-7 w-7 h-7 align-middle text-center inline-block rounded-full border" aria-hidden="true"></i>
+          <i class="fab fa-instagram fa-sm leading-7 w-7 h-7 align-middle text-center inline-block rounded-full border" aria-hidden="true"></i>
         </div>
       </div>
     </div>
