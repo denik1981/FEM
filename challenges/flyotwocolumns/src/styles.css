@@ -13,4 +13,45 @@
   .ac {
     grid: repeat(2, auto) / auto-flow 1fr 45%;
   }
+
+  .ad {
+    grid: auto-flow / repeat(2, max-content);
+  }
+}
+
+/* Icons */
+
+.phone:before {
+  content: "";
+  background: url("~assets/icons/phone.svg") center / contain no-repeat;
+  display: inline-block;
+  width: 1.1rem;
+  aspect-ratio: 1/1;
+}
+
+.email:before {
+  content: "";
+  background: url("~assets/icons/email.svg") center / contain no-repeat;
+  display: inline-block;
+  width: 1.1rem;
+  aspect-ratio: 1/1;
+}
+
+.testimonial:before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  display: block;
+  position: absolute;
+  top: -1rem;
+  left: 0px;
+  background: url("~assets/icons/quotes.svg") center / contain no-repeat;
+}
+
+.see-how:after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  background: url("~assets/icons/arrow.svg") center / contain no-repeat;
 }
