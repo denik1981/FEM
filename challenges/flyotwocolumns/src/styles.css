@@ -2,3 +2,15 @@
   --ff-primary: "Open Sans";
   --ff-display: "Raleway";
 }
+@responsive {
+  .aa {
+    grid: auto-flow / minmax(0, 1fr) auto;
+  }
+  .ab {
+    grid: auto-flow / 45% 1fr;
+  }
+
+  .ac {
+    grid: repeat(2, auto) / auto-flow 1fr 45%;
+  }
+}

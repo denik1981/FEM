@@ -27,6 +27,7 @@
     "build:master:v": "npm run build:v -w "
   },
   "dependencies": {
-    "npm": "^7.12.1"
+    "npm": "^7.12.1",
+    "prettier": "^2.3.2"
   }
 }

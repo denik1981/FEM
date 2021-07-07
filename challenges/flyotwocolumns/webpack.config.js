@@ -4,11 +4,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const isProduction = process.env.NODE_ENV === 'production'
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader'
+const cssLoader = { loader: 'css-loader', options: { sourceMap: true } }
 
 const config = {
   mode: isProduction ? 'production' : 'development',
   stats: 'detailed',
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   entry: { main: path.resolve(__dirname, 'src/index.js') },
   resolve: { alias: { assets: path.resolve(__dirname, 'assets') } },
   devServer: { host: 'localhost' },
@@ -21,7 +22,7 @@ const config = {
   },
   module: {
     rules: [
-      { test: /\.css$/i, use: [stylesHandler, 'css-loader', 'postcss-loader'] },
+      { test: /\.css$/i, use: [stylesHandler, cssLoader, 'postcss-loader'] },
       { test: /\.(|svg|png|jpg|gif)$/i, type: 'asset/resource' }
     ]
   },

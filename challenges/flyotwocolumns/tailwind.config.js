@@ -12,7 +12,16 @@ module.exports = {
   },
   theme: {
     screens: {
-      xs: '440px',
+      '2xs': '480px',
+      xs: '640px',
+      ...defaultTheme.screens
+    },
+    maxWidth: {
+      '5xs': '150px',
+      '4xs': '200px',
+      '3xs': '270px',
+      '2xs': '360px',
+      xs: '480px',
       ...defaultTheme.screens
     },
     extend: {
@@ -23,7 +32,7 @@ module.exports = {
       fontSize: {
         '3xs': ['0.4rem', '1.6'],
         '2xs': ['0.5rem', '1.5'],
-        '1xs': ['0.625rem', '1.5'],
+        xs: ['0.625rem', '1.5'],
         ...defaultTheme.fontSize
       },
       colors: {
