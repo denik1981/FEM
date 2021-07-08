@@ -12,8 +12,7 @@ module.exports = {
   },
   theme: {
     screens: {
-      '2xs': '480px',
-      xs: '640px',
+      xs: '480px',
       ...defaultTheme.screens
     },
     maxWidth: {
