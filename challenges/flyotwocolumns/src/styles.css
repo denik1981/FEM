@@ -1,4 +1,12 @@
 :root {
+  --cl-primary-100: hsl(243, 87%, 12%);
+  --cl-primary-400: hsl(238, 22%, 44%);
+  --cl-accent-400: hsl(170, 45%, 43%);
+  --cl-accent-500: hsl(224, 93%, 58%);
+  --cl-neutral-700: hsl(0, 0%, 75%);
+  --cl-neutral-900: hsl(240, 75%, 98%);
+  --cl-bg-wave: #f8f8fe;
+
   --ff-primary: "Open Sans";
   --ff-display: "Raleway";
 
@@ -6,6 +14,18 @@
   --icon-quotes: url("~assets/icons/quotes.svg");
   --icon-phone: url("~assets/icons/phone.svg");
   --icon-email: url("~assets/icons/email.svg");
+
+  --bg-wave: url("~assets/bg/bg-curve-mobile.svg");
+}
+
+* {
+  @apply focus:outline-none focus:ring focus:ring-accent-400 focus:ring-offset-4;
+}
+
+@screen lg {
+  :root {
+    --bg-wave: url("~assets/bg/bg-curve-desktop.svg");
+  }
 }
 
 @layer base {
@@ -38,9 +58,13 @@
   }
 }
 
+h2 {
+  @apply text-primary-100;
+}
+
 body {
   @apply w-full min-h-screen;
-  @apply font-primary text-base text-black;
+  @apply font-primary text-base text-primary-100;
 }
 
 .container {
@@ -67,10 +91,14 @@ header nav {
   @apply sm:mr-3;
 }
 
+header .nav__item {
+  @apply hover:text-accent-400;
+}
+
 /* Main */
 
 .features {
-  @apply py-16 lg:pt-2 lg:pb-24;
+  @apply pt-16 lg:pt-2;
   @apply space-y-44 xs:space-y-36 xl:space-y-80;
   @apply text-center md:text-left;
 }
@@ -85,6 +113,7 @@ header nav {
 }
 
 .feature--productive {
+  @apply pb-16 lg:pb-24;
   @apply gap-x-12 gap-y-20;
   @apply md:grid-2-cols-left;
 }
@@ -93,7 +122,7 @@ header nav {
   @apply max-w-xs lg:max-w-sm;
   @apply grid grid-cols-1 place-items-center;
   @apply md:justify-self-start md:place-items-start;
-  @apply gap-y-7 xl:gap-y-3;
+  @apply gap-y-9 xl:gap-y-5;
 }
 
 .feature__info--productive {
@@ -116,8 +145,9 @@ header nav {
 }
 
 .feature__text {
+  @apply mx-auto md:mx-0;
   @apply max-w-2xs xs:max-w-xs;
-  @apply font-primary text-sm leading-relaxed;
+  @apply font-primary leading-relaxed text-sm lg:text-base;
 }
 
 .feature__text--productive {
@@ -131,9 +161,10 @@ header nav {
   @apply px-0 pt-3 xl:pt-0;
   @apply mx-auto md:mx-0;
   @apply text-xs;
-  @apply text-blue-400 border-blue-400;
+  @apply text-accent-400 border-accent-400;
   @apply pb-1 border-b-2;
   @apply flex gap-x-2 items-center justify-between;
+  @apply hover:font-bold focus:border-0;
 }
 
 .feature__cta-link:after {
@@ -163,7 +194,7 @@ header nav {
   @apply w-72;
   @apply pl-7 pr-1 py-8;
   @apply space-y-3;
-  @apply border-2 border-black;
+  @apply bg-neutral-900 shadow-xl;
 }
 
 .review__text {
@@ -209,7 +240,11 @@ header nav {
 }
 
 .cta__bg {
-  @apply bg-blue-400;
+  @apply bg-primary-400 text-neutral-900;
+}
+
+.cta * {
+  @apply focus:ring-offset-primary-400;
 }
 
 .cta__lead {
@@ -217,7 +252,7 @@ header nav {
 }
 
 .cta__heading {
-  @apply font-bold text-lg xs:text-2xl xl:text-3xl;
+  @apply text-neutral-900 font-bold text-lg xs:text-2xl xl:text-3xl;
 }
 .cta__text {
   @apply max-w-3xs xs:max-w-xs;
@@ -227,7 +262,11 @@ header nav {
 /* Footer */
 
 footer {
-  @apply bg-purple-500;
+  @apply bg-primary-100 text-neutral-900;
+}
+
+footer * {
+  @apply ring-offset-primary-100;
 }
 
 .footer {
@@ -246,7 +285,7 @@ footer {
   @apply gap-x-10 md:gap-x-20 gap-y-12;
   @apply grid-cols-1 xs:grid-cols-2 sm:grid-cols-6 md:grid-footer-links;
   @apply xs:place-items-center md:items-start;
-  @apply text-white;
+  @apply text-neutral-900;
 }
 
 .footer__contact {
@@ -273,6 +312,11 @@ footer {
   @apply sm:justify-self-start md:justify-self-center xl:justify-self-start;
 }
 
+footer .nav__item {
+  @apply w-max;
+  @apply hover:text-neutral-700;
+}
+
 .footer__social {
   @apply md:my-0;
   @apply justify-self-center xl:justify-self-start;
@@ -288,8 +332,13 @@ footer {
   @apply align-middle text-center;
   @apply inline-block;
 }
+
+.social__link:hover {
+  @apply text-neutral-700 border-neutral-700;
+}
 .contact__data {
   @apply w-max flex gap-x-4 items-center;
+  @apply hover:text-neutral-700;
 }
 
 .contact__data--phone:before {
@@ -298,44 +347,67 @@ footer {
   display: inline-block;
   width: 1.1rem;
   aspect-ratio: 1/1;
+  filter: contrast(200%);
 }
 
+.contact__data--phone:hover:before {
+  filter: contrast(1);
+}
 .contact__data--email:before {
   content: "";
   background: var(--icon-email) center / contain no-repeat;
   display: inline-block;
   width: 1.1rem;
   aspect-ratio: 1/1;
+  filter: contrast(200%);
 }
 
+.contact__data--email:hover:before {
+  filter: contrast(1);
+}
 /* Forms */
 
 .feature__subscription-form {
-  @apply w-full md:w-10/12;
+  @apply w-full md:w-10/12 relative;
   @apply max-w-3xs md:max-w-xl;
-  @apply grid grid-cols-1 gap-3;
+  @apply grid grid-cols-1 gap-2;
   @apply xl:grid-2-cols-form;
   @apply xl:mt-2;
 }
 
 .subscription__email {
   @apply w-full max-w-xs;
-  @apply form-input;
+  @apply form-input rounded-sm;
+  @apply text-black;
+}
+
+.subscription__email::placeholder {
+  @apply text-sm text-neutral-700;
 }
 
 .subscription__error {
-  @apply hidden;
-  @apply absolute;
-  @apply my-1;
-  @apply text-black text-xs lg:text-3xs;
-  bottom: 100%;
+  @apply hidden absolute;
+  @apply text-red-600 text-xs pl-2;
+  top: -1.2rem;
   left: 0;
 }
 
+.subscription__error--cta {
+  @apply text-neutral-900;
+}
+
+.subscription__email:invalid {
+  @apply ring-1 ring-red-600;
+}
+
+.subscription__email:invalid + .subscription__error {
+  @apply block;
+}
+
 .cta__subscription-form {
-  @apply w-4/6 lg:w-full;
+  @apply w-4/6 lg:w-full relative;
   @apply max-w-3xs lg:max-w-2xs;
-  @apply row-span-2 grid grid-cols-1 gap-2;
+  @apply row-span-2 grid grid-cols-1 gap-4;
   @apply self-center justify-self-center lg:justify-self-start;
   @apply justify-items-center lg:justify-items-start;
 }
@@ -343,9 +415,30 @@ footer {
 /* buttons */
 
 .btn__cta {
+  @apply inline-block;
   @apply w-full min-w-max lg:max-w-4xs;
   @apply px-8 py-4;
   @apply text-sm font-bold capitalize;
   @apply align-middle leading-none text-center;
-  @apply bg-black text-white;
+  @apply bg-accent-500 text-neutral-900;
+  @apply rounded-sm filter drop-shadow-xl;
+  @apply hover:bg-accent-400;
+}
+
+/* backgrounds */
+
+.feature-bg--productive {
+  background: var(--cl-bg-wave);
+}
+
+.feature-bg--productive:before {
+  content: "";
+  background: var(--bg-wave) bottom left / contain no-repeat;
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  display: block;
+  z-index: -1;
 }

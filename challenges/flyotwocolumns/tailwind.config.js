@@ -7,9 +7,11 @@ module.exports = {
       borderWidth: ['hover', 'focus'],
       textColor: ['active'],
       ringWidth: ['hover', 'active'],
-      backgroundColor: ['active']
+      backgroundColor: ['active'],
+      fontWeight: ['hover', 'focus']
     }
   },
+
   theme: {
     screens: {
       xs: '480px',
@@ -23,6 +25,7 @@ module.exports = {
       xs: '480px',
       ...defaultTheme.screens
     },
+
     extend: {
       fontFamily: {
         primary: ['var(--ff-primary)', ...defaultTheme.fontFamily.sans],
@@ -34,6 +37,7 @@ module.exports = {
         xs: ['0.625rem', '1.5'],
         ...defaultTheme.fontSize
       },
+      fontWeigth: ['hover', 'focus'],
       colors: {
         primary: {
           '000': 'var(--cl-primary-000)',
