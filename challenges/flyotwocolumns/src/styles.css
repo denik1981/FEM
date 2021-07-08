@@ -7,15 +7,19 @@
     grid: auto-flow / minmax(0, 1fr) auto;
   }
   .ab {
-    grid: auto-flow / 45% 1fr;
+    grid: auto-flow / 47% 1fr;
   }
 
   .ac {
-    grid: repeat(2, auto) / auto-flow 1fr 45%;
+    grid: 1fr / auto-flow 1fr 44%;
   }
 
   .ad {
     grid: auto-flow / repeat(2, max-content);
+  }
+
+  .ae {
+    grid: auto-flow / 2fr 1fr 1fr 2fr;
   }
 }
 
