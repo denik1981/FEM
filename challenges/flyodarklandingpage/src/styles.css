@@ -1,0 +1,95 @@
+/* Theme values */
+
+:root {
+  --cl-primary-090: hsl(216, 53%, 9%); /* footer background */
+  --cl-primary-130: hsl(218, 28%, 13%); /* main background */
+  --cl-primary-150: hsl(217, 28%, 15%); /* intro and email sign up background */
+  --cl-primary-180: hsl(219, 30%, 18%); /* testimonials background */
+  --cl-accent-blue-500: hsl(198, 60%, 50%); /* inside call-to-action gradientcl */
+  --cl-accent-blue-600: hsl(176, 68%, 64%); /* inside call-to-action gradient */
+  --cl-accent-red-600: hsl(0, 100%, 63%); /* light red for errors */
+
+  --cl-neutral-900: hsl(219, 30%, 90%);
+  --cl-white: hsl(0, 0%, 100%);
+
+  --ff-primary: "Open Sans", theme(fontFamily.sans);
+  --ff-display: "Raleway", theme(fontFamily.sans);
+
+  --bg-curvy-desktop: url("~assets/bg/curvy-desktop.svg");
+  --bg-curvy-mobile: url("~assets/bg/curvy-mobile.svg");
+
+  --icon-arrow: url("~assets/icons/arrow.svg");
+  --icon-any-file: url("~assets/icons/any-file.svg");
+  --icon-access-anywhere: url("~assets/icons/access-anywhere.svg");
+  --icon-collaboration: url("~assets/icons/collaboration.svg");
+  --icon-email: url("~assets/icons/email.svg");
+  --icon-location: url("~assets/icons/location.svg");
+  --icon-phone: url("~assets/icons/phone.svg");
+  --icon-quotes: url("~assets/icons/quotes.png");
+  --icon-security: url("~assets/icons/security.svg");
+}
+
+/* General */
+* {
+  @apply focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-primary-130 focus:ring-offset-8 focus:rounded-sm;
+  @apply active:ring-0 active:ring-offset-0;
+}
+
+a {
+  @apply block;
+}
+
+img {
+  @apply object-contain;
+}
+
+body {
+  font-family: var(--ff-primary);
+  @apply bg-primary-130;
+  @apply min-h-screen;
+  @apply text-base;
+  @apply text-neutral-900;
+}
+
+.wrapper {
+  @apply container mx-auto px-5;
+  @apply py-8;
+}
+
+/* Header */
+
+header {
+  @apply w-full;
+  @apply flex flex-row justify-between gap-4;
+  @apply items-center;
+}
+
+.logo {
+  min-width: 70px;
+  @apply w-3/12;
+}
+
+.logo a {
+  width: 100%;
+  max-width: max-content;
+}
+
+nav {
+  width: clamp(160px, 50%, 20rem);
+}
+
+.site-nav {
+  @apply block;
+  @apply flex flex-row justify-between gap-1;
+}
+
+.site-nav__item {
+  @apply block;
+  @apply text-xs capitalize;
+  @apply active:no-underline;
+  @apply hover:text-white focus:text-white;
+}
+
+.site-nav__item:not(:focus) {
+  @apply hover:underline;
+}
