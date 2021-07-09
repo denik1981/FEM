@@ -24,6 +24,7 @@
     "build:threecolumn": "npm run build -w fem-three-column-preview-card-component",
     "build:huddlepagecurved": "npm run build -w fem-hudddle-page-curved-sections",
     "build:flyotwocolumns": "npm run build -w fem-flyo-landing-page-two-columns",
+    "build:flyodarklandingpage": "npm run build -w fem-flyo-dark-landing-page",
     "build:master:v": "npm run build:v -w "
   },
   "dependencies": {
