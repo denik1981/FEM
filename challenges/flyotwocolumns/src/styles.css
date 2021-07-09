@@ -21,6 +21,9 @@
 * {
   @apply focus:outline-none focus:ring focus:ring-accent-400 focus:ring-offset-4;
 }
+input:focus {
+  @apply focus:outline-none focus:ring focus:ring-accent-400 focus:ring-offset-4;
+}
 
 @screen lg {
   :root {
@@ -45,11 +48,7 @@
     }
 
     .grid-2-cols-form {
-      grid: auto-flow / minmax(0, 1fr) auto;
-    }
-
-    .ad {
-      grid: auto-flow / repeat(2, max-content);
+      grid: auto-flow / max(20em) 30%;
     }
 
     .grid-footer-links {
@@ -81,7 +80,7 @@ header {
 }
 
 .header__logo {
-  @apply w-1/4 max-w-5xs object-contain;
+  @apply max-w-5xs object-contain;
 }
 
 header nav {
@@ -233,7 +232,7 @@ header .nav__item {
 .cta {
   @apply max-w-xl;
   @apply py-14 xl:px-14 xl:py-24;
-  @apply grid  gap-x-12 gap-y-4;
+  @apply grid  gap-x-12 gap-y-10;
   @apply grid-cols-1 lg:grid-2-cols-left;
   @apply items-start justify-items-center lg:justify-items-start;
   @apply text-center lg:text-left;
@@ -244,7 +243,7 @@ header .nav__item {
 }
 
 .cta * {
-  @apply focus:ring-offset-primary-400;
+  @apply ring-offset-primary-400;
 }
 
 .cta__lead {
@@ -276,7 +275,7 @@ footer * {
 }
 
 .footer__logo {
-  @apply filter brightness-0 invert;
+  @apply filter brightness-0 invert object-contain;
   @apply xs:mx-auto md:mx-0;
 }
 
@@ -368,36 +367,50 @@ footer .nav__item {
 /* Forms */
 
 .feature__subscription-form {
-  @apply w-full md:w-10/12 relative;
-  @apply max-w-3xs md:max-w-xl;
-  @apply grid grid-cols-1 gap-2;
+  @apply w-full md:w-11/12 relative;
+  @apply max-w-2xs lg:max-w-xl;
+  @apply grid grid-cols-1 gap-4;
+  @apply justify-items-center md:justify-items-start;
   @apply xl:grid-2-cols-form;
   @apply xl:mt-2;
 }
 
 .subscription__email {
-  @apply w-full max-w-xs;
+  @apply w-full max-w-2xs leading-loose;
   @apply form-input rounded-sm;
-  @apply text-black;
+  @apply text-sm;
+  @apply text-primary-100;
+  @apply focus:border-0;
 }
 
 .subscription__email::placeholder {
-  @apply text-sm text-neutral-700;
+  @apply text-neutral-700;
 }
 
 .subscription__error {
-  @apply hidden absolute;
-  @apply text-red-600 text-xs pl-2;
+  @apply w-full hidden absolute pl-2;
+  @apply text-red-400 text-xs font-bold;
   top: -1.2rem;
   left: 0;
 }
 
 .subscription__error--cta {
-  @apply text-neutral-900;
+  @apply text-primary-100;
 }
 
-.subscription__email:invalid {
-  @apply ring-1 ring-red-600;
+.subscription__email--accessible,
+.subscription__error--accessible {
+  @apply text-center md:text-left;
+}
+
+.subscription__email--cta,
+.subscription__error--cta {
+  @apply text-center lg:text-left;
+}
+
+.subscription__email:invalid:focus {
+  @apply focus:ring focus:ring-offset-0 focus:ring-red-400;
+  @apply focus:border-0;
 }
 
 .subscription__email:invalid + .subscription__error {
@@ -405,8 +418,8 @@ footer .nav__item {
 }
 
 .cta__subscription-form {
-  @apply w-4/6 lg:w-full relative;
-  @apply max-w-3xs lg:max-w-2xs;
+  @apply w-full relative;
+  @apply max-w-2xs md:max-w-xs;
   @apply row-span-2 grid grid-cols-1 gap-4;
   @apply self-center justify-self-center lg:justify-self-start;
   @apply justify-items-center lg:justify-items-start;
@@ -416,8 +429,8 @@ footer .nav__item {
 
 .btn__cta {
   @apply inline-block;
-  @apply w-full min-w-max lg:max-w-4xs;
-  @apply px-8 py-4;
+  @apply w-full min-w-max xs:max-w-5xs;
+  @apply px-3 py-3;
   @apply text-sm font-bold capitalize;
   @apply align-middle leading-none text-center;
   @apply bg-accent-500 text-neutral-900;

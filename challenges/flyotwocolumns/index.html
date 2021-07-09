@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fo nts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/1807313955.js" crossorigin="anonymous"></script>
@@ -11,7 +11,7 @@
   </head>
   <body>
     <header class="container">
-      <img src="<%=require('./assets/logo.svg')%>" class="header__logo" alt="site logo" />
+      <a href="#" onclick="return false" class="block w-1/4"><img src="<%=require('./assets/logo.svg')%>" class="header__logo" alt="site logo" /></a>
       <nav>
         <a href="#" onclick="return false" class="nav__item">features</a>
         <a href="#" onclick="return false" class="nav__item">team</a>
@@ -30,8 +30,8 @@
             </section>
             <form class="feature__subscription-form" onsubmit="return false">
               <label id="email-label-featured" hidden>email</label>
-              <input type="email" name="email" class="subscription__email" placeholder="Enter your email..." aria-labelledby="email-label-featured" oninvalid="this.setCustomValidity(' ')" />
-              <span class="subscription__error" aria-live="polite" onclick="this.webkitTransform = 'scale(1)'">Please check your email</span>
+              <input type="email" name="email" class="subscription__email subscription__email--accessible" placeholder="Enter your email..." aria-labelledby="email-label-featured" oninvalid="this.setCustomValidity(' ')" />
+              <span class="subscription__error subscription__error--accessible" aria-live="polite" onclick="this.webkitTransform = 'scale(1)'">Please check your email</span>
               <button type="submit" class="btn__cta" onclick="(e)=>e.preventDefault()">Get started</button>
             </form>
           </div>
@@ -70,7 +70,7 @@
           </div>
           <form onsubmit="return false" class="cta__subscription-form">
             <label id="email-label-cta" hidden>email</label>
-            <input type="email" name="email" class="subscription__email" placeholder="email@example.com" aria-labelledby="email-label-cta" oninvalid="this.setCustomValidity(' ')" />
+            <input type="email" name="email" class="subscription__email subscription__email--cta" placeholder="email@example.com" aria-labelledby="email-label-cta" oninvalid="this.setCustomValidity(' ')" />
             <span class="subscription__error subscription__error--cta" aria-live="polite" onclick="this.webkitTransform = 'scale(1)'">Please check your email</span>
             <button type="submit" class="btn__cta" onclick="(e)=>e.preventDefault()">Get started for free</button>
           </form>
@@ -79,7 +79,7 @@
     </main>
     <footer>
       <div class="container footer">
-        <img src="<%=require('./assets/logo.svg')%>" alt="site logo" class="footer__logo" />
+        <a href="#" onclick="return false" class="block w-1/4"><img src="<%=require('./assets/logo.svg')%>" alt="site logo" class="footer__logo" /></a>
         <div class="footer__links">
           <address class="footer__contact">
             <a href="#" onclick="return false" class="contact__data contact__data--phone">Phone: +1-543-123-4567</a>
