@@ -1,0 +1,26 @@
+:root {
+  --cl-primary-090: hsl(216, 53%, 9%); /* footer background */
+  --cl-primary-130: hsl(218, 28%, 13%); /* main background */
+  --cl-primary-150: hsl(217, 28%, 15%); /* intro and email sign up background */
+  --cl-primary-180: hsl(219, 30%, 18%); /* testimonials background */
+  --cl-accent-blue-500: hsl(198, 60%, 50%); /* inside call-to-action gradientcl */
+  --cl-accent-blue-600: hsl(176, 68%, 64%); /* inside call-to-action gradient */
+  --cl-accent-red-600: hsl(0, 100%, 63%); /* light red for errors */
+  --cl-white: hsl(0, 0%, 100%);
+
+  --ff-primary: "Open Sans", theme(fontFamily.sans);
+  --ff-display: "Raleway", theme(fontFamily.sans);
+
+  --bg-curvy-desktop: url("~assets/bg/curvy-desktop.svg");
+  --bg-curvy-mobile: url("~assets/bg/curvy-mobile.svg");
+
+  --icon-arrow: url("~assets/icons/arrow.svg");
+  --icon-any-file: url("~assets/icons/any-file.svg");
+  --icon-access-anywhere: url("~assets/icons/access-anywhere.svg");
+  --icon-collaboration: url("~assets/icons/collaboration.svg");
+  --icon-email: url("~assets/icons/email.svg");
+  --icon-location: url("~assets/icons/location.svg");
+  --icon-phone: url("~assets/icons/phone.svg");
+  --icon-quotes: url("~assets/icons/quotes.png");
+  --icon-security: url("~assets/icons/security.svg");
+}
