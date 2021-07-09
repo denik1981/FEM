@@ -21,13 +21,14 @@
     <main>
       <h1 hidden>Information about what Flyo offers</h1>
       <section class="features">
+        <h2 hidden>List of flyo main features</h2>
         <article class="container feature feature--accesible">
           <img src="<%=require('./assets/draw-1.svg')%>" class="feature__img" alt="illustration for this feature" />
           <div class="feature__info">
-            <section class="feature__about">
+            <div class="feature__about">
               <h2 class="feature__headline">All your files in one secure location, accessible anywhere.</h2>
               <p class="feature__text">Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.</p>
-            </section>
+            </div>
             <form class="feature__subscription-form" onsubmit="return false">
               <label id="email-label-featured" hidden>email</label>
               <input type="email" name="email" class="subscription__email subscription__email--accessible" placeholder="Enter your email..." aria-labelledby="email-label-featured" oninvalid="this.setCustomValidity(' ')" />
@@ -40,15 +41,15 @@
           <article class="container feature feature--productive">
             <img src="<%=require('./assets/draw-2.svg')%>" class="feature__img feature__img--productive" alt="illustration for this feature" />
             <div class="feature__info feature__info--productive">
-              <section class="feature__about">
+              <div class="feature__about">
                 <h2 class="feature__headline feature__headline--productive">Stay productive, wherever you are</h2>
                 <div class="feature__text feature__text--productive">
                   <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
                   <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!</p>
                   <a href="#" onclick="return false" class="feature__cta-link">See how Fylo works </a>
                 </div>
-              </section>
-              <section class="feature__review">
+              </div>
+              <div class="feature__review">
                 <blockquote class="review__text">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</blockquote>
                 <div class="review__reviewer">
                   <img src="<%=require('./assets/avatar.jpg')%>" alt="reviewer avatar" class="reviewer__avatar" />
@@ -57,7 +58,7 @@
                     <span class="reviewer__highlights">Founder & CEO, Huddle</span>
                   </div>
                 </div>
-              </section>
+              </div>
             </div>
           </article>
         </div>
