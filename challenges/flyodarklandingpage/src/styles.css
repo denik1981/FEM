@@ -24,3 +24,46 @@
   --icon-quotes: url("~assets/icons/quotes.png");
   --icon-security: url("~assets/icons/security.svg");
 }
+
+/* main container */
+
+body {
+  background: var(--cl-primary-130);
+  font-family: var(--ff-primary);
+  color: var(--cl-white);
+  @apply min-h-screen;
+  @apply text-base;
+}
+
+.wrapper {
+  @apply container mx-auto px-5;
+  @apply py-8;
+}
+
+/* header */
+
+header {
+  @apply w-full;
+  @apply flex flex-row justify-between gap-2;
+  @apply items-center;
+}
+
+.logo {
+  min-width: 70px;
+  @apply w-3/12;
+  @apply object-contain;
+}
+
+nav {
+  width: clamp(160px, 50%, 20rem);
+}
+
+.site-nav {
+  @apply block;
+  @apply flex flex-row justify-between gap-1;
+  @apply text-sm;
+}
+
+.site-nav__item {
+  @apply block;
+}
