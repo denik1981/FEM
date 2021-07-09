@@ -22,12 +22,8 @@ module.exports = {
     },
 
     extend: {
-      // fontFamily: {
-      //   primary: ['var(--ff-primary)', ...defaultTheme.fontFamily.sans],
-      //   display: ['var(--ff-display)', ...defaultTheme.fontFamily.sans]
-      // },
       fontSize: {
-        xs: ['0.625rem', '1.5'],
+        xs: ['12px', '1'],
         ...defaultTheme.fontSize
       }
     }
