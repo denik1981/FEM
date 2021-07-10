@@ -20,6 +20,7 @@
 
 * {
   @apply focus:outline-none focus:ring focus:ring-accent-400 focus:ring-offset-4;
+  @apply active:ring-0;
 }
 input:focus {
   @apply focus:outline-none focus:ring focus:ring-accent-400 focus:ring-offset-4;
@@ -80,7 +81,7 @@ header {
 }
 
 .header__logo {
-  @apply max-w-5xs object-contain;
+  @apply object-contain;
 }
 
 header nav {
