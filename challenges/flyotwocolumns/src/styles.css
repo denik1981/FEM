@@ -84,9 +84,9 @@ header {
 }
 
 header nav {
-  @apply align-middle  capitalize;
+  @apply align-middle capitalize;
   @apply text-xs sm:text-base;
-  @apply space-x-6 sm:space-x-10;
+  @apply space-x-2 xs:space-x-6 sm:space-x-10;
   @apply sm:mr-3;
 }
 
