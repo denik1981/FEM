@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | Fylo landing Page with Dark Theme and Features Grid</title>
   </head>
   <body>
@@ -22,7 +25,18 @@
           </ul>
         </nav>
       </header>
-      <main></main>
+      <main>
+        <h1 hidden>Flyo landing page. Information about what it offers</h1>
+        <section class="hero">
+          <img src="<%=require('./assets/vector/intro.png')%>" alt="hero illustration" />
+          <h2>All your files in one secure location, accessible anywhere.</h2>
+          <p>
+            Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with
+            friends family, and co-workers.
+          </p>
+          <a href="#" onclick="return false" class="btn">Get started</a>
+        </section>
+      </main>
       <footer></footer>
     </div>
   </body>

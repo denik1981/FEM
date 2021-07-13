@@ -5,9 +5,9 @@
   --cl-primary-130: hsl(218, 28%, 13%); /* main background */
   --cl-primary-150: hsl(217, 28%, 15%); /* intro and email sign up background */
   --cl-primary-180: hsl(219, 30%, 18%); /* testimonials background */
-  --cl-accent-blue-500: hsl(198, 60%, 50%); /* inside call-to-action gradientcl */
-  --cl-accent-blue-600: hsl(176, 68%, 64%); /* inside call-to-action gradient */
-  --cl-accent-red-600: hsl(0, 100%, 63%); /* light red for errors */
+  --cl-accent-1-500: hsl(198, 60%, 50%); /* inside call-to-action gradientcl */
+  --cl-accent-1-600: hsl(176, 68%, 64%); /* inside call-to-action gradient */
+  --cl-accent-2-600: hsl(0, 100%, 63%); /* light red for errors */
 
   --cl-neutral-900: hsl(219, 30%, 90%);
   --cl-white: hsl(0, 0%, 100%);
@@ -35,19 +35,50 @@
   @apply active:ring-0 active:ring-offset-0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display;
+}
+
+h2 {
+  @apply mt-8;
+  @apply text-2xl font-bold leading-normal;
+}
+
+p {
+  @apply my-6;
+}
+
 a {
-  @apply block;
+  @apply inline-block;
 }
 
 img {
+  @apply inline-block;
   @apply object-contain;
 }
 
+/* Components */
+
+.btn {
+  @apply w-max;
+  @apply py-4 px-20;
+  @apply bg-accent-1-500 hover:bg-accent-1-600 active:bg-accent-1-500;
+  @apply font-primary text-sm text-white font-bold;
+  @apply rounded-3xl;
+  @apply filter drop-shadow-3xl active:drop-shadow-none focus:drop-shadow-none;
+}
+
+/* Main container */
+
 body {
-  font-family: var(--ff-primary);
   @apply bg-primary-130;
   @apply min-h-screen;
-  @apply text-base;
+  @apply font-primary text-sm text-center leading-relaxed;
   @apply text-neutral-900;
 }
 
@@ -92,4 +123,10 @@ nav {
 
 .site-nav__item:not(:focus) {
   @apply hover:underline;
+}
+
+/* Main - Section Hero */
+
+.hero {
+  @apply my-10;
 }
