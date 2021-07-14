@@ -34,6 +34,11 @@ module.exports = {
       dropShadow: {
         '3xl': '0 25px 25px rgba(0, 0, 0, 0.5)'
       },
+      fontSize: {
+        '3xs': ['0.4rem', '1.625'],
+        '2xs': ['0.6rem', '1.625'],
+        ...defaultTheme.fontSize
+      },
       fontFamily: {
         primary: ['var(--ff-primary)', ...defaultTheme.fontFamily.sans],
         display: ['var(--ff-display)', ...defaultTheme.fontFamily.sans]

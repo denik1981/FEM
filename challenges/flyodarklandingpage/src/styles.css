@@ -72,7 +72,7 @@ p {
   max-width: 40ch;
 }
 
-/* Components */
+/* Components - Buttons */
 
 .btn {
   @apply w-max my-4;
@@ -81,6 +81,42 @@ p {
   @apply font-primary text-sm text-white font-bold;
   @apply rounded-3xl;
   @apply filter drop-shadow-3xl active:drop-shadow-none focus:drop-shadow-none;
+}
+
+/* Components - Cards */
+
+.testimonial {
+  width: clamp(40ch, 100vw, 48ch);
+  @apply py-6 px-5 h-40;
+  @apply grid grid-cols-1 items-center;
+  @apply text-2xs text-left leading-loose;
+  @apply bg-primary-180 shadow-xl rounded-md;
+}
+
+.testimonial__quote {
+  max-width: 40ch;
+}
+
+.testimonial__reviewer {
+  @apply mt-3 grid gap-x-2 gap-y-1 items-center self-start;
+  grid: auto-flow 1.1rem / auto 1fr;
+  @apply tracking-widest align-middle;
+}
+
+.reviewer__avatar {
+  @apply w-6 rounded-full;
+}
+
+.reviewer__info {
+  @apply space-y-1;
+}
+
+.reviewer__name {
+  @apply block font-bold leading-none capitalize text-white;
+}
+
+.reviewer__work {
+  @apply block leading-none text-3xs;
 }
 
 /* Layout - Wrapper */
@@ -118,7 +154,7 @@ header {
 /* Layour - Nav */
 
 nav {
-  width: clamp(160px, 50%, 20rem);
+  width: clamp(160px, 50vw, 20rem);
 }
 
 .site-nav {
@@ -212,4 +248,19 @@ nav {
 
 .spot-feature__link:hover:after {
   @apply filter saturate-0 contrast-200;
+}
+
+/* Testimonial */
+
+.testimonials {
+  @apply my-44 relative w-max mx-auto;
+  @apply grid grid-cols-1 gap-y-6 justify-items-center;
+}
+
+.testimonials:before {
+  content: "";
+  @apply absolute w-5 h-5;
+  inset: 0px 0.3rem;
+  transform: translatey(-100%);
+  background: var(--icon-quotes) bottom left / contain no-repeat;
 }
