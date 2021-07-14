@@ -1,4 +1,4 @@
-/* Theme values */
+/* Theme */
 
 :root {
   --cl-primary-090: hsl(216, 53%, 9%); /* footer background */
@@ -29,28 +29,11 @@
   --icon-security: url("~assets/icons/security.svg");
 }
 
-/* General */
+/* Reset */
+
 * {
   @apply focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-primary-130 focus:ring-offset-8 focus:rounded-sm;
   @apply active:ring-0 active:ring-offset-0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply font-display;
-}
-
-h2 {
-  @apply mt-8;
-  @apply text-2xl font-bold leading-normal;
-}
-
-p {
-  @apply my-6;
 }
 
 a {
@@ -62,10 +45,36 @@ img {
   @apply object-contain;
 }
 
+/* Typograpyhy */
+
+h1,
+h2,
+h3 {
+  @apply font-display;
+}
+
+h2 {
+  @apply my-4;
+  @apply font-display text-2xl font-bold leading-normal;
+}
+
+h3 {
+  @apply my-2;
+  @apply font-display text-lg font-bold leading-normal;
+}
+
+p {
+  @apply my-2 mx-auto;
+}
+
+.features p {
+  max-width: 40ch;
+}
+
 /* Components */
 
 .btn {
-  @apply w-max;
+  @apply w-max my-4;
   @apply py-4 px-20;
   @apply bg-accent-1-500 hover:bg-accent-1-600 active:bg-accent-1-500;
   @apply font-primary text-sm text-white font-bold;
@@ -73,7 +82,7 @@ img {
   @apply filter drop-shadow-3xl active:drop-shadow-none focus:drop-shadow-none;
 }
 
-/* Main container */
+/* Layout - Wrapper */
 
 body {
   @apply bg-primary-130;
@@ -87,7 +96,7 @@ body {
   @apply py-8;
 }
 
-/* Header */
+/* Layour - Header */
 
 header {
   @apply w-full;
@@ -104,6 +113,8 @@ header {
   width: 100%;
   max-width: max-content;
 }
+
+/* Layour - Nav */
 
 nav {
   width: clamp(160px, 50%, 20rem);
@@ -125,8 +136,43 @@ nav {
   @apply hover:underline;
 }
 
-/* Main - Section Hero */
+/* Layout - Main - Hero */
 
 .hero {
   @apply my-10;
+}
+
+/* Layout - Main - Features */
+.features {
+  @apply my-52;
+  @apply grid grid-cols-1;
+  @apply gap-y-36;
+}
+
+.feature {
+  @apply relative;
+}
+
+.feature:before {
+  content: "";
+  @apply absolute w-16 h-16;
+  @apply flex;
+  inset: 0 50%;
+  transform: translate(-50%, -130%);
+  background: center / contain no-repeat;
+}
+
+.feature--access-anywhere:before {
+  background-image: var(--icon-access-anywhere);
+}
+
+.feature--security:before {
+  background-image: var(--icon-security);
+}
+
+.feature--collaboration:before {
+  background-image: var(--icon-collaboration);
+}
+.feature--any-file:before {
+  background-image: var(--icon-any-file);
 }
