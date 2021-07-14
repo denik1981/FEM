@@ -6,10 +6,13 @@ module.exports = {
     extend: {
       backgroundColor: ['hover', 'focus', 'active'],
       textDecoration: ['hover', 'focus', 'active'],
+      fontWeight: ['hover', 'focus', 'active'],
+      borderWidth: ['hover', 'focus', 'active'],
       borderRadius: ['hover', 'focus', 'active'],
       ringWidth: ['hover', 'focus', 'active'],
       ringOffsetWidth: ['hover', 'focus', 'active'],
-      dropShadow: ['hover', 'focus', 'active']
+      dropShadow: ['hover', 'focus', 'active'],
+      saturate: ['group-hover', 'hover', 'focus', 'active']
     }
   },
 

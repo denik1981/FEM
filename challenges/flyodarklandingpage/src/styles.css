@@ -41,6 +41,7 @@ a {
 }
 
 img {
+  @apply my-4;
   @apply inline-block;
   @apply object-contain;
 }
@@ -64,7 +65,7 @@ h3 {
 }
 
 p {
-  @apply my-2 mx-auto;
+  @apply my-4 mx-auto;
 }
 
 .features p {
@@ -128,12 +129,9 @@ nav {
 .site-nav__item {
   @apply block;
   @apply text-xs capitalize;
+  @apply hover:text-white hover:underline;
   @apply active:no-underline;
-  @apply hover:text-white focus:text-white;
-}
-
-.site-nav__item:not(:focus) {
-  @apply hover:underline;
+  @apply focus:text-white focus:no-underline;
 }
 
 /* Layout - Main - Hero */
@@ -175,4 +173,43 @@ nav {
 }
 .feature--any-file:before {
   background-image: var(--icon-any-file);
+}
+
+/* Layout - Main - SpotFeature */
+
+.spot-feature {
+  @apply -mt-28;
+}
+
+.spot-feature__img {
+  @apply my-10;
+}
+
+.spot-feature__headline {
+  @apply my-2;
+  @apply text-lg;
+}
+
+.spot-feature__content {
+  @apply text-left;
+}
+
+.spot-feature__link {
+  @apply w-max;
+  @apply text-xs text-accent-1-600 align-bottom;
+  @apply pb-1 border-b-2 border-current;
+  @apply flex gap-x-2 items-center;
+  @apply hover:text-white;
+  @apply focus:border-0;
+  @apply active:font-bold;
+}
+
+.spot-feature__link:after {
+  content: "";
+  background: var(--icon-arrow) center / contain no-repeat;
+  @apply inline-block w-4 h-4;
+}
+
+.spot-feature__link:hover:after {
+  @apply filter saturate-0 contrast-200;
 }

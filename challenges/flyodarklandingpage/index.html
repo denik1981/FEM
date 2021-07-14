@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
     <title>Frontend Mentor | Fylo landing Page with Dark Theme and Features Grid</title>
   </head>
   <body>
@@ -28,42 +25,37 @@
       <main>
         <h1 hidden>Flyo landing page. Information about what it offers</h1>
         <section class="hero">
-          <img src="<%=require('./assets/vector/intro.png')%>" alt="hero illustration" />
+          <img src="<%=require('./assets/vector/intro.png')%>" alt="hero illustration" aria-hidden="true" />
           <h2>All your files in one secure location, accessible anywhere.</h2>
-          <p>
-            Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with
-            friends family, and co-workers.
-          </p>
+          <p>Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.</p>
           <a href="#" onclick="return false" class="btn">Get started</a>
         </section>
         <section class="features">
           <article class="feature feature--access-anywhere">
             <h3>Access your files, anywhere</h3>
-            <p>
-              Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with
-              friends family, and co-workers.
-            </p>
+            <p>Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.</p>
           </article>
           <article class="feature feature--security">
             <h3>Security you can trust</h3>
-            <p>
-              2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your
-              files.
-            </p>
+            <p>2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
           </article>
           <article class="feature feature--collaboration">
             <h3>Real-time collaboration</h3>
-            <p>
-              Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.
-            </p>
+            <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
           </article>
           <article class="feature feature--any-file">
             <h3>Store any type of file</h3>
-            <p>
-              Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely
-              stored and shared.
-            </p>
+            <p>Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.</p>
           </article>
+        </section>
+        <section class="spot-feature">
+          <img class="spot-feature__img" src="<%=require('./assets/vector/stay-productive.png')%>" alt="spot feature illustration" aria-hidden="true" />
+          <h2 class="spot-feature__headline">Stay productive, wherever you are.</h2>
+          <div class="spot-feature__content">
+            <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
+            <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+            <a href="#" onclick="return false" class="spot-feature__link">See how Fylo works </a>
+          </div>
         </section>
       </main>
       <footer></footer>
