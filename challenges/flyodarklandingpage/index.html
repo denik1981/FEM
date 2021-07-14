@@ -22,35 +22,41 @@
           </ul>
         </nav>
       </header>
-      <main>
-        <h1 hidden>Flyo landing page. Information about what it offers</h1>
-        <section class="hero">
-          <img src="<%=require('./assets/vector/intro.png')%>" alt="hero illustration" aria-hidden="true" />
+    </div>
+    <main>
+      <h1 hidden>Flyo landing page. Information about what it offers</h1>
+      <div class="wrapper wrapper--intro">
+        <section class="intro">
+          <img src="<%=require('./assets/vector/intro.png')%>" alt="intro illustration" aria-hidden="true" />
           <h2>All your files in one secure location, accessible anywhere.</h2>
           <p>Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.</p>
           <a href="#" onclick="return false" class="btn">Get started</a>
         </section>
+      </div>
+      <div class="wrapper wrapper--main">
         <section class="features">
           <article class="feature feature--access-anywhere">
             <h3>Access your files, anywhere</h3>
-            <p>Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.</p>
+            <p class="max-ch-40">
+              Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.
+            </p>
           </article>
           <article class="feature feature--security">
             <h3>Security you can trust</h3>
-            <p>2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
+            <p class="max-ch-40">2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
           </article>
           <article class="feature feature--collaboration">
             <h3>Real-time collaboration</h3>
-            <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+            <p class="max-ch-40">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
           </article>
           <article class="feature feature--any-file">
             <h3>Store any type of file</h3>
-            <p>Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.</p>
+            <p class="max-ch-40">Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.</p>
           </article>
         </section>
         <section class="spot-feature">
           <img class="spot-feature__img" src="<%=require('./assets/vector/stay-productive.png')%>" alt="spot feature illustration" aria-hidden="true" />
-          <h2 class="spot-feature__headline">Stay productive, wherever you are.</h2>
+          <h2 class="h-sm spot-feature__headline">Stay productive, wherever you are.</h2>
           <div class="spot-feature__content">
             <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
             <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
@@ -60,7 +66,7 @@
         <section class="testimonials">
           <h2 hidden>What people think about our product?</h2>
           <figure class="testimonial">
-            <blockquote class="testimonial__quote">
+            <blockquote class="testimonial__quote max-ch-40">
               Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
             </blockquote>
             <figcaption class="testimonial__reviewer">
@@ -72,10 +78,10 @@
             </figcaption>
           </figure>
           <figure class="testimonial">
-            <blockquote class="testimonial__quote">
+            <blockquote class="testimonial__quote max-ch-40">
               Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
             </blockquote>
-            <figcaption class="testimonial__reviewer">
+            <figcaption class="testimonial__reviewer max-ch-40">
               <img class="reviewer__avatar" src="<%=require('./assets/raster/profile-2.jpg')%>" alt="spot feature illustration" />
               <div class="reviewer__info">
                 <span class="reviewer__name">Bruce McKenzie</span>
@@ -84,7 +90,7 @@
             </figcaption>
           </figure>
           <figure class="testimonial">
-            <blockquote class="testimonial__quote">
+            <blockquote class="testimonial__quote max-ch-40">
               Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
             </blockquote>
             <figcaption class="testimonial__reviewer">
@@ -96,13 +102,24 @@
             </figcaption>
           </figure>
         </section>
+      </div>
+      <div class="wrapper wrapper--cta">
         <section class="cta">
-          <h2></h2>
-          <p></p>
-          <fom></fom>
+          <h2 class="h-sm">Get early access today</h2>
+          <p class="max-ch-40">
+            It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
+          </p>
+          <form class="email__form">
+            <div class="email__field">
+              <label id="emailLabel" hidden>email</label>
+              <input class="email__input" type="email" placeholder="email@example.com" aria-labelledby="emailLabel" oninvalid="this.setCustomValidity(' ')" required />
+              <span class="email__error" aria-live="polite">Please enter a valid email address</span>
+            </div>
+            <button class="email__submit btn" onclick="(e)=>e.preventDefault()">Get started for free</button>
+          </form>
         </section>
-      </main>
-      <footer></footer>
-    </div>
+      </div>
+    </main>
+    <footer></footer>
   </body>
 </html>

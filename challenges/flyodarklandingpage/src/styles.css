@@ -1,4 +1,6 @@
+/*********/
 /* Theme */
+/*********/
 
 :root {
   --cl-primary-090: hsl(216, 53%, 9%); /* footer background */
@@ -9,6 +11,7 @@
   --cl-accent-1-600: hsl(176, 68%, 64%); /* inside call-to-action gradient */
   --cl-accent-2-600: hsl(0, 100%, 63%); /* light red for errors */
 
+  --cl-neutral-400: hsl(220, 9%, 46%);
   --cl-neutral-900: hsl(219, 30%, 90%);
   --cl-white: hsl(0, 0%, 100%);
 
@@ -28,8 +31,11 @@
   --icon-quotes: url("~assets/icons/quotes.png");
   --icon-security: url("~assets/icons/security.svg");
 }
+/********/
+/* Base */
+/********/
 
-/* Reset */
+/* Base - Elements */
 
 * {
   @apply focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-primary-130 focus:ring-offset-8 focus:rounded-sm;
@@ -46,7 +52,7 @@ img {
   @apply object-contain;
 }
 
-/* Typograpyhy */
+/* Base - Typograpyhy */
 
 h1,
 h2,
@@ -68,22 +74,76 @@ p {
   @apply my-4 mx-auto;
 }
 
-.features p {
+input {
+  @apply appearance-none;
+  @apply bg-white text-gray-900;
+  @apply border border-neutral-400 rounded-none;
+  @apply py-2 px-3;
+}
+
+input:not(:placeholder-shown):focus {
+  @apply ring-0 ring-offset-0;
+}
+
+/********************/
+/* Custom Utilities */
+/********************/
+
+.h-sm {
+  @apply my-2;
+  @apply text-lg;
+}
+
+.max-ch-40 {
   max-width: 40ch;
 }
+
+/**************/
+/* Components */
+/**************/
 
 /* Components - Buttons */
 
 .btn {
-  @apply w-max my-4;
+  @apply w-max my-4 min-w-max;
   @apply py-4 px-20;
   @apply bg-accent-1-500 hover:bg-accent-1-600 active:bg-accent-1-500;
-  @apply font-primary text-sm text-white font-bold;
+  @apply font-primary text-sm text-white font-bold capitalize;
   @apply rounded-3xl;
   @apply filter drop-shadow-3xl active:drop-shadow-none focus:drop-shadow-none;
 }
 
-/* Components - Cards */
+/* Components - Email Form */
+
+.email__form {
+  @apply w-full mt-6 flex flex-col;
+}
+
+.email__field {
+  @apply relative;
+}
+
+.email__input {
+  @apply w-full py-4;
+  @apply rounded-3xl;
+  @apply text-center;
+}
+
+.email__error {
+  @apply hidden absolute;
+  @apply text-accent-2-600 text-xs font-bold pb-1;
+  inset: auto 0 100%;
+}
+
+.email__input:not(:placeholder-shown):invalid ~ .email__error {
+  @apply block;
+}
+
+.email__submit {
+  @apply w-full px-2;
+}
+
+/* Components - Testimonial cards */
 
 .testimonial {
   width: clamp(40ch, 100vw, 48ch);
@@ -94,7 +154,6 @@ p {
 }
 
 .testimonial__quote {
-  max-width: 40ch;
 }
 
 .testimonial__reviewer {
@@ -119,24 +178,52 @@ p {
   @apply block leading-none text-3xs;
 }
 
-/* Layout - Wrapper */
+/* Layout - Wrappers */
 
 body {
-  @apply bg-primary-130;
+  @apply bg-primary-150;
   @apply min-h-screen;
   @apply font-primary text-sm text-center leading-relaxed;
   @apply text-neutral-900;
 }
 
 .wrapper {
-  @apply container mx-auto px-5;
-  @apply py-8;
+  @apply flex flex-col justify-center px-5 py-4;
+}
+
+.wrapper--intro {
+  position: relative;
+  background: linear-gradient(to top, var(--cl-primary-130) 0 45%, transparent 0);
+}
+
+.wrapper--intro:before {
+  display: block;
+  position: absolute;
+  bottom: 44%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  content: "";
+  background: var(--bg-curvy-desktop) bottom center / contain no-repeat;
+}
+
+.wrapper--main {
+  @apply bg-primary-130;
+}
+
+.wrapper--cta {
+  background: linear-gradient(to bottom, var(--cl-primary-130) 0 50%, var(--cl-primary-090) 0 100%);
+}
+
+.wrapper--footer {
+  @apply bg-primary-090;
 }
 
 /* Layour - Header */
 
 header {
-  @apply w-full;
+  @apply w-full mx-auto;
   @apply flex flex-row justify-between gap-4;
   @apply items-center;
 }
@@ -170,15 +257,15 @@ nav {
   @apply focus:text-white focus:no-underline;
 }
 
-/* Layout - Main - Hero */
+/* Layout - Main - Intro */
 
-.hero {
-  @apply my-10;
+.intro {
+  @apply my-10 container mx-auto;
 }
 
 /* Layout - Main - Features */
 .features {
-  @apply my-52;
+  @apply my-52 container mx-auto;
   @apply grid grid-cols-1;
   @apply gap-y-36;
 }
@@ -214,16 +301,11 @@ nav {
 /* Layout - Main - SpotFeature */
 
 .spot-feature {
-  @apply -mt-28;
+  @apply -mt-28 container mx-auto;
 }
 
 .spot-feature__img {
   @apply my-10;
-}
-
-.spot-feature__headline {
-  @apply my-2;
-  @apply text-lg;
 }
 
 .spot-feature__content {
@@ -250,10 +332,10 @@ nav {
   @apply filter saturate-0 contrast-200;
 }
 
-/* Testimonial */
+/* Layout - Main - Testimonials */
 
 .testimonials {
-  @apply my-44 relative w-max mx-auto;
+  @apply my-44 relative w-max container mx-auto;
   @apply grid grid-cols-1 gap-y-6 justify-items-center;
 }
 
@@ -263,4 +345,12 @@ nav {
   inset: 0px 0.3rem;
   transform: translatey(-100%);
   background: var(--icon-quotes) bottom left / contain no-repeat;
+}
+
+/* Layout - Main - CTA */
+
+.cta {
+  @apply my-36 container mx-auto;
+  @apply bg-primary-150 rounded-xl filter drop-shadow-2xl;
+  @apply p-6;
 }
