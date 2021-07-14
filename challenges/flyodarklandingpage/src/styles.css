@@ -38,8 +38,12 @@
 /* Base - Elements */
 
 * {
-  @apply focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-primary-130 focus:ring-offset-8 focus:rounded-sm;
+  @apply focus:outline-none;
   @apply active:ring-0 active:ring-offset-0;
+}
+
+*:not(:hover) {
+  @apply focus:ring-1 focus:ring-white focus:ring-offset-primary-150 focus:ring-offset-8 focus:rounded-sm;
 }
 
 a {
@@ -85,6 +89,9 @@ input:not(:placeholder-shown):focus {
   @apply ring-0 ring-offset-0;
 }
 
+address {
+  @apply not-italic;
+}
 /********************/
 /* Custom Utilities */
 /********************/
@@ -188,7 +195,7 @@ body {
 }
 
 .wrapper {
-  @apply flex flex-col justify-center px-5 py-4;
+  @apply flex flex-col justify-center px-6 py-4;
 }
 
 .wrapper--intro {
@@ -210,6 +217,17 @@ body {
 
 .wrapper--main {
   @apply bg-primary-130;
+}
+
+.wrapper--intro *,
+.wrapper--main * {
+  @apply focus:ring-offset-primary-130;
+}
+.wrapper--cta * {
+  @apply focus:ring-offset-primary-150;
+}
+.wrapper--footer * {
+  @apply focus:ring-offset-primary-090;
 }
 
 .wrapper--cta {
@@ -254,6 +272,9 @@ nav {
   @apply text-xs capitalize;
   @apply hover:text-white hover:underline;
   @apply active:no-underline;
+}
+
+.site-nav__item:not(:hover) {
   @apply focus:text-white focus:no-underline;
 }
 
@@ -314,7 +335,7 @@ nav {
 
 .spot-feature__link {
   @apply w-max;
-  @apply text-xs text-accent-1-600 align-bottom;
+  @apply text-xs text-accent-1-600 align-bottom text-center;
   @apply pb-1 border-b-2 border-current;
   @apply flex gap-x-2 items-center;
   @apply hover:text-white;
@@ -335,7 +356,7 @@ nav {
 /* Layout - Main - Testimonials */
 
 .testimonials {
-  @apply my-44 relative w-max container mx-auto;
+  @apply my-40 relative w-max container mx-auto;
   @apply grid grid-cols-1 gap-y-6 justify-items-center;
 }
 
@@ -350,7 +371,76 @@ nav {
 /* Layout - Main - CTA */
 
 .cta {
-  @apply my-36 container mx-auto;
+  @apply container mx-auto;
   @apply bg-primary-150 rounded-xl filter drop-shadow-2xl;
   @apply p-6;
+}
+
+/* Layout - Main - Footer */
+
+footer {
+  @apply my-8 mb-20;
+  @apply text-left text-base;
+}
+
+.footer__logo {
+  @apply ml-2 w-max;
+}
+
+.contacts {
+  @apply space-y-6 my-5;
+}
+.contact {
+  @apply inline-block my-0;
+  @apply flex gap-x-4 items-center;
+  @apply hover:text-white;
+}
+
+.contact--phone,
+.contact--email {
+  @apply w-max text-sm;
+}
+
+.contact:before {
+  content: "";
+  display: inline-block;
+  min-width: 1.1rem;
+  height: 2rem;
+  filter: contrast(200%);
+}
+
+.contact--location:before {
+  @apply self-start;
+  background: var(--icon-location) center / contain no-repeat;
+}
+
+.contact--phone:before {
+  background: var(--icon-phone) center / contain no-repeat;
+}
+
+.contact--email:before {
+  background: var(--icon-email) center / contain no-repeat;
+}
+
+.footer-nav {
+  @apply my-20 space-y-10;
+}
+
+.footer-nav ul {
+  @apply space-y-4;
+}
+
+.footer-nav__item {
+  @apply hover:text-white hover:font-bold;
+}
+
+.social-nav {
+  @apply w-max mx-auto block space-x-2;
+}
+
+.social-nav__item {
+  @apply inline-block w-7 h-7 leading-7;
+  @apply text-center align-middle;
+  @apply rounded-full border;
+  @apply hover:text-accent-1-600 hover:border-accent-1-600;
 }

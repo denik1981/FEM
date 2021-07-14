@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/1807313955.js" crossorigin="anonymous"></script>
     <title>Frontend Mentor | Fylo landing Page with Dark Theme and Features Grid</title>
   </head>
   <body>
@@ -120,6 +121,35 @@
         </section>
       </div>
     </main>
-    <footer></footer>
+    <div class="wrapper wrapper--footer">
+      <footer>
+        <a class="footer__logo" href="#"><img src="<%=require('./assets/brand/logo.svg')%>" alt="flyo logo" /></a>
+        <address class="contacts">
+          <a href="#" onclick="return false" class="contact contact--location max-ch-40">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</a
+          >
+          <a href="#" onclick="return false" class="contact contact--phone">+1-543-123-4567</a>
+          <a href="#" onclick="return false" class="contact contact--email">example@fylo.com</a>
+        </address>
+        <nav class="footer-nav">
+          <ul>
+            <li class="footer-nav__item"><a href="#" onclick="return false">About us</a></li>
+            <li class="footer-nav__item"><a href="#" onclick="return false">Jobs</a></li>
+            <li class="footer-nav__item"><a href="#" onclick="return false">Press</a></li>
+            <li class="footer-nav__item"><a href="#" onclick="return false">Blog</a></li>
+          </ul>
+          <ul>
+            <li class="footer-nav__item"><a href="#" onclick="return false">Contact us</a></li>
+            <li class="footer-nav__item"><a href="#" onclick="return false">Terms</a></li>
+            <li class="footer-nav__item"><a href="#" onclick="return false">Privacy</a></li>
+          </ul>
+        </nav>
+        <div class="social-nav">
+          <a href="#" onclick="return false" aria-label="follow us on facebook"><i class="social-nav__item fab fa-sm fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" onclick="return false" aria-label="follow us on twitter"><i class="social-nav__item fab fa-sm fa-twitter" aria-hidden="true"></i></a>
+          <a href="#" onclick="return false" aria-label="follow us on instagram"><i class="social-nav__item fab fa-sm fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
