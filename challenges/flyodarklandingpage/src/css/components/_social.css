@@ -1,0 +1,10 @@
+.social-nav {
+  @apply w-max mx-auto block space-x-2;
+}
+
+.social-nav__item {
+  @apply inline-block w-7 h-7 leading-7;
+  @apply text-center align-middle;
+  @apply rounded-full border;
+  @apply hover:text-accent-1-600 hover:border-accent-1-600;
+}

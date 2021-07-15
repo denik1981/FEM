@@ -2,7 +2,11 @@
 @import "_typography.css";
 @import "_theme.css";
 @import "_backgrounds.css";
-@import "_components.css";
+
+@import "components/_buttons.css";
+@import "components/_forms.css";
+@import "components/_cards.css";
+@import "components/_social.css";
 
 @import "layout/_container.css";
 @import "layout/_header.css";

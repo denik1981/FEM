@@ -1,25 +1,62 @@
+.wrapper--footer {
+  @apply py-10;
+  @apply grid-cols-1 justify-items-stretch;
+}
+
 footer {
-  @apply my-8 mb-20;
-  @apply text-left text-base;
+  @apply w-full grid grid-cols-1 md:grid-cols-2;
+  @apply justify-items-start xs:justify-items-center md:items-start xl:justify-items-stretch;
+  @apply gap-y-10 xs:gap-y-16 xl:gap-y-4;
+  @apply text-left xs:text-center md:text-left;
+}
+
+@screen xl {
+  footer {
+    grid: auto-flow / 60% 1fr 10%;
+  }
 }
 
 .footer__logo {
   @apply ml-2 w-max;
+  @apply col-span-full;
 }
 
 .contacts {
-  @apply space-y-2 my-5;
+  @apply w-full md:w-max xl:w-full;
+  @apply flex;
+  @apply gap-x-4 xl:gap-x-24;
+  @apply gap-y-4 md:gap-y-2;
+  @apply flex-col xs:flex-row md:flex-col xl:flex-row;
+  @apply xs:justify-around xl:justify-start;
 }
 .contact {
   @apply my-0;
   @apply hover:text-white;
+  @apply text-left;
+}
+
+.contact__channels {
+  @apply space-y-3 xs:space-y-1;
+}
+
+.contact--location {
+  @apply w-80;
+  @apply xs:max-w-3xs xl:max-w-2xl;
+}
+
+.contact--phone,
+.contact--email {
+  @apply w-max;
 }
 
 .footer-nav {
-  @apply my-20 space-y-10;
+  @apply w-full xs:w-96 xl:w-full;
+  @apply flex gap-y-10;
+  @apply flex-col xs:flex-row justify-evenly;
 }
 
 .footer-nav ul {
+  @apply w-2/6;
   @apply space-y-4;
 }
 
@@ -28,5 +65,5 @@ footer {
 }
 
 .social-nav {
-  @apply mx-auto;
+  @apply col-span-full xs:col-span-1;
 }

@@ -1,0 +1,8 @@
+.btn {
+  @apply w-max my-4 min-w-max;
+  @apply py-4 px-20;
+  @apply bg-accent-1-500 hover:bg-accent-1-600 active:bg-accent-1-500;
+  @apply font-primary text-sm text-white font-bold capitalize;
+  @apply rounded-3xl;
+  @apply shadow-2xl active:shadow-none focus:shadow-none;
+}

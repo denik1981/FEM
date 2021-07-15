@@ -84,12 +84,25 @@
 
 /* Theme - Testimonials */
 
+.testimonial {
+  z-index: 5;
+}
+
 .testimonials:before {
   content: "";
-  @apply absolute w-5 h-5;
+  @apply absolute;
+  @apply w-5 md:w-10;
+  @apply h-5 md:h-10;
   inset: 0px 0.3rem;
-  transform: translatey(-100%);
+  transform: translatey(-90%);
+  z-index: 0;
   background: var(--icon-quotes) bottom left / contain no-repeat;
+}
+
+@screen md {
+  .testimonials:before {
+    inset: 0px -0.5rem;
+  }
 }
 
 /* Theme - Footer */
@@ -98,9 +111,8 @@
   @apply flex gap-x-4 items-center;
 }
 
-.contact--phone,
-.contact--email {
-  @apply w-max text-sm;
+.contact--location {
+  @apply items-start;
 }
 
 .contact:before {
@@ -112,7 +124,6 @@
 }
 
 .contact--location:before {
-  @apply self-start;
   background: var(--icon-location) center / contain no-repeat;
 }
 

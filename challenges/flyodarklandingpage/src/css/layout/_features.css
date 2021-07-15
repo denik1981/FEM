@@ -1,42 +1,15 @@
+.wrapper--features {
+  @apply pt-44 pb-5;
+}
+
 .features {
-  @apply my-28;
-  @apply container mx-auto;
+  @apply container grid justify-items-center;
   @apply xl:max-w-lg;
   @apply grid grid-cols-1 gap-y-36;
   @apply md:grid-cols-2;
 }
 
-.feature {
-  @apply relative;
-}
-
-.feature:before {
-  content: "";
-  @apply flex absolute;
-  @apply w-16 xs:w-20 md:w-16 lg:w-20;
-  @apply h-16 xs:h-20 md:h-16 lg:h-20;
-  @apply xs:mt-4;
-  inset: 0 50%;
-  transform: translate(-50%, -130%);
-  background: center / contain no-repeat;
-}
-
-.feature--access-anywhere:before {
-  background-image: var(--icon-access-anywhere);
-}
-
-.feature--security:before {
-  background-image: var(--icon-security);
-}
-
-.feature--collaboration:before {
-  background-image: var(--icon-collaboration);
-}
-.feature--any-file:before {
-  background-image: var(--icon-any-file);
-}
-
 .feature__description {
   @apply w-72;
-  @apply mx-auto my-0 md:my-2;
+  @apply my-0 md:my-2;
 }

@@ -1,5 +1,5 @@
 .spot-feature {
-  @apply container mx-auto;
+  @apply container grid justify-items-center;
   @apply max-w-xs md:max-w-lg;
   @apply flex flex-col items-center gap-x-12;
   @apply lg:flex-row lg:justify-evenly xl:justify-start;
@@ -17,6 +17,6 @@
 }
 
 .spot-feature__content {
-  @apply text-left mx-auto lg:mx-0;
+  @apply text-left lg:mx-0;
   @apply xs:max-w-2xs md:max-w-xs lg:max-w-2xs xl:max-w-xs;
 }

@@ -2,10 +2,8 @@
   @apply lg:pt-10;
 }
 
-/* Layour - Header */
-
 header {
-  @apply w-full mx-auto;
+  @apply w-full;
   @apply flex flex-row justify-between gap-4;
   @apply items-center;
 }

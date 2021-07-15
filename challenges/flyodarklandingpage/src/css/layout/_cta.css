@@ -1,15 +1,6 @@
 .cta {
-  @apply container mx-auto;
+  @apply w-full max-w-xs md:max-w-sm lg:max-w-md;
+  @apply grid justify-items-center;
   @apply bg-primary-150 rounded-xl filter drop-shadow-2xl;
   @apply p-6;
-}
-
-.cta__headline {
-  @apply my-2;
-  @apply text-lg;
-}
-
-.cta__description {
-  max-width: 40ch;
-  @apply mx-auto;
 }
