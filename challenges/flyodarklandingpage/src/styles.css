@@ -38,7 +38,7 @@
 }
 
 *:not(:hover) {
-  @apply focus:ring-1 focus:ring-white focus:ring-offset-primary-150 focus:ring-offset-8 focus:rounded-sm;
+  @apply focus:ring-1 focus:ring-white focus:ring-offset-primary-150 focus:ring-offset-8;
 }
 
 a {
@@ -81,7 +81,7 @@ h2 {
 }
 
 h3 {
-  @apply my-2;
+  @apply my-2 xl:my-1;
   @apply font-display font-bold;
   @apply text-lg leading-normal;
 }
@@ -92,12 +92,6 @@ p {
 
 .text-error {
   @apply text-accent-2-600 text-xs font-bold;
-}
-
-.spot-feature__headline,
-.cta__headline {
-  @apply my-2;
-  @apply text-lg;
 }
 
 /* Base - Typograhy - Utilities */
@@ -114,7 +108,7 @@ p {
   @apply bg-accent-1-500 hover:bg-accent-1-600 active:bg-accent-1-500;
   @apply font-primary text-sm text-white font-bold capitalize;
   @apply rounded-3xl;
-  @apply filter drop-shadow-3xl active:drop-shadow-none focus:drop-shadow-none;
+  @apply shadow-2xl active:shadow-none focus:shadow-none;
 }
 
 /* Components - Email Form */
@@ -203,23 +197,8 @@ body {
   background: linear-gradient(to top, var(--cl-primary-130) 0 45%, transparent 0);
 }
 
-.wrapper--intro:before {
-  @apply block absolute w-full h-screen;
-  content: "";
-  bottom: 44%;
-  left: 0;
-  z-index: -1;
-  background: var(--bg-curvy-desktop) bottom center / contain no-repeat;
-}
-
-@screen md {
-  .wrapper--intro:before {
-    @apply hidden;
-  }
-}
-
 .wrapper--main {
-  @apply bg-primary-130;
+  @apply relative bg-primary-130;
 }
 
 .wrapper--cta {
@@ -240,6 +219,33 @@ body {
 
 .wrapper--footer * {
   @apply focus:ring-offset-primary-090;
+}
+
+.wrapper--intro:before {
+  @apply block absolute w-full h-screen;
+  content: "";
+  bottom: 44%;
+  left: 0;
+  z-index: -1;
+  background: var(--bg-curvy-mobile) bottom center / contain no-repeat;
+}
+
+.wrapper--main:before {
+  @apply block absolute w-full h-screen;
+  content: "";
+  bottom: 100%;
+  left: 0;
+  z-index: -1;
+  background: var(--bg-curvy-desktop) bottom center / contain no-repeat;
+}
+
+@screen md {
+  .wrapper--intro:before {
+    @apply hidden;
+  }
+  .wrapper--intro {
+    background: transparent;
+  }
 }
 
 /* Layour - Header */
@@ -298,15 +304,17 @@ nav {
   @apply max-w-xs md:max-w-sm mx-auto;
 }
 .intro__description {
-  width: 55ch;
+  width: min(100%, 55ch);
   @apply max-w-2xs md:max-w-xs lg:max-w-sm mx-auto;
 }
 
 /* Layout - Main - Features */
 .features {
-  @apply my-52 container mx-auto;
-  @apply grid grid-cols-1;
-  @apply gap-y-36;
+  @apply my-28;
+  @apply container mx-auto;
+  @apply xl:max-w-lg;
+  @apply grid grid-cols-1 gap-y-36;
+  @apply md:grid-cols-2;
 }
 
 .feature {
@@ -315,8 +323,10 @@ nav {
 
 .feature:before {
   content: "";
-  @apply absolute w-16 h-16;
-  @apply flex;
+  @apply flex absolute;
+  @apply w-16 xs:w-20 md:w-16 lg:w-20;
+  @apply h-16 xs:h-20 md:h-16 lg:h-20;
+  @apply xs:mt-4;
   inset: 0 50%;
   transform: translate(-50%, -130%);
   background: center / contain no-repeat;
@@ -337,19 +347,29 @@ nav {
   background-image: var(--icon-any-file);
 }
 
+.feature__headline {
+  @apply xs:text-xl md:text-lg;
+}
+
 .feature__description {
-  max-width: 40ch;
-  @apply mx-auto;
+  @apply w-72;
+  @apply md:text-sm;
+  @apply mx-auto my-0 md:my-2;
 }
 
 /* Layout - Main - SpotFeature */
 
 .spot-feature {
-  @apply -mt-28 container mx-auto;
+  @apply container mx-auto;
 }
 
 .spot-feature__img {
   @apply my-10;
+}
+
+.spot-feature__headline {
+  @apply my-2;
+  @apply text-lg;
 }
 
 .spot-feature__content {
@@ -397,6 +417,11 @@ nav {
   @apply container mx-auto;
   @apply bg-primary-150 rounded-xl filter drop-shadow-2xl;
   @apply p-6;
+}
+
+.cta__headline {
+  @apply my-2;
+  @apply text-lg;
 }
 
 .cta__description {
