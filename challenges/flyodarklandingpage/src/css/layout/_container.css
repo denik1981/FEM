@@ -1,0 +1,8 @@
+body {
+  @apply min-h-screen;
+}
+
+.wrapper {
+  @apply flex flex-col justify-center px-6 py-4;
+  @apply lg:px-20 lg:py-6;
+}

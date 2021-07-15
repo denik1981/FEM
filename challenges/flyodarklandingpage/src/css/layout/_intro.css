@@ -1,0 +1,22 @@
+.wrapper--intro {
+  @apply lg:py-0;
+}
+
+.intro {
+  @apply my-10 lg:my-0;
+  @apply container mx-auto;
+  @apply max-w-xs md:max-w-lg;
+}
+
+.intro__draw {
+  @apply w-full max-w-xs;
+}
+
+.intro__heading {
+  @apply max-w-xs md:max-w-sm mx-auto;
+}
+
+.intro__description {
+  width: min(100%, 55ch);
+  @apply max-w-2xs md:max-w-xs mx-auto;
+}

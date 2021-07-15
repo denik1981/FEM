@@ -1,0 +1,4 @@
+.testimonials {
+  @apply my-40 relative w-max container mx-auto;
+  @apply grid grid-cols-1 gap-y-6 justify-items-center;
+}

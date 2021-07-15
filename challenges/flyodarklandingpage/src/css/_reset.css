@@ -1,0 +1,50 @@
+* {
+  @apply focus:outline-none;
+  @apply active:ring-0 active:ring-offset-0;
+}
+
+*:not(:hover) {
+  @apply focus:ring-1 focus:ring-white focus:ring-offset-primary-150 focus:ring-offset-8;
+}
+
+a {
+  @apply inline-block;
+}
+
+img {
+  @apply my-4;
+  @apply inline-block;
+  @apply object-contain;
+}
+
+input {
+  @apply appearance-none;
+  @apply bg-white text-gray-900;
+  @apply border border-neutral-400 rounded-none;
+  @apply py-2 px-3;
+}
+
+input:not(:placeholder-shown):focus {
+  @apply ring-0 ring-offset-0;
+}
+
+address {
+  @apply not-italic;
+}
+
+/* Reset - Sections */
+
+.wrapper--intro,
+.wrapper--features,
+.wrapper--spot-feature,
+.wrapper--testimonials * {
+  @apply focus:ring-offset-primary-130;
+}
+
+.wrapper--cta * {
+  @apply focus:ring-offset-primary-150;
+}
+
+.wrapper--footer * {
+  @apply focus:ring-offset-primary-090;
+}

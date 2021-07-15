@@ -1,0 +1,125 @@
+:root {
+  --cl-primary-090: hsl(216, 53%, 9%); /* footer background */
+  --cl-primary-130: hsl(218, 28%, 13%); /* main background */
+  --cl-primary-150: hsl(217, 28%, 15%); /* intro and email sign up background */
+  --cl-primary-180: hsl(219, 30%, 18%); /* testimonials background */
+  --cl-accent-1-500: hsl(198, 60%, 50%); /* inside call-to-action gradientcl */
+  --cl-accent-1-600: hsl(176, 68%, 64%); /* inside call-to-action gradient */
+  --cl-accent-2-600: hsl(0, 100%, 63%); /* light red for errors */
+
+  --cl-neutral-400: hsl(220, 9%, 46%);
+  --cl-neutral-900: hsl(219, 30%, 90%);
+  --cl-white: hsl(0, 0%, 100%);
+
+  --ff-primary: "Open Sans", theme(fontFamily.sans);
+  --ff-display: "Raleway", theme(fontFamily.sans);
+
+  --bg-curvy-desktop: url("~assets/bg/curvy-desktop.svg");
+  --bg-curvy-mobile: url("~assets/bg/curvy-mobile.svg");
+
+  --icon-arrow: url("~assets/icons/arrow.svg");
+  --icon-any-file: url("~assets/icons/any-file.svg");
+  --icon-access-anywhere: url("~assets/icons/access-anywhere.svg");
+  --icon-collaboration: url("~assets/icons/collaboration.svg");
+  --icon-email: url("~assets/icons/email.svg");
+  --icon-location: url("~assets/icons/location.svg");
+  --icon-phone: url("~assets/icons/phone.svg");
+  --icon-quotes: url("~assets/icons/quotes.png");
+  --icon-security: url("~assets/icons/security.svg");
+}
+
+/* Theme - Feature Section */
+
+.feature {
+  @apply relative;
+}
+
+.feature:before {
+  content: "";
+  @apply flex absolute;
+  @apply w-16 xs:w-20 md:w-16 lg:w-20;
+  @apply h-16 xs:h-20 md:h-16 lg:h-20;
+  @apply xs:mt-4;
+  inset: 0 50%;
+  transform: translate(-50%, -130%);
+  background: center / contain no-repeat;
+}
+
+.feature--access-anywhere:before {
+  background-image: var(--icon-access-anywhere);
+}
+
+.feature--security:before {
+  background-image: var(--icon-security);
+}
+
+.feature--collaboration:before {
+  background-image: var(--icon-collaboration);
+}
+.feature--any-file:before {
+  background-image: var(--icon-any-file);
+}
+
+/* Theme - Spot-Feature Section */
+
+.spot-feature__link {
+  @apply w-max;
+  @apply text-xs text-accent-1-600 align-bottom text-center;
+  @apply pb-1 border-b-2 border-current;
+  @apply flex gap-x-2 items-center;
+  @apply hover:text-white;
+  @apply focus:border-0;
+  @apply active:font-bold;
+}
+
+.spot-feature__link:after {
+  content: "";
+  background: var(--icon-arrow) center / contain no-repeat;
+  @apply inline-block w-4 h-4;
+}
+
+.spot-feature__link:hover:after {
+  @apply filter saturate-0 contrast-200;
+}
+
+/* Theme - Testimonials */
+
+.testimonials:before {
+  content: "";
+  @apply absolute w-5 h-5;
+  inset: 0px 0.3rem;
+  transform: translatey(-100%);
+  background: var(--icon-quotes) bottom left / contain no-repeat;
+}
+
+/* Theme - Footer */
+
+.contact {
+  @apply flex gap-x-4 items-center;
+}
+
+.contact--phone,
+.contact--email {
+  @apply w-max text-sm;
+}
+
+.contact:before {
+  content: "";
+  @apply inline-block;
+  min-width: 1.1rem;
+  height: 2rem;
+  filter: contrast(200%);
+}
+
+.contact--location:before {
+  @apply self-start;
+  background: var(--icon-location) center / contain no-repeat;
+}
+
+.contact--phone:before {
+  background: var(--icon-phone) center / contain no-repeat;
+}
+
+.contact--email:before {
+  background: var(--icon-email) center / contain no-repeat;
+}

@@ -1,0 +1,42 @@
+.wrapper--header {
+  @apply lg:pt-10;
+}
+
+/* Layour - Header */
+
+header {
+  @apply w-full mx-auto;
+  @apply flex flex-row justify-between gap-4;
+  @apply items-center;
+}
+
+.logo {
+  min-width: 70px;
+  @apply w-3/12;
+}
+
+.logo a {
+  @apply block w-full;
+  max-width: max-content;
+}
+
+/* Layour - Nav */
+
+nav {
+  width: clamp(10rem, 40vw, 15rem);
+}
+
+.site-nav {
+  @apply block;
+  @apply flex flex-row justify-between gap-1;
+}
+
+.site-nav__item {
+  @apply block;
+  @apply capitalize;
+  @apply hover:text-white hover:underline active:no-underline;
+}
+
+.site-nav__item:not(:hover) {
+  @apply focus:text-white focus:no-underline;
+}

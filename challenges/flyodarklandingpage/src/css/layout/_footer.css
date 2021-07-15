@@ -1,0 +1,32 @@
+footer {
+  @apply my-8 mb-20;
+  @apply text-left text-base;
+}
+
+.footer__logo {
+  @apply ml-2 w-max;
+}
+
+.contacts {
+  @apply space-y-2 my-5;
+}
+.contact {
+  @apply my-0;
+  @apply hover:text-white;
+}
+
+.footer-nav {
+  @apply my-20 space-y-10;
+}
+
+.footer-nav ul {
+  @apply space-y-4;
+}
+
+.footer-nav__item {
+  @apply hover:text-white hover:font-bold;
+}
+
+.social-nav {
+  @apply mx-auto;
+}

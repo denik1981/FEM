@@ -1,0 +1,22 @@
+.spot-feature {
+  @apply container mx-auto;
+  @apply max-w-xs md:max-w-lg;
+  @apply flex flex-col items-center gap-x-12;
+  @apply lg:flex-row lg:justify-evenly xl:justify-start;
+}
+
+.spot-feature__draw {
+  @apply my-10;
+  @apply w-full max-w-xs;
+}
+
+.spot-feature__headline {
+  @apply my-2;
+  @apply text-center lg:text-left;
+  @apply lg:w-72 xl:w-80;
+}
+
+.spot-feature__content {
+  @apply text-left mx-auto lg:mx-0;
+  @apply xs:max-w-2xs md:max-w-xs lg:max-w-2xs xl:max-w-xs;
+}
