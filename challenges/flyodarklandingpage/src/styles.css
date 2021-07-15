@@ -51,28 +51,6 @@ img {
   @apply object-contain;
 }
 
-/* Base - Typograpyhy */
-
-h1,
-h2,
-h3 {
-  @apply font-display;
-}
-
-h2 {
-  @apply my-4;
-  @apply font-display text-2xl font-bold leading-normal;
-}
-
-h3 {
-  @apply my-2;
-  @apply font-display text-lg font-bold leading-normal;
-}
-
-p {
-  @apply my-4 mx-auto;
-}
-
 input {
   @apply appearance-none;
   @apply bg-white text-gray-900;
@@ -88,12 +66,41 @@ address {
   @apply not-italic;
 }
 
-/* Base - Custom Utilities */
+/* Base - Typograpyhy */
 
-.h-sm {
+body {
+  @apply font-primary text-center text-neutral-900;
+  @apply text-sm md:text-lg leading-relaxed;
+}
+
+h2 {
+  @apply my-4;
+  @apply font-display font-bold;
+  @apply text-2xl md:text-4xl;
+  @apply leading-normal md:leading-relaxed;
+}
+
+h3 {
+  @apply my-2;
+  @apply font-display font-bold;
+  @apply text-lg leading-normal;
+}
+
+p {
+  @apply my-4;
+}
+
+.text-error {
+  @apply text-accent-2-600 text-xs font-bold;
+}
+
+.spot-feature__headline,
+.cta__headline {
   @apply my-2;
   @apply text-lg;
 }
+
+/* Base - Typograhy - Utilities */
 
 .max-ch-40 {
   max-width: 40ch;
@@ -128,7 +135,7 @@ address {
 
 .email__error {
   @apply hidden absolute;
-  @apply text-accent-2-600 text-xs font-bold pb-1;
+  @apply pb-1;
   inset: auto 0 100%;
 }
 
@@ -180,34 +187,47 @@ address {
 body {
   @apply bg-primary-150;
   @apply min-h-screen;
-  @apply font-primary text-sm text-center leading-relaxed;
-  @apply text-neutral-900;
 }
 
 .wrapper {
   @apply flex flex-col justify-center px-6 py-4;
-  @apply lg:px-20 lg:py-10;
+  @apply lg:px-20 lg:py-6;
+}
+
+.wrapper--header {
+  @apply lg:pt-10;
 }
 
 .wrapper--intro {
-  position: relative;
+  @apply relative lg:py-0;
   background: linear-gradient(to top, var(--cl-primary-130) 0 45%, transparent 0);
 }
 
 .wrapper--intro:before {
-  display: block;
-  position: absolute;
+  @apply block absolute w-full h-screen;
+  content: "";
   bottom: 44%;
   left: 0;
-  width: 100%;
-  height: 100vh;
   z-index: -1;
-  content: "";
   background: var(--bg-curvy-desktop) bottom center / contain no-repeat;
+}
+
+@screen md {
+  .wrapper--intro:before {
+    @apply hidden;
+  }
 }
 
 .wrapper--main {
   @apply bg-primary-130;
+}
+
+.wrapper--cta {
+  background: linear-gradient(to bottom, var(--cl-primary-130) 0 50%, var(--cl-primary-090) 0 100%);
+}
+
+.wrapper--footer {
+  @apply bg-primary-090;
 }
 
 .wrapper--intro *,
@@ -217,16 +237,9 @@ body {
 .wrapper--cta * {
   @apply focus:ring-offset-primary-150;
 }
+
 .wrapper--footer * {
   @apply focus:ring-offset-primary-090;
-}
-
-.wrapper--cta {
-  background: linear-gradient(to bottom, var(--cl-primary-130) 0 50%, var(--cl-primary-090) 0 100%);
-}
-
-.wrapper--footer {
-  @apply bg-primary-090;
 }
 
 /* Layour - Header */
@@ -260,11 +273,10 @@ nav {
 
 .site-nav__item {
   @apply block;
-  @apply text-xs capitalize;
+  @apply capitalize;
   @apply hover:text-white hover:underline;
   @apply active:no-underline;
-
-  @apply xs:text-sm;
+  @apply text-xs xs:text-sm;
 }
 
 .site-nav__item:not(:hover) {
@@ -274,7 +286,20 @@ nav {
 /* Layout - Main - Intro */
 
 .intro {
-  @apply my-10 container mx-auto;
+  @apply my-10 lg:my-0;
+  @apply container mx-auto;
+  @apply max-w-xs md:max-w-lg;
+}
+
+.intro__draw {
+  @apply w-full max-w-xs;
+}
+.intro__heading {
+  @apply max-w-xs md:max-w-sm mx-auto;
+}
+.intro__description {
+  width: 55ch;
+  @apply max-w-2xs md:max-w-xs lg:max-w-sm mx-auto;
 }
 
 /* Layout - Main - Features */
@@ -310,6 +335,11 @@ nav {
 }
 .feature--any-file:before {
   background-image: var(--icon-any-file);
+}
+
+.feature__description {
+  max-width: 40ch;
+  @apply mx-auto;
 }
 
 /* Layout - Main - SpotFeature */
@@ -369,6 +399,10 @@ nav {
   @apply p-6;
 }
 
+.cta__description {
+  max-width: 40ch;
+  @apply mx-auto;
+}
 /* Layout - Main - Footer */
 
 footer {
@@ -396,7 +430,7 @@ footer {
 
 .contact:before {
   content: "";
-  display: inline-block;
+  @apply inline-block;
   min-width: 1.1rem;
   height: 2rem;
   filter: contrast(200%);
