@@ -1,0 +1,10 @@
+.wrapper--testimonials {
+  @apply py-40 lg:py-20;
+}
+
+.testimonials {
+  @apply relative;
+  @apply grid justify-items-center;
+  @apply gap-x-6 gap-y-6 xs:gap-y-10;
+  @apply grid-cols-1 auto-rows-fr lg:grid-cols-3;
+}

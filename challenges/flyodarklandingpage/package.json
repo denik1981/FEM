@@ -11,14 +11,12 @@
   "private": true,
   "scripts": {
     "build": "webpack --mode=production --node-env=production",
-    "build:v": "webpack --mode=development -- --stats=verbose",
     "build:dev": "webpack --mode=development --node-env=development",
-    "build:dev:v": "npm run build:dev -- --stats=verbose",
     "build:prod": "npm run build",
     "debug": "node --inspect-brk $(npx which webpack) --mode=development",
     "watch": "webpack --watch --mode=development",
     "serve": "webpack serve",
-    "serve:fox": "webpack serve --env browser=firefox"
+    "serve:prod": "webpack serve --mode=production --node-env=production"
   },
   "devDependencies": {
     "css-loader": "^5.2.4",

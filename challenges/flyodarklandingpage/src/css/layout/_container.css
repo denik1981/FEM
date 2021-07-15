@@ -1,0 +1,9 @@
+body {
+  @apply min-h-screen;
+}
+
+.wrapper {
+  @apply grid justify-items-center;
+  @apply px-6 py-4;
+  @apply lg:px-20 lg:py-6;
+}

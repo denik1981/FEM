@@ -1,0 +1,6 @@
+.cta {
+  @apply w-full max-w-xs md:max-w-sm lg:max-w-md;
+  @apply grid justify-items-center;
+  @apply bg-primary-150 rounded-xl filter drop-shadow-2xl;
+  @apply p-6;
+}

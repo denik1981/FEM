@@ -1,0 +1,53 @@
+/* Testimonial */
+
+/* Testimonial - Typography */
+
+.testimonial {
+  @apply text-2xs xs:text-base lg:text-xs;
+  @apply leading-loose xs:leading-relaxed;
+}
+
+.testimonial__reviewer {
+  @apply tracking-widest xs:tracking-wide;
+  @apply align-middle;
+}
+
+.reviewer__name {
+  @apply block;
+  @apply text-xs font-bold tracking-normal leading-none;
+  @apply capitalize;
+}
+
+.reviewer__work {
+  @apply block;
+  @apply text-3xs xs:text-2xs;
+  @apply leading-none;
+}
+
+/* Testimonial - Layout */
+
+.testimonial {
+  min-width: 40ch;
+  @apply w-screen;
+  @apply max-w-3xs xs:max-w-2xs md:max-w-xs lg:max-w-4xs xl:max-w-2xs;
+  @apply py-6;
+  @apply px-5 xs:px-8 lg:px-5 xl:px-8;
+  @apply flex flex-col justify-between;
+  @apply gap-y-4;
+  @apply text-left;
+  @apply bg-primary-180 shadow-xl;
+  @apply rounded-lg;
+}
+
+.testimonial__reviewer {
+  @apply mt-3 grid gap-x-2 gap-y-1 items-center self-start;
+  grid: auto-flow 1.1rem / auto 1fr;
+}
+
+.reviewer__avatar {
+  @apply w-6 rounded-full;
+}
+
+.reviewer__info {
+  @apply space-y-1;
+}

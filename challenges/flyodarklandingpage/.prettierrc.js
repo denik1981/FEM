@@ -2,9 +2,9 @@ module.exports = {
     "printWidth": 120,
     "overrides": [
       {
-        "files": "*.html", 
+        "files": "*.html",
         "options": {
-          "printWidth": 999
+          "printWidth": 180
         }
       }]
-  };
+}

@@ -1,0 +1,74 @@
+body {
+  @apply font-primary text-center text-neutral-900;
+  @apply text-sm md:text-lg leading-relaxed;
+}
+
+h2 {
+  @apply my-4;
+  @apply font-display font-bold;
+  @apply text-2xl md:text-4xl;
+  @apply leading-normal md:leading-relaxed;
+}
+
+h3 {
+  @apply my-2 xl:my-1;
+  @apply font-display font-bold;
+  @apply text-lg leading-normal;
+}
+
+p {
+  @apply my-4;
+}
+
+.text-error {
+  @apply text-accent-2-600 text-xs font-bold;
+}
+
+/* Utils */
+
+.max-ch-40 {
+  max-width: 40ch;
+}
+
+.site-nav__items {
+  @apply text-xs xs:text-sm;
+}
+
+.feature__headline {
+  @apply xs:text-xl md:text-lg;
+}
+
+.feature__description {
+  @apply md:text-sm;
+}
+
+.spot-feature__headline {
+  @apply text-lg xs:text-2xl md:text-4xl lg:text-2xl xl:text-4xl;
+}
+
+.spot-feature__content {
+  @apply text-sm md:text-lg lg:text-sm leading-relaxed;
+}
+
+.cta__headline {
+  @apply my-2;
+  @apply text-lg md:text-3xl;
+}
+
+.cta__description {
+  @apply text-sm;
+  @apply max-w-3xs xs:max-w-2xs md:max-w-xs lg:max-w-sm;
+}
+
+footer {
+  @apply text-base;
+}
+
+.contact--location {
+  @apply xs:text-sm;
+}
+
+.contact--phone,
+.contact--email {
+  @apply text-sm;
+}

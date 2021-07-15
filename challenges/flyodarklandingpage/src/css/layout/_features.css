@@ -1,0 +1,15 @@
+.wrapper--features {
+  @apply pt-44 pb-5;
+}
+
+.features {
+  @apply container grid justify-items-center;
+  @apply xl:max-w-lg;
+  @apply grid grid-cols-1 gap-y-36;
+  @apply md:grid-cols-2;
+}
+
+.feature__description {
+  @apply w-72;
+  @apply my-0 md:my-2;
+}

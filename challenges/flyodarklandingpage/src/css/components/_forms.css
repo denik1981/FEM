@@ -1,0 +1,37 @@
+/* Typography */
+
+.email__input {
+  @apply text-sm;
+  @apply text-center lg:text-left;
+}
+
+.email__form {
+  @apply w-full mt-4 lg:mt-0;
+  @apply flex flex-col lg:flex-row gap-x-6;
+  @apply items-center;
+}
+
+.email__field {
+  @apply max-w-xs;
+  @apply w-full relative;
+}
+
+.email__input {
+  @apply w-full px-10 py-4;
+  @apply rounded-3xl;
+}
+
+.email__error {
+  @apply hidden absolute;
+  @apply pb-1;
+  inset: auto 0 100%;
+}
+
+.email__input:not(:placeholder-shown):invalid ~ .email__error {
+  @apply block;
+}
+
+.email__submit {
+  @apply px-6 w-full lg:w-min;
+  @apply max-w-2xs;
+}

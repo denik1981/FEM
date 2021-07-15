@@ -1,0 +1,56 @@
+body {
+  @apply bg-primary-150;
+}
+
+.wrapper--intro {
+  @apply relative;
+  background: linear-gradient(to top, var(--cl-primary-130) 0 45%, transparent 0);
+}
+
+@screen md {
+  .wrapper--intro {
+    background: transparent;
+  }
+}
+
+.wrapper--intro:before {
+  @apply block absolute w-full h-screen;
+  content: "";
+  bottom: 44%;
+  left: 0;
+  z-index: -1;
+  background: var(--bg-curvy-mobile) bottom center / contain no-repeat;
+}
+
+@screen md {
+  .wrapper--intro:before {
+    @apply hidden;
+  }
+}
+
+.wrapper--features,
+.wrapper--spot-feature,
+.wrapper--testimonials {
+  @apply bg-primary-130;
+}
+
+.wrapper--features {
+  @apply relative;
+}
+
+.wrapper--features:before {
+  @apply block absolute w-full h-screen;
+  content: "";
+  bottom: 100%;
+  left: 0;
+  z-index: -1;
+  background: var(--bg-curvy-desktop) bottom center / contain no-repeat;
+}
+
+.wrapper--cta {
+  background: linear-gradient(to bottom, var(--cl-primary-130) 0 50%, var(--cl-primary-090) 0 100%);
+}
+
+.wrapper--footer {
+  @apply bg-primary-090;
+}

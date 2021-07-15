@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const isProduction = process.env.NODE_ENV === 'production'
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader'
 const cssLoader = { loader: 'css-loader', options: { sourceMap: true } }
+const publicPath = isProduction && !(process.env.WEBPACK_DEV_SERVER) ? path.sep + path.basename(__dirname) + path.sep : ''
 
 const config = {
   mode: isProduction ? 'production' : 'development',
@@ -14,10 +15,10 @@ const config = {
 
   entry: { main: path.resolve(__dirname, 'src/index.js') },
   output: {
-    clean: isProduction,
+    clean: isProduction && !(process.env.WEBPACK_DEV_SERVER),
     path: isProduction ? path.resolve('..', '..', 'public', path.basename(__dirname)) : path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'assets/[hash][ext]',
-    publicPath: isProduction ? path.sep + path.basename(__dirname) + path.sep : ''
+    publicPath: publicPath
   },
 
   resolve: { alias: { assets: path.resolve(__dirname, 'assets') } },
