@@ -65,5 +65,5 @@ footer {
 }
 
 .social-nav {
-  @apply col-span-full xs:col-span-1;
+  @apply col-span-full xl:col-span-1;
 }
