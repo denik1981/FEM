@@ -24,12 +24,13 @@ module.exports = {
       ...defaultTheme.screens
     },
     extend: {
-      maxWidth: {
-        '5xs': '140px',
-        '4xs': '190px',
-        '3xs': '270px',
-        '2xs': '360px'
-      },
+      // maxWidth: {
+      //   '5xs': '140px',
+      //   '4xs': '190px',
+      //   '3xs': '270px',
+      //   '2xs': '360px'
+      //   // ...defaultTheme.screens
+      // },
       dropShadow: {
         '3xl': '0 25px 25px rgba(0, 0, 0, 0.5)'
       },

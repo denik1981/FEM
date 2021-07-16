@@ -18,13 +18,13 @@ input {
 }
 
 body {
-  @apply min-h-screen;
+  @apply min-h-screen w-full;
   @apply grid justify-items-center auto-rows-min;
 }
 
-.wrapper {
-  @apply w-full;
-  @apply px-5 xs:px-8 md:px-10 lg:px-12;
+.header__content,
+.intro__content {
+  @apply px-5 xs:px-8 md:px-10 lg:px-8 xl:px-4;
 }
 
 /* Active */

@@ -1,6 +1,7 @@
 :root {
-  --cl-primary-600: hsl(322, 100%, 66%);
   --cl-primary-500: hsl(320, 80%, 50%);
+  --cl-primary-600: hsl(322, 100%, 66%);
+  --cl-primary-700: hsl(322, 100%, 76%);
 
   --cl-neutral-100: hsl(192, 100%, 9%);
   --cl-neutral-500: hsl(208, 11%, 55%);
@@ -21,3 +22,27 @@
 body {
   @apply bg-neutral-900 text-neutral-100;
 }
+
+/* Backgrounds */
+
+header {
+  @apply relative;
+}
+
+header:before {
+  @apply block absolute w-full h-screen;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: top center / 100% auto no-repeat;
+  background-image: var(--bg-hero-mobile);
+}
+
+@screen md {
+  header:before {
+    background-image: var(--bg-hero-desktop);
+  }
+}
+
+/* Sections */

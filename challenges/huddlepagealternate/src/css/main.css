@@ -1,6 +1,8 @@
 @import "_base.css";
+@import "_typography.css";
 @import "_theme.css";
 
 @import "components/_buttons.css";
 
 @import "layout/_header.css";
+@import "layout/_intro.css";

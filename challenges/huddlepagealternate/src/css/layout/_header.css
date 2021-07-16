@@ -1,22 +1,18 @@
 header {
   @apply w-full py-8;
+  @apply grid justify-items-center;
+  /* @apply bg-blue-400; */
 }
 
 .header__content {
-  @apply w-full max-w-xl;
+  @apply w-full max-w-screen-xl;
   @apply flex justify-between items-center gap-x-2;
 }
 
 .header__logo {
-  width: clamp(6rem, 25vw, 100%);
+  width: clamp(6rem, 25vw, 12rem);
 }
 
 .header__logo img {
   @apply filter contrast-200;
-}
-
-.header__cta {
-  @apply text-2xs xs:text-xs sm:text-sm;
-  @apply px-5 xs:px-8 sm:px-12 lg:px-16;
-  @apply py-1 xs:py-2 sm:py-3;
 }

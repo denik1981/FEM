@@ -1,0 +1,43 @@
+body {
+  @apply font-primary;
+  @apply text-base;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-display font-bold;
+}
+
+h1 {
+  @apply text-2xl md:text-3xl leading-relaxed;
+}
+
+p {
+  max-width: 60ch;
+}
+
+/* Sections */
+
+.intro__text {
+  @apply text-center md:text-left;
+}
+
+.intro__heading {
+  @apply max-w-xs sm:max-w-sm md:max-w-xs lg:max-w-md;
+  @apply text-2xl sm:text-3xl md:text-2xl lg:text-4xl;
+  @apply md:leading-normal;
+  @apply font-bold lg:font-normal;
+}
+
+@screen xl {
+  .intro__heading {
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
+}
+
+.intro__description {
+  @apply max-w-md lg:max-w-screen-xs xl:max-w-prose;
+  @apply lg:text-lg;
+}
