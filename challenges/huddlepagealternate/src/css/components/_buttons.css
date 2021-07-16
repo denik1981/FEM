@@ -1,0 +1,12 @@
+.btn {
+  @apply bg-white;
+  @apply text-sm;
+  @apply leading-loose;
+
+  @apply w-max py-3 px-16 inline-block;
+  @apply font-primary font-bold capitalize;
+  @apply rounded-3xl shadow-lg;
+
+  @apply hover:text-neutral-500;
+  @apply active:text-neutral-100;
+}

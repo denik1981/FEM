@@ -1,0 +1,23 @@
+:root {
+  --cl-primary-600: hsl(322, 100%, 66%);
+  --cl-primary-500: hsl(320, 80%, 50%);
+
+  --cl-neutral-100: hsl(192, 100%, 9%);
+  --cl-neutral-500: hsl(208, 11%, 55%);
+  --cl-neutral-900: hsl(193, 100%, 96%);
+
+  --cl-white: hsl(0, 0%, 100%);
+
+  --ff-primary: "Open Sans", theme(fontFamily.sans);
+  --ff-display: "Poppins", theme(fontFamily.sans);
+
+  --bg-hero-desktop: url("~assets/bg/hero-desktop.svg");
+  --bg-hero-mobile: url("~assets/bg/hero-mobile.svg");
+  --icon-email: url("~assets/icons/email.svg");
+  --icon-location: url("~assets/icons/location.svg");
+  --icon-phone: url("~assets/icons/phone.svg");
+}
+
+body {
+  @apply bg-neutral-900 text-neutral-100;
+}

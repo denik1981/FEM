@@ -13,7 +13,8 @@ module.exports = {
       ringOffsetWidth: ['hover', 'focus', 'active'],
       dropShadow: ['hover', 'focus', 'active'],
       boxShadow: ['hover', 'focus', 'active'],
-      saturate: ['group-hover', 'hover', 'focus', 'active']
+      saturate: ['group-hover', 'hover', 'focus', 'active'],
+      textColor: ['group-hover', 'hover', 'focus', 'active']
     }
   },
 

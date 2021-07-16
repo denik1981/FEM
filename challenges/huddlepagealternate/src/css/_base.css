@@ -1,0 +1,45 @@
+a {
+  @apply inline-block;
+}
+
+img {
+  @apply object-contain;
+}
+
+address {
+  @apply not-italic;
+}
+
+input {
+  @apply appearance-none;
+  @apply bg-white text-gray-900;
+  @apply py-2 px-3;
+  @apply border border-neutral-400 rounded-none;
+}
+
+body {
+  @apply min-h-screen;
+  @apply grid justify-items-center auto-rows-min;
+}
+
+.wrapper {
+  @apply w-full;
+  @apply px-5 xs:px-8 md:px-10 lg:px-12;
+}
+
+/* Active */
+
+* {
+  @apply hover:ring-0 hover:ring-offset-0;
+  @apply focus:outline-none focus:shadow-none;
+  @apply active:ring-0 active:ring-offset-0 active:shadow-none;
+}
+
+*:not(:hover) {
+  @apply focus:ring-primary-500 focus:ring-offset-neutral-900;
+  @apply focus:ring-4 focus:ring-offset-8;
+}
+
+input:not(:placeholder-shown):focus {
+  @apply ring-0 ring-offset-0;
+}
