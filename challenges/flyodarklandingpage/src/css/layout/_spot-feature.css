@@ -1,5 +1,5 @@
 .spot-feature {
-  @apply container grid justify-items-center;
+  @apply container;
   @apply max-w-xs md:max-w-lg;
   @apply flex flex-col items-center gap-x-12;
   @apply lg:flex-row lg:justify-evenly xl:justify-start;
