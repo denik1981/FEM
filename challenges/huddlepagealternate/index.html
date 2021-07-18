@@ -29,35 +29,40 @@
           <img class="intro__draw" src="<%=require('./assets/vector/mockups.svg')%>" alt="illustration intro" aria-hidden="true" />
         </div>
       </section>
-        <section class="features">
-          <div class="features__container">
-            <article class="feature">
-              <div class="feature__text">
-                <h2 class="feature__heading">Grow Together</h1>
-                <p class="feature__summary">
-                  Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.
-                </p>
-              </div>
-              <img class="feature__draw" src="<%=require('./assets/vector/grow-together.svg')%>" alt="illustration grow together" aria-hidden="true" />
-            </article>
-          <article class="feature">
+      <section class="features">
+        <div class="features__container">
+          <article class="feature shadow-box">
             <div class="feature__text">
-              <h2 class="feature__heading">Flowing Conversations</h1>
+              <h2 class="feature__heading">Grow Together</h2>
               <p class="feature__summary">
-                You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.
+                Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.
               </p>
+            </div>
+            <img class="feature__draw" src="<%=require('./assets/vector/grow-together.svg')%>" alt="illustration grow together" aria-hidden="true" />
+          </article>
+          <article class="feature shadow-box">
+            <div class="feature__text">
+              <h2 class="feature__heading">Flowing Conversations</h2>
+              <p class="feature__summary">You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.</p>
             </div>
             <img class="feature__draw" src="<%=require('./assets/vector/flowing-conversation.svg')%>" alt="illustration grow together" aria-hidden="true" />
           </article>
-          <article class="feature">
+          <article class="feature shadow-box">
             <div class="feature__text">
-              <h2 class="feature__heading">Your Users</h1>
+              <h2 class="feature__heading">Your Users</h2>
               <p class="feature__summary">
-                It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.
+                It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting
+                immediately.
               </p>
             </div>
             <img class="feature__draw" src="<%=require('./assets/vector/your-users.svg')%>" alt="illustration grow together" aria-hidden="true" />
           </article>
+        </div>
+      </section>
+      <section class="cta">
+        <div class="cta__container shadow-box">
+          <h2 class="cta__heading">Ready to build your community?</h2>
+          <a href="#" onclick="return false" class="btn btn__cta btn__cta--big">Get Started For Free</a>
         </div>
       </section>
     </main>

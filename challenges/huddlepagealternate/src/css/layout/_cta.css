@@ -1,0 +1,7 @@
+.cta__container {
+  @apply w-11/12;
+  @apply max-w-screen-xs lg:max-w-screen-md;
+  @apply py-10 px-4;
+  @apply space-y-5 lg:space-y-8;
+  @apply text-center;
+}

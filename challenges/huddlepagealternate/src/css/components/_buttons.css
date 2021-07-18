@@ -9,8 +9,8 @@
   @apply text-xs sm:text-sm xl:text-base;
   @apply leading-loose;
 
-  @apply px-14 lg:px-16;
-  @apply py-3 lg:py-4;
+  @apply px-14 lg:px-20;
+  @apply py-3;
 
   @apply rounded-full;
 
@@ -26,4 +26,11 @@
 
   @apply hover:text-neutral-500 hover:bg-white;
   @apply active:text-neutral-100;
+}
+
+.btn__cta--big {
+  @apply px-14 lg:px-20;
+  @apply lg:py-5;
+
+  @apply text-xs lg:text-lg;
 }

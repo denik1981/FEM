@@ -26,6 +26,11 @@ main {
   @apply w-full;
 }
 
+main > * {
+  @apply w-full py-8;
+  @apply grid justify-items-center;
+}
+
 /* Active */
 
 * {

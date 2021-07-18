@@ -56,3 +56,8 @@ p {
   @apply text-sm lg:text-base;
   @apply leading-relaxed;
 }
+
+.cta__heading {
+  @apply text-base md:text-xl lg:text-3xl;
+  @apply capitalize;
+}

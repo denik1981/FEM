@@ -58,12 +58,22 @@ header:before {
   }
 }
 
-/* Sections */
+.cta {
+  @apply w-full;
+  background: linear-gradient(to top, var(--cl-neutral-100) 0 50%, transparent 0);
+}
 
-.feature {
+.cta__container {
+  @apply bg-white;
+}
+
+/* Utilities */
+.shadow-box {
+  @apply rounded-xl;
   box-shadow: 0 0 10px 0 var(--shadow-neutral-100);
 }
 
+/* Sections */
 .feature__summary {
   @apply text-neutral-500;
 }
