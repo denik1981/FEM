@@ -17,16 +17,19 @@
   --icon-email: url("~assets/icons/email.svg");
   --icon-location: url("~assets/icons/location.svg");
   --icon-phone: url("~assets/icons/phone.svg");
+
+  --shadow-neutral-100: hsla(0, 0%, 0%, 0.2);
 }
 
 body {
-  @apply bg-neutral-900 text-neutral-100;
+  @apply bg-white text-neutral-100;
 }
 
 /* Backgrounds */
 
 header {
   @apply relative;
+  background-color: var(--cl-neutral-900);
 }
 
 header:before {
@@ -34,9 +37,19 @@ header:before {
   content: "";
   top: 0;
   left: 0;
-  z-index: -1;
-  background: top center / 100% auto no-repeat;
+  background: top center / 100% no-repeat, transparent;
   background-image: var(--bg-hero-mobile);
+  @apply filter saturate-200;
+  @apply z-10;
+}
+
+.intro {
+  @apply bg-neutral-900;
+}
+
+.intro__container,
+.header__container {
+  @apply z-20;
 }
 
 @screen md {
@@ -46,3 +59,11 @@ header:before {
 }
 
 /* Sections */
+
+.feature {
+  box-shadow: 0 0 10px 0 var(--shadow-neutral-100);
+}
+
+.feature__summary {
+  @apply text-neutral-500;
+}

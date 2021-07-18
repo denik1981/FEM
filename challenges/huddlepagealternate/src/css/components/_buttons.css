@@ -1,28 +1,29 @@
 .btn {
-  @apply bg-white;
-  @apply text-sm;
-  @apply leading-loose;
-
   @apply w-max inline-block my-2;
   @apply font-primary font-bold capitalize;
   @apply rounded-3xl shadow-2xl;
 }
 
-.header__cta {
+.btn__cta {
+  @apply bg-primary-600 text-white;
+  @apply text-xs sm:text-sm xl:text-base;
+  @apply leading-loose;
+
+  @apply px-14 lg:px-16;
+  @apply py-3 lg:py-4;
+
+  @apply rounded-full;
+
+  @apply hover:bg-primary-700;
+  @apply active:bg-primary-600 active:text-white;
+}
+
+.btn__cta--small {
+  @apply bg-white text-current;
   @apply text-2xs xs:text-xs sm:text-sm;
   @apply px-5 xs:px-8 sm:px-12 lg:px-16;
   @apply py-1 xs:py-2 sm:py-3;
 
-  @apply hover:text-neutral-500;
+  @apply hover:text-neutral-500 hover:bg-white;
   @apply active:text-neutral-100;
-}
-
-.intro__cta {
-  @apply bg-primary-600 text-white;
-  @apply text-xs sm:text-sm xl:text-base;
-  @apply px-14 lg:px-16;
-  @apply py-3 lg:py-4;
-
-  @apply hover:bg-primary-700;
-  @apply active:bg-primary-600 active:text-white;
 }

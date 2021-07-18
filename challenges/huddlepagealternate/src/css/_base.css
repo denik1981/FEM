@@ -22,9 +22,8 @@ body {
   @apply grid justify-items-center auto-rows-min;
 }
 
-.header__content,
-.intro__content {
-  @apply px-5 xs:px-8 md:px-10 lg:px-8 xl:px-4;
+main {
+  @apply w-full;
 }
 
 /* Active */

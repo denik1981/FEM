@@ -1,11 +1,10 @@
 header {
   @apply w-full py-8;
   @apply grid justify-items-center;
-  /* @apply bg-blue-400; */
 }
 
-.header__content {
-  @apply w-full max-w-screen-xl;
+.header__container {
+  @apply w-11/12 max-w-screen-xl;
   @apply flex justify-between items-center gap-x-2;
 }
 

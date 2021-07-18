@@ -13,6 +13,10 @@ h1 {
   @apply text-2xl md:text-3xl leading-relaxed;
 }
 
+h2 {
+  @apply text-xl;
+}
+
 p {
   max-width: 60ch;
 }
@@ -37,7 +41,18 @@ p {
   }
 }
 
-.intro__description {
-  @apply max-w-md lg:max-w-screen-xs xl:max-w-prose;
+.intro__summary {
+  @apply max-w-xs xs:max-w-md lg:max-w-screen-xs xl:max-w-prose;
   @apply lg:text-lg;
+}
+
+.feature__heading {
+  @apply w-max;
+  @apply lg:text-2xl;
+}
+
+.feature__summary {
+  @apply w-10/12 md:w-full;
+  @apply text-sm lg:text-base;
+  @apply leading-relaxed;
 }

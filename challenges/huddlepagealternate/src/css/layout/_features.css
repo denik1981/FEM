@@ -1,0 +1,46 @@
+.features {
+  @apply text-center md:text-left;
+}
+
+.features__container {
+  @apply w-11/12 md:w-10/12;
+  @apply grid grid-cols-1 auto-rows-fr;
+  @apply gap-y-10;
+  @apply xs:max-w-screen-sm md:max-w-screen-lg;
+}
+
+.feature {
+  @apply grid grid-cols-1 justify-items-center;
+  @apply md:grid-cols-2 md:items-center;
+  @apply gap-y-12 sm:gap-y-10;
+
+  @apply p-8;
+  @apply md:pl-20 md:pr-8 md:py-10;
+}
+
+.feature:nth-child(even) .feature__draw {
+  @apply md:order-first;
+}
+
+.feature:nth-child(odd) .feature__draw,
+.feature:nth-child(even) .feature__text {
+  @apply md:ml-auto;
+}
+
+.feature:nth-child(even) .feature__draw,
+.feature:nth-child(odd) .feature__text {
+  @apply md:mr-auto;
+}
+
+.feature__text {
+  @apply w-full;
+  @apply container md:max-w-none;
+  @apply grid justify-items-center auto-rows-min md:justify-items-start;
+  @apply gap-y-2 sm:gap-y-4;
+  @apply order-last md:order-none;
+}
+
+.feature__draw {
+  @apply w-full md:w-4/5;
+  @apply xs:max-w-xs;
+}
