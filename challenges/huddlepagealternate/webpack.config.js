@@ -13,7 +13,10 @@ const config = {
   devServer: { host: 'localhost' },
   optimization: { runtimeChunk: 'single' },
 
-  entry: { main: path.resolve(__dirname, 'src/index.js') },
+  entry: {
+    main: path.resolve(__dirname, 'src/index.js'),
+    svg4everybody: path.resolve(__dirname, 'src/utils/svg4everybody.js')
+  },
   output: {
     clean: isProduction && !(process.env.WEBPACK_DEV_SERVER),
     path: isProduction ? path.resolve('..', '..', 'public', path.basename(__dirname)) : path.resolve(__dirname, 'dist'),

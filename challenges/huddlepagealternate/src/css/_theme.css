@@ -14,9 +14,6 @@
 
   --bg-hero-desktop: url("~assets/bg/hero-desktop.svg");
   --bg-hero-mobile: url("~assets/bg/hero-mobile.svg");
-  --icon-email: url("~assets/icons/email.svg");
-  --icon-location: url("~assets/icons/location.svg");
-  --icon-phone: url("~assets/icons/phone.svg");
 
   --shadow-neutral-100: hsla(0, 0%, 0%, 0.2);
 }

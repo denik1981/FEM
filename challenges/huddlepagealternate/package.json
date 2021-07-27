@@ -9,14 +9,21 @@
     "url": "https://github.com/denik1981/FEM/tree/master/challenges/huddlepagealternate"
   },
   "private": true,
+  "workspaces": [
+    "."
+  ],
   "scripts": {
-    "build": "webpack --mode=production --node-env=production",
-    "build:dev": "webpack --mode=development --node-env=development",
-    "build:prod": "npm run build",
+    "sprite:svgo": "svgo --config=svgo.config.js -f ./assets/icons -o ./temp/svgo",
+    "sprite:gen": "svg-sprite -s --symbol-sprite=icons.svg --symbol-dest=assets/sprites temp/svgo/*",
+    "sprite": "npm run sprite:svgo -w fem-huddle-page-alternate && npm run sprite:gen -w fem-huddle-page-alternate && rimraf ./temp",
+    "prebuild": "npm run sprite -w fem-huddle-page-alternate",
+    "build": "webpack",
+    "build:dev": "npm run build --mode=development --node-env=development",
+    "build:prod": "npm run build --mode=production --node-env=production",
     "debug": "node --inspect-brk $(npx which webpack) --mode=development",
-    "watch": "webpack --watch --mode=development",
-    "serve": "webpack serve",
-    "serve:prod": "webpack serve --mode=production --node-env=production"
+    "watch": "npm run build --watch --mode=development",
+    "serve": "npm run build serve",
+    "serve:prod": "npm run serve --mode=production --node-env=production"
   },
   "devDependencies": {
     "css-loader": "^5.2.4",
@@ -32,13 +39,17 @@
     "postcss-import": "^14.0.2",
     "postcss-loader": "^6.1.0",
     "postcss-preset-env": "^6.7.0",
+    "rimraf": "^3.0.2",
     "style-loader": "^3.0.0",
+    "svg-sprite": "^1.5.0",
+    "svgo": "^2.3.1",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.3.3",
+    "npm-run-all": "^4.1.5",
     "tailwindcss": "^2.1.2"
   }
 }
