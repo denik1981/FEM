@@ -6,7 +6,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/1807313955.js" crossorigin="anonymous"></script>
     <title>Frontend Mentor | Huddle Landing Page With Alternating Feature Blocks</title>
   </head>
   <body>
@@ -66,6 +65,58 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer__container">
+        <a class="footer__logo" href="#"><img src="<%=require('./assets/brand/logo.svg')%>" alt="flyo logo" /></a>
+        <section class="footer__content">
+          <address class="contacts">
+            <a href="#" onclick="return false" class="contact contact--location" aria-label="our address">
+              <svg class="contact__icon" height="32" style="max-width: 16px">
+                <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#contact-location" aria-hidden="true"></use>
+              </svg>
+              <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            </a>
+            <a href="#" onclick="return false" class="contact contact--phone" aria-label="our phone">
+              <svg class="contact__icon" width="1rem" height="1rem">
+                <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#contact-phone" aria-hidden="true"></use>
+              </svg>
+              <span class="contact__text">+1-543-123-4567</span>
+            </a>
+            <a href="mailto:example@fylo.com" onclick="return false" class="contact contact--email" aria-label="our email">
+              <svg class="contact__icon" width="1rem" height="1rem">
+                <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#contact-email" aria-hidden="true"></use>
+              </svg>
+              <span class="contact__text">example@fylo.com</span>
+            </a>
+          </address>
+          <ul class="footer-nav">
+            <li class="footer-nav__item"><a href="#" onclick="return false">About us</a></li>
+            <li class="footer-nav__item"><a href="#" onclick="return false">What we do</a></li>
+            <li class="footer-nav__item"><a href="#" onclick="return false">FAQ</a></li>
+            <li class="footer-nav__item"><a href="#" onclick="return false">Career</a></li>
+            <li class="footer-nav__item"><a href="#" onclick="return false">Blog</a></li>
+            <li class="footer-nav__item"><a href="#" onclick="return false">Contact us</a></li>
+          </ul>
+          <div class="social-nav">
+            <a href="#" onclick="return false" aria-label="follow us on facebook" class="social-nav__item">
+              <svg width="1rem" height="1rem">
+                <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#social-facebook" aria-hidden="true"></use>
+              </svg>
+            </a>
+            <a href="#" onclick="return false" aria-label="follow us on twitter" class="social-nav__item">
+              <svg width="1rem" height="1rem">
+                <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#social-twitter" aria-hidden="true"></use>
+              </svg>
+            </a>
+            <a href="#" onclick="return false" aria-label="follow us on instagram" class="social-nav__item">
+              <svg width="1rem" height="1rem">
+                <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#social-instagram" aria-hidden="true"></use>
+              </svg>
+            </a>
+          </div>
+          <p class="copyright"><small>&copy; Copyright 2018 Huddle. All rights reserved.</small></p>
+        </section>
+      </div>
+    </footer>
   </body>
 </html>

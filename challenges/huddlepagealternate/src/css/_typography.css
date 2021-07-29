@@ -61,3 +61,18 @@ p {
   @apply text-base md:text-xl lg:text-3xl;
   @apply capitalize;
 }
+
+.contact {
+  @apply text-sm leading-relaxed;
+  @apply hover:text-white hover:font-bold;
+}
+
+.footer-nav__item {
+  @apply capitalize;
+  @apply md:text-sm;
+  @apply hover:underline active:no-underline;
+}
+
+.copyright {
+  @apply text-xs w-max;
+}

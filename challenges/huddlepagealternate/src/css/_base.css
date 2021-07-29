@@ -30,20 +30,3 @@ main > * {
   @apply w-full py-8;
   @apply grid justify-items-center;
 }
-
-/* Active */
-
-* {
-  @apply hover:ring-0 hover:ring-offset-0;
-  @apply focus:outline-none focus:shadow-none;
-  @apply active:ring-0 active:ring-offset-0 active:shadow-none;
-}
-
-*:not(:hover) {
-  @apply focus:ring-primary-500 focus:ring-offset-neutral-900;
-  @apply focus:ring-4 focus:ring-offset-8;
-}
-
-input:not(:placeholder-shown):focus {
-  @apply ring-0 ring-offset-0;
-}

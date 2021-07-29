@@ -26,7 +26,7 @@ body {
 
 header {
   @apply relative;
-  background-color: var(--cl-neutral-900);
+  @apply bg-neutral-900;
 }
 
 header:before {
@@ -64,13 +64,50 @@ header:before {
   @apply bg-white;
 }
 
+footer {
+  @apply bg-neutral-100 text-neutral-900;
+}
+
 /* Utilities */
 .shadow-box {
   @apply rounded-xl;
   box-shadow: 0 0 10px 0 var(--shadow-neutral-100);
 }
 
+/* Active */
+
+* {
+  @apply hover:ring-0 hover:ring-offset-0;
+  @apply focus:outline-none focus:shadow-none;
+  @apply active:ring-0 active:ring-offset-0 active:shadow-none;
+}
+
+*:not(:hover) {
+  @apply focus:ring-primary-500 focus:ring-offset-neutral-900;
+  @apply focus:ring-4 focus:ring-offset-8;
+}
+
+input:not(:placeholder-shown):focus {
+  @apply ring-0 ring-offset-0;
+}
+
+footer *:not(:hover) {
+  @apply focus:ring-offset-neutral-100 focus:ring-offset-4;
+}
+
 /* Sections */
 .feature__summary {
   @apply text-neutral-500;
+}
+
+footer {
+  @apply text-neutral-900;
+}
+
+.footer__logo img {
+  @apply filter brightness-0 invert;
+}
+
+footer svg {
+  fill: white;
 }
