@@ -1,5 +1,7 @@
 .features {
+  @apply py-16;
   @apply text-center md:text-left;
+  @apply lg:py-28;
 }
 
 .features__container {
@@ -14,7 +16,7 @@
   @apply md:grid-cols-2 md:items-center;
   @apply gap-y-12 sm:gap-y-10;
 
-  @apply p-8;
+  @apply py-12 px-8;
   @apply md:pl-20 md:pr-8 md:py-10;
 }
 

@@ -1,5 +1,6 @@
 header {
-  @apply w-full py-8;
+  @apply py-8;
+  @apply w-full;
   @apply grid justify-items-center;
 }
 

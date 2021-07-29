@@ -25,16 +25,6 @@ module.exports = {
       ...defaultTheme.screens
     },
     extend: {
-      // maxWidth: {
-      //   '5xs': '140px',
-      //   '4xs': '190px',
-      //   '3xs': '270px',
-      //   '2xs': '360px'
-      //   // ...defaultTheme.screens
-      // },
-      dropShadow: {
-        '3xl': '0 25px 25px rgba(0, 0, 0, 0.5)'
-      },
       fontSize: {
         '3xs': ['0.4rem', '1.625'],
         '2xs': ['0.6rem', '1.625'],
@@ -47,8 +37,6 @@ module.exports = {
       colors: {
         primary: {
           '000': 'var(--cl-primary-000)',
-
-          '090': 'var(--cl-primary-090)',
           100: 'var(--cl-primary-100)',
           130: 'var(--cl-primary-130)',
           150: 'var(--cl-primary-150)',

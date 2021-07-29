@@ -36,7 +36,6 @@ header:before {
   left: 0;
   background: top center / 100% no-repeat, transparent;
   background-image: var(--bg-hero-mobile);
-  @apply filter saturate-200;
   @apply z-10;
 }
 

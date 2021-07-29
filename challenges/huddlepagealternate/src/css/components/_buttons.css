@@ -1,7 +1,9 @@
 .btn {
   @apply w-max inline-block my-2;
   @apply font-primary font-bold capitalize;
-  @apply rounded-3xl shadow-2xl;
+  @apply rounded-3xl;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+    0 10px 15px -8px rgba(0, 0, 0, 0.3);
 }
 
 .btn__cta {
@@ -31,6 +33,5 @@
 .btn__cta--big {
   @apply px-14 lg:px-20;
   @apply lg:py-5;
-
   @apply text-xs lg:text-lg;
 }
