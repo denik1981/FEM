@@ -39,11 +39,6 @@ header:before {
   @apply z-10;
 }
 
-.intro {
-  @apply bg-neutral-900;
-}
-
-.intro__container,
 .header__container {
   @apply z-20;
 }
@@ -64,6 +59,7 @@ header:before {
 }
 
 footer {
+  box-shadow: 0 -5px 0 0 var(--cl-neutral-100);
   @apply bg-neutral-100 text-neutral-900;
 }
 
