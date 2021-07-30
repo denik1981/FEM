@@ -11,13 +11,11 @@
   <body>
     <header>
       <div class="header__container">
-        <a href="#" onclick="return false" class="header__logo"><img src="<%=require('./assets/brand/logo.svg')%>" alt="site logo" /></a>
-        <nav><a href="#" class="btn btn__cta btn__cta--small" onclick="return false">Try it free</a></nav>
-      </div>
-    </header>
-    <main>
-      <section class="intro">
-        <div class="intro__container">
+        <div class="header__navbar">
+          <a href="#" onclick="return false" class="header__logo"><img src="<%=require('./assets/brand/logo.svg')%>" alt="site logo" /></a>
+          <nav><a href="#" class="btn btn__cta btn__cta--small" onclick="return false">Try it free</a></nav>
+        </div>
+        <section class="header__intro">
           <div class="intro__text">
             <h1 class="intro__heading">Build The Community Your Fans Will Love</h1>
             <p class="intro__summary">
@@ -26,8 +24,10 @@
             <a href="#" onclick="return false" class="btn btn__cta">Get Started For Free</a>
           </div>
           <img class="intro__draw" src="<%=require('./assets/vector/mockups.svg')%>" alt="illustration intro" aria-hidden="true" />
-        </div>
-      </section>
+        </section>
+      </div>
+    </header>
+    <main>
       <section class="features">
         <div class="features__container">
           <article class="feature shadow-box">
