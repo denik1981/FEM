@@ -17,16 +17,16 @@
     "sprite:gen": "svg-sprite -s --symbol-sprite=icons.svg --symbol-dest=assets/sprites temp/svgo/*",
     "sprite": "npm run sprite:svgo -w fem-huddle-page-alternate && npm run sprite:gen -w fem-huddle-page-alternate && rimraf ./temp",
     "prebuild": "npm run sprite -w fem-huddle-page-alternate",
-    "build": "webpack",
-    "build:dev": "npm run build --mode=development --node-env=development",
-    "build:prod": "npm run build --mode=production --node-env=production",
+    "build": "webpack --mode=$npm_config_mode --node-env=$npm_config_nodeenv",
+    "build:dev": "npm run build --mode=development --nodeenv=development",
+    "build:prod": "npm run build --mode=production --nodeenv=production",
     "debug": "node --inspect-brk $(npx which webpack) --mode=development",
-    "watch": "npm run build --watch --mode=development",
-    "serve": "npm run build serve",
-    "serve:prod": "npm run serve --mode=production --node-env=production"
+    "watch": "npm run prebuild && webpack --watch --mode=development",
+    "serve": "npm run prebuild && webpack serve"
   },
   "devDependencies": {
     "css-loader": "^5.2.4",
+    "css-minimizer-webpack-plugin": "^3.0.2",
     "eslint": "^7.29.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.23.4",

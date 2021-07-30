@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const isProduction = process.env.NODE_ENV === 'production'
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader'
 const cssLoader = { loader: 'css-loader', options: { sourceMap: true } }
@@ -11,7 +12,14 @@ const config = {
   stats: 'detailed',
   devtool: 'source-map',
   devServer: { host: 'localhost' },
-  optimization: { runtimeChunk: 'single' },
+  optimization: {
+    runtimeChunk: 'single',
+    minimize: true,
+    minimizer: [
+      '...',
+      new CssMinimizerPlugin()
+    ]
+  },
 
   entry: {
     main: path.resolve(__dirname, 'src/index.js'),
