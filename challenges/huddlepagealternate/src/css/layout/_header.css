@@ -12,7 +12,7 @@ header {
 }
 
 .header__navbar {
-  @apply w-11/12 max-w-screen-xl;
+  @apply w-full;
   @apply flex justify-between items-center gap-x-2;
 }
 
@@ -37,5 +37,5 @@ header {
 
 .intro__draw {
   @apply w-10/12 md:w-1/2;
-  @apply xl:w-3/5 lg:max-w-2xl;
+  @apply xl:w-3/5 lg:max-w-xl;
 }
