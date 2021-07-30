@@ -12,7 +12,7 @@ header {
 }
 
 .header__navbar {
-  @apply w-11/12 max-w-screen-xl;
+  @apply w-full;
   @apply flex justify-between items-center gap-x-2;
 }
 
