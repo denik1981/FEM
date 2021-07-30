@@ -1,0 +1,12 @@
+/* Theme */
+
+:root {
+  --bg-desktop: url("~assets/bg/desktop.png");
+  --bg-mobile: url("~assets/bg/mobile.png");
+}
+
+body {
+  @apply min-h-screen w-full;
+  @apply grid place-items-center;
+  @apply px-4;
+}

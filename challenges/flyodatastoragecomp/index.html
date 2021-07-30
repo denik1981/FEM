@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@600&display=optional" rel="stylesheet" />
     <title>Frontend Mentor | Flyo Data Storage Component</title>
   </head>
   <body>
@@ -13,11 +13,23 @@
       <h1 hidden>Flyo data storage component</h1>
       <div class="component">
         <div class="component__input">
-          <img src="<%=require('assets/brand/logo.svg')%>" alt="site logo" class="logo" style="fill: black" />
-          <div class="input__buttons">
-            <button type="button" class="input__button"></button>
-            <button type="button" class="input__button"></button>
-            <button type="button" class="input__button"></button>
+          <img src="<%=require('assets/brand/logo.svg')%>" alt="site logo" class="logo" width="135" height="40" />
+          <div class="input__menu">
+            <button type="button" class="menu__btn" id="btnDocument">
+              <svg width="1rem" height="1rem">
+                <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#document" aria-hidden="true"></use>
+              </svg>
+            </button>
+            <button type="button" class="menu__btn" id="btnFolder">
+              <svg width="1rem" height="1rem">
+                <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#folder" aria-hidden="true"></use>
+              </svg>
+            </button>
+            <button type="button" class="menu__btn" id="btnUpload">
+              <svg width="1rem" height="1rem">
+                <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#upload" aria-hidden="true"></use>
+              </svg>
+            </button>
           </div>
         </div>
         <div class="component__output">

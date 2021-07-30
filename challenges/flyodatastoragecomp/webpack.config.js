@@ -23,8 +23,8 @@ const config = {
   },
 
   entry: {
-    main: path.resolve(__dirname, 'src/index.js'),
-    svg4everybody: path.resolve(__dirname, 'src/utils/svg4everybody.js')
+    main: path.resolve(__dirname, 'src/index.js')
+    // svg4everybody: path.resolve(__dirname, 'src/utils/svg4everybody.js')
   },
   output: {
     clean: isProduction && !(process.env.WEBPACK_DEV_SERVER),

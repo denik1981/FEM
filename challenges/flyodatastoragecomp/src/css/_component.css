@@ -1,0 +1,65 @@
+/* Theme */
+/* color.hailpixel.com/#1D2A67,667FFF,0C112C,848794,DBE1FF */
+:root {
+  --cl-primary-hue: 230; /* Blue */
+
+  --cl-midtone-hue: var(--cl-primary-hue);
+  --cl-highlights-hue: var(--cl-primary-hue);
+  --cl-shadows-hue: var(--cl-primary-hue);
+  --cl-neutrals-hue: var(--cl-primary-hue);
+
+  --cl-midtone-100: hsl(var(--cl-midtone-hue), 57%, 11%);
+  --cl-midtone-200: hsl(var(--cl-midtone-hue), 56%, 26%);
+  --cl-midtone-700: hsl(var(--cl-midtone-hue), 100%, 76%);
+
+  --cl-neutral-500: hsl(var(--cl-neutrals-hue), 7%, 55%);
+  --cl-highligth-900: hsl(var(--cl-highlights-hue), 100%, 93%);
+
+  --cl-black: hsl(var(--cl-shadows-hue), 0%, 0%);
+  --cl-white: hsl(var(--cl-highlights-hue), 0%, 100%);
+
+  --ff-primary: "Raleway", theme(fontFamily.sans);
+
+  /* --shadow-neutral-100: hsla(0, 0%, 0%, 0.2); */
+  /* --btn-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.15); */
+}
+
+.component__input {
+}
+
+/* Layout */
+.component {
+  @apply w-full;
+  @apply max-w-md;
+  @apply grid grid-cols-1;
+  @apply gap-y-4;
+}
+
+.component__input {
+  @apply p-8 space-y-8;
+
+  border-radius: 0.8rem 5rem 0.8rem 0.8rem;
+  @apply bg-midtone-200;
+}
+
+.component__output {
+  @apply p-8;
+  @apply bg-black text-gray-50;
+}
+
+/* Layout - Input */
+
+.input__menu {
+  @apply space-x-4;
+}
+
+.menu__btn {
+  @apply p-2;
+  @apply bg-midtone-100;
+  @apply rounded-md;
+}
+
+.menu__btn svg {
+  @apply text-midtone-700 fill-current;
+}
+/* Layout - Output */
