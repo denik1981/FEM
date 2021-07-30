@@ -53,6 +53,7 @@ p {
 
 .feature__summary {
   @apply w-10/12 md:w-full;
+  @apply max-w-sm md:max-w-md;
   @apply text-sm lg:text-base;
   @apply leading-relaxed;
 }
