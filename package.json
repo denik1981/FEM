@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "build": "npm run --if-present build:$npm_config_branch",
-    "build:master": "npm run build:prod --workspaces",
+    "build:master": "MONO_BUILD=mono npm run build:prod --workspaces",
     "build:fourcards": "npm run build:prod -w fem-fourcards",
     "build:huddlepage": "npm run build:prod -w fem-huddlepage",
     "build:profilecard": "npm run build:prod -w fem-profilecard",
