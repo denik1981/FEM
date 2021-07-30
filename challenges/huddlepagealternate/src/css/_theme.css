@@ -16,6 +16,7 @@
   --bg-hero-mobile: url("~assets/bg/hero-mobile.svg");
 
   --shadow-neutral-100: hsla(0, 0%, 0%, 0.2);
+  --btn-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.15);
 }
 
 body {

@@ -2,8 +2,7 @@
   @apply w-max inline-block my-2;
   @apply font-primary font-bold capitalize;
   @apply rounded-3xl;
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
-    0 10px 15px -8px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--btn-shadow);
 }
 
 .btn__cta {
