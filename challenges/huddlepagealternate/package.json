@@ -13,7 +13,7 @@
     "."
   ],
   "scripts": {
-    "sprite:svgo": "svgo --config=svgo.config.js -f ./assets/icons -o ./temp/svgo",
+    "sprite:svgo": "svgo --config=svgo.config.js -f ./assets/icons -o ./temp/svgo > /dev/null",
     "sprite:gen": "svg-sprite -s --symbol-sprite=icons.svg --symbol-dest=assets/sprites temp/svgo/*",
     "sprite": "npm run sprite:svgo -w fem-huddle-page-alternate && npm run sprite:gen -w fem-huddle-page-alternate && rimraf ./temp",
     "prebuild": "npm run sprite -w fem-huddle-page-alternate",
