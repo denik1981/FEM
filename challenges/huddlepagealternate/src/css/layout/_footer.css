@@ -18,7 +18,7 @@ footer {
 .footer__content {
   @apply w-full;
   @apply grid grid-cols-1 gap-y-12;
-  @apply xs:justify-items-center;
+  @apply xs:justify-items-center xs:gap-y-20;
   @apply md:grid-cols-2 md:justify-items-start md:gap-x-16;
   @apply lg:grid-cols-3 lg:gap-x-0;
 }
