@@ -29,20 +29,20 @@ p {
 
 .intro__heading {
   @apply max-w-xs sm:max-w-sm md:max-w-xs lg:max-w-md;
-  @apply text-2xl sm:text-3xl md:text-2xl lg:text-4xl;
+  @apply text-2xl sm:text-3xl md:text-2xl lg:text-3xl;
   @apply md:leading-normal;
   @apply font-bold lg:font-normal;
 }
 
 @screen xl {
   .intro__heading {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     line-height: 1.5;
   }
 }
 
 .intro__summary {
-  @apply max-w-xs xs:max-w-md lg:max-w-screen-xs xl:max-w-prose;
+  @apply max-w-xs xs:max-w-md lg:max-w-screen-xs xl:max-w-lg;
   @apply lg:text-lg;
 }
 
