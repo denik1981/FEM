@@ -5,12 +5,15 @@
   "author": "denik1981",
   "license": "MIT",
   "private": true,
+  "workspaces": [
+    "."
+  ],
   "scripts": {
-    "build": "webpack --mode=production --node-env=production",
+    "build": "webpack --mode=$npm_config_mode --node-env=$npm_config_nodeenv",
     "build:v": "webpack --mode=development -- --stats=verbose",
     "build:dev": "webpack --mode=development --node-env=development",
     "build:dev:v": "npm run build:dev -- --stats=verbose",
-    "build:prod": "npm run build",
+    "build:prod": "npm run build --mode=production --nodeenv=production -w fem-hudddle-page-curved-sections",
     "debug": "node --inspect-brk $(npx which webpack) --mode=development",
     "watch": "webpack --watch --mode=development",
     "serve": "webpack serve",

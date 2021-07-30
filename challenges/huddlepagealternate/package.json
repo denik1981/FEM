@@ -19,7 +19,7 @@
     "prebuild": "npm run sprite -w fem-huddle-page-alternate",
     "build": "webpack --mode=$npm_config_mode --node-env=$npm_config_nodeenv",
     "build:dev": "npm run build --mode=development --nodeenv=development",
-    "build:prod": "npm run build --mode=production --nodeenv=production",
+    "build:prod": "npm run build --mode=production --nodeenv=production -w fem-huddle-page-alternate",
     "debug": "node --inspect-brk $(npx which webpack) --mode=development",
     "watch": "npm run prebuild && webpack --watch --mode=development",
     "serve": "npm run prebuild && webpack serve"

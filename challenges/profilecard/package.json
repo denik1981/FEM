@@ -5,11 +5,14 @@
   "author": "denik1981",
   "license": "MIT",
   "private": true,
+  "workspaces": [
+    "."
+  ],
   "scripts": {
     "build": "webpack --mode=production --node-env=production",
     "build:v": "webpack --mode=development -- --stats=verbose",
     "build:dev": "webpack --mode=development",
-    "build:prod": "webpack --mode=production --node-env=production",
+    "build:prod": "npm run build --mode=production --nodeenv=production -w fem-profilecard",
     "debug": "node --inspect-brk $(npx which webpack) --mode=development",
     "watch": "webpack --watch --mode=development",
     "serve": "webpack serve --hot"

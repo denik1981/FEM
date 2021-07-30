@@ -9,10 +9,13 @@
     "url": "https://github.com/denik1981/FEM"
   },
   "private": true,
+  "workspaces": [
+    "."
+  ],
   "scripts": {
-    "build": "webpack --mode=production --node-env=production",
+    "build": "webpack --mode=$npm_config_mode --node-env=$npm_config_nodeenv",
     "build:dev": "webpack --mode=development --node-env=development",
-    "build:prod": "npm run build",
+    "build:prod": "npm run build --mode=production --nodeenv=production -w fem-flyo-dark-landing-page",
     "debug": "node --inspect-brk $(npx which webpack) --mode=development",
     "watch": "webpack --watch --mode=development",
     "serve": "webpack serve",
