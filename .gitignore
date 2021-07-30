@@ -15,4 +15,6 @@ tools/*
 *.fig
 *.xd
 
+**/sprites
+**/sprites/*
 

@@ -1,0 +1,17 @@
+.intro__container {
+  @apply w-11/12;
+  @apply xs:max-w-screen-sm md:max-w-screen-xl;
+  @apply flex flex-col items-center;
+  @apply md:flex-row md:justify-between;
+  @apply gap-x-4 gap-y-10;
+}
+
+.intro__text {
+  @apply grid justify-items-center md:justify-items-start;
+  @apply gap-y-5;
+}
+
+.intro__draw {
+  @apply w-10/12 md:w-1/2;
+  @apply xl:w-3/5 lg:max-w-2xl;
+}

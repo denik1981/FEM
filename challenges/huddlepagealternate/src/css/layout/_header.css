@@ -1,0 +1,18 @@
+header {
+  @apply py-8;
+  @apply w-full;
+  @apply grid justify-items-center;
+}
+
+.header__container {
+  @apply w-11/12 max-w-screen-xl;
+  @apply flex justify-between items-center gap-x-2;
+}
+
+.header__logo {
+  width: clamp(6rem, 25vw, 12rem);
+}
+
+.header__logo img {
+  @apply filter contrast-200;
+}

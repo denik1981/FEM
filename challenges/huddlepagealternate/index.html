@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+    <title>Frontend Mentor | Huddle Landing Page With Alternating Feature Blocks</title>
+  </head>
+  <body>
+    <header>
+      <div class="header__container">
+        <a href="#" onclick="return false" class="header__logo"><img src="<%=require('./assets/brand/logo.svg')%>" alt="site logo" /></a>
+        <nav><a href="#" class="btn btn__cta btn__cta--small" onclick="return false">Try it free</a></nav>
+      </div>
+    </header>
+    <main>
+      <section class="intro">
+        <div class="intro__container">
+          <div class="intro__text">
+            <h1 class="intro__heading">Build The Community Your Fans Will Love</h1>
+            <p class="intro__summary">
+              Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.
+            </p>
+            <a href="#" onclick="return false" class="btn btn__cta">Get Started For Free</a>
+          </div>
+          <img class="intro__draw" src="<%=require('./assets/vector/mockups.svg')%>" alt="illustration intro" aria-hidden="true" />
+        </div>
+      </section>
+      <section class="features">
+        <div class="features__container">
+          <article class="feature shadow-box">
+            <div class="feature__text">
+              <h2 class="feature__heading">Grow Together</h2>
+              <p class="feature__summary">
+                Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.
+              </p>
+            </div>
+            <img class="feature__draw" src="<%=require('./assets/vector/grow-together.svg')%>" alt="illustration grow together" aria-hidden="true" />
+          </article>
+          <article class="feature shadow-box">
+            <div class="feature__text">
+              <h2 class="feature__heading">Flowing Conversations</h2>
+              <p class="feature__summary">You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.</p>
+            </div>
+            <img class="feature__draw" src="<%=require('./assets/vector/flowing-conversation.svg')%>" alt="illustration grow together" aria-hidden="true" />
+          </article>
+          <article class="feature shadow-box">
+            <div class="feature__text">
+              <h2 class="feature__heading">Your Users</h2>
+              <p class="feature__summary">
+                It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting
+                immediately.
+              </p>
+            </div>
+            <img class="feature__draw" src="<%=require('./assets/vector/your-users.svg')%>" alt="illustration grow together" aria-hidden="true" />
+          </article>
+        </div>
+      </section>
+      <section class="cta">
+        <div class="cta__container shadow-box">
+          <h2 class="cta__heading">Ready to build your community?</h2>
+          <a href="#" onclick="return false" class="btn btn__cta btn__cta--big">Get Started For Free</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer__container">
+        <a class="footer__logo" href="#"><img src="<%=require('./assets/brand/logo.svg')%>" alt="flyo logo" /></a>
+        <section class="footer__content">
+          <address class="contacts">
+            <a href="#" onclick="return false" class="contact contact--location" aria-label="our address">
+              <svg class="contact__icon" height="32" style="max-width: 16px">
+                <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#contact-location" aria-hidden="true"></use>
+              </svg>
+              <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            </a>
+            <a href="#" onclick="return false" class="contact contact--phone" aria-label="our phone">
+              <svg class="contact__icon" width="1rem" height="1rem">
+                <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#contact-phone" aria-hidden="true"></use>
+              </svg>
+              <span class="contact__text">+1-543-123-4567</span>
+            </a>
+            <a href="mailto:example@fylo.com" onclick="return false" class="contact contact--email" aria-label="our email">
+              <svg class="contact__icon" width="1rem" height="1rem">
+                <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#contact-email" aria-hidden="true"></use>
+              </svg>
+              <span class="contact__text">example@fylo.com</span>
+            </a>
+          </address>
+          <ul class="footer-nav">
+            <li class="footer-nav__item"><a href="#" onclick="return false">About us</a></li>
+            <li class="footer-nav__item"><a href="#" onclick="return false">What we do</a></li>
+            <li class="footer-nav__item"><a href="#" onclick="return false">FAQ</a></li>
+            <li class="footer-nav__item"><a href="#" onclick="return false">Career</a></li>
+            <li class="footer-nav__item"><a href="#" onclick="return false">Blog</a></li>
+            <li class="footer-nav__item"><a href="#" onclick="return false">Contact us</a></li>
+          </ul>
+          <div class="social-nav">
+            <a href="#" onclick="return false" aria-label="follow us on facebook" class="social-nav__item">
+              <svg width="1rem" height="1rem">
+                <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#social-facebook" aria-hidden="true"></use>
+              </svg>
+            </a>
+            <a href="#" onclick="return false" aria-label="follow us on twitter" class="social-nav__item">
+              <svg width="1rem" height="1rem">
+                <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#social-twitter" aria-hidden="true"></use>
+              </svg>
+            </a>
+            <a href="#" onclick="return false" aria-label="follow us on instagram" class="social-nav__item">
+              <svg width="1rem" height="1rem">
+                <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#social-instagram" aria-hidden="true"></use>
+              </svg>
+            </a>
+          </div>
+          <p class="copyright"><small>&copy; Copyright 2018 Huddle. All rights reserved.</small></p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

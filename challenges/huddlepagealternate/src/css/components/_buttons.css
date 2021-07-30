@@ -1,0 +1,37 @@
+.btn {
+  @apply w-max inline-block my-2;
+  @apply font-primary font-bold capitalize;
+  @apply rounded-3xl;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+    0 10px 15px -8px rgba(0, 0, 0, 0.3);
+}
+
+.btn__cta {
+  @apply bg-primary-600 text-white;
+  @apply text-xs sm:text-sm xl:text-base;
+  @apply leading-loose;
+
+  @apply px-14 lg:px-20;
+  @apply py-3;
+
+  @apply rounded-full;
+
+  @apply hover:bg-primary-700;
+  @apply active:bg-primary-600 active:text-white;
+}
+
+.btn__cta--small {
+  @apply bg-white text-current;
+  @apply text-2xs xs:text-xs sm:text-sm;
+  @apply px-5 xs:px-8 sm:px-12 lg:px-16;
+  @apply py-1 xs:py-2 sm:py-3;
+
+  @apply hover:text-neutral-500 hover:bg-white;
+  @apply active:text-neutral-100;
+}
+
+.btn__cta--big {
+  @apply px-14 lg:px-20;
+  @apply lg:py-5;
+  @apply text-xs lg:text-lg;
+}

@@ -1,0 +1,112 @@
+:root {
+  --cl-primary-500: hsl(320, 80%, 50%);
+  --cl-primary-600: hsl(322, 100%, 66%);
+  --cl-primary-700: hsl(322, 100%, 76%);
+
+  --cl-neutral-100: hsl(192, 100%, 9%);
+  --cl-neutral-500: hsl(208, 11%, 55%);
+  --cl-neutral-900: hsl(193, 100%, 96%);
+
+  --cl-white: hsl(0, 0%, 100%);
+
+  --ff-primary: "Open Sans", theme(fontFamily.sans);
+  --ff-display: "Poppins", theme(fontFamily.sans);
+
+  --bg-hero-desktop: url("~assets/bg/hero-desktop.svg");
+  --bg-hero-mobile: url("~assets/bg/hero-mobile.svg");
+
+  --shadow-neutral-100: hsla(0, 0%, 0%, 0.2);
+}
+
+body {
+  @apply bg-white text-neutral-100;
+}
+
+/* Backgrounds */
+
+header {
+  @apply relative;
+  @apply bg-neutral-900;
+}
+
+header:before {
+  @apply block absolute w-full h-screen;
+  content: "";
+  top: 0;
+  left: 0;
+  background: top center / 100% no-repeat, transparent;
+  background-image: var(--bg-hero-mobile);
+  @apply z-10;
+}
+
+.intro {
+  @apply bg-neutral-900;
+}
+
+.intro__container,
+.header__container {
+  @apply z-20;
+}
+
+@screen md {
+  header:before {
+    background-image: var(--bg-hero-desktop);
+  }
+}
+
+.cta {
+  @apply w-full;
+  background: linear-gradient(to top, var(--cl-neutral-100) 0 50%, transparent 0);
+}
+
+.cta__container {
+  @apply bg-white;
+}
+
+footer {
+  @apply bg-neutral-100 text-neutral-900;
+}
+
+/* Utilities */
+.shadow-box {
+  @apply rounded-xl;
+  box-shadow: 0 0 10px 0 var(--shadow-neutral-100);
+}
+
+/* Active */
+
+* {
+  @apply hover:ring-0 hover:ring-offset-0;
+  @apply focus:outline-none focus:shadow-none;
+  @apply active:ring-0 active:ring-offset-0 active:shadow-none;
+}
+
+*:not(:hover) {
+  @apply focus:ring-primary-500 focus:ring-offset-neutral-900;
+  @apply focus:ring-4 focus:ring-offset-8;
+}
+
+input:not(:placeholder-shown):focus {
+  @apply ring-0 ring-offset-0;
+}
+
+footer *:not(:hover) {
+  @apply focus:ring-offset-neutral-100 focus:ring-offset-4;
+}
+
+/* Sections */
+.feature__summary {
+  @apply text-neutral-500;
+}
+
+footer {
+  @apply text-neutral-900;
+}
+
+.footer__logo img {
+  @apply filter brightness-0 invert;
+}
+
+footer svg {
+  fill: white;
+}
