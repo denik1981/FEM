@@ -8,7 +8,13 @@
   @apply w-11/12 md:w-10/12;
   @apply grid grid-cols-1 auto-rows-fr;
   @apply gap-y-10;
-  @apply xs:max-w-screen-sm md:max-w-screen-lg;
+  @apply xs:max-w-screen-sm;
+}
+
+@screen md {
+  .features__container {
+    max-width: 1200px;
+  }
 }
 
 .feature {
@@ -17,7 +23,7 @@
   @apply gap-y-12 sm:gap-y-10;
 
   @apply py-12 px-8;
-  @apply md:pl-20 md:pr-8 md:py-10;
+  @apply lg:pl-28 md:pr-8 md:py-10;
 }
 
 .feature:nth-child(even) .feature__draw {
@@ -44,5 +50,5 @@
 
 .feature__draw {
   @apply w-full md:w-4/5;
-  @apply xs:max-w-xs;
+  @apply xs:max-w-xs md:max-w-none;
 }
