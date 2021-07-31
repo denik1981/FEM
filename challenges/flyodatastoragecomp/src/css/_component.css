@@ -105,6 +105,7 @@
 }
 
 .widget__message {
+  opacity: 0;
   @apply w-max -mt-7;
 }
 
