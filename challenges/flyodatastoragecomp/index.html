@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=optional" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
     <title>Frontend Mentor | Flyo Data Storage Component</title>
   </head>
   <body>
@@ -15,17 +15,17 @@
         <div class="component__input">
           <img src="<%=require('assets/brand/logo.svg')%>" alt="site logo" class="logo" width="135" height="40" />
           <div class="input__menu">
-            <button type="button" class="menu__btn">
+            <button type="button" class="menu__btn" aria-label="create new file">
               <svg width="1rem" height="1rem">
                 <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#document" aria-hidden="true"></use>
               </svg>
             </button>
-            <button type="button" class="menu__btn">
+            <button type="button" class="menu__btn" aria-label="open folder">
               <svg width="1rem" height="1rem">
                 <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#folder" aria-hidden="true"></use>
               </svg>
             </button>
-            <button type="button" class="menu__btn">
+            <button type="button" class="menu__btn" aria-label="upload file">
               <svg width="1rem" height="1rem">
                 <use xlink:href="<%=require('./assets/sprites/icons.svg')%>#upload" aria-hidden="true"></use>
               </svg>
