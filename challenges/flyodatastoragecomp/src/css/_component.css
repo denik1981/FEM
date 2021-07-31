@@ -1,6 +1,6 @@
 /* Theme vars */
 /* color.hailpixel.com/#1D2A67,667FFF,0C112C,848794,DBE1FF */
-:root {
+.component {
   --cl-primary-hue: 230; /* Blue */
   --cl-accent-hue: 190; /* Cyan */
   --cl-gradient-hue-0: 6;
@@ -96,7 +96,7 @@
 }
 
 .menu__btn svg {
-  @apply w-6 h-auto;
+  @apply w-6 h-6;
   @apply fill-current;
 }
 
@@ -135,39 +135,29 @@
 /* prettier-ignore */
 .widget__bar {
   --user-storage:80%; 
-  --bar-gradient: linear-gradient( to right, var(--cl-bar-gradient-start), 30%, var(--cl-bar-gradient-end));
   @apply bg-midtone-100;
   box-shadow: 0 0 0 2px #000A;
 }
 
+/* prettier-ignore */
 .widget__bar:before {
+  --bar-gradient: linear-gradient( to right, var(--cl-bar-gradient-start), 30%, var(--cl-bar-gradient-end));
+  --circle-tip-pos: calc(100% - (var(--bar-height)/2) - 1px) 50%;
+  --circle-tip-width: calc(var(--bar-height) / 2 - 2px);
+  --circle-tip: radial-gradient( circle at var(--circle-tip-pos), white 0 var(--circle-tip-width), transparent 0 );
   content: "";
   display: block;
-  width: var(--user-storage);
+  width:0;
   height: 100%;
   border-radius: inherit;
-  background: var(--bar-gradient);
+  background: var(--circle-tip), var(--bar-gradient);
   box-shadow: inset 0 2px 0 0 #fff4, 2px 0 0 0 #0004;
-}
-
-.widget__bar:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: var(--user-storage);
-  transform: translateX(-100%);
-  border: 2px solid transparent;
-  width: var(--bar-height);
-  height: 100%;
-  border-radius: 50%;
-  background: var(--cl-white);
-  background-clip: padding-box;
 }
 
 /* tooltip */
 
 .tooltip {
+  opacity: 0;
   position: absolute;
   bottom: 0;
   transform: translatey(50%);
@@ -219,5 +209,53 @@
     width: 0;
     border: 0.6rem solid;
     border-color: white white transparent transparent;
+  }
+}
+
+/* Animate */
+
+.component {
+  --animate-bar-duration: 3s; /* 5s */
+  --animate-bar-delay: 1s;
+  --animate-on-load-bar: var(--animate-bar-duration) ease-out var(--animate-bar-delay) 1 forwards;
+  --animate-on-load-tooltip: 1s ease-out calc(var(--animate-bar-duration) + var(--animate-bar-delay) - 1s) 1 forwards;
+}
+
+.widget__bar:before {
+  animation: var(--animate-on-load-bar) onLoadBar;
+}
+
+.tooltip {
+  animation: var(--animate-on-load-tooltip) onLoadTooltip;
+}
+
+@keyframes onLoadBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--user-storage);
+  }
+}
+
+@keyframes onLoadTooltip {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .widget__bar {
+    width: var(--user-storage);
+  }
+  .tooltip {
+    opacity: 1;
+  }
+  .component *,
+  .component *:before .component *:after {
+    animation-name: none;
   }
 }
