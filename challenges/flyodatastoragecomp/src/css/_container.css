@@ -3,6 +3,7 @@
 :root {
   --bg-desktop: url("~assets/bg/desktop.png");
   --bg-mobile: url("~assets/bg/mobile.png");
+  --bg-color: hsl(230, 57%, 11%);
 }
 
 body {
@@ -12,4 +13,19 @@ body {
 main {
   @apply w-full min-h-screen grid place-items-center;
   @apply px-4;
+}
+
+/* Backgrounds */
+
+body {
+  @apply bg-midtone-100;
+  background: center center / cover no-repeat;
+  background-image: var(--bg-mobile);
+}
+
+@screen lg {
+  body {
+    background: bottom center / 100% 50% no-repeat, var(--bg-color);
+    background-image: var(--bg-desktop);
+  }
 }
