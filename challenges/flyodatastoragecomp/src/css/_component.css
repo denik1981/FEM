@@ -1,7 +1,9 @@
-/* Theme */
+/* Theme vars */
 /* color.hailpixel.com/#1D2A67,667FFF,0C112C,848794,DBE1FF */
 :root {
   --cl-primary-hue: 230; /* Blue */
+  --cl-gradient-hue-0: 6;
+  --cl-gradient-hue-100: 335;
 
   --cl-midtone-hue: var(--cl-primary-hue);
   --cl-highlights-hue: var(--cl-primary-hue);
@@ -13,41 +15,62 @@
   --cl-midtone-700: hsl(var(--cl-midtone-hue), 100%, 76%);
 
   --cl-neutral-500: hsl(var(--cl-neutrals-hue), 7%, 55%);
-  --cl-highligth-900: hsl(var(--cl-highlights-hue), 100%, 93%);
+  --cl-highlight-900: hsl(var(--cl-highlights-hue), 100%, 93%);
 
   --cl-black: hsl(var(--cl-shadows-hue), 0%, 0%);
   --cl-white: hsl(var(--cl-highlights-hue), 0%, 100%);
 
+  /* gradients */
+  --cl-bar-gradient-start: hsl(var(--cl-gradient-hue-0), 100%, 80%);
+  --cl-bar-gradient-end: hsl(var(--cl-gradient-hue-100), 100%, 65%);
+
+  /* fonts */
   --ff-primary: "Raleway", theme(fontFamily.sans);
 
   /* --shadow-neutral-100: hsla(0, 0%, 0%, 0.2); */
   /* --btn-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.15); */
 }
 
-.component__input {
+/* general theme */
+.component {
+  @apply font-primary text-sm text-highlight-900;
 }
 
-/* Layout */
+.component em,
+.widget__max {
+  @apply text-white font-bold not-italic normal-case;
+}
+
+.component__input,
+.component__output {
+  @apply bg-midtone-200;
+  @apply rounded-lg;
+  box-shadow: 0.8rem 0.8rem 0.5rem -0.5rem #0006;
+}
+
+.component__input {
+  border-top-right-radius: 5rem;
+}
+
+/* layout */
 .component {
-  @apply w-full;
-  @apply max-w-md;
+  @apply min-w-max;
+  @apply w-full max-w-sm;
   @apply grid grid-cols-1;
   @apply gap-y-4;
 }
 
 .component__input {
   @apply p-8 space-y-8;
-
-  border-radius: 0.8rem 5rem 0.8rem 0.8rem;
-  @apply bg-midtone-200;
 }
 
 .component__output {
-  @apply p-8;
-  @apply bg-black text-gray-50;
+  @apply grid place-items-center;
+  @apply px-8 py-16;
+  @apply relative;
 }
 
-/* Layout - Input */
+/* buttons */
 
 .input__menu {
   @apply space-x-4;
@@ -62,4 +85,90 @@
 .menu__btn svg {
   @apply text-midtone-700 fill-current;
 }
-/* Layout - Output */
+
+/* progress bar */
+.widget {
+  @apply w-full grid justify-items-center gap-y-2;
+}
+
+.widget__message {
+  @apply w-max -mt-7;
+}
+
+.message__storage:after {
+  content: " GB";
+}
+
+.widget__max {
+  @apply w-full flex justify-between;
+}
+
+.widget__bar {
+  --bar-height: 0.8rem;
+  @apply w-full;
+  height: var(--bar-height);
+  min-width: 14rem;
+  @apply rounded-md;
+  @apply relative;
+}
+
+.widget__max:before {
+  content: "0 GB";
+  display: block;
+  @apply w-max;
+}
+/* bar gradient */
+/* prettier-ignore */
+.widget__bar {
+  --user-storage:80%; 
+  --bar-gradient: linear-gradient( to right, var(--cl-bar-gradient-start), 30%, var(--cl-bar-gradient-end));
+  @apply bg-midtone-100;
+  box-shadow: 0 0 0 2px #000A;
+}
+
+.widget__bar:before {
+  content: "";
+  display: block;
+  width: var(--user-storage);
+  height: 100%;
+  border-radius: inherit;
+  background: var(--bar-gradient);
+  box-shadow: inset 0 2px 0 0 #fff4, 2px 0 0 0 #0004;
+}
+
+.widget__bar:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: var(--user-storage);
+  transform: translateX(-100%);
+  border: 2px solid transparent;
+  width: var(--bar-height);
+  height: 100%;
+  border-radius: 50%;
+  background: var(--cl-white);
+  background-clip: padding-box;
+}
+
+/* tooltip */
+
+.tooltip {
+  position: absolute;
+  bottom: 0;
+  transform: translatey(50%);
+  @apply p-4;
+  @apply bg-white rounded-lg;
+  box-shadow: 0.8rem 0.8rem 0.5rem -0.5rem #0006;
+  @apply text-midtone-100 text-3xl font-bold;
+}
+
+.tooltip__value {
+  @apply flex items-center gap-x-2;
+}
+
+.tooltip__value:after {
+  content: " gb left";
+  @apply text-neutral-500 font-normal text-xs;
+  @apply uppercase;
+}

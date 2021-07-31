@@ -47,7 +47,7 @@ module.exports = {
           100: 'var(--cl-shadow-100)'
         },
         highlight: {
-          900: 'var(--cl-shadow-900)'
+          900: 'var(--cl-highlight-900)'
         },
         black: 'var(--cl-black)',
         white: 'var(--cl-white)'
