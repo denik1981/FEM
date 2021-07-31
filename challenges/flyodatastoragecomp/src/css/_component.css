@@ -1,5 +1,4 @@
 /* Theme vars */
-/* color.hailpixel.com/#1D2A67,667FFF,0C112C,848794,DBE1FF */
 .component {
   --cl-primary-hue: 230; /* Blue */
   --cl-accent-hue: 190; /* Cyan */
@@ -45,12 +44,12 @@
 .component__input,
 .component__output {
   @apply bg-midtone-200;
-  @apply rounded-lg;
+  @apply rounded-xl;
   box-shadow: 0.8rem 0.8rem 0.5rem -0.5rem #0006;
 }
 
 .component__input {
-  border-top-right-radius: 5rem;
+  border-top-right-radius: 6rem;
 }
 
 /* layout */
@@ -62,28 +61,28 @@
 }
 
 .component__input {
-  @apply p-8 space-y-8;
+  @apply px-10 py-10 space-y-8;
 }
 
 .component__output {
   --output-px: 2rem;
   padding-inline: var(--output-px);
   @apply grid place-items-center;
-  @apply py-16;
+  @apply pb-12 pt-14;
   @apply relative;
 }
 
 /* buttons */
 
 .input__menu {
-  @apply space-x-4;
+  @apply space-x-3;
 }
 
 .menu__btn {
   @apply p-3;
   @apply bg-midtone-100;
   @apply text-midtone-700;
-  @apply rounded-lg;
+  @apply rounded-xl;
 
   @apply hover:bg-accent-500;
   @apply active:bg-midtone-100;
@@ -115,10 +114,16 @@
 
 .widget__max {
   @apply w-full flex justify-between;
+  @apply text-xs;
+}
+.widget__max:before {
+  content: "0 GB";
+  display: block;
+  @apply w-max;
 }
 
 .widget__bar {
-  --bar-height: 0.8rem;
+  --bar-height: 0.7rem;
   @apply w-full;
   height: var(--bar-height);
   min-width: 14rem;
@@ -126,11 +131,6 @@
   @apply relative;
 }
 
-.widget__max:before {
-  content: "0 GB";
-  display: block;
-  @apply w-max;
-}
 /* bar gradient */
 /* prettier-ignore */
 .widget__bar {
@@ -143,7 +143,7 @@
 .widget__bar:before {
   --bar-gradient: linear-gradient( to right, var(--cl-bar-gradient-start), 30%, var(--cl-bar-gradient-end));
   --circle-tip-pos: calc(100% - (var(--bar-height)/2) - 1px) 50%;
-  --circle-tip-width: calc(var(--bar-height) / 2 - 2px);
+  --circle-tip-width: calc(var(--bar-height) / 2 - 1px);
   --circle-tip: radial-gradient( circle at var(--circle-tip-pos), white 0 var(--circle-tip-width), transparent 0 );
   content: "";
   display: block;
@@ -161,10 +161,11 @@
   position: absolute;
   bottom: 0;
   transform: translatey(50%);
-  @apply p-4;
+  @apply py-3 px-6;
   @apply bg-white rounded-lg;
   box-shadow: 0.8rem 0.8rem 0.5rem -0.5rem #0006;
-  @apply text-midtone-100 text-3xl font-bold;
+  @apply text-midtone-100 text-4xl font-bold;
+  @apply lg:text-3xl;
 }
 
 .tooltip__value {
@@ -173,7 +174,7 @@
 
 .tooltip__value:after {
   content: " gb left";
-  @apply text-neutral-500 font-normal text-xs;
+  @apply text-neutral-500 text-xs;
   @apply uppercase;
 }
 
@@ -181,8 +182,9 @@
 
 @screen md {
   .component {
-    @apply max-w-4xl gap-x-4 items-end;
-    grid: auto-flow / 20rem 1fr;
+    @apply gap-x-4 items-end;
+    max-width: 52rem;
+    grid: auto-flow / 22rem 1fr;
   }
   .component__output {
     @apply py-8;
@@ -194,7 +196,7 @@
   }
 
   .tooltip {
-    top: -25%;
+    top: -30%;
     right: var(--output-px);
     bottom: auto;
     transform: none;
@@ -209,53 +211,5 @@
     width: 0;
     border: 0.6rem solid;
     border-color: white white transparent transparent;
-  }
-}
-
-/* Animate */
-
-.component {
-  --animate-bar-duration: 3s; /* 5s */
-  --animate-bar-delay: 1s;
-  --animate-on-load-bar: var(--animate-bar-duration) ease-out var(--animate-bar-delay) 1 forwards;
-  --animate-on-load-tooltip: 1s ease-out calc(var(--animate-bar-duration) + var(--animate-bar-delay) - 1s) 1 forwards;
-}
-
-.widget__bar:before {
-  animation: var(--animate-on-load-bar) onLoadBar;
-}
-
-.tooltip {
-  animation: var(--animate-on-load-tooltip) onLoadTooltip;
-}
-
-@keyframes onLoadBar {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: var(--user-storage);
-  }
-}
-
-@keyframes onLoadTooltip {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .widget__bar {
-    width: var(--user-storage);
-  }
-  .tooltip {
-    opacity: 1;
-  }
-  .component *,
-  .component *:before .component *:after {
-    animation-name: none;
   }
 }

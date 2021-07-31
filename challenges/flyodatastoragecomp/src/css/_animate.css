@@ -1,0 +1,63 @@
+/* Animate */
+
+.component {
+  --animate-bar-duration: 3s; /* 5s */
+  --animate-bar-delay: 1s;
+  --animate-on-load-bar: var(--animate-bar-duration) ease-out var(--animate-bar-delay) 1 forwards;
+  --animate-on-load-tooltip: 1s ease-out calc(var(--animate-bar-duration) + var(--animate-bar-delay) - 1s) 1 forwards;
+}
+
+.widget__bar:before {
+  animation: var(--animate-on-load-bar) onLoadBar;
+}
+
+.tooltip {
+  animation: var(--animate-on-load-tooltip) onLoadTooltip;
+}
+
+@keyframes onLoadBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--user-storage);
+  }
+}
+
+@keyframes onLoadTooltip {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .widget__bar:before {
+    width: var(--user-storage);
+  }
+  .tooltip {
+    opacity: 1;
+  }
+  .component *,
+  .component *:before .component *:after {
+    animation-name: none !important;
+  }
+}
+
+/* disable animations (for dev usage) */
+/* to activate dev mode, add "dev" attribute in the body tag */
+body[dev] *,
+body[dev] *:before,
+body[dev] *:after {
+  animation-name: none !important;
+}
+
+body[dev] .widget__bar:before {
+  width: var(--user-storage);
+}
+
+body[dev] .tooltip {
+  opacity: 1;
+}
