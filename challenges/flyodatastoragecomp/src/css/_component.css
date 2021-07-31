@@ -1,0 +1,215 @@
+/* Theme vars */
+.component {
+  --cl-primary-hue: 230; /* Blue */
+  --cl-accent-hue: 190; /* Cyan */
+  --cl-gradient-hue-0: 6;
+  --cl-gradient-hue-100: 335;
+
+  --cl-midtone-hue: var(--cl-primary-hue);
+  --cl-highlights-hue: var(--cl-primary-hue);
+  --cl-shadows-hue: var(--cl-primary-hue);
+  --cl-neutrals-hue: var(--cl-primary-hue);
+
+  --cl-midtone-100: hsl(var(--cl-midtone-hue), 57%, 11%);
+  --cl-midtone-200: hsl(var(--cl-midtone-hue), 56%, 26%);
+  --cl-midtone-700: hsl(var(--cl-midtone-hue), 100%, 76%);
+
+  --cl-accent-100: hsl(var(--cl-accent-hue), 60%, 10%);
+  --cl-accent-500: hsl(var(--cl-accent-hue), 100%, 55%);
+
+  --cl-neutral-500: hsl(var(--cl-neutrals-hue), 7%, 55%);
+  --cl-highlight-900: hsl(var(--cl-highlights-hue), 100%, 93%);
+
+  --cl-black: hsl(var(--cl-shadows-hue), 0%, 0%);
+  --cl-white: hsl(var(--cl-highlights-hue), 0%, 100%);
+
+  /* gradients */
+  --cl-bar-gradient-start: hsl(var(--cl-gradient-hue-0), 100%, 80%);
+  --cl-bar-gradient-end: hsl(var(--cl-gradient-hue-100), 100%, 65%);
+
+  /* fonts */
+  --ff-primary: "Raleway", theme(fontFamily.sans);
+}
+
+/* general theme */
+.component {
+  @apply font-primary text-sm text-highlight-900;
+}
+
+.component em,
+.widget__max {
+  @apply text-white font-bold not-italic normal-case;
+}
+
+.component__input,
+.component__output {
+  @apply bg-midtone-200;
+  @apply rounded-xl;
+  box-shadow: 0.8rem 0.8rem 0.5rem -0.5rem #0006;
+}
+
+.component__input {
+  border-top-right-radius: 6rem;
+}
+
+/* layout */
+.component {
+  @apply min-w-max;
+  @apply w-full max-w-sm;
+  @apply grid grid-cols-1;
+  @apply gap-y-4;
+}
+
+.component__input {
+  @apply px-10 py-10 space-y-8;
+}
+
+.component__output {
+  --output-px: 2rem;
+  padding-inline: var(--output-px);
+  @apply grid place-items-center;
+  @apply pb-12 pt-14;
+  @apply relative;
+}
+
+/* buttons */
+
+.input__menu {
+  @apply space-x-3;
+}
+
+.menu__btn {
+  @apply p-3;
+  @apply bg-midtone-100;
+  @apply text-midtone-700;
+  @apply rounded-xl;
+
+  @apply hover:bg-accent-500;
+  @apply active:bg-midtone-100;
+
+  @apply focus:text-white;
+  @apply hover:text-accent-100;
+  @apply active:text-white;
+
+  @apply hover:outline-none;
+}
+
+.menu__btn svg {
+  @apply w-6 h-6;
+  @apply fill-current;
+}
+
+/* progress bar */
+.widget {
+  @apply w-full grid justify-items-center gap-y-2;
+}
+
+.widget__message {
+  @apply w-max -mt-7;
+}
+
+.message__storage:after {
+  content: " GB";
+}
+
+.widget__max {
+  @apply w-full flex justify-between;
+  @apply text-xs;
+}
+.widget__max:before {
+  content: "0 GB";
+  display: block;
+  @apply w-max;
+}
+
+.widget__bar {
+  --bar-height: 0.7rem;
+  @apply w-full;
+  height: var(--bar-height);
+  min-width: 14rem;
+  @apply rounded-md;
+  @apply relative;
+}
+
+/* bar gradient */
+/* prettier-ignore */
+.widget__bar {
+  --user-storage:80%; 
+  @apply bg-midtone-100;
+  box-shadow: 0 0 0 2px #000A;
+}
+
+/* prettier-ignore */
+.widget__bar:before {
+  --bar-gradient: linear-gradient( to right, var(--cl-bar-gradient-start), 30%, var(--cl-bar-gradient-end));
+  --circle-tip-pos: calc(100% - (var(--bar-height)/2) - 1px) 50%;
+  --circle-tip-width: calc(var(--bar-height) / 2 - 1px);
+  --circle-tip: radial-gradient( circle at var(--circle-tip-pos), white 0 var(--circle-tip-width), transparent 0 );
+  content: "";
+  display: block;
+  width:0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--circle-tip), var(--bar-gradient);
+  box-shadow: inset 0 2px 0 0 #fff4, 2px 0 0 0 #0004;
+}
+
+/* tooltip */
+
+.tooltip {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  transform: translatey(50%);
+  @apply py-3 px-6;
+  @apply bg-white rounded-lg;
+  box-shadow: 0.8rem 0.8rem 0.5rem -0.5rem #0006;
+  @apply text-midtone-100 text-4xl font-bold;
+  @apply lg:text-3xl;
+}
+
+.tooltip__value {
+  @apply flex items-center gap-x-2;
+}
+
+.tooltip__value:after {
+  content: " gb left";
+  @apply text-neutral-500 text-xs;
+  @apply uppercase;
+}
+
+/* horizontal */
+
+@screen md {
+  .component {
+    @apply gap-x-4 items-end;
+    max-width: 52rem;
+    grid: auto-flow / 22rem 1fr;
+  }
+  .component__output {
+    @apply py-8;
+  }
+
+  .widget__message {
+    @apply mt-0 mb-2;
+    @apply justify-self-start;
+  }
+
+  .tooltip {
+    top: -30%;
+    right: var(--output-px);
+    bottom: auto;
+    transform: none;
+    border-bottom-right-radius: 0;
+  }
+  .tooltip:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 99%;
+    right: 0;
+    width: 0;
+    border: 0.6rem solid;
+    border-color: white white transparent transparent;
+  }
+}

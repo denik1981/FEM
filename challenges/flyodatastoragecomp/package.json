@@ -1,0 +1,53 @@
+{
+  "name": "fem-flyo-data-storage-comp",
+  "version": "1.0.0",
+  "description": "Frontendmentor.io - Flyo Data Storage Component",
+  "author": "denik1981",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/denik1981/FEM/tree/master/challenges/flyodatastoragecomp"
+  },
+  "private": true,
+  "workspaces": [
+    "."
+  ],
+  "scripts": {
+    "sprite:svgo": "svgo --config=svgo.config.js -f ./assets/icons -o ./temp/svgo > /dev/null",
+    "sprite:gen": "svg-sprite -s --symbol-sprite=icons.svg --symbol-dest=assets/sprites temp/svgo/*",
+    "sprite": "npm run sprite:svgo -w fem-flyo-data-storage-comp && npm run sprite:gen -w fem-flyo-data-storage-comp && rimraf ./temp",
+    "prebuild": "npm run sprite -w fem-flyo-data-storage-comp",
+    "build": "webpack --mode=$npm_config_mode --node-env=$npm_config_nodeenv",
+    "build:dev": "npm run build --mode=development --nodeenv=development",
+    "build:prod": "npm run build --mode=production --nodeenv=production -w fem-flyo-data-storage-comp",
+    "debug": "node --inspect-brk $(npx which webpack) --mode=development",
+    "watch": "npm run prebuild && webpack --watch --mode=development",
+    "serve": "npm run prebuild && webpack serve"
+  },
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "css-minimizer-webpack-plugin": "^3.0.2",
+    "eslint": "^7.29.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^2.1.0",
+    "postcss": "^8.3.0",
+    "postcss-import": "^14.0.2",
+    "postcss-loader": "^6.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "rimraf": "^3.0.2",
+    "style-loader": "^3.0.0",
+    "svg-sprite": "^1.5.0",
+    "svgo": "^2.3.1",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.1.2"
+  }
+}
