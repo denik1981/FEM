@@ -1,21 +1,11 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   purge: ['./index.html'],
-  // plugins: [require('@tailwindcss/forms')({ strategy: 'class' })],
   variants: {
     extend: {
-      // backgroundColor: ['hover', 'focus', 'active'],
-      // textDecoration: ['hover', 'focus', 'active'],
-      // fontWeight: ['hover', 'focus', 'active'],
-      // borderWidth: ['hover', 'focus', 'active'],
-      // borderRadius: ['hover', 'focus', 'active'],
-      // ringWidth: ['hover', 'focus', 'active'],
-      // ringOffsetWidth: ['hover', 'focus', 'active'],
-      // dropShadow: ['hover', 'focus', 'active'],
-      // boxShadow: ['hover', 'focus', 'active'],
-      // saturate: ['group-hover', 'hover', 'focus', 'active'],
-      // textColor: ['group-hover', 'hover', 'focus', 'active'],
-      // padding: ['group-hover', 'hover', 'focus', 'active']
+      textColor: ['hover', 'focus', 'active'],
+      backgroundColor: ['hover', 'active'],
+      outline: ['hover']
     }
   },
 
@@ -25,20 +15,18 @@ module.exports = {
       ...defaultTheme.screens
     },
     extend: {
-      // fontSize: {
-      //   // '3xs': ['0.4rem', '1.625'],
-      //   // '2xs': ['0.6rem', '1.625'],
-      //   // ...defaultTheme.fontSize
-      // },
       fontFamily: {
-        primary: ['var(--ff-primary)', ...defaultTheme.fontFamily.sans],
-        display: ['var(--ff-display)', ...defaultTheme.fontFamily.sans]
+        primary: ['var(--ff-primary)', ...defaultTheme.fontFamily.sans]
       },
       colors: {
         midtone: {
           100: 'var(--cl-midtone-100)',
           200: 'var(--cl-midtone-200)',
           700: 'var(--cl-midtone-700)'
+        },
+        accent: {
+          100: 'var(--cl-accent-100)',
+          500: 'var(--cl-accent-500)'
         },
         neutral: {
           500: 'var(--cl-neutral-500)'

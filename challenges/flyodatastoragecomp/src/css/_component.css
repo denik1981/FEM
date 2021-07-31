@@ -2,6 +2,7 @@
 /* color.hailpixel.com/#1D2A67,667FFF,0C112C,848794,DBE1FF */
 :root {
   --cl-primary-hue: 230; /* Blue */
+  --cl-accent-hue: 190; /* Cyan */
   --cl-gradient-hue-0: 6;
   --cl-gradient-hue-100: 335;
 
@@ -13,6 +14,9 @@
   --cl-midtone-100: hsl(var(--cl-midtone-hue), 57%, 11%);
   --cl-midtone-200: hsl(var(--cl-midtone-hue), 56%, 26%);
   --cl-midtone-700: hsl(var(--cl-midtone-hue), 100%, 76%);
+
+  --cl-accent-100: hsl(var(--cl-accent-hue), 60%, 10%);
+  --cl-accent-500: hsl(var(--cl-accent-hue), 100%, 55%);
 
   --cl-neutral-500: hsl(var(--cl-neutrals-hue), 7%, 55%);
   --cl-highlight-900: hsl(var(--cl-highlights-hue), 100%, 93%);
@@ -26,9 +30,6 @@
 
   /* fonts */
   --ff-primary: "Raleway", theme(fontFamily.sans);
-
-  /* --shadow-neutral-100: hsla(0, 0%, 0%, 0.2); */
-  /* --btn-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.15); */
 }
 
 /* general theme */
@@ -79,11 +80,21 @@
 .menu__btn {
   @apply p-2;
   @apply bg-midtone-100;
+  @apply text-midtone-700;
   @apply rounded-md;
+
+  @apply hover:bg-accent-500;
+  @apply active:bg-midtone-100;
+
+  @apply focus:text-white;
+  @apply hover:text-accent-100;
+  @apply active:text-white;
+
+  @apply hover:outline-none;
 }
 
 .menu__btn svg {
-  @apply text-midtone-700 fill-current;
+  @apply fill-current;
 }
 
 /* progress bar */

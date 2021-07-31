@@ -48,7 +48,6 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "@tailwindcss/forms": "^0.3.3",
     "tailwindcss": "^2.1.2"
   }
 }
