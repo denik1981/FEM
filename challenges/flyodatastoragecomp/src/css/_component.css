@@ -66,8 +66,10 @@
 }
 
 .component__output {
+  --output-px: 2rem;
+  padding-inline: var(--output-px);
   @apply grid place-items-center;
-  @apply px-8 py-16;
+  @apply py-16;
   @apply relative;
 }
 
@@ -78,10 +80,10 @@
 }
 
 .menu__btn {
-  @apply p-2;
+  @apply p-3;
   @apply bg-midtone-100;
   @apply text-midtone-700;
-  @apply rounded-md;
+  @apply rounded-lg;
 
   @apply hover:bg-accent-500;
   @apply active:bg-midtone-100;
@@ -94,6 +96,7 @@
 }
 
 .menu__btn svg {
+  @apply w-6 h-auto;
   @apply fill-current;
 }
 
@@ -182,4 +185,39 @@
   content: " gb left";
   @apply text-neutral-500 font-normal text-xs;
   @apply uppercase;
+}
+
+/* horizontal */
+
+@screen md {
+  .component {
+    @apply max-w-4xl gap-x-4 items-end;
+    grid: auto-flow / 20rem 1fr;
+  }
+  .component__output {
+    @apply py-8;
+  }
+
+  .widget__message {
+    @apply mt-0 mb-2;
+    @apply justify-self-start;
+  }
+
+  .tooltip {
+    top: -25%;
+    right: var(--output-px);
+    bottom: auto;
+    transform: none;
+    border-bottom-right-radius: 0;
+  }
+  .tooltip:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 99%;
+    right: 0;
+    width: 0;
+    border: 0.6rem solid;
+    border-color: white white transparent transparent;
+  }
 }
