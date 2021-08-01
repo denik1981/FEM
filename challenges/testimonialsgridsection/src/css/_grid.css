@@ -1,7 +1,7 @@
 .testimonials {
   display: grid;
   justify-items: center;
-  grid: auto-flow / 1fr;
+  grid: auto-flow repeat(2, 40rem) / 1fr;
   @apply gap-6;
   /* @apply max-w-2xl; */
 }
