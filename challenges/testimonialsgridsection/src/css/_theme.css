@@ -1,21 +1,20 @@
 .testimonials {
   /* assets */
   --bg-pattern: url("~assets/bg/pattern.svg");
-  --avatar-width: 2.2rem;
+  --avatar-width: theme("width.9");
 
   /* spacing */
-  --card-px: 1.5rem;
-  --card-py: 2rem;
-  --card-gap-y: 1.2rem;
-  --card-shadow: 0.8rem 0.8rem 1rem -0.5rem #0002;
-  --card-inner-shadow: inset 0 0.5rem 1rem 0 #0002;
+  --card-gap-y: 1rem;
+  --cards-gap-y: 1.2rem;
+  --cards-shadow: 0.8rem 0.8rem 1rem -0.5rem #0002;
+  --cards-inner-shadow: inset 0 0.5rem 1rem 0 #0002;
   /* borders */
-  --card-b-radius: 1rem;
+  --cards-b-radius: 1rem;
 }
 
 @screen md {
   .testimonials {
-    --card-gap-y: 2rem;
+    --cards-gap-y: 2rem;
   }
 }
 
@@ -27,7 +26,7 @@
   --cl-text-display: white;
   --cl-text-dim: hsla(0, 0%, 100%, 0.8);
   --cl-avatar-border: hsla(0, 0%, 100%, 0.314);
-  --cl-gradient-shadow: hsla(0, 0%, 0%, 0.3);
+  --cl-gradient-shadow: hsla(0, 0%, 0%, 0.6);
 }
 .testimonial:nth-child(2) {
   --cl-bg: hsl(217, 19%, 35%);
@@ -35,16 +34,16 @@
   --cl-text-display: white;
   --cl-text-dim: hsla(0, 0%, 100%, 0.8);
   --cl-avatar-border: hsla(0, 0%, 100%, 0.5);
-  --cl-gradient-shadow: hsla(0, 0%, 0%, 0.3);
+  --cl-gradient-shadow: hsla(0, 0%, 0%, 0.4);
 }
 .testimonial:nth-child(3),
 .testimonial:nth-child(5) {
   --cl-bg: white;
-  --cl-text-copy: hsla(217, 30%, 14%, 0.7);
-  --cl-text-display: hsl(217, 30%, 14%);
+  --cl-text-copy: hsla(217, 10%, 40%, 0.7);
+  --cl-text-display: hsl(217, 10%, 40%);
   --cl-text-dim: hsla(217, 19%, 35%, 0.502);
   --cl-avatar-border: hsla(0, 0%, 100%, 0.5);
-  --cl-gradient-shadow: hsla(0, 0%, 85%, 0.1);
+  --cl-gradient-shadow: hsla(0, 0%, 50%, 0.3);
 }
 .testimonial:nth-child(4) {
   --cl-bg: hsl(217, 30%, 14%);
@@ -52,15 +51,14 @@
   --cl-text-display: white;
   --cl-text-dim: rgba(255, 255, 255, 0.5);
   --cl-avatar-border: hsla(0, 0%, 100%, 0.314);
-  --cl-gradient-shadow: hsla(0, 0%, 0%, 0.3);
+  --cl-gradient-shadow: hsla(0, 0%, 0%, 0.8);
 }
 
 .testimonial {
-  background: linear-gradient(to top left, var(--cl-gradient-shadow), 15%, transparent, 85%, #0002), var(--cl-bg);
+  background: linear-gradient(to top left, var(--cl-gradient-shadow), 15%, transparent, 85%, var(--cl-gradient-shadow)),
+    var(--cl-bg);
   color: var(--cl-text-copy);
-  box-shadow: var(--card-shadow), var(--card-inner-shadow);
-  min-width: 20rem;
-  max-width: 90ch;
+  box-shadow: var(--cards-shadow), var(--cards-inner-shadow);
 }
 
 .testimonial__summary,
@@ -79,14 +77,38 @@
 /* typography */
 .testimonials {
   --ff-primary: "Barlow Semi Condensed";
-  @apply font-primary text-sm font-medium;
+  --ff-text-copy: theme("fontSize.sm");
+  font-size: var(--ff-text-copy);
+  @apply font-primary font-medium;
 }
 
 .testimonial__summary {
-  @apply font-semibold text-xl leading-snug tracking-wide;
+  --ff-text-summary: theme("fontSize.xl");
+  font-size: var(--ff-text-summary);
+  @apply font-semibold leading-snug tracking-wide;
 }
 
 /* responsive typography */
 
-.testimonials {
+.testimonial.testimonial--highlight {
+  @apply sm:text-xl sm:gap-y-8;
+  @apply xl:text-sm xl:gap-y-4;
+}
+
+.testimonial.testimonial--highlight .testimonial__summary {
+  @apply sm:text-4xl xl:text-xl;
+}
+
+.testimonial.testimonial--highlight .testimonial__author {
+  @apply sm:text-base sm:leading-none;
+  @apply xl:text-sm xl:leading-none;
+}
+
+.testimonial--highlight .testimonial__author {
+  @apply sm:h-16 sm:-mb-4 xl:h-9 xl:mb-0;
+}
+
+.testimonial.testimonial--highlight .author__avatar {
+  @apply sm:w-12;
+  @apply xl:w-9;
 }
