@@ -43,7 +43,7 @@
   --cl-text-display: hsl(217, 10%, 40%);
   --cl-text-dim: hsla(217, 19%, 35%, 0.502);
   --cl-avatar-border: hsla(0, 0%, 100%, 0.5);
-  --cl-gradient-shadow: hsla(0, 0%, 50%, 0.3);
+  --cl-gradient-shadow: hsla(0, 0%, 80%, 0.3);
 }
 .testimonial:nth-child(4) {
   --cl-bg: hsl(217, 30%, 14%);
