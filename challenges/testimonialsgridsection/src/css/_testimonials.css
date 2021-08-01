@@ -1,14 +1,15 @@
 .testimonials {
   @apply w-full;
-  @apply grid grid-cols-1 place-items-center;
-  @apply gap-y-4 gap-5;
+  @apply grid place-items-center;
+  @apply gap-6;
 }
 
 .testimonial {
-  @apply grid;
+  @apply grid grid-cols-1 auto-rows-min;
   row-gap: var(--card-gap-y);
   padding: var(--card-py) var(--card-px);
   border-radius: var(--card-b-radius);
+  min-height: 16rem;
 }
 
 .testimonial > * {
@@ -25,4 +26,10 @@
 .author__avatar {
   width: var(--avatar-width);
   @apply rounded-full;
+}
+
+/* Grid System */
+
+.testimonials {
+  grid: auto-flow / min(0, 1fr);
 }

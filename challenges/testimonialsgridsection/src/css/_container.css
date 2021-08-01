@@ -5,5 +5,5 @@ body {
 
 main {
   @apply w-full min-h-screen grid place-items-center;
-  @apply px-6;
+  @apply px-6 py-20;
 }
