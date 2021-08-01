@@ -15,10 +15,6 @@
     transform: none !important;
     animation: none !important;
   }
-
-  .testimonials * {
-    /* transition-property: none !important; */
-  }
 }
 
 @media (min-width: 1280px) {
