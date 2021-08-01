@@ -1,0 +1,66 @@
+.testimonials {
+  --animate-duration: 0.5s;
+  --animate-timing-function: cubic-bezier(0.36, 0.78, 0.29, 0.84);
+  --animate-timing-function: ease-out;
+  --animate: var(--animate-duration) var(--animate-timing-function) 0s 1 forwards;
+  --animate-delay-1: 0s;
+  --animate-delay-2: calc(var(--animate-duration) + 0.1s);
+  --animate-delay-3: calc(var(--animate-duration) * 2 + 0.1s);
+  --animate-delay-4: calc(var(--animate-duration) * 3 + 0.1s);
+  --animate-delay-5: calc(var(--animate-duration) * 4 + 0.1s);
+}
+
+@media (prefers-reduced-motion) {
+  .testimonial {
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .testimonials * {
+    /* transition-property: none !important; */
+  }
+}
+
+@media (min-width: 1280px) {
+  .animate.testimonial {
+    animation: var(--animate);
+  }
+  .animate.testimonial:nth-child(1) {
+    transform: translatey(-100vw);
+    animation-delay: var(--animate-delay-1);
+    animation-name: moveY;
+  }
+
+  .animate.testimonial:nth-child(2) {
+    transform: translatex(100vw);
+    animation-delay: var(--animate-delay-2);
+    animation-name: moveX;
+  }
+  .animate.testimonial:nth-child(3) {
+    transform: translatex(-100vw);
+    animation-delay: var(--animate-delay-4);
+    animation-name: moveX;
+  }
+  .animate.testimonial:nth-child(4) {
+    transform: translatey(100vw);
+    animation-delay: var(--animate-delay-3);
+    animation-name: moveY;
+  }
+  .animate.testimonial:nth-child(5) {
+    transform: translatex(100vw);
+    animation-delay: var(--animate-delay-5);
+    animation-name: moveX;
+  }
+}
+
+@keyframes moveY {
+  100% {
+    transform: translatey(0);
+  }
+}
+
+@keyframes moveX {
+  100% {
+    transform: translatex(0);
+  }
+}

@@ -26,7 +26,8 @@
     "build:flyotwocolumns": "npm run build:prod -w fem-flyo-landing-page-two-columns",
     "build:flyodarklandingpage": "npm run build:prod -w fem-flyo-dark-landing-page",
     "build:huddlepagealternate": "npm run build:prod -w fem-huddle-page-alternate",
-    "build:flyodatastoragecomp": "npm run build:prod -w fem-flyo-data-storage-comp"
+    "build:flyodatastoragecomp": "npm run build:prod -w fem-flyo-data-storage-comp",
+    "build:testimonialsgridsection": "npm run build:prod -w fem-testimonials-grid-section"
   },
   "dependencies": {
     "npm": "^7.12.1",
