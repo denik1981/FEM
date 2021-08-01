@@ -1,0 +1,28 @@
+.testimonials {
+  @apply w-full;
+  @apply grid grid-cols-1 place-items-center;
+  @apply gap-y-4 gap-5;
+}
+
+.testimonial {
+  @apply grid;
+  row-gap: var(--card-gap-y);
+  padding: var(--card-py) var(--card-px);
+  border-radius: var(--card-b-radius);
+}
+
+.testimonial > * {
+  @apply w-11/12;
+}
+
+.testimonial__author {
+  @apply flex flex-col flex-wrap w-full;
+  @apply content-start justify-center;
+  @apply gap-x-3 gap-y-1 leading-none;
+  height: var(--avatar-width);
+}
+
+.author__avatar {
+  width: var(--avatar-width);
+  @apply rounded-full;
+}

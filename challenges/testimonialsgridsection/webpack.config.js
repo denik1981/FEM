@@ -15,7 +15,7 @@ const config = {
   devServer: { host: 'localhost' },
   optimization: {
     runtimeChunk: 'single',
-    minimize: true,
+    minimize: isProduction,
     minimizer: [
       '...',
       new CssMinimizerPlugin()
