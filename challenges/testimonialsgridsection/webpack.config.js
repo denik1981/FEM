@@ -5,7 +5,6 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const isMonoBuild = process.env.MONO_BUILD ? process.env.MONO_BUILD === 'mono' : false
 const isProduction = process.env.NODE_ENV === 'production'
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader'
-const cssLoader = { loader: 'css-loader', options: { sourceMap: true } }
 const publicPath = isProduction && !(process.env.WEBPACK_DEV_SERVER) ? path.sep + path.basename(__dirname) + path.sep : ''
 
 const config = {
@@ -36,7 +35,7 @@ const config = {
 
   module: {
     rules: [
-      { test: /\.css$/i, use: [stylesHandler, cssLoader, 'postcss-loader'] },
+      { test: /\.css$/i, use: [stylesHandler, 'css-loader', 'postcss-loader'] },
       { test: /\.(|svg|png|jpg|gif)$/i, type: 'asset/resource' }
     ]
   },
