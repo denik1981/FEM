@@ -1,0 +1,81 @@
+/* Reset */
+
+details > summary {
+  list-style: none;
+}
+details > summary::marker {
+  display: none;
+}
+
+/* Theme */
+
+.faq {
+  border-bottom: 1px solid black;
+}
+
+/* Typography */
+body {
+  --ff-primary: "Kumbh Sans";
+  --ff-bold: 700;
+  @apply font-primary text-sm;
+}
+
+p {
+  max-width: 64ch;
+  font-weight: normal;
+}
+
+.faqs__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: var(--ff-bold);
+  @apply text-4xl;
+}
+
+/* Layout */
+.wrapper {
+  @apply p-8 rounded-xl;
+  width: 40rem;
+  height: 30rem;
+  /****/
+  @apply bg-blue-400;
+}
+
+.faq {
+  @apply py-4;
+}
+
+.faq__question {
+  width: 100%;
+}
+
+/* Interactive */
+.faq__question {
+  @apply hover:font-bold;
+  cursor: pointer;
+}
+
+/* typography utility to prevent FOUT */
+.no-fout {
+  --fout-latency: 0.6s;
+  animation: noPaint var(--fout-latency) 1 forwards;
+}
+
+.wrapper {
+  visibility: hidden;
+}
+
+@keyframes noPaint {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .wrapper {
+    visibility: visible;
+  }
+}

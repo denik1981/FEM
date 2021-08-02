@@ -1,0 +1,62 @@
+/* --animate-margin-top: margin between p & summary elements */
+/* --animate-line-height: desirable line height for the content */
+/* --animate-max-height: minimum height (aprox) of the estimated maximum height for all the text boxes when expanded */
+/* --animate-duration: the duration for he disclosed animation */
+
+.faq {
+  --animate-margin-top: 0.5rem;
+  --animate-line-height: 1.5;
+  --animate-max-height: 3rem;
+  --animate-duration: 0.3s;
+}
+
+.faq__question {
+  line-height: 1;
+}
+
+.faq__answer {
+  margin-top: 0;
+  line-height: 0px;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.faq[open] {
+  font-weight: var(--ff-bold);
+}
+
+.faq[open] .faq__answer {
+  animation-name: increaseMaxWidth, increaseMarginTop, increaseLineHeight;
+  animation-duration: var(--animate-duration), 0s, 0s;
+  animation-delay: 0s, 0s, 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes increaseLineHeight {
+  0%,
+  99% {
+    line-height: 0;
+  }
+  100% {
+    line-height: var(--animate-line-height);
+  }
+}
+
+@keyframes increaseMarginTop {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: var(--animate-margin-top);
+  }
+}
+
+@keyframes increaseMaxWidth {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: var(--animate-max-height);
+  }
+}
