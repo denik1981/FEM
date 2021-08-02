@@ -35,3 +35,28 @@
   @apply sm:w-12;
   @apply xl:w-9;
 }
+
+/* typography utility to prevent FOUT */
+.no-fout {
+  --fout-latency: 0.3s;
+  animation: noPaint var(--fout-latency) 1 forwards;
+}
+
+.testimonials {
+  visibility: hidden;
+}
+
+@keyframes noPaint {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .testimonials {
+    visibility: visible;
+  }
+}
