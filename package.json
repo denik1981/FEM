@@ -27,7 +27,8 @@
     "build:flyodarklandingpage": "npm run build:prod -w fem-flyo-dark-landing-page",
     "build:huddlepagealternate": "npm run build:prod -w fem-huddle-page-alternate",
     "build:flyodatastoragecomp": "npm run build:prod -w fem-flyo-data-storage-comp",
-    "build:testimonialsgridsection": "npm run build:prod -w fem-testimonials-grid-section"
+    "build:testimonialsgridsection": "npm run build:prod -w fem-testimonials-grid-section",
+    "build:faqaccordioncard": "npm run build:prod -w fem-faq-accordion-card"
   },
   "dependencies": {
     "npm": "^7.12.1",

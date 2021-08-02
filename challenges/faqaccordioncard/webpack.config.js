@@ -2,11 +2,12 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const isMonoBuild = process.env.MONO_BUILD ? process.env.MONO_BUILD === 'mono' : false
 const isProduction = process.env.NODE_ENV === 'production'
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader'
+const cssLoader = { loader: 'css-loader', options: { sourceMap: true } }
 const publicPath = isProduction && !(process.env.WEBPACK_DEV_SERVER) ? path.sep + path.basename(__dirname) + path.sep : ''
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const config = {
   mode: isProduction ? 'production' : 'development',
@@ -36,7 +37,7 @@ const config = {
 
   module: {
     rules: [
-      { test: /\.css$/i, use: [stylesHandler, 'css-loader', 'postcss-loader'] },
+      { test: /\.css$/i, use: [stylesHandler, cssLoader, 'postcss-loader'] },
       { test: /\.(|svg|png|jpg|gif)$/i, type: 'asset/resource' }
     ]
   },
