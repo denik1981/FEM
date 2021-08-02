@@ -6,6 +6,7 @@ const isMonoBuild = process.env.MONO_BUILD ? process.env.MONO_BUILD === 'mono' :
 const isProduction = process.env.NODE_ENV === 'production'
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader'
 const publicPath = isProduction && !(process.env.WEBPACK_DEV_SERVER) ? path.sep + path.basename(__dirname) + path.sep : ''
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const config = {
   mode: isProduction ? 'production' : 'development',
@@ -39,7 +40,7 @@ const config = {
       { test: /\.(|svg|png|jpg|gif)$/i, type: 'asset/resource' }
     ]
   },
-  plugins: []
+  plugins: [new BundleAnalyzerPlugin()]
 }
 
 module.exports = (env) => {
