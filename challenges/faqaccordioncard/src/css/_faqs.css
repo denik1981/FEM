@@ -1,5 +1,12 @@
-/* Reset */
+:root {
+  --bg-women-mobile: url("~assets/bg/illustrations/woman-mobile.svg");
+  --bg-women-desktop: url("~assets/bg/illustrations/woman-desktop.svg");
+  --bg-shadow-mobile: url("~assets/bg/shadows/shadow-mobile.svg");
+  --bg-shadow-desktop: url("~assets/bg/shadows/shadow-desktop.svg");
+  --bg-box-desktop: url("~assets/bg/illustrations/box-desktop.svg");
+}
 
+/* Reset */
 details > summary {
   list-style: none;
 }
@@ -7,10 +14,39 @@ details > summary::marker {
   display: none;
 }
 
-/* Theme */
+/* Theme*/
+.wrapper {
+  background: white;
+  position: relative;
+  background: top center no-repeat, white;
+  background-image: var(--bg-shadow-mobile);
+  z-index: 0;
+}
 
-.faq {
+.wrapper:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  inset: -7rem 0;
+  background: top center no-repeat, transparent;
+  background-image: var(--bg-women-mobile);
+  z-index: -1;
+}
+
+.faqs .faq {
   border-bottom: 1px solid black;
+}
+
+.faq__question {
+  display: flex;
+  justify-content: space-between;
+}
+
+.question__icon {
+  display: block;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 /* Typography */
@@ -34,11 +70,18 @@ p {
 
 /* Layout */
 .wrapper {
-  @apply p-8 rounded-xl;
-  width: 40rem;
-  height: 30rem;
-  /****/
-  @apply bg-blue-400;
+  @apply p-6 rounded-xl;
+  width: 100%;
+  max-width: 30rem;
+  min-width: 19rem;
+}
+
+.faqs__title {
+  @apply mt-28 mb-6;
+}
+
+.faqs {
+  @apply mb-20;
 }
 
 .faq {
@@ -49,19 +92,22 @@ p {
   width: 100%;
 }
 
+/* Responsive */
+
 /* Interactive */
-.faq__question {
+
+.question__text {
   @apply hover:font-bold;
   cursor: pointer;
 }
 
-/* typography utility to prevent FOUT */
+/* Utilities - NO-FOUT */
 .no-fout {
   --fout-latency: 0.6s;
   animation: noPaint var(--fout-latency) 1 forwards;
 }
 
-.wrapper {
+.no-fout {
   visibility: hidden;
 }
 
@@ -75,7 +121,7 @@ p {
 }
 
 @media (prefers-reduced-motion) {
-  .wrapper {
+  .no-fout {
     visibility: visible;
   }
 }

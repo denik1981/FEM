@@ -1,10 +1,14 @@
 body {
   width: 100%;
+  display: grid;
+  @apply bg-red-400;
 }
 
 main {
   @apply w-full min-h-screen;
-  @apply p-4;
+  @apply p-6 mt-28;
   display: grid;
-  place-items: center;
+  grid: 1fr / 1fr;
+  justify-items: center;
+  align-items: start;
 }
