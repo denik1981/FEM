@@ -1,0 +1,13 @@
+/* Reset */
+
+html::-webkit-scrollbar {
+  width: 0px;
+}
+
+details summary {
+  list-style: none;
+  cursor: pointer;
+}
+details summary::marker {
+  display: none;
+}

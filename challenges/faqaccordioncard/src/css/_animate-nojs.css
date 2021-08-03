@@ -1,7 +1,11 @@
 /* --animate-margin-top: margin between p & summary elements */
 /* --animate-line-height: desirable line height for the content */
 /* --animate-max-height: minimum height (aprox) of the estimated maximum height for all the text boxes when expanded */
-/* --animate-duration: the duration for he disclosed animation */
+
+/* To get a nice and soft effect the animation must first increase the line-height, then the top margin and then the max-height. */
+/* We set the line-height to 0 as a way to prevent the default browser without using JS.   */
+/* Be aware that JS solution is much more complete as it lets animate the close as well and let you animate the whole group. */
+/* Meaning that when one summary is open the others change their state to close. You cannot do this with only CSS.   */
 
 .faq {
   --animate-margin-top: 0.5rem;

@@ -1,0 +1,44 @@
+/* Layout */
+
+.wrapper {
+  position: relative;
+  @apply p-6 rounded-xl;
+  width: 70vw;
+  max-width: 50rem;
+  min-width: 19rem;
+}
+
+.faqs {
+  grid-column-start: 2;
+}
+
+.faqs__title {
+  @apply mt-44 mb-6;
+}
+
+.faqs__content {
+  @apply mb-20;
+}
+
+.faq {
+  @apply py-4;
+}
+
+.faq__question {
+  width: 100%;
+}
+
+/* Responsive */
+@screen lg {
+  .faqs__title {
+    @apply mt-0;
+    text-align: left;
+  }
+
+  .wrapper {
+    display: grid;
+    grid: min-content / auto-flow 1fr;
+    @apply py-16;
+    max-width: 55rem;
+  }
+}
