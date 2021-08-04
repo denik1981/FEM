@@ -26,6 +26,10 @@ p {
   @apply lg:text-3xl;
 }
 
+.faq__question {
+  line-height: 1;
+}
+
 /* Interactive */
 
 .question__text,

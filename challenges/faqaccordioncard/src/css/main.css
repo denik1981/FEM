@@ -3,7 +3,7 @@
 @import "_typography.css";
 @import "_theme.css";
 @import "_layout.css";
-@import "_animate-nojs.css";
+@import "_animate.css";
 
 /* Only for development (not commited) */
 /* @import "junk.css"; */
