@@ -2,9 +2,9 @@
 
 .wrapper {
   position: relative;
-  @apply p-6 rounded-xl;
+  @apply p-6 rounded-3xl;
   width: 70vw;
-  max-width: 50rem;
+  max-width: 30rem;
   min-width: 19rem;
 }
 
@@ -13,11 +13,12 @@
 }
 
 .faqs__title {
-  @apply mt-44 mb-6;
+  margin-top: clamp(5rem, 35vw, 12rem);
+  padding-bottom: clamp(2rem, 4vh, 3rem);
+  @apply lg:pb-6;
 }
-
 .faqs__content {
-  @apply mb-20;
+  @apply mb-16;
 }
 
 .faq {

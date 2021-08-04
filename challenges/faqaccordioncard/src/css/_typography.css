@@ -1,8 +1,15 @@
 /* Typography */
+
+:root {
+  --cl-text-body: #1d1b31ee;
+  --cl-text-display: #1d1b31;
+}
+
 body {
   --ff-primary: "Kumbh Sans";
   --ff-bold: 700;
-  @apply font-primary text-sm;
+  color: var(--cl-text-body);
+  @apply font-primary text-xs;
 }
 
 p {
@@ -11,10 +18,25 @@ p {
 }
 
 .faqs__title {
+  color: var(--cl-text-display);
   text-align: center;
   text-transform: uppercase;
   font-weight: var(--ff-bold);
-  @apply text-4xl;
+  font-size: clamp(2rem, 8vw, 2.5rem);
+  @apply lg:text-3xl;
+}
+
+/* Interactive */
+
+.question__text,
+.question__text:active,
+.question__text:target,
+.question__text:focus {
+  font-weight: normal;
+}
+:is(.faq__question:hover, .faq[open]) .question__text {
+  color: var(--cl-text-display);
+  @apply font-bold;
 }
 
 /* Utility - NO-FOUT */

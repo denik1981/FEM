@@ -18,14 +18,14 @@
   position: absolute;
   width: 100%;
   height: 20rem;
-  inset: -10rem 0 0 auto;
-  background: center center / 60% auto no-repeat, transparent;
+  inset: -10rem 0 0 -1rem;
+  background: center center / 80% auto no-repeat, transparent;
   background-image: var(--bg-women-mobile);
   z-index: -1;
 }
 
 .faqs__content .faq {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #0003;
 }
 
 .faq__question {
@@ -55,10 +55,4 @@
     background: top 65% left -2rem no-repeat, center left / 45% auto no-repeat, transparent;
     background-image: var(--bg-box-desktop), var(--bg-women-desktop);
   }
-}
-
-/* Interactive */
-
-:is(.faq__question:hover, .faq[open]) .question__text {
-  @apply font-bold;
 }
