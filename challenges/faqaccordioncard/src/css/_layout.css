@@ -17,16 +17,22 @@
   padding-bottom: clamp(2rem, 4vh, 3rem);
   @apply lg:pb-6;
 }
+.faq {
+  /* @apply py-4; */
+}
+
 .faqs__content {
   @apply mb-16;
 }
 
-.faq {
+.faq__question {
   @apply py-4;
+  width: 100%;
 }
 
-.faq__question {
-  width: 100%;
+.faq__answer {
+  /* margin-top: -10rem; */
+  @apply pb-2;
 }
 
 /* Responsive */

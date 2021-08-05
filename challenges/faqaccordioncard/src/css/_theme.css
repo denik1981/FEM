@@ -56,3 +56,16 @@
     background-image: var(--bg-box-desktop), var(--bg-women-desktop);
   }
 }
+
+/* Interactive */
+
+.question__text,
+.question__text:active,
+.question__text:target,
+.question__text:focus {
+  font-weight: normal;
+}
+:is(.faq__question:hover, .faq[open]) .question__text {
+  color: var(--cl-text-display);
+  @apply font-bold;
+}

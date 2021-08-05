@@ -39,8 +39,18 @@ const config = {
   module: {
     rules: [
       { test: /\.css$/i, use: [stylesHandler, cssLoader, 'postcss-loader'] },
-      { test: /\.(|svg|png|jpg|gif)$/i, type: 'asset/resource' }
-    ]
+      { test: /\.(|svg|png|jpg|gif)$/i, type: 'asset/resource' },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-transform-runtime']
+          }
+        }
+      }]
   },
   plugins: []
 }
