@@ -1,9 +1,9 @@
 :root {
-  --bg-women-mobile: url("~assets/bg/illustrations/woman-mobile.svg");
-  --bg-women-desktop: url("~assets/bg/illustrations/woman-desktop.svg");
-  --bg-shadow-mobile: url("~assets/bg/shadows/shadow-mobile.svg");
-  --bg-shadow-desktop: url("~assets/bg/shadows/shadow-desktop.svg");
-  --bg-box-desktop: url("~assets/bg/illustrations/box-desktop.svg");
+  --bg-women-mobile: url('~assets/bg/illustrations/woman-mobile.svg');
+  --bg-women-desktop: url('~assets/bg/illustrations/woman-desktop.svg');
+  --bg-shadow-mobile: url('~assets/bg/shadows/shadow-mobile.svg');
+  --bg-shadow-desktop: url('~assets/bg/shadows/shadow-desktop.svg');
+  --bg-box-desktop: url('~assets/bg/illustrations/box-desktop.svg');
 }
 
 .wrapper {
@@ -13,7 +13,7 @@
 }
 
 .wrapper:before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 100%;
@@ -36,7 +36,6 @@
 .question__icon {
   display: block;
   object-fit: contain;
-  cursor: pointer;
 }
 
 @screen lg {
@@ -45,7 +44,7 @@
     grid: 1fr / auto-flow 1fr;
     @apply p-6;
     max-width: 55rem;
-    background: top 3.5rem left -3rem / 50% no-repeat, white;
+    background: top 1rem left -3rem / 50% no-repeat, white;
     background-image: var(--bg-shadow-desktop);
   }
 
@@ -55,17 +54,4 @@
     background: top 65% left -2rem no-repeat, center left / 45% auto no-repeat, transparent;
     background-image: var(--bg-box-desktop), var(--bg-women-desktop);
   }
-}
-
-/* Interactive */
-
-.question__text,
-.question__text:active,
-.question__text:target,
-.question__text:focus {
-  font-weight: normal;
-}
-:is(.faq__question:hover, .faq[open]) .question__text {
-  color: var(--cl-text-display);
-  @apply font-bold;
 }

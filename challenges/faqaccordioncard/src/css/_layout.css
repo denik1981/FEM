@@ -4,6 +4,7 @@
   position: relative;
   @apply p-6 rounded-3xl;
   width: 70vw;
+  height: max-content;
   max-width: 30rem;
   min-width: 19rem;
 }
@@ -18,7 +19,7 @@
   @apply lg:pb-6;
 }
 .faq {
-  /* @apply py-4; */
+  /* @apply mb-2; */
 }
 
 .faqs__content {
@@ -26,13 +27,12 @@
 }
 
 .faq__question {
-  @apply py-4;
+  @apply my-2 py-3;
   width: 100%;
 }
 
 .faq__answer {
-  /* margin-top: -10rem; */
-  @apply pb-2;
+  /* @apply pb-2; */
 }
 
 /* Responsive */

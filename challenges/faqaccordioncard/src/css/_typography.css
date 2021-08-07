@@ -1,8 +1,8 @@
 /* Typography */
 
 :root {
-  --cl-text-body: #1d1b31ee;
-  --cl-text-display: #1d1b31;
+  --cl-text-body: hsla(245, 29%, 15%, 0.933);
+  --cl-text-display: hsla(245, 29%, 15%, 0.8);
 }
 
 body {
