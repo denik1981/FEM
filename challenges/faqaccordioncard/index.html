@@ -8,5 +8,63 @@
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
     <title>Frontend Mentor | FAQ Accordion Card</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <div class="wrapper no-fout">
+        <section class="faqs">
+          <h1 class="faqs__title">Faq</h1>
+          <div class="faqs__content accordion fallbackNoJS">
+            <details class="faq accordion__control">
+              <summary class="faq__question">
+                <p class="question__text">How many team members can I invite?</p>
+                <img src="<%=require('./assets/icons/arrow-down.svg')%>" width="10" height="7" aria-hidden="true" class="question__icon" />
+              </summary>
+              <p class="faq__answer accordion__content">
+                You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
+              </p>
+            </details>
+            <details class="faq accordion__control">
+              <summary class="faq__question">
+                <p class="question__text">What is the maximum file upload size?</p>
+                <img src="<%=require('./assets/icons/arrow-down.svg')%>" width="10" height="7" aria-hidden="true" class="question__icon" />
+              </summary>
+              <p class="faq__answer accordion__content">
+                No more than 2GB. All files in your account must fit your allotted storage space.
+              </p>
+            </details>
+            <details class="faq accordion__control">
+              <summary class="faq__question">
+                <p class="question__text">How do I reset my password?</p>
+                <img src="<%=require('./assets/icons/arrow-down.svg')%>" height="7" aria-hidden="true" class="question__icon" />
+              </summary>
+              <p class="faq__answer accordion__content">
+                You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
+              </p>
+            </details>
+            <details class="faq accordion__control">
+              <summary class="faq__question">
+                <p class="question__text">Can I cancel my subscription?</p>
+                <img src="<%=require('./assets/icons/arrow-down.svg')%>" height="7" aria-hidden="true" class="question__icon" />
+              </summary>
+              <p class="faq__answer accordion__content">Yes! Send us a message and we’ll process your request no questions asked.</p>
+            </details>
+            <details class="faq accordion__control">
+              <summary class="faq__question">
+                <p class="question__text">Do you provide additional support?</p>
+                <img src="<%=require('./assets/icons/arrow-down.svg')%>" height="7" aria-hidden="true" class="question__icon" />
+              </summary>
+              <p class="faq__answer accordion__content">
+                Chat and email support is available 24/7. Phone lines are open during normal business hours.
+              </p>
+            </details>
+          </div>
+        </section>
+      </div>
+      <figure class="mode-switch">
+        <div class="switch">
+          <label> JS<input type="checkbox" /><span class="lever"></span>CSS</label>
+        </div>
+      </figure>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,13 @@
+:root {
+  --accordion-timinig-function: linear;
+  --accordion-duration: 0.4s;
+}
+
+.accordion__content {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition-property: height;
+  transition-duration: var(--accordion-duration);
+  transition-timing-function: var(--accordion-timinig-function);
+}

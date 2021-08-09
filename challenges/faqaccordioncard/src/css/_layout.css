@@ -1,0 +1,51 @@
+/* Layout */
+
+.wrapper {
+  position: relative;
+  @apply p-6 rounded-3xl;
+  width: 70vw;
+  height: max-content;
+  max-width: 30rem;
+  min-width: 19rem;
+}
+
+.faqs {
+  grid-column-start: 2;
+}
+
+.faqs__title {
+  margin-top: clamp(5rem, 35vw, 12rem);
+  padding-bottom: clamp(2rem, 4vh, 3rem);
+  @apply lg:pb-6;
+}
+.faq {
+  /* @apply mb-2; */
+}
+
+.faqs__content {
+  @apply mb-16;
+}
+
+.faq__question {
+  @apply my-2 py-3;
+  width: 100%;
+}
+
+.faq__answer {
+  /* @apply pb-2; */
+}
+
+/* Responsive */
+@screen lg {
+  .faqs__title {
+    @apply mt-0;
+    text-align: left;
+  }
+
+  .wrapper {
+    display: grid;
+    grid: min-content / auto-flow 1fr;
+    @apply py-16;
+    max-width: 55rem;
+  }
+}

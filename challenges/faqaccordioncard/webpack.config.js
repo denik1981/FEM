@@ -5,6 +5,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const isMonoBuild = process.env.MONO_BUILD ? process.env.MONO_BUILD === 'mono' : false
 const isProduction = process.env.NODE_ENV === 'production'
+const isServe = process.env.WEBPACK_DEV_SERVER
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader'
 const cssLoader = { loader: 'css-loader', options: { sourceMap: true } }
 const publicPath = isProduction && !(process.env.WEBPACK_DEV_SERVER) ? path.sep + path.basename(__dirname) + path.sep : ''
@@ -38,14 +39,25 @@ const config = {
   module: {
     rules: [
       { test: /\.css$/i, use: [stylesHandler, cssLoader, 'postcss-loader'] },
-      { test: /\.(|svg|png|jpg|gif)$/i, type: 'asset/resource' }
-    ]
+      { test: /\.(|svg|png|jpg|gif)$/i, type: 'asset/resource' },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-transform-runtime']
+          }
+        }
+      }]
   },
-  plugins: [new BundleAnalyzerPlugin()]
+  plugins: []
 }
 
 module.exports = (env) => {
   config.plugins.push(new HtmlWebpackPlugin({ minify: false, favicon: 'assets/misc/favicon.png', template: 'index.html' }))
   if (isProduction) config.plugins.push(new MiniCssExtractPlugin({ filename: '[contenthash].css' }))
+  if (!isServe && !isProduction) config.plugins.push(new BundleAnalyzerPlugin())
   return config
 }

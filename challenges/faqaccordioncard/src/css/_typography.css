@@ -1,0 +1,57 @@
+/* Typography */
+
+:root {
+  --cl-text-body: hsla(245, 29%, 15%, 0.933);
+  --cl-text-display: hsla(245, 29%, 15%, 0.8);
+}
+
+body {
+  --ff-primary: "Kumbh Sans";
+  --ff-bold: 700;
+  color: var(--cl-text-body);
+  @apply font-primary text-xs;
+}
+
+p {
+  max-width: 64ch;
+  font-weight: normal;
+}
+
+.faqs__title {
+  color: var(--cl-text-display);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: var(--ff-bold);
+  font-size: clamp(2rem, 8vw, 2.5rem);
+  @apply lg:text-3xl;
+}
+
+.faq__question {
+  line-height: 1;
+}
+
+/* Utility - NO-FOUT */
+/* I use this personal utility to prevent the FOUT problem of Google Fonts */
+.no-fout {
+  --fout-latency: 0.6s;
+  animation: noPaint var(--fout-latency) 1 forwards;
+}
+
+.no-fout {
+  visibility: hidden;
+}
+
+@keyframes noPaint {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .no-fout {
+    visibility: visible;
+  }
+}

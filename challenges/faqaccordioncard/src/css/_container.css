@@ -1,10 +1,40 @@
 body {
-  width: 100%;
+  position: relative;
+  @apply min-h-screen w-full;
+  @apply grid place-items-center;
+  background: linear-gradient(to bottom, #a667e9, #6a63e7);
 }
 
 main {
-  @apply w-full min-h-screen;
-  @apply p-4;
+  /* position: relative; */
+  @apply w-full;
+  @apply px-6;
+  @apply my-40 lg:my-20;
   display: grid;
-  place-items: center;
+  height: max-content;
+  grid: 1fr / 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Toogle Switch */
+
+.mode-switch {
+  margin-top: 2rem;
+}
+
+.switch label {
+  @apply font-primary tracking-widest text-lg font-bold;
+  color: #fff8;
+}
+
+.mode-switch .switch .lever {
+  margin-inline: 0.8rem;
+}
+
+.mode-switch label @screen lg {
+  .mode-switch {
+    position: absolute;
+    inset: 0 auto auto 65%;
+  }
 }

@@ -1,0 +1,109 @@
+/* Settings */
+
+.faqs {
+  --animate-duration: var(--accordion-duration);
+  --animate-timinig-function: var(--accordion-timing-function);
+  --animate-line-height: 1.5;
+
+  --animate-max-lines-expected: 2;
+  --animate-content-font-size-px: 12px;
+  --animate-max-height: calc(var(--animate-content-font-size-px) * var(--animate-line-height) * var(--animate-max-lines-expected));
+}
+
+.question__text,
+.question__text:active,
+.question__text:target,
+.question__text:focus {
+  font-weight: normal;
+}
+
+:is(.faq__question:hover, .fallbackNoJS .faq[open], .accordion__control--active) .question__text {
+  color: var(--cl-text-display);
+  @apply font-bold;
+}
+
+.faq__question:focus {
+  --bg-shadow: #00000022;
+  background: var(--bg-shadow);
+  box-shadow: -0.5rem 0 0 0 var(--bg-shadow), 0.5rem 0 0 0 var(--bg-shadow);
+  outline: none;
+}
+
+.question__icon {
+  cursor: pointer;
+}
+
+.faq__question:focus .question__icon {
+  filter: contrast(10);
+}
+
+.fallbackNoJS .faq__answer {
+  line-height: var(--animate-line-height);
+  max-height: min-content;
+}
+
+.fallbackNoJS .faq__answer {
+  height: max-content;
+  padding-bottom: 0;
+  line-height: 0px;
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* FAUX bottom-padding */
+.faq__answer::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1rem;
+}
+
+.fallbackNoJS .faq[open] {
+  font-weight: var(--ff-bold);
+}
+
+.fallbackNoJS .faq[open] .faq__answer {
+  transition-property: none;
+  animation-name: fallbackIncreaseMaxHeight, fallbackIncreaseLineHeight;
+  animation-duration: var(--animate-duration), 0s;
+  animation-delay: 0s, 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: var(--animate-timinig-function);
+}
+
+@keyframes fallbackIncreaseLineHeight {
+  0%,
+  99% {
+    line-height: 0;
+  }
+  100% {
+    line-height: var(--animate-line-height);
+  }
+}
+
+@keyframes fallbackIncreaseMaxHeight {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: var(--animate-max-height);
+  }
+}
+
+/* Animate the Arrow */
+
+.question__icon {
+  transform: rotate(0);
+  transition-property: transform;
+  transition-timing-function: var(--accordion-timinig-function);
+  transition-duration: calc(var(--accordion-duration) * 0.6);
+}
+
+.fallbackNoJS .question__icon {
+  transition-duration: 0s;
+}
+
+:is(.fallbackNoJS .faq[open], .accordion__control--active) .question__icon {
+  transform: rotate(-180deg);
+  transition-duration: calc(var(--accordion-duration) * 0.6);
+}
