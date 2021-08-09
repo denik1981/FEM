@@ -1,6 +1,6 @@
 :root {
   --accordion-timinig-function: linear;
-  --accordion-duration: 0.5s;
+  --accordion-duration: 0.4s;
 }
 
 .accordion__content {

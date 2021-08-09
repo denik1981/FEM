@@ -6,27 +6,35 @@ class Accordion {
    * @typedef {{accordionClass: {string}, controlId: string, controlClass:string, contentClass:string }} settings
    * @returns {settings}
    */
-  static get settings() {
+  get settings() {
     return {
       accordionClass: 'accordion',
       controlIdAttr: 'ac-control',
       controlClass: 'accordion__control',
-      contentClass: 'accordion__content'
+      contentClass: 'accordion__content',
+      activeClass: 'accordion__control--active'
     };
   }
 
   constructor() {
+    this.accordionStateHandler = toogleAccordionState.bind(this);
+    this.toogleAccordionState = toogleAccordionState;
     this.currentActive = null;
   }
 
   make() {
-    const controls = Array.from(document.getElementsByClassName(Accordion.settings.controlClass));
+    const controls = Array.from(document.getElementsByClassName(this.settings.controlClass));
     controls.forEach((control, index) => this._installControl(control, index));
   }
 
   destroy() {
-    const controls = Array.from(document.getElementsByClassName(Accordion.settings.controlClass));
-    controls.forEach((control, index) => this._uninstallControl(control, index));
+    const currentActiveElement = this._getCurrentActiveElement(this.currentActive);
+    if (currentActiveElement) {
+      this._toogleElementClass(currentActiveElement, this.settings.activeClass);
+    }
+    const controls = Array.from(document.getElementsByClassName(this.settings.controlClass));
+    controls.forEach((control) => this._uninstallControl(control));
+    delete this;
   }
   /**
    *
@@ -34,47 +42,15 @@ class Accordion {
    * @param {number} index
    */
   _installControl(control, index) {
-    control.setAttribute(Accordion.settings.controlIdAttr, index);
-    control.addEventListener('click', (e) => this._toogleAccordionState(e, this));
+    control.setAttribute(this.settings.controlIdAttr, index);
+    control.addEventListener('click', this.accordionStateHandler);
     //
   }
 
-  _uninstallControl(control, index) {
-    control.removeAttribute(Accordion.settings.controlIdAttr);
-    control.removeEventListener('click', (e) => this._toogleAccordionState(e, this));
+  _uninstallControl(control) {
+    control.removeAttribute(this.settings.controlIdAttr);
+    control.removeEventListener('click', this.accordionStateHandler);
     //
-  }
-  /**
-   *
-   * @param {Event} event
-   * @param {Accordion} accordion
-   */
-  _toogleAccordionState(event, accordion) {
-    const accordionClass = Accordion.settings.accordionClass;
-    const controlIdAttr = Accordion.settings.controlIdAttr;
-    const contentClass = Accordion.settings.contentClass;
-    const activeClass = [Accordion.settings.controlClass, 'active'].join('--');
-
-    event.preventDefault();
-
-    const currentActive = event.currentTarget.getAttribute(controlIdAttr);
-    const previousActive = accordion.currentActive;
-
-    const currentControl = event.currentTarget;
-    const currentContent = event.currentTarget.getElementsByClassName(contentClass)[0];
-
-    accordion._toogleContentHeight(currentContent);
-    accordion._toogleElementClass(currentControl, activeClass);
-
-    if (previousActive !== currentActive && previousActive !== null) {
-      const previousControlSelector = `.${accordionClass} [${controlIdAttr}="${previousActive}"]`;
-      const previousControl = document.querySelector(previousControlSelector);
-      const previousContent = previousControl.getElementsByClassName(contentClass)[0];
-      accordion._toogleContentHeight(previousContent);
-      accordion._toogleElementClass(previousControl, activeClass);
-    }
-
-    accordion.currentActive = previousActive === currentActive ? null : currentActive;
   }
 
   /**
@@ -89,6 +65,7 @@ class Accordion {
       element.classList.add(elementClass);
     }
   }
+
   /**
    *
    * @param {HTMLElement} element
@@ -97,5 +74,41 @@ class Accordion {
     const height = element.offsetHeight ? 0 : element.scrollHeight;
     element.style.height = height + 'px';
   }
+  /**
+   *
+   * @param {number} id
+   * @returns {HTMLElement}
+   */
+  _getCurrentActiveElement(id) {
+    const selector = `.${this.settings.accordionClass} [${this.settings.controlIdAttr}="${id}"]`;
+    return document.querySelector(selector);
+  }
 }
+
+function toogleAccordionState(e) {
+  const controlIdAttr = this.settings.controlIdAttr;
+  const contentClass = this.settings.contentClass;
+  const activeClass = this.settings.activeClass;
+
+  e.preventDefault();
+
+  const currentActive = e.currentTarget.getAttribute(controlIdAttr);
+  const previousActive = this.currentActive;
+
+  const currentControl = e.currentTarget;
+  const currentContent = e.currentTarget.getElementsByClassName(contentClass)[0];
+
+  this._toogleContentHeight(currentContent);
+  this._toogleElementClass(currentControl, this.settings.activeClass);
+
+  if (previousActive !== currentActive && previousActive !== null) {
+    const previousControl = this._getCurrentActiveElement(previousActive);
+    const previousContent = previousControl.getElementsByClassName(contentClass)[0];
+    this._toogleContentHeight(previousContent);
+    this._toogleElementClass(previousControl, activeClass);
+  }
+
+  this.currentActive = previousActive === currentActive ? null : currentActive;
+}
+
 export default Accordion;

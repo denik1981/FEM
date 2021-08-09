@@ -4,7 +4,10 @@
   --animate-duration: var(--accordion-duration);
   --animate-timinig-function: var(--accordion-timing-function);
   --animate-line-height: 1.5;
-  --animate-max-height: 5rem;
+
+  --animate-max-lines-expected: 2;
+  --animate-content-font-size-px: 12px;
+  --animate-max-height: calc(var(--animate-content-font-size-px) * var(--animate-line-height) * var(--animate-max-lines-expected));
 }
 
 .question__text,
@@ -60,6 +63,7 @@
 }
 
 .fallbackNoJS .faq[open] .faq__answer {
+  transition-property: none;
   animation-name: fallbackIncreaseMaxHeight, fallbackIncreaseLineHeight;
   animation-duration: var(--animate-duration), 0s;
   animation-delay: 0s, 0s;
@@ -86,14 +90,20 @@
   }
 }
 
+/* Animate the Arrow */
+
 .question__icon {
   transform: rotate(0);
   transition-property: transform;
-  transition-duration: calc(var(--accordion-duration) * 0.8);
   transition-timing-function: var(--accordion-timinig-function);
+  transition-duration: calc(var(--accordion-duration) * 0.6);
 }
 
-/* Animate the Arrow */
+.fallbackNoJS .question__icon {
+  transition-duration: 0s;
+}
+
 :is(.fallbackNoJS .faq[open], .accordion__control--active) .question__icon {
   transform: rotate(-180deg);
+  transition-duration: calc(var(--accordion-duration) * 0.6);
 }
