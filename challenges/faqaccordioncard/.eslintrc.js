@@ -13,6 +13,6 @@ module.exports = {
     'no-console': 1,
     'prettier/prettier': 2,
     'newline-per-chained-call': ['error', { ignoreChainWithDepth: 5 }]
-  }
-  // plugins: ['prettier']
+  },
+  plugins: ['prettier']
 };
