@@ -5,7 +5,7 @@
   --animate-timinig-function: var(--accordion-timing-function);
   --animate-line-height: 1.5;
 
-  --animate-max-lines-expected: 2;
+  --animate-max-lines-expected: 4;
   --animate-content-font-size-px: 12px;
   --animate-max-height: calc(var(--animate-content-font-size-px) * var(--animate-line-height) * var(--animate-max-lines-expected));
 }
