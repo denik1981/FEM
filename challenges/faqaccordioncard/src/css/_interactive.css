@@ -10,14 +10,14 @@
   --animate-max-height: calc(var(--animate-content-font-size-px) * var(--animate-line-height) * var(--animate-max-lines-expected));
 }
 
-.question__text,
-.question__text:active,
-.question__text:target,
-.question__text:focus {
+..faq__question,
+..faq__question:active,
+..faq__question:target,
+..faq__question:focus {
   font-weight: normal;
 }
 
-:is(.faq__question:hover, .fallbackNoJS .faq[open], .accordion__control--active) .question__text {
+:is(.faq__question:hover, .fallbackNoJS .faq[open], .accordion__control--active) ..faq__question {
   color: var(--cl-text-display);
   @apply font-bold;
 }
