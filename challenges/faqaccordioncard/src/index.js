@@ -69,7 +69,6 @@ const MODE_CLASS = 'mode-switch';
     }
   }
   window.onload = init;
-  // debugger;
   class AccordionWithModeSwitch extends Accordion {
     destroy() {
       this._resetAllHeights();

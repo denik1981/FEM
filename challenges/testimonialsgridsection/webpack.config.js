@@ -40,7 +40,7 @@ const config = {
   plugins: [],
 };
 
-module.exports = (env) => {
+module.exports = () => {
   config.plugins.push(
     new HtmlWebpackPlugin({ minify: false, favicon: "assets/misc/favicon.png", template: "index.html" })
   );

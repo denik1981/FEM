@@ -11,7 +11,8 @@ module.exports = {
   },
   rules: {
     'no-console': 1,
-    'prettier/prettier': 2
+    'prettier/prettier': 2,
+    'newline-per-chained-call': ['error', { ignoreChainWithDepth: 5 }]
   },
   plugins: ['prettier']
 };
