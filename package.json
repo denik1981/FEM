@@ -28,10 +28,10 @@
     "build:huddlepagealternate": "npm run build:prod -w fem-huddle-page-alternate",
     "build:flyodatastoragecomp": "npm run build:prod -w fem-flyo-data-storage-comp",
     "build:testimonialsgridsection": "npm run build:prod -w fem-testimonials-grid-section",
-    "build:faqaccordioncard": "npm run build:prod -w fem-faq-accordion-card"
+    "build:faqaccordioncard": "npm run build:prod -w fem-faq-accordion-card",
+    "build:testimonialsslidermaster": "npm run build:prod -w fem-testimonials-slider-master"
   },
-  "dependencies": {
-    "npm": "^7.12.1",
-    "prettier": "^2.3.2"
+  "devDependencies": {
+    "npm": "^7.12.1"
   }
 }
