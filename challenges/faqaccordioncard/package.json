@@ -16,7 +16,7 @@
     "build": "webpack --mode=$npm_config_mode --node-env=$npm_config_nodeenv",
     "build:dev": "npm run build --mode=development --nodeenv=development",
     "build:prod": "npm run build --mode=production --nodeenv=production -w fem-faq-accordion-card",
-    "build:stats": "webpack --mode=production --node-env=production --env analyze",
+    "build:stats": "webpack --mode=production --node-env=production --env analyze=true",
     "debug": "node --inspect-brk $(npx which webpack) --mode=development",
     "watch": "webpack --watch --mode=development --nodeenv=development",
     "serve": "webpack serve"

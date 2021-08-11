@@ -19,8 +19,7 @@ const HTMLwebpackPluginSettings = {
   minify: false,
   favicon: 'assets/misc/favicon.png',
   template: 'index.html',
-  filename: 'index.html',
-  cache: true
+  filename: 'index.html'
 };
 const MiniCssExtractPluginSettings = { filename: '[contenthash].css' };
 const bundleAnalizerPluginSettings = { openAnalyzer: false };
@@ -87,7 +86,7 @@ module.exports = (env) => {
   config.plugins = [];
   config.plugins.push(new HtmlWebpackPlugin(HTMLwebpackPluginSettings));
   if (isProduction) config.plugins.push(new MiniCssExtractPlugin(MiniCssExtractPluginSettings));
-  if (env.analyze) config.plugins.push(new BundleAnalyzerPlugin(bundleAnalizerPluginSettings));
+  if (env.analyze === true) config.plugins.push(new BundleAnalyzerPlugin(bundleAnalizerPluginSettings));
   if (!isMonoBuild) config.plugins.push(new WebpackManifestPlugin());
   return config;
 };
