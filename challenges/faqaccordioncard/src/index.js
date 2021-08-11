@@ -1,6 +1,4 @@
-import './css/_tailwind.css';
-import 'materialize-css/dist/css/materialize.min.css';
-import 'materialize-css/dist/js/materialize.min.js';
+import './css/_vendors.css';
 import './components/accordion/accordion.css';
 import './components/accordion/accordion.js';
 import './css/main.css';
