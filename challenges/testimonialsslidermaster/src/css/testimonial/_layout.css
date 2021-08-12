@@ -1,0 +1,32 @@
+.testimonials {
+  width: 85vw;
+}
+
+.testimonial {
+  display: grid;
+  justify-items: center;
+  gap: 1.5rem;
+}
+
+.testimonial__slider {
+  --p-slidder: 2rem;
+  width: 100%;
+  height: max-content;
+  text-align: center;
+  padding-block: var(--p-slidder);
+}
+
+.slider__image {
+  display: inline-block;
+  max-width: 80%;
+  object-fit: scale-down;
+}
+
+.testimonial__quote {
+  padding-top: 1.5rem;
+}
+
+.testimonial__about {
+  display: flex;
+  @apply flex-col;
+}

@@ -1,1 +1,2 @@
-console.log(process.env.NODE_ENV);
+import './css/vendors.css';
+import './css/main.css';

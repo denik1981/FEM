@@ -1,0 +1,47 @@
+.testimonials {
+  --ff-primary: 'Inter';
+  --ff-bold: 700;
+  --cl-text-body: hsl(240, 38%, 20%);
+  --cl-text-body-dim: hsl(240, 18%, 77%);
+  color: var(--cl-text-body);
+  @apply font-primary text-lg font-light;
+  @apply text-center;
+}
+
+blockquote {
+  max-width: 64ch;
+}
+
+.testimonial__quote {
+  line-height: 1.4;
+}
+.testimonial__author {
+  @apply text-base font-bold;
+}
+
+.testimonial__author--role {
+  color: var(--cl-text-body-dim);
+  font-weight: 500;
+}
+
+/* Tiny utility to avoid FOUT when using Google Fonts */
+.no-fout {
+  --fout-delay: 0.6s;
+  animation: noFOUT var(--fout-delay) 1 forwards;
+  visibility: hidden;
+}
+
+@keyframes noFOUT {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .no-fout {
+    visibility: visible;
+  }
+}

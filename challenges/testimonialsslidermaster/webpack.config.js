@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -26,21 +25,20 @@ const MiniCssExtractPluginSettings = { filename: '[contenthash].css' };
 const bundleAnalizerPluginSettings = { openAnalyzer: false };
 
 const statsSettings = {
+  preset: 'detailed',
   assets: true,
-  modules: true,
-  moduleAssets: true,
   assetsSort: 'size',
+  modules: false,
+  moduleAssets: false,
   modulesSort: 'size',
-  cachedModules: true,
-  chunks: false,
-  children: false,
+  cachedAssets: false,
+  cachedModules: false,
   runtimeModules: false,
-  groupAssetsByChunk: true,
-  cachedAssets: true,
+  children: false,
+  chunks: false,
   hash: false,
-  outputPath: true,
+  outputPath: false,
   entrypoints: false,
-  groupAssetsByEmitStatus: true,
   logging: 'none' //'info': 'none' | 'error' | 'warn' | 'info' | 'log' | 'verbose' | false
   // loggingDebug: ['HTMLWebpackPlugin', /HTMLWebpackPlugin/, /webpack/, (name) => name.contains('HTMLWebpackPlugin')],
   // loggingTrace: false,
@@ -64,7 +62,7 @@ const optimizationSettings = {
 const outputSettings = {
   path: isProduction ? path.resolve('..', '..', 'public', path.basename(__dirname)) : path.resolve(__dirname, 'dist'),
   publicPath: publicPath,
-  clean: true,
+  clean: !isServe,
   assetModuleFilename: 'assets/[hash][ext]',
   filename: '[name].[contenthash].js'
 };

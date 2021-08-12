@@ -1,0 +1,12 @@
+body {
+  @apply min-h-screen w-full;
+  @apply grid place-items-center;
+}
+
+main {
+  @apply w-full py-8;
+  display: grid;
+  height: 100%;
+  grid: 1fr / 1fr;
+  place-items: center;
+}

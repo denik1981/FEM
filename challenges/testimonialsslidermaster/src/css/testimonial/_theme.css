@@ -1,0 +1,47 @@
+.testimonials {
+  background: white;
+  --icon-prev-btn: url('~assets/icons/prev.svg');
+  --icon-next-btn: url('~assets/icons/next.svg');
+  --bg-pattern: url('~assets/theme/bg.svg');
+  --bg-quotes: url('~assets/theme/quotes.svg');
+}
+
+.testimonial__slider {
+  position: relative;
+  background: var(--bg-pattern) center center / 100% 100% no-repeat;
+}
+
+.slider__image {
+  border-radius: 0.5rem;
+  box-shadow: 0 3.5rem 3rem -2.5rem #0004;
+}
+
+.slider__controls {
+  position: absolute;
+  background-color: white;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(50% - var(--p-slidder)));
+  border-radius: 9999px;
+  overflow: hidden;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.slider__control {
+  background-color: #5557;
+  padding: 1.2rem;
+  mask: center center / auto 30% no-repeat;
+}
+
+.slider__control--prev {
+  mask-image: var(--icon-prev-btn);
+}
+
+.slider__control--next {
+  mask-image: var(--icon-next-btn);
+}
+
+.testimonial__quote {
+  background: var(--bg-quotes) top center / auto 3rem no-repeat;
+}

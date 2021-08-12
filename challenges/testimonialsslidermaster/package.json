@@ -12,7 +12,7 @@
   "workspaces": [
     "."
   ],
-  "sideEffects": false,
+  "sideEffects": ["*.css"],
   "scripts": {
     "build": "webpack --mode=$npm_config_mode --node-env=$npm_config_nodeenv",
     "build:dev": "npm run build --mode=development --nodeenv=development",
