@@ -1,5 +1,3 @@
-![Logo](./misc/banner.png)
-
 # Frontend Mentor Challenges
 
 ## The Challenges

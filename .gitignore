@@ -1,22 +1,15 @@
 node_modules
-**/node_modules/*
-**/dist/*
-**/_/**
-*.bk.*
+dist
+public
+.vscode
+.vercel
 
-public/*
-tools/*
-
-.vscode/
 *.code-workspace
-.vercel/
-
 *.sketch
 *.fig
 *.xd
 
-**/sprites
-**/sprites/*
-
 TODO
-challenges
+
+#current challenge
+testimonialsslidermaster
