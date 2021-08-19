@@ -1,4 +1,5 @@
 {
   "trailingSlash": false,
-  "public": true
+  "public": true,
+  "rewrites": [{ "source": "/", "destination": "/demo/index.html" }]
 }
