@@ -29,7 +29,7 @@
     "build:flyodatastoragecomp": "npm run build:prod -w fem-flyo-data-storage-comp",
     "build:testimonialsgridsection": "npm run build:prod -w fem-testimonials-grid-section",
     "build:faqaccordioncard": "npm run build:prod -w fem-faq-accordion-card",
-    "build:demo": "mkdir public"
+    "build:demo": "eleventy"
   },
   "dependencies": {
     "npm": "^7.12.1"
