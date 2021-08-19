@@ -4,6 +4,7 @@ const copyDirs = ["images", "assets"];
 const config = {
   dir: { input: "demo", output: path.join("public", "demo") },
   templateFormats: ["html", "liquid", "njk"],
+  pathPrefix: "/demo/",
 };
 
 module.exports = function (eleventyConfig) {
