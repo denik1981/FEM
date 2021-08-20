@@ -6,7 +6,6 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const cssMinimizerPluginSetttings = { minimizerOptions: { preset: ['default', { discardComments: { removeAll: true } }] } };
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-const isMonoBuild = process.env.MONO_BUILD ? process.env.MONO_BUILD === 'mono' : false;
 const isProduction = process.env.NODE_ENV === 'production';
 const isServe = process.env.WEBPACK_DEV_SERVER;
 
@@ -66,7 +65,7 @@ const outputSettings = {
 
 const config = {
   mode: isProduction ? 'production' : 'development',
-  stats: isMonoBuild ? 'summary' : statsSettings,
+  stats: isProduction ? 'summary' : statsSettings,
   devtool: 'source-map',
   devServer: { host: 'localhost' },
   optimization: optimizationSettings,
@@ -87,6 +86,5 @@ module.exports = (env) => {
   config.plugins.push(new HtmlWebpackPlugin(HTMLwebpackPluginSettings));
   if (isProduction) config.plugins.push(new MiniCssExtractPlugin(MiniCssExtractPluginSettings));
   if (env.analyze === true) config.plugins.push(new BundleAnalyzerPlugin(bundleAnalizerPluginSettings));
-  if (!isMonoBuild) config.plugins.push(new WebpackManifestPlugin());
   return config;
 };

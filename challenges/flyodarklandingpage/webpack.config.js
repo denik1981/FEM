@@ -2,7 +2,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const isMonoBuild = process.env.MONO_BUILD ? process.env.MONO_BUILD === "mono" : false;
 const isProduction = process.env.NODE_ENV === "production";
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : "style-loader";
 const cssLoader = { loader: "css-loader", options: { sourceMap: true } };
@@ -11,7 +10,7 @@ const publicPath =
 
 const config = {
   mode: isProduction ? "production" : "development",
-  stats: isMonoBuild ? "summary" : "detailed",
+  stats: isProduction ? "summary" : "detailed",
   devtool: "source-map",
   devServer: { host: "localhost" },
   optimization: {
