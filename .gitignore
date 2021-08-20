@@ -1,13 +1,14 @@
 node_modules
 dist
 public
-.vscode
-.vercel
 
 *.code-workspace
 *.sketch
 *.fig
 *.xd
+
+.vscode
+.vercel
 
 TODO
 

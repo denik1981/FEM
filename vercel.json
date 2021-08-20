@@ -1,5 +1,14 @@
 {
   "trailingSlash": false,
   "public": true,
-  "rewrites": [{ "source": "/", "destination": "/demo/index.html" }]
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "https://denik-eventually.vercel.app/SOON/index.html"
+    },
+    {
+      "source": "/SOON/:match*",
+      "destination": "https://denik-eventually.vercel.app/SOON/:match*"
+    }
+  ]
 }
