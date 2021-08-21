@@ -9,5 +9,3 @@ If you want to leave some feedback please follow the link below.
 
 ## Contact Me
 demian.m1981@gmail.com
-
- |

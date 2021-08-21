@@ -1,7 +1,7 @@
 # Fylo Dark Theme Landing Page
 
 ## The Challenge
-[Live Demo](https://Fylo Data Storage Componentfemchallenges.vercel.app/flyodatastoragecomp) |
+[Live Demo](https://femchallenges.vercel.app/flyodatastoragecomp) |
 [Challenge](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n)
 
 ## Feedback
